@@ -27,7 +27,7 @@ body {
 }
 #header {
     border-bottom: 1px dashed #dcdcdc;
-    padding: 40;
+    padding-bottom: 40px;
 }
 #main {
     border-bottom: 1px dashed #dcdcdc;
