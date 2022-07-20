@@ -51,6 +51,11 @@ body {
 #header .header_nav ul li {
     display: inline;
 }
+#header .header_nav ul li.active a  {
+    background-color: #000;
+    color: #fff;
+} 
+/* li와 active는 띄어주면 안 됨(부모-자식 관계가 아니라서) */
 #header .header_nav ul li a {
     border: 1px solid #222;
     padding: 8px 25px;
