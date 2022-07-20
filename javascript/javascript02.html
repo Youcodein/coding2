@@ -67,11 +67,17 @@
 
         <div class ="main_sample">
             <div id="sample01" class="sample">
-                <h3>01. 변수 : 데이터 저장</h3>
+                <h3>01. 변수 : 데이터 불러오기</h3>
                 <p>
                 </p>
                 <div class="script">
-<pre><code class="language-js">
+<pre><code class="language-js">let x = 100,
+y = 200,
+z = "javascript";
+
+document.write(x);
+document.write(y);
+document.write(z);
 </code></pre>
 
                 </div>
@@ -84,6 +90,184 @@
                 </div>
             </div>
             <!-- //sample01 -->
+
+            <div id="sample02" class="sample">
+                <h3>02. 상수 : 데이터 불러오기</h3>
+                <p>
+                </p>
+                <div class="script">
+<pre><code class="language-js">const x = 100
+y = 200
+z = "javascript";
+
+document.write(x);
+document.write(y);
+document.write(z);
+</code></pre>
+
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과 보기</summary>
+                        <div class="sample02_result">
+                        </div>
+                    </details>
+                </div>
+            </div>
+            <!-- //sample02 -->
+
+            <div id="sample03" class="sample">
+                <h3>03. 배열 : 데이터 불러오기</h3>
+                <p>
+                </p>
+                <div class="script">
+<pre><code class="language-js">const arr = [100, 200, "javascript"];
+
+document.write(arr[0]);
+document.write(arr[1]);
+document.write(arr[2]);
+</code></pre>
+
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과 보기</summary>
+                        <div class="sample03_result">
+                        </div>
+                    </details>
+                </div>
+            </div>
+            <!-- //sample03 -->
+
+            <div id="sample04" class="sample">
+                <h3>04. 배열 : 데이터 불러오기 : 2차 배열</h3>
+                <p>
+                </p>
+                <div class="script">
+<pre><code class="language-js">const arr = [100, 200, ["javascript","jquery"]];
+
+document.write(arr[0]);
+document.write(arr[1]);
+document.write(arr[2][0]);
+document.write(arr[2][1]);
+</code></pre>
+
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과 보기</summary>
+                        <div class="sample04_result">
+                        </div>
+                    </details>
+                </div>
+            </div>
+            <!-- //sample04 -->
+
+            <div id="sample05" class="sample">
+                <h3>05. 배열 : 데이터 불러오기 : 갯수 구하기</h3>
+                <p>
+                </p>
+                <div class="script">
+<pre><code class="language-js">const arr = [100, 200, "javascript"];
+
+document.write(arr.length);
+</code></pre>
+
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과 보기</summary>
+                        <div class="sample05_result">
+                        </div>
+                    </details>
+                </div>
+            </div>
+            <!-- //sample05 -->
+
+            <div id="sample06" class="sample">
+                <h3>06. 배열 : 데이터 불러오기 : for()문</h3>
+                <p>
+                </p>
+                <div class="script">
+<pre><code class="language-js">const arr = [100, 200, 300, 400, 500];
+
+//for(초기값, 조건식, 증감식)
+for(let i = 0; i < arr.length; i++){
+    document.write(arr[i]);
+};
+</code></pre>
+
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과 보기</summary>
+                        100
+                        200
+                        300
+                        400
+                        500
+                        <div class="sample06_result">
+                        </div>
+                    </details>
+                </div>
+            </div>
+            <!-- //sample06 -->
+
+            <div id="sample07" class="sample">
+                <h3>05. 배열 : 데이터 불러오기 : 갯수 구하기</h3>
+                <p>
+                </p>
+                <div class="script">
+<pre><code class="language-js">const num = [100, 200, 300, 400, 500];
+
+//for문을 이용해서 출력...
+
+for(let i = 0; i < num.length; i++){
+    document.write(num[i]);
+};
+
+document.write("<br><br>");
+
+//forEach()를 이용해서 출력
+num.forEach(function(el){
+    document.write(el);
+});
+
+document.write("<br><br>");
+
+//forEach() 3가지 인자(parameter)값
+num.forEach(function(element, index, array){
+    document.write(element,"<br>");
+    document.write(index,"<br>");
+    document.write(array,"<br>");
+})
+</code></pre>
+
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과 보기</summary>
+                        100<br>
+                        0<br>
+                        100,200,300,400,500<br>
+                        200<br>
+                        1<br>
+                        100,200,300,400,500<br>
+                        300<br>
+                        2<br>
+                        100,200,300,400,500<br>
+                        400<br>
+                        3<br>
+                        100,200,300,400,500<br>
+                        500<br>
+                        4<br>
+                        100,200,300,400,500
+                        <div class="sample07_result">
+                        </div>
+                    </details>
+                </div>
+            </div>
+            <!-- //sample07 -->
 
         <div class="main_desc"></div>
     </main>
@@ -109,9 +293,11 @@
                 y = 200,
                 z = "javascript";
 
-            document.write(x);
-            document.write(y);
-            document.write(z);
+            // document.write(x);
+            // document.write(y);
+            // document.write(z);
+
+            document.querySelector(".sample01_result").innerHTML = x + "<br>" + y + "<br>" +z;
         }
 
         //02 상수
@@ -120,42 +306,46 @@
                   y = 200
                   z = "javascript";
 
-                document.write(x);
-                document.write(y);
-                document.write(z);
+                // document.write(x);
+                // document.write(y);
+                // document.write(z);
+
+            document.querySelector(".sample02_result").innerHTML = x + "<br>" + y + "<br>" +z;
         }
 
         //03 배열
         {
             const arr = [100, 200, "javascript"];
 
-            document.write(arr[0]);
-            document.write(arr[1]);
-            document.write(arr[2]);
+            // document.write(arr[0]);
+            // document.write(arr[1]);
+            // document.write(arr[2]);
+
+            document.querySelector(".sample03_result").innerHTML = arr[0] + "<br>" + arr[1] + "<br>" +arr[2];
         }
 
-        document.write("<br><br>");
 
         //04
         {
             const arr = [100, 200, ["javascript","jquery"]];
 
-            document.write(arr[0]);
-            document.write(arr[1]);
-            document.write(arr[2][0]);
-            document.write(arr[2][1]);
+            // document.write(arr[0]);
+            // document.write(arr[1]);
+            // document.write(arr[2][0]);
+            // document.write(arr[2][1]);
+
+            document.querySelector(".sample04_result").innerHTML = arr[0] + "<br>" + arr[1] + "<br>" +arr[2][0]+ "<br>" +arr[2][1];
         }
-        
-            document.write("<br><br>");
 
         //05
         {
             const arr = [100, 200, "javascript"];
 
-            document.write(arr.length);
+            // document.write(arr.length);
+
+            document.querySelector(".sample05_result").innerHTML = arr.length;
         }
 
-        document.write("<br><br>");
 
         //06
         {
@@ -167,39 +357,38 @@
             // document.write(arr[3]);
             // document.write(arr[4]);
 
-            //for(초기값, 조건식, 증감식)
-            for(let i = 0; i < arr.length; i++){
-                document.write(arr[i]);
-            };
-        }
+            // for(초기값, 조건식, 증감식)
+            // for(let i = 0; i < arr.length; i++){
+            //     document.write(arr[i]);
+            // };
 
-        document.write("<br><br>");
+        }
 
         //07 forEach()
         {
-            const num = [100, 200, 300, 400, 500];
+            // const num = [100, 200, 300, 400, 500];
 
-            //for문을 이용해서 출력...
+            // //for문을 이용해서 출력...
 
-            for(let i = 0; i < num.length; i++){
-                document.write(num[i]);
-            };
+            // for(let i = 0; i < num.length; i++){
+            //     document.write(num[i]);
+            // };
             
-            document.write("<br><br>");
+            // document.write("<br><br>");
 
-            //forEach()를 이용해서 출력
-            num.forEach(function(el){
-                document.write(el);
-            });
+            // //forEach()를 이용해서 출력
+            // num.forEach(function(el){
+            //     document.write(el);
+            // });
 
-            document.write("<br><br>");
+            // document.write("<br><br>");
 
-            //forEach() 3가지 인자(parameter)값
-            num.forEach(function(element, index, array){
-                document.write(element,"<br>");
-                document.write(index,"<br>");
-                document.write(array,"<br>");
-            })
+            // //forEach() 3가지 인자(parameter)값
+            // num.forEach(function(element, index, array){
+            //     document.write(element,"<br>");
+            //     document.write(index,"<br>");
+            //     document.write(array,"<br>");
+            // })
 
         }
     </script>
