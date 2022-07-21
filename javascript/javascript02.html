@@ -360,6 +360,59 @@ arr.map(function(element, index, array){
         hljs.highlightAll();
     </script>
     <script>
+        //01
+        {let x = 100,
+            y = 200,
+            z = "javascript";
+
+            // document.write(x);
+            // document.write(y);
+            // document.write(z);
+
+            document.querySelector(".sample01_result").innerHTML = x + "<br>" + y + "<br>" +z;
+        }
+        //02
+        {
+            const x = 100
+            y = 200
+            z = "javascript";
+
+            // document.write(x);
+            // document.write(y);
+            // document.write(z);
+
+            document.querySelector(".sample02_result").innerHTML = x + "<br>" + y + "<br>" +z;
+        }
+        //03
+        {
+            const arr = [100, 200, "javascript"];
+
+            // document.write(arr[0]);
+            // document.write(arr[1]);
+            // document.write(arr[2]);
+
+            document.querySelector(".sample03_result").innerHTML = arr[0] + "<br>" + arr[1] + "<br>" +arr[2];
+        }
+        //04
+        {
+            const arr = [100, 200, ["javascript","jquery"]];
+
+            // document.write(arr[0]);
+            // document.write(arr[1]);
+            // document.write(arr[2][0]);
+            // document.write(arr[2][1]);
+
+            document.querySelector(".sample04_result").innerHTML = arr[0] + "<br>" + arr[1] + "<br>" +arr[2][0]+ "<br>" +arr[2][1];
+        }
+        //05
+        {
+            const arr = [100, 200, "javascript"];
+
+            // document.write(arr.length);
+
+            document.querySelector(".sample05_result").innerHTML = arr.length;
+        }
+
         //06 for문
         {
             const arr = [100, 200, 300, 400, 500];
