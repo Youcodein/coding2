@@ -8,63 +8,103 @@
     <style>
         * {
             margin: 0;
+            padding: 0;
+        }
+        #body {
+            background-color: #E1F5FE;
         }
         #wrap {
             width: 1200px;
             margin: 0 auto;
         }
         #header {
-            width: 1200px;
             height: 100px;
-            background-color: #d3f6ff;
+            background-color: #B3E5FC;
         }
         #nav {
-            width: 1200px;
             height: 100px;
-            background-color: #9aebff;
+            background-color: #81D4FA;
+        }
+        #main {
         }
         #aside {
-            width: 300px;
+            width: 30%;
             height: 780px;
-            background-color: #83c7d8;
+            background-color: #4FC3F7;
             float: left;
         }
-        #section1 {
-            width: 900px;
+        #article1 {
+            width: 70%;
             height: 260px;
-            background-color: #5eb6cc;
+            background-color: #29B6F6;
             float: left;
         }
-        #section2 {
-            width: 900px;
+        #article2 {
+            width: 70%;
             height: 260px;
-            background-color: #3eaac5;
+            background-color: #03A9F4;
             float: left;
         }
-        #section3 {
-            width: 900px;
+        #article3 {
+            width: 70%;
             height: 260px;
-            background-color: #299ab6;
+            background-color: #039BE5;
             float: left;
         }
         #footer {
-            width: 1200px;
             height: 100px;
-            background-color: #1f6e81;
+            background-color: #0288D1;
+        }
+        /* clearfix */
+        .clearfix::before,
+        .clearfix::after {
+            content: '';
+            display: block;
+            line-height: 0;
+        }
+        .clearfix::after {
             clear: both;
         }
 
+        /* 미디어쿼리 */
+        @media (max-width: 1300px;){
+            #wrap{
+                width: 96%;
+            }
+            #article2 {
+                width: 35%;
+                height: 520px;
+            }
+            #article3 {
+                width: 35%;
+                height: 520px;
+            }
+        }
+        @media (max-width: 768px;){
+            #wrap{
+                width: 100%;
+            }
+        }
     </style>
 </head>
 <body>
     <div id="wrap">
         <div id="header"></div>
         <div id="nav"></div>
-        <div id="aside"></div>
-        <div id="section1"></div>
-        <div id="section2"></div>
-        <div id="section3"></div>
+        <div id="main" class="clearfix">
+            <div id="aside"></div>
+            <div id="article1"></div>
+            <div id="article2"></div>
+            <div id="article3"></div>
+        </div>
         <div id="footer"></div>
     </div>
+
+    <!-- 레이아웃 02_01 : float 방식 레이아웃 -->
+    <!-- 레이아웃 02_02 : float 반응형 방식 레이아웃 -->
+    <!-- 레이아웃 02_03 : flex 방식 레이아웃 -->
+    <!-- 레이아웃 02_04 : flex 방식 반응형 레이아웃 -->
+    <!-- 레이아웃 02_05 : grid 방식 레이아웃 -->
+    <!-- 레이아웃 02_06 : grid 방식 반응형 레이아웃 -->
 </body>
 </html>

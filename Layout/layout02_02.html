@@ -18,41 +18,74 @@
             margin: 0 auto;
         }
         #header {
-            width: 1200px;
+            width: 100%;
             height: 100px;
             background-color: #C8E6C9;
         }
         #nav {
-            width: 1200px;
+            width: 100%;
             height: 100px;
             background-color: #A5D6A7;
         }
         #main {
-            width: 1200px;
+            width: 100%;
             overflow: hidden;
         }
         #aside {
-            width: 300px;
+            width: 30%;
             height: 780px;
             background-color: #81C784;
             float: left;
         }
         #section {
-            width: 600px;
+            width: 40%;
             height: 780px;
             background-color: #66BB6A;
             float: left;
         }
         #article {
-            width: 300px;
+            width: 30%;
             height: 780px;
             background-color: #4CAF50;
             float: left;
         }
         #footer {
-            width: 1200px;
+            width: 100%;
             height: 100px;
             background-color: #43A047;
+        }
+        /* 미디어 쿼리 */
+        @media (max-width: 1300px){
+            #wrap {
+                width: 96%;
+            }
+        }
+        @media (max-width: 768px){
+            #wrap {
+                width: 100%;
+            }
+            #aside {
+                width: 30%;
+                height: 630px;
+            }
+            #section {
+                width: 70%;
+                height: 630px;
+            }
+            #article {
+                width: 100%;
+                height: 150px;
+            }
+        }
+        @media (max-width: 480px){
+            #aside {
+                width: 100%;
+                height: 200px;
+            }
+            #section {
+                width: 100%;
+                height: 430px;
+            }
         }
     </style>
 </head>
