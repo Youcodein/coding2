@@ -115,6 +115,7 @@ body {
     border: 0;
     border-top: 1px dashed #dcdcdc;
     margin-top: 45px;
+    margin-bottom: 45px;
 }
 .document .t_tit {
     font-size: 30px;
@@ -163,6 +164,7 @@ body {
     width: 100%;
     border-spacing: 0;
     border-collapse: collapse;
+    margin-top: 45px;
 }
 .document .t_table tr th {
     background-color: #f9f9f9;

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>자바스크립트 : 기본 규칙</title>
+    <title>자바스크립트 : 데이터 타입</title>
 
 <link rel="stylesheet" href="../assets/css/style.css">
 <link rel="stylesheet" href="../assets/css/dracura.css">
@@ -41,103 +41,130 @@
 
     <main id="main">
         <div class="document">
-            <h2 class="t_tit">반복문</h2>
-            <p class="t_desc">반복문은 프로그램에서 필요한 결과 값을 도출하기 위해
-                실행문의 순서를 반복적으로 실행시키는 문법을 말합니다.
-                반복문에는 while문 do while문 for 무니 있으며 for 문을 가장 많이 사용합니다.
+            <h2 class="t_tit">자바스크립트에서의 데이터 타입</h2>
+            <p class="t_desc">데이터 타입은 변수에 저장되는 데이터의 유형으로 
+                '(Primitive)원시 데이터 타입'과 '(Object)객체 데이터 타입'으로 나눌 수 있습니다.
             </p>
-            <p class="t_box">
-                for ( 초기값; 조건식; 증감값 ){<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;실행문<br>
-                }
-            </p>
-            <p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="KKovNbJ" data-user="youJin2" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
-                <span>See the Pen <a href="https://codepen.io/youJin2/pen/KKovNbJ">
-                if문</a> by HwangYoujin (<a href="https://codepen.io/youJin2">@youJin2</a>)
-                on <a href="https://codepen.io">CodePen</a>.</span>
-              </p>
-              <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
 
+            <table class="t_table">
+                <thead>
+                    <tr>
+                        <th>분류</th>
+                        <th>데이터 타입</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="ce">원시(Primitive)</td>
+                        <td>number, string, boolean, undefined, null, symbol</td>
+                    </tr>
+                    <tr>
+                        <td class="ce">객체(Object)</td>
+                        <td>function, object, array</td>
+                    </tr>
+                </tbody>
+            </table>
 
             <hr>
 
+            <h3 class="t_tit2">number(숫자)데이터</h3>
+            <p class="t_desc">number 데이터는 정수, 소수점, 지수를 표현할 수 있습니다.</p>
 
-            <h3 class="t_tit2">0부터 99까지 출력하기</h3>
-            <div class="t_code">
-<pre><code class="language-js">//0부터 99까지 출력하기
-for( let i=0; i&lt;100; i++){
-    document.write(i)
-}
-</code></pre>
+            <div class="t_box">
+                var num1 = 10; <br>
+                var num2 = 10.5; <br>
+                var num3 = le+10; <br>
+                console.log(num1);  //  10 <br>
+                console.log(num2);  //  10.5 <br>
+                console.log(num3);  //  100, le + 2는 1*10의 2승을 의미합니다.
             </div>
 
-            <h3 class="t_tit2">1부터 100까지 출력하기</h3>
-            <div class="t_code">
-<pre><code class="language-js">//1부터 100까지 출력
-for( let i=1; i&lt;=100; i++){
-    document.write(i)
-}
-</code></pre>
+            <h3 class="t_tit2">string (문자)데이터</h3>
+            <p class="t_desc">string 데이터는 ' '또는 " "로 표현할 수 있습니다.</p>
+
+            <div class="t_box">
+                var str1 = "문자"; <br>
+                var str2 = "문자"; <br>
+                console.log(str1);  //  문자 <br>
+                console.log(str2);  //  문자 <br>
+            </div>
+            <p class="t_desc">문자 안에 문자가 들어갈 경우</p>
+
+            <div class="t_box">
+                var str1 = '문자는 "문자"''; <br>
+                var str2 = "문자는 '문자'"; <br>
+                console.log(str1);  //  문자는 "문자" <br>
+                console.log(str2);  //  문자는 '문자' <br>
             </div>
 
-            <h3 class="t_tit2">1부터 100까지 출력하기(짝수)</h3>
-            <div class="t_code">
-<pre><code class="language-js">//1부터 100까지 출력(짝수) i = i + 2
-for( let i=2; i&lt;=100; i+=2){
-    document.write(i)
-}
-</code></pre>
+            <h3 class="t_tit2">boolean (논리)데이터</h3>
+            <p class="t_desc">boolean 데이터는 true(참)또는 false(거짓)의 값을 표현합니다.</p>
+
+            <div class="t_box">
+                var temp1 = (5 &gt; 4); <br>
+                var temp2 = (5 &lt; 4); <br>
+                console.log(temp1);  //  true <br>
+                console.log(temp2);  //  false <br>
+            </div>
+            <p class="t_desc">boolean 에서 0값은 false를 의미하며 0값 이외의 숫자나 문자 값은 true를 의미합니다.</p>
+
+            <div class="t_box">
+                var temp1 = 0; <br>
+                var temp2 = 0; <br>
+                console.log(temp1);  //  false <br>
+                console.log(temp2);  //  true <br>
             </div>
 
-            <h3 class="t_tit2">for문을 이용해서 테이블 출력하기(100칸)</h3>
-            <p class="t_desc">for문을 이용해서 테이블을 만들 수 있습니다.</p>
-            <div class="t_code">
-<pre><code class="language-js">let table = "&lt;table&gt;";
+            <h3 class="t_tit2">undefined 데이터</h3>
+            <p class="t_desc">undefined 데이터는 변수는 선언하였으나 데이터 값,
+                혹은 객체의 속성 값을 지정하지 않았을 경우에 나오는 값입니다.</p>
 
-for( let i=0; i&lt;10; i++){
-    table += "&lt;tr&gt;";
-
-        for( let j=0; j&lt;10; j++){
-            table += "&lt;td&gt;1&lt;/td&gt;";
-        }
-
-    table += "&lt;/tr&gt;";
-}
-
-table += "&lt;/table&gt;";
-
-document.write(table);
-</code></pre>
+            <div class="t_box">
+                var temp1 = 10; <br>
+                var temp2; <br>
+                console.log(temp1);  //  10 <br>
+                console.log(temp2);  //  undefined <br> -> 변수에 데이터 값이 없기 때문에
             </div>
-            <div class="t_result">
-                <details>
-                    <summary>결과 확인하기</summary>
-                    <div class="result01"></div>
-                </details>
-                <style>
-                    .testTable tr td {
-                        border: 1px solid #000;
-                    }
-                </style>
-                <script>
-                    let table = "<table class='testTable'>"
-            
-                        for( let i=0; i<10; i++){
-                            table += "<tr>";
-            
-                                for( let j=0; j<10; j++){
-                                    table += "<td>1</td>";
-                                }
-            
-                            table += "</tr>";
-                        }
-            
-                        table += "</table>";
-            
-                        document.querySelector(".result01").innerHTML = table;
-                </script>
+            <p class="t_desc">boolean 에서 0값은 false를 의미하며 0값 이외의 숫자나 문자 값은 true를 의미합니다.</p>
+
+            <div class="t_box">
+                var obj = {}; <br>
+                obj.name = '홍길동'; <br>
+                obj.age; <br>
+
+                console.log(obj.name);  //  홍길동 <br>
+                console.log(obj.age);  //  undefined <br> -> 객체에 속성 값이 없기 때문에
             </div>
 
+            <h3 class="t_tit2">null 데이터</h3>
+            <p class="t_desc">undefined와 유사하지만 변수를 빈(empty)상태로 만들거나,
+                데이터를 저장하였으나 값이 존재하지 않을 때 null 값을 반환합니다.</p>
+
+            <div class="t_box">
+                var temp1 = 10; <br>
+                var temp2; <br>
+                console.log(temp1);  //  10 <br>
+                console.log(temp2);  //  undefined <br> -> 변수에 데이터 값이 없기 때문에
+            </div>
+            <p class="t_desc">boolean 에서 0값은 false를 의미하며 0값 이외의 숫자나 문자 값은 true를 의미합니다.</p>
+
+            <div class="t_box">
+                var obj = 10; <br>
+                obj = null; <br>
+                console.log(obj);  //  null, 변수를 빈 상태로 만듭니다. <br>
+                var obj = document.getElementById('gnb'); <br>
+                console.log(obj);  //  변수에 데이터 값을 저장은 하였으나 값이 존재하지 않을 경우 null을 저장합니다.
+            </div>
+
+            <h3 class="t_tit2">typeof 명령</h3>
+            <p class="t_desc">변수에 저장 되어 있는 데이터의 타입을 알아보기 위해 사용하는 명령어입니다.</p>
+
+            <div class="t_box">
+                var num = 10;
+                var str = '문자';
+                console.log(typeof num); // number
+                console.log(typeof str); // string
+            </div>
 
         </div>
     </main>
