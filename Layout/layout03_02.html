@@ -18,41 +18,44 @@
             margin: 0 auto;
         }
         #header {
+            width: 1200px;
             height: 100px;
             background-color: #B3E5FC;
         }
         #nav {
+            width: 1200px;
             height: 100px;
             background-color: #81D4FA;
         }
         #main {
-            display: flex;
+            width: 1200px;
         }
         #aside {
-            width: 30%;
+            width: 300px;
             height: 780px;
             background-color: #4FC3F7;
             float: left;
         }
         #article1 {
-            width: 70%;
+            width: 900px;
             height: 260px;
             background-color: #29B6F6;
             float: left;
         }
         #article2 {
-            width: 70%;
+            width: 900px;
             height: 260px;
             background-color: #03A9F4;
             float: left;
         }
         #article3 {
-            width: 70%;
+            width: 900px;
             height: 260px;
             background-color: #039BE5;
             float: left;
         }
         #footer {
+            width: 1200px;
             height: 100px;
             background-color: #0288D1;
         }
@@ -66,39 +69,31 @@
         .clearfix::after {
             clear: both;
         }
-
-        /* 미디어쿼리 */
-        @media (max-width: 1300px;){
-            #wrap{
+        @media (max-width: 1300px){
+            #wrap {
                 width: 96%;
             }
-            #article2 {
-                width: 35%;
-                height: 520px;
-            }
-            #article3 {
-                width: 35%;
-                height: 520px;
-            }
+            
         }
-        @media (max-width: 768px;){
-            #wrap{
-                width: 100%;
+        @media (max-width: 780px){
+            #wrap {
+                width: 96%;
             }
+            
         }
     </style>
 </head>
 <body>
     <div id="wrap">
-        <header id="header"></header>
-        <nav id="nav"></nav>
-        <main id="main" class="clearfix">
-            <aside id="aside"></aside>
-            <article1 id="article1"></article1>
-            <article2 id="article2"></article2>
-            <article3 id="article3"></article3>
-        </main>
-        <footer id="footer"></footer>
+        <div id="header"></div>
+        <div id="nav"></div>
+        <div id="main" class="clearfix">
+            <div id="aside"></div>
+            <div id="article1"></div>
+            <div id="article2"></div>
+            <div id="article3"></div>
+        </div>
+        <div id="footer"></div>
     </div>
 
     <!-- 레이아웃 02_01 : float 방식 레이아웃 -->
