@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반복문</title>
+
+<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="stylesheet" href="../assets/css/dracura.css">
+</head>
+<body>
+    <header id="header">
+        <h1><a href="../index.html">Javascript</a></h1>
+        <nav class="header_nav">
+            <ul>
+                <li><a href="../javascript01.html">데이터 저장하기</a></li>
+                <li><a href="../javascript02.html">데이터 불러오기</a></li>
+                <li><a href="../javascript03.html">데이터 실행하기</a></li>
+                <li><a href="../javascript04.html">데이터 제어하기</a></li>
+            </ul>
+            <ul>
+                <li><a href="../javascript05.html">문자열 객체</a></li>
+                <li><a href="../javascript06.html">배열 객체</a></li>
+                <li><a href="../javascript07.html">수학 객체</a></li>
+                <li><a href="../javascript08.html">숫자 객체</a></li>
+                <li><a href="../javascript09.html">브라우저 객체</a></li>
+                <li><a href="../javascript10.html">요소 객체</a></li>
+                <li><a href="../javascript11.html">이벤트 객체</a></li>
+            </ul>
+            <ul class="study">
+                <li><a href="baisic.html">기본 규칙</a></li>
+                <li><a href="operate.html">연산자</a></li>
+                <li><a href="for.html">반복문</a></li>
+                <li><a href="if.html">조건문</a></li>
+                <li><a href="type.html">데이터 타입</a></li>
+                <li><a href="function.html">함수</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- //header -->
+
+    <main id="main">
+        <div class="document">
+            <h2 class="t_tit">함수</h2>
+            <p class="t_desc2">함수는 프로그램에서 반복적으로 사용되는 기능을 만들어 내기 위한 코드들의 집합입니다.</p>
+
+            
+
+            <h3 class="t_tit2">선언적 함수</h3>  
+            <p class="t_desc">#</p>
+            <p class="t_box">
+                function func(){<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;실행문;<br>
+                }
+            </p>
+            <p class="t_box">
+                function compute(){<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;console.log('선언적 함수');<br>
+                }
+            </p>
+
+
+            <h3 class="t_tit2">익명 함수</h3>
+            <p class="t_desc">익명 함수는 변수에 데이터를 저장하여 변수를 함수처럼 사용할 수 있게 합니다. <i>익명 함수는 변수 선언 이후</i>에 호출해야 합니다.
+            </p>
+            <p class="t_box">
+                var compute = function(){<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;실행문;<br>
+                };
+            </p>
+            <p class="t_box">
+                var compute = function(){<br>
+                &nbsp;&nbsp;&nbsp;console.log('익명 함수');<br>
+                };
+            </p>
+
+
+
+            <h3 class="t_tit2">즉시 실행 함수</h3>  
+            <p class="t_desc">일회성으로 사용되는 함수입니다. <i>선언과 동시에 함수가 실행되고 함수명이 없기 때문에 재호출이 불가</i>합니다.</p>
+            <p class="t_box">
+                (function(){<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;실행문;<br>
+                })();
+            </p>
+            <p class="t_box">
+                (function(){<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;var sum = 10;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;console.log(sum);<br>
+                })();
+            </p>
+
+            <h3 class="t_tit2">return 함수</h3>  
+            <p class="t_desc">함수를 통해 처리된 결과를 반환시켜주는 명령어입니다.</p>
+            <p class="t_box">
+                function func(){<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;const str = "함수가 실행되었습니다.4";<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return str;<br>
+                }<br>
+                <br>
+                document.write(func());<br>
+            </p>
+
+            <h3 class="t_tit2">매개변수</h3>  
+            <p class="t_desc">함수를 호출할 때 전달하는 변수를 '매개변수'라 합니다.</p>
+            <p class="t_box">
+                function func(str){<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;document.write(str);<br>
+                }<br>
+                <br>
+                func("함수가 실행되었습니다.3");<br>
+            </p>
+
+            <h3 class="t_tit2">01.0부터 99까지 출력하기</h3>
+            <div class="t_code">
+<pre><code class="language-js">//0부터 99까지 출력하기
+for( let i=0; i&lt;100; i++){
+    document.write(i)
+}
+</code></pre>
+            <div class="result">
+                <details>
+                    <summary>결과 보기</summary>
+                    <script>
+                    { 
+                        for( let i=0; i<100; i++){
+                            document.write(i,"<br>")
+                        }
+                    }
+                    </script>
+                </details>
+            </div>
+            </div>
+            <!--  01.0부터 99까지 출력하기 -->
+
+    </div>
+    </main>
+      <!-- //main -->
+
+    <footer id="footer">
+        <a href="mailto:ghkddbwls96@gmail.com">ghkddbwls96@gmail.com</a>
+    </footer>
+      <!-- //footer --> 
+
+    <script src="../assets/js/highlight.min.js"></script>
+    <script>
+        hljs.highlightAll();
+    </script>
+</body>
+</html>

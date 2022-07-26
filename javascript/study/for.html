@@ -324,24 +324,26 @@ document.write(table);
         <h3 class="t_tit2">10. for문을 이용해서 테이블 출력하기(100칸)-2</h3>
         <p class="t_desc">for문을 이용해서 테이블을 만들 수 있습니다.</p>
         <div class="t_code">
-<pre><code class="language-js">let table = "<table class='testTable'>";
-//tr10번 반복
-table +="&lt;tr&gt;"
-    z=0;
-for( let i=1; i&lt;=10; i++){
-    table +="&lt;tr&gt;"
+<pre><code class="language-js">
+let table = "&lt;table class='testTable'&gt;";
 
-        //td10번 반복(for문)
-        for( let j = 1; j&lt;=10; j++){
-        z++;
-        table +="&lt;td&gt;"+z+"&lt;/td&gt;";
+        //tr10번 반복
+        table +="&lt;tr&gt;"
+            z=0;
+        for( let i=1; i&lt;=10; i++){
+            table +="&lt;tr&gt;"
+
+                //td10번 반복(for문)
+                for( let j = 1; j&lt;=10; j++){
+                z++;
+                table +="&lt;td&gt;"+z+"&lt;/td&gt;";
+                }
+            table += "&lt;/tr&gt;";
         }
-    table += "&lt;/tr&gt;";
-}
 
-table += "&lt;/table&gt;";
+        table += "&lt;/table&gt;";
 
-document.write(table)
+        document.write(table)
 </code></pre>
 
             <div class="t_result">
