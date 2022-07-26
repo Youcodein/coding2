@@ -26,30 +26,34 @@
             background-color: #81D4FA;
         }
         #main {
-            display: grid;
-            grid-template-areas: 
-            "aside article1 article1"
-            "aside article2 article2"
-            "aside article3 article3";
-            grid-template-columns: 30% 70%;
-            grid-template-rows: 260px 260px 260px;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            height: 780px;
         }
         #aside {
+            width: 30%;
+            height: 780px;
             background-color: #4FC3F7;
-            grid-area: aside;
+            float: left;
         }
         #article1 {
+            width: 70%;
+            height: 260px;
             background-color: #29B6F6;
-            grid-area: article1;
+            float: left;
         }
-
-        #article2 {
+        #article2-1 {
+            width: 100%;
+            height: 260px;
             background-color: #03A9F4;
-            grid-area: article2;
+            float: left;
         }
-        #article3 {
+        #article2-2 {
+            width: 100%;
+            height: 260px;
             background-color: #039BE5;
-            grid-area: article3;
+            float: left;
         }
         #footer {
             height: 100px;
@@ -57,61 +61,68 @@
         }
 
         @media (max-width: 1300px){
-
             #wrap {
-            width: 96%;
-        }
-            #main {
-            grid-template-areas: 
-            "aside article1 article1"
-            "aside article2 article2"
-            "aside article3 article3";
-            grid-template-columns: 30% 35% 35%;
-            grid-template-rows: 260px 520px;
-        }
+                width: 96%;
+            }
+            #article2 {
+                display: flex;
+            }
+            #article2-1 {
+                width: 50%;
+                height: 520px;
+            }
+            #article2-2 {
+                width: 50%;
+                height: 520px;
+            }
         }
        
         @media (max-width: 768px){
             #wrap {
-            width: 100%;
-        }
-            #main {
-            grid-template-areas: 
-            "aside article1 article1"
-            "aside article2 article2"
-            "aside article3 article3";
-            grid-template-columns: 30% 70%;
-            grid-template-rows: 390px 390px;
-        }
-            #article3 {
+                width: 100%;
+            }
+            #article1 {
+                width: 100%;
+                height: 390px;
+            }
+            #article2-1 {
+                width: 100%;
+                height: 390px;
+            }
+            #article2-2 {
                 display: none;
+                
             }
         }
 
         @media (max-width: 480px){
-            #main {
-            grid-template-areas: 
-            "aside"
-            "article1"
-            "article2";
-            grid-template-columns: 100%;
-            grid-template-rows: 200px 430px 150px;
-        }
+            #aside {
+                width: 100%;
+                height: 200px;
+            }
+            #article1 {
+                height: 430px;
+            }
+            #article2-1 {
+                height: 150px;
+            }
         }
 
     </style>
 </head>
 <body>
     <div id="wrap">
-        <div id="header"></div>
-        <div id="nav"></div>
-        <div id="main">
-            <div id="aside"></div>
-            <div id="article1"></div>
-            <div id="article2"></div>
-            <div id="article3"></div>
-        </div>
-        <div id="footer"></div>
+        <header id="header"></header>
+        <nav id="nav"></nav>
+        <main id="main">
+            <aside id="aside"></aside>
+            <article1 id="article1"></article1>
+            <article2 id="article2">
+                <div id="article2-1"></div>
+                <div id="article2-2"></div>
+            </article2>
+        </main>
+        <footer id="footer"></footer>
     </div>
 
     <!-- 레이아웃 02_01 : float 방식 레이아웃 -->
