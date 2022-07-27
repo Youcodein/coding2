@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>반복문</title>
+    <title>함수</title>
 
 <link rel="stylesheet" href="../assets/css/style.css">
 <link rel="stylesheet" href="../assets/css/dracura.css">
@@ -48,7 +48,64 @@
             
 
             <h3 class="t_tit2">선언적 함수</h3>  
-            <p class="t_desc">#</p>
+            <p class="t_desc">선언적 함수는 함수를 선언할 때 이름을 붙여주는 함수를 의미합니다.</p>
+            <p class="t_box">
+                function func(){<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;실행문;<br>
+                }
+            </p>
+            <p class="t_box">
+                function compute(){<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;console.log('선언적 함수');<br>
+                }
+            </p>
+
+
+            <h3 class="t_tit2">익명 함수</h3>
+            <p class="t_desc">익명 함수는 변수에 데이터를 저장하여 변수를 함수처럼 사용할 수 있게 합니다. <i>익명 함수는 변수 선언 이후</i>에 호출해야 합니다.
+            </p>
+            <p class="t_box">
+                var compute = function(){<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;실행문;<br>
+                };
+            </p>
+            <p class="t_box">
+                var compute = function(){<br>
+                &nbsp;&nbsp;&nbsp;console.log('익명 함수');<br>
+                };
+            </p>
+
+
+
+            <h3 class="t_tit2">즉시 실행 함수</h3>  
+            <p class="t_desc">일회성으로 사용되는 함수입니다. <i>선언과 동시에 함수가 실행되고 함수명이 없기 때문에 재호출이 불가</i>합니다.</p>
+            <p class="t_box">
+                (function(){<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;실행문;<br>
+                })();
+            </p>
+            <p class="t_box">
+                (function(){<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;var sum = 10;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;console.log(sum);<br>
+                })();
+            </p>
+
+            <h3 class="t_tit2">return 함수</h3>  
+            <p class="t_desc">함수를 통해 처리된 결과를 반환시켜주는 명령어입니다.</p>
+            <p class="t_box">
+                function func(){<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;const str = "함수가 실행되었습니다.4";<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return str;<br>
+                }<br>
+                <br>        <div class="document">
+            <h2 class="t_tit">함수</h2>
+            <p class="t_desc2">함수는 프로그램에서 반복적으로 사용되는 기능을 만들어 내기 위한 코드들의 집합입니다.</p>
+
+            
+
+            <h3 class="t_tit2">선언적 함수</h3>  
+            <p class="t_desc">선언적 함수는 함수를 선언할 때 이름을 붙여주는 함수를 의미합니다.</p>
             <p class="t_box">
                 function func(){<br>
                 &nbsp;&nbsp;&nbsp;&nbsp;실행문;<br>
@@ -112,22 +169,198 @@
                 func("함수가 실행되었습니다.3");<br>
             </p>
 
-            <h3 class="t_tit2">01.0부터 99까지 출력하기</h3>
+            <h3 class="t_tit2">화살표 함수 : 선언적 함수</h3>  
+            <p class="t_desc">함수 표현식보다 단순하고 간결한 문법으로 함수를 표현할 수 있는 방법을 말합니다.
+                <i>화살표 =></i>를 사용하여 함수를 표현합니다.</p>
+            <p class="t_box">
+                
+                    //선언적 함수<br>
+                    function func(){<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;document.write("함수가 실행되었습니다.1");<br>
+                    }<br>
+                    func();<br>
+                    <br>
+                    //화살표 함수1<br>
+                    func = () => {<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;document.write("함수가 실행되었습니다.5");<br>
+                    }<br>
+                    <br>
+                    //화살표 함수2<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;func = () => document.write("함수가 실행되었습니다.5");<br>
+                    func();<br>
+            </p>
+
+            <h3 class="t_tit2">화살표 함수 : 익명 함수</h3>  
+            <p class="t_box">
+                //익명 함수
+                const func = function(){<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;document.write("함수가 실행되었습니다.6");<br>
+                }<br>
+                <br>
+                func();<br>
+                <br>
+                // 화살표 함수1<br>
+                const func = () => {<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;document.write("함수가 실행되었습니다.6");<br>
+                }<br>
+                <br>
+                // 화살표 함수2<br>
+                const func = () => document.write("함수가 실행되었습니다.6");<br>
+                <br>
+                func();<br>
+            </p>
+
+            <h3 class="t_tit2">화살표 함수 : 매개변수 함수</h3>  
+            <p class="t_box">
+                    // 매개변수 함수<br>
+                    function func(str){<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;document.write(str);<br>
+                    }<br>
+                    func("함수가 실행되었습니다.7");<br>
+                    <br>
+                    // 화살표 함수1<br>
+                    func = (str) => {<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;document.write(str);<br>
+                    }<br>
+                    <br>
+                    // 화살표 함수2<br>
+                    func = (str) => document.write(str);<br>
+                    <br>
+                    //화살표 함수3<br>
+                    func = str => document.write(str);<br>
+                    <br>
+                    func("함수가 실행되었습니다.7");<br>
+
+                <h3 class="t_tit2">화살표 함수 : 리턴값 함수</h3>  
+                <p class="t_box">
+                    //리턴값 함수<br>
+                    function func(){<br>
+                        const str = "함수가 실행되었습니다.8";<br>
+                        return str;<br>
+                    }<br>
+                    <br>
+                    //화살표 함수<br>
+                    func = () => {<br>
+                        const str = "함수가 실행되었습니다.8";<br>
+                        return str;<br>
+                    }<br>
+                    document.write(func());
+    
+
+            <h3 class="t_tit2">#</h3>
             <div class="t_code">
-<pre><code class="language-js">//0부터 99까지 출력하기
-for( let i=0; i&lt;100; i++){
-    document.write(i)
-}
+<pre><code class="language-js">#
 </code></pre>
             <div class="result">
                 <details>
                     <summary>결과 보기</summary>
                     <script>
-                    { 
-                        for( let i=0; i<100; i++){
-                            document.write(i,"<br>")
-                        }
-                    }
+                    </script>
+                </details>
+            </div>
+            </div>
+            <!--  01.0부터 99까지 출력하기 -->
+
+    </div>
+                document.write(func());<br>
+            </p>
+
+            <h3 class="t_tit2">매개변수 함수</h3>  
+            <p class="t_desc">함수를 호출할 때 전달하는 변수를 '매개변수'라 합니다.</p>
+            <p class="t_box">
+                function func(str){<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;document.write(str);<br>
+                }<br>
+                <br>
+                func("함수가 실행되었습니다.3");<br>
+            </p>
+
+            <h3 class="t_tit2">화살표 함수 : 선언적 함수</h3>  
+            <p class="t_desc">함수 표현식보다 단순하고 간결한 문법으로 함수를 표현할 수 있는 방법을 말합니다.
+                <i>화살표 =></i>를 사용하여 함수를 표현합니다.</p>
+            <p class="t_box">
+                
+                    //선언적 함수<br>
+                    function func(){<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;document.write("함수가 실행되었습니다.1");<br>
+                    }<br>
+                    func();<br>
+                    <br>
+                    //화살표 함수1<br>
+                    func = () => {<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;document.write("함수가 실행되었습니다.5");<br>
+                    }<br>
+                    <br>
+                    //화살표 함수2<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;func = () => document.write("함수가 실행되었습니다.5");<br>
+                    func();<br>
+            </p>
+
+            <h3 class="t_tit2">화살표 함수 : 익명 함수</h3>  
+            <p class="t_box">
+                //익명 함수
+                const func = function(){<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;document.write("함수가 실행되었습니다.6");<br>
+                }<br>
+                <br>
+                func();<br>
+                <br>
+                // 화살표 함수1<br>
+                const func = () => {<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;document.write("함수가 실행되었습니다.6");<br>
+                }<br>
+                <br>
+                // 화살표 함수2<br>
+                const func = () => document.write("함수가 실행되었습니다.6");<br>
+                <br>
+                func();<br>
+            </p>
+
+            <h3 class="t_tit2">화살표 함수 : 매개변수 함수</h3>  
+            <p class="t_box">
+                    // 매개변수 함수<br>
+                    function func(str){<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;document.write(str);<br>
+                    }<br>
+                    func("함수가 실행되었습니다.7");<br>
+                    <br>
+                    // 화살표 함수1<br>
+                    func = (str) => {<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;document.write(str);<br>
+                    }<br>
+                    <br>
+                    // 화살표 함수2<br>
+                    func = (str) => document.write(str);<br>
+                    <br>
+                    //화살표 함수3<br>
+                    func = str => document.write(str);<br>
+                    <br>
+                    func("함수가 실행되었습니다.7");<br>
+
+                <h3 class="t_tit2">화살표 함수 : 리턴값 함수</h3>  
+                <p class="t_box">
+                    //리턴값 함수<br>
+                    function func(){<br>
+                        const str = "함수가 실행되었습니다.8";<br>
+                        return str;<br>
+                    }<br>
+                    <br>
+                    //화살표 함수<br>
+                    func = () => {<br>
+                        const str = "함수가 실행되었습니다.8";<br>
+                        return str;<br>
+                    }<br>
+                    document.write(func());
+    
+
+            <h3 class="t_tit2">#</h3>
+            <div class="t_code">
+<pre><code class="language-js">#
+</code></pre>
+            <div class="result">
+                <details>
+                    <summary>결과 보기</summary>
+                    <script>
                     </script>
                 </details>
             </div>
