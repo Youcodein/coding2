@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0 auto;
+        padding: 0 auto;
+    }
+    #wrap {
+        width: 1200px;
+        background-color: #666;
+        font-size: 40px;
+    }
+    #header {
+        width: 1200px;
+        height: 100px;
+        background-color: #777;
+        overflow: hidden;
+    }
+    #header .logo {
+        width: 300px;
+        height: 100px;
+        background-color: #933;
+        float: left;
+        text-align: center;
+        line-height: 100px;
+    }
+    #header .menu {
+        width: 900px;
+        height: 100px;
+        background-color: #855;
+        float: left;
+        text-align: center;
+        line-height: 100px;
+    }
+    #banner {
+        width: 1200px;
+        height: 400px;
+        background-color: #888;
+        overflow: hidden;
+    }
+    #banner .slide {
+        width: 800px;
+        height: 400px;
+        background-color: #111;
+        float: left;
+        line-height: 400px;
+        text-align: center;
+    }
+    #banner .ads {
+        width: 400px;
+        height: 400px;
+        background-color: #222;
+        float: left;
+        line-height: 400px;
+        text-align: center;
+
+    }
+    #section {
+        width: 1200px;
+        height: 300px;
+        background-color: #999;
+        overflow: hidden;
+    }
+    #section .section1 {
+        width: 400px;
+        height: 300px;
+        background-color: #872F2F;
+        float: left;
+        text-align: center;
+        line-height: 300px;
+    }
+    #section .section2 {
+        width: 400px;
+        height: 300px;
+        background-color: #AA6262;
+        float: left;
+        text-align: center;
+        line-height: 300px;
+    }
+    #section .section3 {
+        width: 400px;
+        height: 300px;
+        background-color: #872F2F;
+        float: left;
+        text-align: center;
+        line-height: 300px;
+    }
+    #footer {
+        width: 1200px;
+        height: 100px;
+        background-color: #555;
+        overflow: hidden;
+    }
+    #footer .footer1{
+        width: 200px;
+        height: 100px;
+        background-color: #FF9595;
+        float: left;
+        text-align: center;
+        line-height: 100px;
+    }
+    #footer .footer2{
+        width: 800px;
+        height: 100px;
+        background-color: #BA6060;
+        float: left;
+        text-align: center;
+        line-height: 100px;
+    }
+    #footer .footer3{
+        width: 200px;
+        height: 100px;
+        background-color: #FF9595;
+        float: left;
+        text-align: center;
+        line-height: 100px;
+    }
+</style>
+<body>
+    <div id="wrap">
+        <div id="header">
+            <div class="logo"></div>
+            <div class="menu">
+                <!-- <script>
+                    for (let i=1; i<=13; i++)
+                    document.write(i);
+                </script> -->
+            </div>
+        </div>
+        <div id="banner">
+            <div class="slide">
+                <!-- <script>
+                    for (let i=1; i<10; i+=2)
+                    document.write(i);
+                </script> -->
+            </div>
+            <div class="ads"></div>
+        </div>
+        <div id="section">
+            <div class="section1"></div>
+            <div class="section2"></div>
+            <div class="section3"></div>
+        </div>
+        <div id="footer">
+            <div class="footer1"></div>
+            <div class="footer2"></div>
+            <div class="footer3"></div>
+        </div>
+    </div>
+    <script>
+        let name = ["로고","광고","공지사항","갤러리","팝업","푸터","COPYRIGHT","SNS"];
+    
+        const obj = {a:"로고",b:"",c:"",d:"광고",e:"공지사항",f:"갤러리",g:"팝업",h:"푸터",i:"COPYRIGHT",j:"SNS"};
+
+        document.querySelector(".logo").innerHTML = obj.a
+        document.querySelector(".menu").innerHTML = obj.b
+        document.querySelector(".slide").innerHTML = obj.c
+        document.querySelector(".section1").innerHTML = obj.d
+        document.querySelector(".section2").innerHTML = obj.e
+        document.querySelector(".section3").innerHTML = obj.f
+        document.querySelector(".logo").innerHTML = obj.g
+        document.querySelector(".logo").innerHTML = obj.h
+        document.querySelector(".logo").innerHTML = obj.i
+        document.querySelector(".logo").innerHTML = obj.j
+    </script>
+</body>
+</html>
