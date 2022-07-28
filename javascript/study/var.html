@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>자바스크립트 : 데이터 타입</title>
+    <title>전역변수/지역변수</title>
 
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/dracura.css">
@@ -76,8 +76,7 @@
 
             <hr>
 
-            <h3 class="t_tit2">예시 3-14</h3>
-            <p class="t_desc">함수 블록 안에 있는 kor 변수는 전역 변수입니다.</p>
+            <h3 class="t_tit2">예시 3-14)</h3>
 
             <div class="t_box">
                 var kor = 90;<br>
@@ -88,7 +87,10 @@
                 getScore();<br>
                 console.log(kor);   //100
             </div>
-            <h3 class="t_tit2">예시 3-15</h3>
+
+            <p class="t_desc">함수 블록 안에 있는 kor 변수는 전역 변수입니다. 그렇기 때문에 getScore()함수를 호출하게 되면 kor변수 값이 90에서 100으로 바뀌게 됩니다.</p>
+
+            <h3 class="t_tit2">예시 3-15)</h3>
             <div class="t_box">
                 var kor = 90;<br>
                 function getScore() {<br>
@@ -99,9 +101,16 @@
                 console.log(kor);   //90
             </div>
 
-            <h3 class="t_tit2">함수 레벨 스코프와 블록 레벨 스코프</h3>
+            <p class="t_desc">함수 블록 안의 kor 변수를 var로 정의하였습니다.
+                함수 블록 안에서 var로 선언된 변수는 지역 변수가 되며
+                함수 블록 밖의 전역 변수 kor과 다른 별도의 변수가 됩니다.
+                 함수 블록 안의 지역 변수는 <i>반드시 var로 선언</i> 해주어야 하며 함수의 지역 변수는 함수 블록 밖에서 사용 할 수 없습니다. </p>
+
+            <hr>
+
+            <h2 class="t_tit">함수 레벨 스코프와 블록 레벨 스코프</h2>
             <p class="t_desc"><i>var는 함수 블록{}에서만 지역 변수가 존재</i>하며 블록{}이나 제어문 블록{}에서는 지역 변수가 존재하지 않습니다.
-                ES6에서 새로 추가된 <i>let과 const는 블록{}이나 제어문 블록에서도 지역변수를 선언할 수 있습니다. </i>
+                ES6에서 새로 추가된 <i> let과 const는 블록{}이나 제어문 블록에서도 지역변수를 선언할 수 있습니다. </i> 
             </p>
 
             <h3 class="t_tit2">예시 3-14</h3>
@@ -128,7 +137,9 @@
             </div>
             <!-- //sample01 -->
 
-            <h3 class="t_tit2">var, let, const 비교 정리</h3>
+            <hr>
+
+            <h2 class="t_tit">var, let, const 비교 정리</h2>
             <table class="t_table">
                 <thead>
                     <tr>
