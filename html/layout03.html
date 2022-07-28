@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 <body>
-   <header id="header">
+    <header id="header">
         <h1><a href="#">라인 중학교 1학년 코딩반</a></h1>
         <span>이름 : 황유진</span>
     </header>
@@ -45,15 +45,14 @@
         <div class="document">
             <h2 class="t_tit">레이아웃3</h2>
             <p class="t_desc">
-                이번 레이아웃은 전체 영역이 들어간 구조입니다 
-                실제 사이트에서 이런 구조를 많이 사용하며, 컨테이너를 사용하여 가운데 영역을 설정합니다
+                이번 레이아웃은 section이 3개로 나누어진 레이아웃입니다.
             </p>
             <div class="t_iframe">
                 <iframe src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FJNWsPoD9FtmCpkEyHq5Phj%2FLayout%3Fnode-id%3D18%253A165" allowfullscreen></iframe>
             </div>
     
         <h3 class="t_tit2">float을 이용한 레이아웃</h3>
-        <p class="t_desc2">내가 해내고만다</p>
+        <p class="t_desc2">&lt;div&gt;태그를 float 속성 및 widh, height속성 등을 이용하여 레이아웃을 배치하는 방식입니다. </p>
 
         <div class="t_code">
 <pre><code class="language-css">* {
@@ -131,49 +130,275 @@
     width: 35%;
     height: 520px;
     
-    }
+}
 }
 @media (max-width: 780px){
 #wrap {
     width: 100%;
 }
 #article1 {
-    width: 70%;
-    height: 390px;
+width: 70%;
+height: 390px;
 }
 #article2 {
     width: 70%;
     height: 390px;
 }
 #article3 {
-        display: none;
-    } 
+    display: none;
+} 
 }
 
 @media (max-width: 480px){
 
-    #aside {
-    width: 100%;
-    height: 200px;
-    }
-    #article1 {
+#aside {
+width: 100%;
+height: 200px;
+}
+#article1 {
+width: 100%;
+height: 430px;
+}
+#article2 {
     width: 100%;
     height: 430px;
-    }
-    #article2 {
-        width: 100%;
-        height: 430px;
-    }
+}
 }
 </code></pre>
             </div>
             <div class="iframe">
-                <iframe height="300" style="width: 100%;" scrolling="no" title="Untitled" src="https://codepen.io/youJin2/embed/QWmMXyY?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
-                    See the Pen <a href="https://codepen.io/youJin2/pen/QWmMXyY">
-                    Untitled</a> by HwangYoujin (<a href="https://codepen.io/youJin2">@youJin2</a>)
+                <iframe height="300" style="width: 100%;" scrolling="no" title="lay3-float" src="https://codepen.io/youJin2/embed/zYWPzjv?default-tab=result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+                    See the Pen <a href="https://codepen.io/youJin2/pen/zYWPzjv">
+                    lay3-float</a> by HwangYoujin (<a href="https://codepen.io/youJin2">@youJin2</a>)
                     on <a href="https://codepen.io">CodePen</a>.
                 </iframe>
-            </div>           
+            </div>     
+                <!-- float -->
+
+            <h3 class="t_tit2">flex을 이용한 레이아웃</h3>
+            <p class="t_desc2">header와 footer를 제외한 나머지 요소들을 container 클래스로 묶고 container안의 요소들을 배치하는 방식입니다.</p>
+
+            <div class="t_code">
+<pre><code class="language-css">* {
+    margin: 0;
+    padding: 0;
+}
+#body {
+    background-color: #E1F5FE;
+}
+#wrap {
+    width: 1200px;
+    margin: 0 auto;
+}
+#header {
+    height: 100px;
+    background-color: #B3E5FC;
+}
+#nav {
+    height: 100px;
+    background-color: #81D4FA;
+}
+#main {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    height: 780px;
+}
+#aside {
+    width: 30%;
+    height: 780px;
+    background-color: #4FC3F7;
+    float: left;
+}
+#article1 {
+    width: 70%;
+    height: 260px;
+    background-color: #29B6F6;
+    float: left;
+}
+#article2-1 {
+    width: 100%;
+    height: 260px;
+    background-color: #03A9F4;
+    float: left;
+}
+#article2-2 {
+    width: 100%;
+    height: 260px;
+    background-color: #039BE5;
+    float: left;
+}
+#footer {
+    height: 100px;
+    background-color: #0288D1;
+}
+
+@media (max-width: 1300px){
+    #wrap {
+        width: 96%;
+    }
+    #article2 {
+        display: flex;
+    }
+    #article2-1 {
+        width: 50%;
+        height: 520px;
+    }
+    #article2-2 {
+        width: 50%;
+        height: 520px;
+    }
+}
+
+@media (max-width: 768px){
+    #wrap {
+        width: 100%;
+    }
+    #article1 {
+        width: 100%;
+        height: 390px;
+    }
+    #article2-1 {
+        width: 100%;
+        height: 390px;
+    }
+    #article2-2 {
+        display: none;
+        
+    }
+}
+
+@media (max-width: 480px){
+    #aside {
+        width: 100%;
+        height: 200px;
+    }
+    #article1 {
+        height: 430px;
+    }
+    #article2-1 {
+        height: 150px;
+    }
+}
+
+</code></pre>
+                </div>
+                <div class="iframe">
+                    <iframe height="300" style="width: 100%;" scrolling="no" title="lay3-flex" src="https://codepen.io/youJin2/embed/qBoVjKq?default-tab=result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+                        See the Pen <a href="https://codepen.io/youJin2/pen/qBoVjKq">
+                        lay3-flex</a> by HwangYoujin (<a href="https://codepen.io/youJin2">@youJin2</a>)
+                        on <a href="https://codepen.io">CodePen</a>.
+                    </iframe>
+                </div>           
+                <!-- flex -->
+
+            <h3 class="t_tit2">grid를 이용한 레이아웃</h3>
+            <p class="t_desc2">grid 레이아웃은 1차원 시스템인 플렉스 박스와는 다르게 열과 행 모두 다룰 수 있는 2차원 시스템이며, 
+                CSS 규칙에 따라 부모 요소(그리드 컨테이너)와 자식 요소(그리드 아이템)로 그리드 레이아웃 작업을 합니다.</p>
+
+            <div class="t_code">
+<pre><code class="language-css">* {
+    margin: 0;
+    padding: 0;
+}
+#body {
+    background-color: #E1F5FE;
+}
+#wrap {
+    width: 1200px;
+    margin: 0 auto;
+}
+#header {
+    height: 100px;
+    background-color: #B3E5FC;
+}
+#nav {
+    height: 100px;
+    background-color: #81D4FA;
+}
+#main {
+    display: grid;
+    grid-template-areas: 
+    "aside article1 article1"
+    "aside article2 article2"
+    "aside article3 article3";
+    grid-template-columns: 30% 70%;
+    grid-template-rows: 260px 260px 260px;
+}
+#aside {
+    background-color: #4FC3F7;
+    grid-area: aside;
+}
+#article1 {
+    background-color: #29B6F6;
+    grid-area: article1;
+}
+
+#article2 {
+    background-color: #03A9F4;
+    grid-area: article2;
+}
+#article3 {
+    background-color: #039BE5;
+    grid-area: article3;
+}
+#footer {
+    height: 100px;
+    background-color: #0288D1;
+}
+
+@media (max-width: 1300px){
+
+    #wrap {
+    width: 96%;
+}
+    #main {
+    grid-template-areas: 
+    "aside article1 article1"
+    "aside article2 article2"
+    "aside article3 article3";
+    grid-template-columns: 30% 35% 35%;
+    grid-template-rows: 260px 520px;
+}
+}
+
+@media (max-width: 768px){
+    #wrap {
+    width: 100%;
+}
+    #main {
+    grid-template-areas: 
+    "aside article1 article1"
+    "aside article2 article2"
+    "aside article3 article3";
+    grid-template-columns: 30% 70%;
+    grid-template-rows: 390px 390px;
+}
+    #article3 {
+        display: none;
+    }
+}
+
+@media (max-width: 480px){
+    #main {
+    grid-template-areas: 
+    "aside"
+    "article1"
+    "article2";
+    grid-template-columns: 100%;
+    grid-template-rows: 200px 430px 150px;
+}
+}
+</code></pre>
+                </div>
+                <div class="iframe">
+                    <iframe height="300" style="width: 100%;" scrolling="no" title="lay3-grid" src="https://codepen.io/youJin2/embed/dymZRjW?default-tab=result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+                        See the Pen <a href="https://codepen.io/youJin2/pen/dymZRjW">
+                        lay3-grid</a> by HwangYoujin (<a href="https://codepen.io/youJin2">@youJin2</a>)
+                        on <a href="https://codepen.io">CodePen</a>.
+                    </iframe>
+                </div>           
+            <!-- grid -->
         </div>
     </div>
 </main>

@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>레이아웃4</title>
     <style>
+        *{
+            margin: 0 auto;
+        }
         #wrap {
             width: 100%;
         }
@@ -35,18 +38,18 @@
             전체적인 틀, 스크립트 ---> id
             세부적인 영역, 반복  ----> class
          */
-         .container {
+        .container {
             width: 1200px;
             height: inherit;
             margin: 0 auto;
             background-color: rgba(0,0,0,0.3);
-         }
-         @media (max-width: 1220px){
+        }
+        @media (max-width: 1220px){
             #wrap{
                 width: 96%;
             }
-         }
-         @media (max-width: 768px){
+        }
+        @media (max-width: 768px){
             #wrap{
                 width: 100%;
             }
