@@ -35,6 +35,7 @@
                 <li><a href="study/if.html">조건문</a></li>
                 <li><a href="study/type.html">데이터 타입</a></li>
                 <li><a href="study/function.html">함수</a></li>
+                <li><a href="study/var.html">지역변수/전역변수</a></li>
             </ul>
         </nav>
     </header>
@@ -370,11 +371,12 @@ do {
     <!-- //footer --> 
     
     <script>
+        
 //제어문 : 조건문, 반복문, 중지, 건너뛰기
 // //01. if문
 // {
-//     //false, 0, undefined, null
-//     //true, 1, "0", "1" 0<10, []배열, {}객체
+// //     //false, 0, undefined, null.""(빈 문자열)-false로 나온다!(외우기)
+// //     //true, 1, "0", "1" 0<10, []배열, {}객체
 //     if(1){
 //         document.write("실행되었습니다(true).")
 //     } else {
@@ -382,7 +384,7 @@ do {
 //     }
 // }
 
-// //02. if문 생략
+// // //02. if문 생략
 // {
 //     const num = 100;
 
@@ -390,7 +392,7 @@ do {
 //     else document.write("실행되었습니다.(true).");
 // }
 
-// //03. 다중 if문
+// // //03. 다중 if문
 // {
 //     const num = 100;
 //     if( num == 90 ){
@@ -406,7 +408,7 @@ do {
 //     }
 // }
 
-// //04 중첩 if문
+// // //04 중첩 if문
 
 // {
 //     const num = 100;
@@ -424,7 +426,7 @@ do {
 //     }    
 // }
 
-// //05. 조건부 연산자(삼항 연산자)
+// // //05. 조건부 연산자(삼항 연산자)
 // {
 //     const num = 100;
 //     //num의 값이 100이면 true출력하고 아니면 false를 출력하세요.
@@ -437,7 +439,7 @@ do {
 //     (num == 100) ? document.write("true") : document.write("false")
 // }
 
-// //06 스위치 문
+// // //06 스위치 문(스위치랑 같다고 생각하면 된다. but 차이점 있음)
 // {
 //     const num = 100;
 
@@ -480,7 +482,7 @@ do {
         //     } while ( num<= 5 );
         // }
 
-        // //09. for문
+        // //09. for문(중요)
         // {
         //     for( let i=1; i<100; i++ ){
         //         document.write(i + ". 실행되었습니다.")
@@ -497,6 +499,24 @@ do {
         //     }
         // }
 
+        //11. break문(죽은 문법)
+        
+        //for문을 이용해서 1~20까지 출력
+        // for( let i = 1; i<20; i++ ){
+        //     document.write(i);
+        //     if( i == 10){
+        //         break;
+        //     }
+        // }
+
+        //12. continue문(죽은 문법)
+
+        for( let i = 1; i<=20; i++ ){
+            document.write(i);
+            if( i == 10){
+                continue;
+            }
+        }
 
     </script>
 </body>

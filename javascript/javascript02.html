@@ -35,6 +35,7 @@
                 <li><a href="study/if.html">조건문</a></li>
                 <li><a href="study/type.html">데이터 타입</a></li>
                 <li><a href="study/function.html">함수</a></li>
+                <li><a href="study/var.html">지역변수/전역변수</a></li>
             </ul>
         </nav>
     </header>
@@ -226,7 +227,7 @@ for(let i = 0; i &lt; arr.length; i++){
 
 //for문을 이용해서 출력...
 
-for(let i = 0; i < num.length; i++){
+for(let i = 0; i &lt; num.length; i++){
     document.write(num[i]);
 };
 
@@ -363,143 +364,45 @@ arr.map(function(element, index, array){
         hljs.highlightAll();
     </script>
     <script>
-        //01
-        {let x = 100,
-            y = 200,
-            z = "javascript";
+        //
+        const arr = [1,2,3,4,5,6,7,8,9]
 
-            // document.write(x);
-            // document.write(y);
-            // document.write(z);
-
-            document.querySelector(".sample01_result").innerHTML = x + "<br>" + y + "<br>" +z;
-        }
-        //02
+        //for문을 이용해서 하나씩 출력해주세요!
         {
-            const x = 100
-            y = 200
-            z = "javascript";
-
-            // document.write(x);
-            // document.write(y);
-            // document.write(z);
-
-            document.querySelector(".sample02_result").innerHTML = x + "<br>" + y + "<br>" +z;
-        }
-        //03
-        {
-            const arr = [100, 200, "javascript"];
-
-            // document.write(arr[0]);
-            // document.write(arr[1]);
-            // document.write(arr[2]);
-
-            document.querySelector(".sample03_result").innerHTML = arr[0] + "<br>" + arr[1] + "<br>" +arr[2];
-        }
-        //04
-        {
-            const arr = [100, 200, ["javascript","jquery"]];
-
-            // document.write(arr[0]);
-            // document.write(arr[1]);
-            // document.write(arr[2][0]);
-            // document.write(arr[2][1]);
-
-            document.querySelector(".sample04_result").innerHTML = arr[0] + "<br>" + arr[1] + "<br>" +arr[2][0]+ "<br>" +arr[2][1];
-        }
-        //05
-        {
-            const arr = [100, 200, "javascript"];
-
-            // document.write(arr.length);
-
-            document.querySelector(".sample05_result").innerHTML = arr.length;
+            for( let i=0; i<arr.length; i++ ){
+                document.write(arr[i]);
+            }
         }
 
-        //06 for문
-        {
-            const arr = [100, 200, 300, 400, 500];
+        //forEach
+    {
+        arr.forEach(function(el){
+            document.write(el);
+        });
+    }
 
+    //map
+    {
+        arr.map(function(el){
+            document.write(el);
+        });
+    }
 
-            // for ( let i=0; i<arr.length; i++){
-            //     document.write(arr[i]);
-            // }
+    //for in
+
+    {
+        for( let i in arr){
+            document.write(arr[i]);
         }
+    }
 
-        document.write("<br><br>");
+    //for of
 
-        //07. 배열 데이터 불러오기 : forEach();
-        {
-            const num = [100, 200, 300, 400, 500];
-
-            // //forEach()
-            // num.forEach(function(el){
-            //     document.write(el);
-            // });
-
-            // //forEach(element, index, array)
-            // num.forEach(function(element,index,array){
-            //     document.write(element);
-            //     document.write(index);
-            //     document.write(array);
-            // });
-        }
-
-        // document.write("<br><br>");
-
-        //08. 배열에 데이터 불러오기 : for of
-        {
-            const arr = [100, 200, 300, 400, 500];
-
-            // for ( let i=0; i<arr.length; i++){
-            //     document.write(arr[i]);
-            // }
-
-            // for( let i of arr ){
-            //     document.write(i);
-            // }
-        }
-
-        // document.write("<br><br>")
-
-        //09. 배열에 데이터 불러오기 : for in
-        {
-            // const arr = [100, 200, 300, 400, 500]
-
-            // for( let i in arr ){
-            //     // document.write(i);
-            //     document.write(arr[i]);
-            // }
-
-        }
-
-        // document.write("<br><br>");
-
-        //10. 배열 데이터 불러오기 : map()
-        {
-            const arr = [100, 200, 300, 400, 500];
-
-            //forEach를 이용해서 값을 출력해주세요!
-            //forEach와 map은 같다고 생각하기
-
-            // arr.forEach(function(el){
-            //     document.write(el);
-            // });
-
-            // document.write("<br><br>");
-
-            // arr.map(function(el){
-            //     document.write(el);
-            // });
-
-            // document.write("<br><br>");
-
-            // arr.map(function(element, index, array){
-            //     document.write(element);
-            //     document.write(index);
-            //     document.write(array);
-            // });
-        }
+    {
+        for( let i of arr){
+            document.write(i);
+        };
+    }
     </script>
 </body>
 </html>
