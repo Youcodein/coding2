@@ -4,11 +4,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>변수의 범위</title>
 </head>
 <body>
     <script>
-
+        //함수의 전역변수
+        var sum1 = 10;
+        function add1( {
+            sum1 = 20
+        });
+        add1 ();
+        console.log('전역'+sum1);
+        //함수의 지역변수
+        var sum2 =30;
+        function add2() {
+            var sum2 = 40;
+            console.log('지역' + sum2);
+        }
+        add2();
+        console.log('전역' + sum2);
+        //블록의 지역변수
+        
     </script>
 </body>
 </html>
