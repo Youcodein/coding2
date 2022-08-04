@@ -50,26 +50,25 @@
                 간단한 퀴즈 게임을 만들어보았습니다. 열심히 <i>공부</i>하세요!
             </p>
 
-            <hr>
-            <h3 class="t_tit2">정답 확인하기 유형</h3>
+            <h3 class="t_tit2">주관식 유형</h3>
             <div class="t_iframe" style="min-height: 1000px; padding-top: 0;">
-                <iframe src="https://hwangyoujin.github.io/coding2/javascript/effect/quizEffect01.html" frameborder="0"></iframe>
+                <iframe src="https://hwangyoujin.github.io/coding2/javascript/effect/quizEffect02.html" frameborder="0"></iframe>
             </div>
 
             <div class="t_link">
-                <a href="https://github.com/HWANGYoujin/coding2/blob/main/javascript/effect/quizEffect01.html" target="_blank">원본 소스 보기</a>
+                <a href="https://github.com/HWANGYoujin/coding2/blob/main/javascript/effect/quizEffect02.html" target="_blank">원본 소스 보기</a>
             </div>
 
             <h3 class="t_tit2"> 자바스크립트</h3>
-            <p class="t_desc2">
+            <p class="t_desc2">                
                 1. 선택자를 설정합니다.<br>
                 2. 문제 정보 데이터를 저장합니다.<br>
                 3. 문제 데이터를 출력합니다.<br>
                 &nbsp;&nbsp;(※innerText는 문자만을 인식하고 innerHTML은 태그까지 인식합니다.)<br>
-                4. 정답 버튼을 클릭하기 전까진 답을 확인할 수 없도록 정답을 숨깁니다. -> quizResult.style.display = "none"; <br>
-                5. 버튼을 클릭하면 숨겨진 정답이 보이게 합니다. ->addEventListener()메서드를 사용하여 버튼을 클릭했을 때 함수를 실행하게 합니다.<br>
-                &nbsp;&nbsp;(※addEventListener()는 특정 이벤트가 발생되었을 때, 특정 함수를 실행할 수 있게 해줍니다.)<br>
+                4. 답을 입력할 때 소문자와 대문자가 상관이 없게 소문자 치환을 해주고 여백도 없애줍니다. ->toLowerCase().trim()  <br>
+                5. 사용자가 정답을 입력하면 정답을 입력하는 칸을 없애고 정답을 보여줍니다.<br>
                 6. 클래스 like를 추가하여 정답을 확인하면 강아지가 웃는 모습이 보이게 합니다. -> quizDog.classList.add("like");<br>
+                7. 정답/오답에 따라 강아지 옆에 정답인지 오답인지를 알려줍니다.<br>
             </p>
             <div class="t_code">
 <pre><code class="language-js">//선택자
@@ -78,34 +77,52 @@ const quizNumber = document.querySelector(".quiz__question .number");           
 const quizAsk = document.querySelector(".quiz__question .ask");                 //퀴즈 질문
 const quizConfirm = document.querySelector(".quiz__answer .confirm");           //정답 확인 버튼
 const quizResult = document.querySelector(".quiz__answer .result");             //정답 결과
-const quizDog = document.querySelector(".quiz__view .dog");                     //강아지
+const quizInput = document.querySelector(".quiz__answer .input");               //사용자 정답
+const quizView = document.querySelector(".quiz__view");                     //강아지
 
-//문제 정보(데이터 저장)
+//문제 정보
 const answerType = "웹디자인기능사";
-const answerNum = 1;
-const answerAsk = "인접하는 두 색의 경계 부분에 색상, 명도, 채도의 대비가 더욱 강하게 일어나는 현상을 무엇이라고 합니까?";
-const answerResult = "연변대비";
+const answerNum = "2";
+const answerAsk = "기업의 새로운 이념 구축에 필요한 이미지와 커뮤니케이션 시스템을 의도적, 계획적으로 만들어내는 기업이미지통합 전략은 무엇인가요?";
+let answerResult = "CIP"; //const를 사용하면 데이터를 변경할 수 없다.
 
-//문제 출력(데이터 출력)
-quizType.innerText = answerType;
-quizNumber.innerText = answerNum + ". ";
-quizAsk.innerText = answerAsk;
-quizResult.innerText = answerResult;
+//문제 출력
+quizType.textContent = answerType;
+quizNumber.textContent = answerNum + ". ";
+quizAsk.textContent = answerAsk;
+quizResult.textContent = "정답은 : " + answerResult + "입니다.";
 
 //정답 숨기기
 quizResult.style.display = "none";
 
-//정답 확인
-//정답 버튼을 클릭하면 확인버튼 안보이게... but 숨겨진 정답은 보이게
-//정답을 확인하면 강아지가 웃고 있어야 함 //클래스 like 추가함
-quizConfirm.addEventListener("click", function(){
-    quizConfirm.style.display = "none";
-    quizResult.style.display = "block";
-    quizDog.classList.add("like");
-});
 
+//정답 확인
+quizConfirm.addEventListener("click", () => {
+    quizInput.style.display = "none";
+    quizResult.style.display = "block";
+    quizConfirm.style.display = "none";
+    //사용자 정답
+    const userWord = quizInput.value.toLowerCase().trim(); //소문자 치환, 여백 없애줌
+    answerResult = answerResult.toLowerCase().trim();
+    // console.log(userWord)
+    // console.log(answerResult)
+
+    //사용자 정답 == 문제 정답
+    if(userWord == answerResult){
+        //정답일 때
+        // alert("정답입니다.")
+        quizView.classList.add("like");
+    } else {
+        //오답일 때
+        quizView.classList.add("dislike");
+        // alert("오답입니다.")
+
+        
+    }
+});    //정답버튼을 클릭했을 때
 </code></pre>
             </div>
+
 
         </div>
 
