@@ -1,43 +1,36 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>변수의 범위</title>
-</head>
-<body>
-    <script>
-        //함수의 전역변수
-        var sum1 = 10;
-        function add1() {
-            sum1 = 20;
+&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;요소를 직접 선택하는 메서드&lt;/title&gt;
+    &lt;script&gt;&gt;
+        window.onload = function() {
+            var list1 = document.querySelector('#box1 &gt; ul &gt; li');
+            var list2 = document.querySelectorAll('#box2 &gt; ul &gt; li');
+            consolel.log(list1);
+            consolel.log(list2);
+            //list1.style.background = '#ff6600';
+            //list2[0].style.background = '#ccc';
+            //list2.item(1).style.background = '#ddd';
         };
-        add1 ();
-        console.log('전역'+sum1);
-        //함수의 지역변수
-        var sum2 =30;
-        function add2() {
-            var sum2 = 40;
-            console.log('지역' + sum2);
-        }
-        add2();
-        console.log('전역' + sum2);
-        //블록의 지역변수
-        
-        var num1 = 50;
-        if (num1 === 50) {
-            var num1 = 60;
-        }
-
-        console.log('전역' + num1);
-        let num2 = 70;
-        if (num2 === 70) {
-            let num2 = 80;
-            console.log('지역' + num2);
-        }
-
-        console.log('전역' + num2);
-    </script>
-</body>
-</html>
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div id="box1"&gt;
+        &lt;ul&gt;
+            &lt;li&gt;내용1&lt;/li&gt;
+            &lt;li&gt;내용2&lt;/li&gt;
+            &lt;li&gt;내용3&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;div id="box2"&gt;
+        &lt;ul&gt;
+            &lt;li&gt;내용4&lt;/li&gt;
+            &lt;li&gt;내용5&lt;/li&gt;
+            &lt;li&gt;내용6&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
