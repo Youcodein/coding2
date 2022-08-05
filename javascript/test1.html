@@ -8,21 +8,20 @@
 </head>
 <body>
     <script>
-        //1. 선언적 함수
-        function func(){
-            document.write("함수가 실행되었습니다.1");
-        };
-        func();
+    const arr = ["무엇인가요?", "누구는 무엇인가요?", "?", 4, 5, 6, 7, 8, 9];
+    //for문 이용하여 하나씩 출력
 
-        //2. 익명 함수
-        ㅎㅎㅎ머엿징
-
-
-        //3. 매개변수 함수
-
-        //4. 리턴 함수
-
-        //5. 화살표 함수
+    for( let i = 0; i < arr.length; i++){
+        document.write(arr[i]);
+    } //let 생략가능
+    
+    document.write("<br>");
+    
+    //forEach
+    arr.forEach(function(e, i, a){
+        document.write(e);
+    }); //첫번째 함수가 실행되고 두번째 함수가 실행된다 - 콜백함수
     </script>
-    </body>
+
+</body>
 </html>
