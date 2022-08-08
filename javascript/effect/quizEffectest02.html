@@ -9,7 +9,7 @@
     <link href="https://webfontworld.github.io/NexonMabinogi/MabinogiClassic.css" rel="stylesheet">
     <title>퀴즈 이펙트</title>
     <link rel="stylesheet" href="../assets/css/quiz.css">
-   
+
 </head>
 
 <body>
@@ -81,7 +81,7 @@
         const quizResult = document.querySelector(".quiz__answer .result");             //정답 결과
         const quizInput = document.querySelector(".quiz__answer .input");               //사용자 정답
         const quizView = document.querySelector(".quiz__view");                     //강아지
-    
+
         //문제 정보
         const answerType = "웹디자인기능사";
         const answerNum = "2";
@@ -90,31 +90,32 @@
 
         //문제 출력
 
-        quizType.innerText = answerType;
-        quizNumber.innerText = answerNum;
-        quizAsk.innerText = answerAsk;
-        quizResult.innerText = answerResult;
+        quizType.textContent = answerType;
+        quizNumber.textContent = answerNum + ". ";
+        quizAsk.textContent = answerAsk;
+        quizResult.textContent = answerResult;
+
 
         //정답 삭제
+
         quizResult.style.display = "none";
 
 
         //정답확인
+        quizConfirm.addEventListener("click", () => {
 
-        quizConfirm.addEventListener("click",() => {
-            quizInput.style.display = "none";
-            quizResult.style.display = "block";
-            quizConfirm.style.display = "none";
+            const userWord = quizInput.value;
 
+            if (userWord == answerResult) {
 
-            const userWord = quizInput.value
-            
-            if(userWord == answerResult){
-                quizView.classList.add("like")
+                quizView.classList.add("like");
             } else {
-                quizView.classList.add("dislike")
-            }
+                quizView.classList.add("dislike");
+            };
         });
+
+
+
     </script>
 </body>
 
