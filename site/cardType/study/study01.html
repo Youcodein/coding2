@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,46 +8,176 @@
     <title>HTML 레퍼런스 북</title>
 
     <link rel="stylesheet" href="asset/css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/base16/railscasts.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/base16/railscasts.min.css">
 
 
     <!-- 구글 아이콘 -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
+
 <body>
     <header id="header">
         <h1><a href="#">라인 중학교 1학년 코딩반</a></h1>
         <span>이름 : 황유진</span>
     </header>
-<!-- header -->
+    <!-- header -->
 
-<main id="main">
-    <div class="main_refer">
+    <main id="main">
+        <div class="main_refer">
             <div class="document">
-                <h2 class="t_tit">카드유형</h2>
+                <h2 class="t_tit" data-ke-size="size26">카드유형2</h2>
+                <p class="t_desc" data-ke-size="size16">카드 유형 레이아웃 사이트입니다. html과 css로 작업하였습니다.</p>
+                <div class="t_iframe" style="min-height: 1000px; padding-top: 0;"><iframe
+                        src="https://youcodein.github.io/coding2/site/cardType/cardType02.html"
+                        frameborder="0"></iframe></div>
+                <div class="t_link"><a href="https://youcodein.github.io/coding2/site/cardType/cardType02.html"
+                        target="_blank" rel="noopener">원본 사이트 보기</a></div>
+                <div class="t_link"><a
+                        href="https://github.com/Youcodein/coding2/blob/main/site/cardType/cardType02.html"
+                        target="_blank" rel="noopener">원본 소스 보기</a></div>
+                <h2 data-ke-size="size26">레이아웃 설정</h2>
+                <p class="t_desc2" data-ke-size="size16">figma로 그리드와 사이트의 레이아웃을 잡습니다.</p>
+                <div class="t_iframe"><iframe src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FTNqhMyejddfylXxue7gjHH%2F%25EC%2582%25AC%25EC%259D%25B4%25ED%258A%25B8-%25EB%25A7%258C%25EB%2593%25A4%25EA%25B8%25B0%3Fnode-id%3D26%253A3" allowfullscreen></iframe></div>
+                <h2 data-ke-size="size26">HTML</h2>
+                <p class="t_desc2" data-ke-size="size16">html 소스입니다.</p>
+                <div class="t_code">
+<pre class="language-html"><code>&lt;body&gt;
+&lt;section id="cardType" class="card__wrap nexon section"&gt;
+    &lt;h2&gt;귀여운 앵무새를 보세요&lt;/h2&gt;
+    &lt;p&gt;
+        화려한 앵무새의 광기, 폭력성, 그리고 귀여움을 알리려고 합니다.&lt;br&gt;
+        사람들이 뭐라고 할 때도 있지만 그런 부분까지 정말 귀여운걸요 예쁜 우리 앵무새들의 매력에 빠져보세요.
+    &lt;/p&gt;
+    &lt;div class="card__inner container"&gt;
+        &lt;article class="card"&gt;
+            &lt;figure class="card__header"&gt;
+                &lt;img src="img/Card_bg_2_01.jpg" alt="멋진 글을 적어보세요."&gt;
+            &lt;/figure&gt;
+            &lt;div class="card__body"&gt;
+                &lt;h3 class="tit"&gt;멋진 앵무들의 생활
+                    &lt;a class="btn" href="/"&gt;
+                        &lt;svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg"&gt;
+                            &lt;rect width="24" height="24" rx="5" fill="#71D1D7" /&gt;
+                        &lt;/svg&gt;
+                    &lt;/a&gt;
+                &lt;/h3&gt;
 
-                <div class="t_iframe" style="min-height: 1000px; padding-top: 0;">
-                    <iframe src="https://youcodein.github.io/coding2/site/cardType/cardType01.html" frameborder="0"></iframe>
-                </div>
-                <div class="t_link">
-                    <a href="https://youcodein.github.io/coding2/site/cardType/cardType01.html" target="_blank">원본 사이트 보기</a>
-                </div>
-                <div class="t_link">
-                    <a href="https://github.com/Youcodein/coding2/blob/main/site/cardType/cardType01.html" target="_blank">원본 소스 보기</a>
-                </div>
-                <p class="t_desc">
-                    사이트를 만들 때 가장 기본이 되는 레이아웃입니다.
-                </p>
-                <div class="t_iframe">
-                    <iframe src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FTNqhMyejddfylXxue7gjHH%2F%25EC%2582%25AC%25EC%259D%25B4%25ED%258A%25B8-%25EB%25A7%258C%25EB%2593%25A4%25EA%25B8%25B0%3Fnode-id%3D4%253A50" allowfullscreen></iframe>
-                </div>
+                &lt;p class="desc"&gt;
+                    멋진 앵무새들 생활을 보세요. 청금강은 사람들이 알고 있는
+                    대표적인 앵무새입니다. 화려한 그 모습....
+                &lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/article&gt;
 
-            <div class="t_code">
-<pre><code class="language-css">/* fonts */
-@import url('https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css');
+        &lt;article class="card"&gt;
+            &lt;figure class="card__header"&gt;
+                &lt;img src="img/Card_bg_2_02.jpg" alt="당신의 추억을 기록하세요"&gt;
+            &lt;/figure&gt;
+            &lt;div class="card__body"&gt;
+                &lt;h3 class="tit"&gt;멋진 앵무들의 생활&lt;/h3&gt;
+                &lt;p class="desc"&gt;
+                    멋진 앵무새들 생활을 보세요. 청금강은 사람들이 알고 있는
+                    대표적인 앵무새입니다. 화려한 그 모습....
+                &lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/article&gt;
+
+        &lt;article class="card"&gt;
+            &lt;figure class="card__header"&gt;
+                &lt;img src="img/Card_bg_2_03.jpg" alt="당신의 추억을 장식하세요"&gt;
+            &lt;/figure&gt;
+            &lt;div class="card__body"&gt;
+                &lt;h3 class="tit"&gt;멋진 앵무들의 생활&lt;/h3&gt;
+                &lt;p class="desc"&gt;
+                    멋진 앵무새들 생활을 보세요. 청금강은 사람들이 알고 있는
+                    대표적인 앵무새입니다. 화려한 그 모습....
+                &lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/article&gt;
+
+        &lt;article class="card"&gt;
+            &lt;figure class="card__header"&gt;
+                &lt;img src="img/Card_bg_2_04.jpg" alt="당신의 추억을 장식하세요"&gt;
+            &lt;/figure&gt;
+            &lt;div class="card__body"&gt;
+                &lt;h3 class="tit"&gt;멋진 앵무들의 생활&lt;/h3&gt;
+                &lt;p class="desc"&gt;
+                    멋진 앵무새들 생활을 보세요. 청금강은 사람들이 알고 있는
+                    대표적인 앵무새입니다. 화려한 그 모습....
+                &lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/article&gt;
+    &lt;/div&gt;
+
+    &lt;div class="card__inner container"&gt;
+        &lt;article class="card"&gt;
+            &lt;figure class="card__header"&gt;
+                &lt;img src="img/Card_bg_2_05.jpg" alt="멋진 글을 적어보세요."&gt;
+            &lt;/figure&gt;
+            &lt;div class="card__body"&gt;
+                &lt;h3 class="tit"&gt;멋진 앵무들의 생활&lt;/h3&gt;
+                &lt;p class="desc"&gt;
+                    멋진 앵무새들 생활을 보세요. 청금강은 사람들이 알고 있는
+                    대표적인 앵무새입니다. 화려한 그 모습....
+                &lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/article&gt;
+
+        &lt;article class="card"&gt;
+            &lt;figure class="card__header"&gt;
+                &lt;img src="img/Card_bg_2_06.jpg" alt="당신의 추억을 기록하세요"&gt;
+            &lt;/figure&gt;
+            &lt;div class="card__body"&gt;
+                &lt;h3 class="tit"&gt;멋진 앵무들의 생활&lt;/h3&gt;
+                &lt;p class="desc"&gt;
+                    멋진 앵무새들 생활을 보세요. 청금강은 사람들이 알고 있는
+                    대표적인 앵무새입니다. 화려한 그 모습....
+                &lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/article&gt;
+
+        &lt;article class="card"&gt;
+            &lt;figure class="card__header"&gt;
+                &lt;img src="img/Card_bg_2_07.jpg" alt="당신의 추억을 장식하세요"&gt;
+            &lt;/figure&gt;
+            &lt;div class="card__body"&gt;
+                &lt;h3 class="tit"&gt;멋진 앵무들의 생활&lt;/h3&gt;
+                &lt;p class="desc"&gt;
+                    멋진 앵무새들 생활을 보세요. 청금강은 사람들이 알고 있는
+                    대표적인 앵무새입니다. 화려한 그 모습....
+                &lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/article&gt;
+
+        &lt;article class="card"&gt;
+            &lt;figure class="card__header"&gt;
+                &lt;img src="img/Card_bg_2_08.jpg" alt="당신의 추억을 장식하세요"&gt;
+            &lt;/figure&gt;
+            &lt;div class="card__body"&gt;
+                &lt;h3 class="tit"&gt;멋진 앵무들의 생활&lt;/h3&gt;
+                &lt;p class="desc"&gt;
+                    멋진 앵무새들 생활을 보세요. 청금강은 사람들이 알고 있는
+                    대표적인 앵무새입니다. 화려한 그 모습....
+                &lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/article&gt;
+    &lt;/div&gt;
+&lt;/section&gt;
+&lt;/body&gt;
+</code></pre>
+                </div>
+                <!-- html -->
+                <h2 data-ke-size="size26">CSS</h2>
+                <p class="t_desc2" data-ke-size="size16">css 소스입니다. figma로 설정해놓은 레이아웃이나 zaplin을 보며 적절하게 css를 설정해줍니다.</p>
+                <div class="t_code">
+<pre class="language-css"><code>/* fonts */
+@import url('https://webfontworld.github.io/gmarket/GmarketSans.css');
 
 .nexon {
-    font-family: 'NexonLv1Gothic';
+    font-family: 'GmarketSans';
     font-weight: 400;
 }
 
@@ -109,44 +240,50 @@ img {
 
 .card {
     width: 32%;
-    background: #f5f5f5;
 }
 
-.card__body {
-    padding: 24px;
+.card__header {
+    width: 275px;
+    height: 200px;
+    margin: 0 0 20px;
+    border-radius: 10px;
+    background-color: #d9d9d9;
 }
+
+.card__body {}
 
 .card__body .tit {
-    font-size: 24px;
-    margin-bottom: 10px;
+    font-size: 28px;
+    margin: 20px 18px 10px 0;
 }
 
 .card__body .desc {
     font-size: 18px;
     line-height: 1.4;
     color: #666;
-    margin-bottom: 20px;
+    margin: 10px 0 0;
     font-weight: 300;
+    margin: 0 20px 50px 0;
 }
 
-.card__body .btn {}
+.card__body .btn {
+    text-align: right;
+}
 </code></pre>
-                </div>     
-            <!-- float -->
-
+                </div>
             </div>
-        </div>
     </main>
-<!-- header -->
+    <!-- header -->
 
     <footer id="footer">
         <a href="mailto:foryoucodin@gmail.com">foryoucodin@gmail.com</a>
-    </footer> 
-<!-- footer -->
+    </footer>
+    <!-- footer -->
 
-<script src="assets/js/highlight.min.js"></script>
-<script>
-    hljs.highlightAll();
-</script>
+    <script src="assets/js/highlight.min.js"></script>
+    <script>
+        hljs.highlightAll();
+    </script>
 </body>
+
 </html>

@@ -1,68 +1,124 @@
-//선택자
-        const quizType = document.querySelector(".quiz__type");                         //퀴즈 종류
-        const quizNumber = document.querySelector(".quiz__question .number");           //퀴즈 번호
-        const quizAsk = document.querySelector(".quiz__question .ask");                 //퀴즈 질문
-        const quizConfirm = document.querySelector(".quiz__answer .confirm");           //정답 확인 버튼
-        const quizResult = document.querySelector(".quiz__answer .result");             //정답 결과
-        const quizView = document.querySelector(".quiz__view");                     //강아지
-        const quizSelects = document.querySelector(".quiz__selects");               //객관식 보기
-        const quizChoice = quizSelects.querySelectorAll(".choice");                    //객관식 보기
-        const quizSelect = quizSelects.querySelectorAll(".select");                    //객관식 보기
+&lt;body&gt;
+    &lt;section id="cardType" class="card__wrap nexon section"&gt;
+        &lt;h2&gt;귀여운 앵무새를 보세요&lt;/h2&gt;
+        &lt;p&gt;
+            화려한 앵무새의 광기, 폭력성, 그리고 귀여움을 알리려고 합니다.&lt;br&gt;
+            사람들이 뭐라고 할 때도 있지만 그런 부분까지 정말 귀여운걸요 예쁜 우리 앵무새들의 매력에 빠져보세요.
+        &lt;/p&gt;
+        &lt;div class="card__inner container"&gt;
+            &lt;article class="card"&gt;
+                &lt;figure class="card__header"&gt;
+                    &lt;img src="img/Card_bg_2_01.jpg" alt="멋진 글을 적어보세요."&gt;
+                &lt;/figure&gt;
+                &lt;div class="card__body"&gt;
+                    &lt;h3 class="tit"&gt;멋진 앵무들의 생활
+                        &lt;a class="btn" href="/"&gt;
+                            &lt;svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg"&gt;
+                                &lt;rect width="24" height="24" rx="5" fill="#71D1D7" /&gt;
+                            &lt;/svg&gt;
+                        &lt;/a&gt;
+                    &lt;/h3&gt;
 
+                    &lt;p class="desc"&gt;
+                        멋진 앵무새들 생활을 보세요. 청금강은 사람들이 알고 있는
+                        대표적인 앵무새입니다. 화려한 그 모습....
+                    &lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/article&gt;
 
-        //1. 문제 정보
-        const quizInfo = [
-            {
-            answerType : "웹디자인기능사 2022년 01회",
-            answerNum : "1",
-            answerAsk : "자연에서 쉽게 찾을 수 있고 온화함이 있지만, 때로는 단조로움을 주는 디자인 원리는?",
-            answerChoice : ["유사조화", "대비조화", "대칭", "비대칭"],
-            answerResult : "1",
-            answerEx : "자연에서 쉽게 찾을 수 있고 온화함이 있지만, 때로는 단조로움을 주는 디자인 원리는 유사조화다.",
-            }
-        ];
+            &lt;article class="card"&gt;
+                &lt;figure class="card__header"&gt;
+                    &lt;img src="img/Card_bg_2_02.jpg" alt="당신의 추억을 기록하세요"&gt;
+                &lt;/figure&gt;
+                &lt;div class="card__body"&gt;
+                    &lt;h3 class="tit"&gt;멋진 앵무들의 생활&lt;/h3&gt;
+                    &lt;p class="desc"&gt;
+                        멋진 앵무새들 생활을 보세요. 청금강은 사람들이 알고 있는
+                        대표적인 앵무새입니다. 화려한 그 모습....
+                    &lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/article&gt;
 
-        //2. 문제 출력
-            //2-1. 문제 출력 함수
-            function updateQuiz() {
-                
+            &lt;article class="card"&gt;
+                &lt;figure class="card__header"&gt;
+                    &lt;img src="img/Card_bg_2_03.jpg" alt="당신의 추억을 장식하세요"&gt;
+                &lt;/figure&gt;
+                &lt;div class="card__body"&gt;
+                    &lt;h3 class="tit"&gt;멋진 앵무들의 생활&lt;/h3&gt;
+                    &lt;p class="desc"&gt;
+                        멋진 앵무새들 생활을 보세요. 청금강은 사람들이 알고 있는
+                        대표적인 앵무새입니다. 화려한 그 모습....
+                    &lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/article&gt;
 
-                quizType.textContent = quizInfo[0].answerType;
-                quizNumber.textContent = quizInfo[0].answerNum + ". ";
-                quizAsk.textContent = quizInfo[0].answerAsk;
-                quizResult.textContent = quizInfo[0].answerEx;
+            &lt;article class="card"&gt;
+                &lt;figure class="card__header"&gt;
+                    &lt;img src="img/Card_bg_2_04.jpg" alt="당신의 추억을 장식하세요"&gt;
+                &lt;/figure&gt;
+                &lt;div class="card__body"&gt;
+                    &lt;h3 class="tit"&gt;멋진 앵무들의 생활&lt;/h3&gt;
+                    &lt;p class="desc"&gt;
+                        멋진 앵무새들 생활을 보세요. 청금강은 사람들이 알고 있는
+                        대표적인 앵무새입니다. 화려한 그 모습....
+                    &lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/article&gt;
+        &lt;/div&gt;
 
-                //2-1-1. 보기 출력
-                for ( let i = 0; i&lt;4; i++) {
-                    quizChoice[i].textContent = quizInfo[0].answerChoice[i];
-                }
-                //2-1-2. 해설 숨기기
-                quizResult.style.display = "none"
-            }
-            
-            updateQuiz()
+        &lt;div class="card__inner container"&gt;
+            &lt;article class="card"&gt;
+                &lt;figure class="card__header"&gt;
+                    &lt;img src="img/Card_bg_2_05.jpg" alt="멋진 글을 적어보세요."&gt;
+                &lt;/figure&gt;
+                &lt;div class="card__body"&gt;
+                    &lt;h3 class="tit"&gt;멋진 앵무들의 생활&lt;/h3&gt;
+                    &lt;p class="desc"&gt;
+                        멋진 앵무새들 생활을 보세요. 청금강은 사람들이 알고 있는
+                        대표적인 앵무새입니다. 화려한 그 모습....
+                    &lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/article&gt;
 
-        //3. 정답 확인
-        function answerQuiz() {
-            //사용자 선택한 정답 == 문제 정답
-            //사용자가 클릭한 input박스를 가져와야 한다. ---&gt; checked 확인
+            &lt;article class="card"&gt;
+                &lt;figure class="card__header"&gt;
+                    &lt;img src="img/Card_bg_2_06.jpg" alt="당신의 추억을 기록하세요"&gt;
+                &lt;/figure&gt;
+                &lt;div class="card__body"&gt;
+                    &lt;h3 class="tit"&gt;멋진 앵무들의 생활&lt;/h3&gt;
+                    &lt;p class="desc"&gt;
+                        멋진 앵무새들 생활을 보세요. 청금강은 사람들이 알고 있는
+                        대표적인 앵무새입니다. 화려한 그 모습....
+                    &lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/article&gt;
 
-            for( let i=0; i&lt;quizSelect.length; i++){
-                if(quizSelect[i].checked == true){  //보기에 체크가 된 상태
-                    //체크된 번호 == 문제 번호
-                    if(quizSelect[i].value == quizInfo[0].answerResult){
-                        // alert("정답")
-                        quizView.classList.add("like");
-                    } else {
-                        // alert("오답")
-                        quizView.classList.add("dislike");
-                        quizResult.style.display = "block"
-                        quizConfirm.style.display = "none"
-                    }
-                }
-            }
-        }
+            &lt;article class="card"&gt;
+                &lt;figure class="card__header"&gt;
+                    &lt;img src="img/Card_bg_2_07.jpg" alt="당신의 추억을 장식하세요"&gt;
+                &lt;/figure&gt;
+                &lt;div class="card__body"&gt;
+                    &lt;h3 class="tit"&gt;멋진 앵무들의 생활&lt;/h3&gt;
+                    &lt;p class="desc"&gt;
+                        멋진 앵무새들 생활을 보세요. 청금강은 사람들이 알고 있는
+                        대표적인 앵무새입니다. 화려한 그 모습....
+                    &lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/article&gt;
 
-
-        //4. 정답 클릭
-        quizConfirm.addEventListener("click",answerQuiz);
+            &lt;article class="card"&gt;
+                &lt;figure class="card__header"&gt;
+                    &lt;img src="img/Card_bg_2_08.jpg" alt="당신의 추억을 장식하세요"&gt;
+                &lt;/figure&gt;
+                &lt;div class="card__body"&gt;
+                    &lt;h3 class="tit"&gt;멋진 앵무들의 생활&lt;/h3&gt;
+                    &lt;p class="desc"&gt;
+                        멋진 앵무새들 생활을 보세요. 청금강은 사람들이 알고 있는
+                        대표적인 앵무새입니다. 화려한 그 모습....
+                    &lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/article&gt;
+        &lt;/div&gt;
+    &lt;/section&gt;
+&lt;/body&gt;
