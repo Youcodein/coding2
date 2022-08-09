@@ -8,10 +8,10 @@
     <title>카드 유형01</title>
     <style>
         /* fonts */
-        @import url('https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css');
+        @import url('https://webfontworld.github.io/gmarket/GmarketSans.css');
 
         .nexon {
-            font-family: 'NexonLv1Gothic';
+            font-family: 'GmarketSans';
             font-weight: 400;
         }
 
@@ -74,7 +74,6 @@
 
         .card {
             width: 32%;
-            background: #f5f5f5;
         }
 
         .card__header {
@@ -85,24 +84,25 @@
             background-color: #d9d9d9;
         }
 
-        .card__body {
-            padding: 24px;
-        }
+        .card__body {}
 
         .card__body .tit {
-            font-size: 24px;
-            margin-bottom: 10px;
+            font-size: 28px;
+            margin: 20px 18px 10px 0;
         }
 
         .card__body .desc {
             font-size: 18px;
             line-height: 1.4;
             color: #666;
-            margin-bottom: 20px;
+            margin: 10px 0 0;
             font-weight: 300;
+            margin: 0 20px 50px 0;
         }
 
-        .card__body .btn {}
+        .card__body .btn {
+            text-align: right;
+        }
     </style>
 </head>
 
@@ -111,92 +111,66 @@
         <h2>귀여운 앵무새를 보세요</h2>
         <p>
             화려한 앵무새의 광기, 폭력성, 그리고 귀여움을 알리려고 합니다.<br>
-            사람들이 뭐라고 할 때도 있지만 그런 부분까지  정말 귀여운걸요 예쁜 우리 앵무새들의 매력에 빠져보세요.
+            사람들이 뭐라고 할 때도 있지만 그런 부분까지 정말 귀여운걸요 예쁜 우리 앵무새들의 매력에 빠져보세요.
         </p>
         <div class="card__inner container">
             <article class="card">
                 <figure class="card__header">
-                    <img src="img/card_bg01.jpg" alt="멋진 글을 적어보세요.">
+                    <img src="img/Card_bg_2_01.jpg" alt="멋진 글을 적어보세요.">
                 </figure>
                 <div class="card__body">
-                    <h3 class="tit">멋진 글을 적어보세요.</h3>
-                    <p class="desc">어떠한 글이 멋진 글이라고 정확히 정할 수는 없습니다만 당신이 쓰는 글이라면 어떤 글이든 멋질 거예요! 연필을 들고 종이에 적어볼까요?</p>
-                    <a class="btn" href="/">
-                        더 자세히 보기
-                        <span>
-                            <svg width="65" height="8" viewBox="0 0 65 8" fill="none"
+                    <h3 class="tit">멋진 앵무들의 생활
+                        <a class="btn" href="/">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M64.3536 4.35355C64.5488 4.15829 64.5488 3.84171 64.3536 3.64645L61.1716 0.464466C60.9763 0.269204 60.6597 0.269204 60.4645 0.464466C60.2692 0.659728 60.2692 0.976311 60.4645 1.17157L63.2929 4L60.4645 6.82843C60.2692 7.02369 60.2692 7.34027 60.4645 7.53553C60.6597 7.7308 60.9763 7.7308 61.1716 7.53553L64.3536 4.35355ZM0 4.5H64V3.5H0V4.5Z"
-                                    fill="black" />
+                                <rect width="24" height="24" rx="5" fill="#71D1D7" />
                             </svg>
-                        </span>
-                    </a>
+                        </a>
+                    </h3>
+
+                    <p class="desc">
+                        멋진 앵무새들 생활을 보세요. 청금강은 사람들이 알고 있는
+                        대표적인 앵무새입니다. 화려한 그 모습....
+                    </p>
                 </div>
             </article>
 
             <article class="card">
                 <figure class="card__header">
-                    <img src="img/card_bg02.jpg" alt="당신의 추억을 기록하세요">
+                    <img src="img/Card_bg_2_02.jpg" alt="당신의 추억을 기록하세요">
                 </figure>
                 <div class="card__body">
-                    <h3 class="tit">당신의 추억을 기록하세요</h3>
-                    <p class="desc">기억으로 남기는 것도 좋은 방법이지만 기록으로 남기지 않은 기억은 금방 휘발되는 법이죠. 당신의 기억과 감정을 어딘가에 박제하세요.</p>
-                    <a class="btn" href="/">
-                        더 자세히 보기
-                        <span>
-                            <svg width="65" height="8" viewBox="0 0 65 8" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M64.3536 4.35355C64.5488 4.15829 64.5488 3.84171 64.3536 3.64645L61.1716 0.464466C60.9763 0.269204 60.6597 0.269204 60.4645 0.464466C60.2692 0.659728 60.2692 0.976311 60.4645 1.17157L63.2929 4L60.4645 6.82843C60.2692 7.02369 60.2692 7.34027 60.4645 7.53553C60.6597 7.7308 60.9763 7.7308 61.1716 7.53553L64.3536 4.35355ZM0 4.5H64V3.5H0V4.5Z"
-                                    fill="black" />
-                            </svg>
-                        </span>
-                    </a>
+                    <h3 class="tit">멋진 앵무들의 생활</h3>
+                    <p class="desc">
+                        멋진 앵무새들 생활을 보세요. 청금강은 사람들이 알고 있는
+                        대표적인 앵무새입니다. 화려한 그 모습....
+                    </p>
                 </div>
             </article>
 
             <article class="card">
                 <figure class="card__header">
-                    <img src="img/card_bg03.jpg" alt="당신의 추억을 장식하세요">
+                    <img src="img/Card_bg_2_03.jpg" alt="당신의 추억을 장식하세요">
                 </figure>
                 <div class="card__body">
-                    <h3 class="tit">당신의 추억을 장식하세요</h3>
-                    <p class="desc">당신의 감정을 시각적으로 표현하고 싶지 않으신가요? 스티커를 붙이세요. 그림을 그리세요. 당신의 추억을 장식하세요. 적절한 장식은 감정을 실감나게
-                        표현해줍니다.</p>
-                    <a class="btn" href="/">
-                        더 자세히 보기
-                        <span aria-hidden="true">
-                            <svg width="65" height="8" viewBox="0 0 65 8" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M64.3536 4.35355C64.5488 4.15829 64.5488 3.84171 64.3536 3.64645L61.1716 0.464466C60.9763 0.269204 60.6597 0.269204 60.4645 0.464466C60.2692 0.659728 60.2692 0.976311 60.4645 1.17157L63.2929 4L60.4645 6.82843C60.2692 7.02369 60.2692 7.34027 60.4645 7.53553C60.6597 7.7308 60.9763 7.7308 61.1716 7.53553L64.3536 4.35355ZM0 4.5H64V3.5H0V4.5Z"
-                                    fill="black" />
-                            </svg>
-                        </span>
-                    </a>
+                    <h3 class="tit">멋진 앵무들의 생활</h3>
+                    <p class="desc">
+                        멋진 앵무새들 생활을 보세요. 청금강은 사람들이 알고 있는
+                        대표적인 앵무새입니다. 화려한 그 모습....
+                    </p>
                 </div>
             </article>
 
             <article class="card">
                 <figure class="card__header">
-                    <img src="img/card_bg03.jpg" alt="당신의 추억을 장식하세요">
+                    <img src="img/Card_bg_2_04.jpg" alt="당신의 추억을 장식하세요">
                 </figure>
                 <div class="card__body">
-                    <h3 class="tit">당신의 추억을 장식하세요</h3>
-                    <p class="desc">당신의 감정을 시각적으로 표현하고 싶지 않으신가요? 스티커를 붙이세요. 그림을 그리세요. 당신의 추억을 장식하세요. 적절한 장식은 감정을 실감나게
-                        표현해줍니다.</p>
-                    <a class="btn" href="/">
-                        더 자세히 보기
-                        <span aria-hidden="true">
-                            <svg width="65" height="8" viewBox="0 0 65 8" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M64.3536 4.35355C64.5488 4.15829 64.5488 3.84171 64.3536 3.64645L61.1716 0.464466C60.9763 0.269204 60.6597 0.269204 60.4645 0.464466C60.2692 0.659728 60.2692 0.976311 60.4645 1.17157L63.2929 4L60.4645 6.82843C60.2692 7.02369 60.2692 7.34027 60.4645 7.53553C60.6597 7.7308 60.9763 7.7308 61.1716 7.53553L64.3536 4.35355ZM0 4.5H64V3.5H0V4.5Z"
-                                    fill="black" />
-                            </svg>
-                        </span>
-                    </a>
+                    <h3 class="tit">멋진 앵무들의 생활</h3>
+                    <p class="desc">
+                        멋진 앵무새들 생활을 보세요. 청금강은 사람들이 알고 있는
+                        대표적인 앵무새입니다. 화려한 그 모습....
+                    </p>
                 </div>
             </article>
         </div>
@@ -204,87 +178,53 @@
         <div class="card__inner container">
             <article class="card">
                 <figure class="card__header">
-                    <img src="img/card_bg01.jpg" alt="멋진 글을 적어보세요.">
+                    <img src="img/Card_bg_2_05.jpg" alt="멋진 글을 적어보세요.">
                 </figure>
                 <div class="card__body">
-                    <h3 class="tit">멋진 글을 적어보세요.</h3>
-                    <p class="desc">어떠한 글이 멋진 글이라고 정확히 정할 수는 없습니다만 당신이 쓰는 글이라면 어떤 글이든 멋질 거예요! 연필을 들고 종이에 적어볼까요?</p>
-                    <a class="btn" href="/">
-                        더 자세히 보기
-                        <span>
-                            <svg width="65" height="8" viewBox="0 0 65 8" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M64.3536 4.35355C64.5488 4.15829 64.5488 3.84171 64.3536 3.64645L61.1716 0.464466C60.9763 0.269204 60.6597 0.269204 60.4645 0.464466C60.2692 0.659728 60.2692 0.976311 60.4645 1.17157L63.2929 4L60.4645 6.82843C60.2692 7.02369 60.2692 7.34027 60.4645 7.53553C60.6597 7.7308 60.9763 7.7308 61.1716 7.53553L64.3536 4.35355ZM0 4.5H64V3.5H0V4.5Z"
-                                    fill="black" />
-                            </svg>
-                        </span>
-                    </a>
+                    <h3 class="tit">멋진 앵무들의 생활</h3>
+                    <p class="desc">
+                        멋진 앵무새들 생활을 보세요. 청금강은 사람들이 알고 있는
+                        대표적인 앵무새입니다. 화려한 그 모습....
+                    </p>
                 </div>
             </article>
 
             <article class="card">
                 <figure class="card__header">
-                    <img src="img/card_bg02.jpg" alt="당신의 추억을 기록하세요">
+                    <img src="img/Card_bg_2_06.jpg" alt="당신의 추억을 기록하세요">
                 </figure>
                 <div class="card__body">
-                    <h3 class="tit">당신의 추억을 기록하세요</h3>
-                    <p class="desc">기억으로 남기는 것도 좋은 방법이지만 기록으로 남기지 않은 기억은 금방 휘발되는 법이죠. 당신의 기억과 감정을 어딘가에 박제하세요.</p>
-                    <a class="btn" href="/">
-                        더 자세히 보기
-                        <span>
-                            <svg width="65" height="8" viewBox="0 0 65 8" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M64.3536 4.35355C64.5488 4.15829 64.5488 3.84171 64.3536 3.64645L61.1716 0.464466C60.9763 0.269204 60.6597 0.269204 60.4645 0.464466C60.2692 0.659728 60.2692 0.976311 60.4645 1.17157L63.2929 4L60.4645 6.82843C60.2692 7.02369 60.2692 7.34027 60.4645 7.53553C60.6597 7.7308 60.9763 7.7308 61.1716 7.53553L64.3536 4.35355ZM0 4.5H64V3.5H0V4.5Z"
-                                    fill="black" />
-                            </svg>
-                        </span>
-                    </a>
+                    <h3 class="tit">멋진 앵무들의 생활</h3>
+                    <p class="desc">
+                        멋진 앵무새들 생활을 보세요. 청금강은 사람들이 알고 있는
+                        대표적인 앵무새입니다. 화려한 그 모습....
+                    </p>
                 </div>
             </article>
 
             <article class="card">
                 <figure class="card__header">
-                    <img src="img/card_bg03.jpg" alt="당신의 추억을 장식하세요">
+                    <img src="img/Card_bg_2_07.jpg" alt="당신의 추억을 장식하세요">
                 </figure>
                 <div class="card__body">
-                    <h3 class="tit">당신의 추억을 장식하세요</h3>
-                    <p class="desc">당신의 감정을 시각적으로 표현하고 싶지 않으신가요? 스티커를 붙이세요. 그림을 그리세요. 당신의 추억을 장식하세요. 적절한 장식은 감정을 실감나게
-                        표현해줍니다.</p>
-                    <a class="btn" href="/">
-                        더 자세히 보기
-                        <span aria-hidden="true">
-                            <svg width="65" height="8" viewBox="0 0 65 8" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M64.3536 4.35355C64.5488 4.15829 64.5488 3.84171 64.3536 3.64645L61.1716 0.464466C60.9763 0.269204 60.6597 0.269204 60.4645 0.464466C60.2692 0.659728 60.2692 0.976311 60.4645 1.17157L63.2929 4L60.4645 6.82843C60.2692 7.02369 60.2692 7.34027 60.4645 7.53553C60.6597 7.7308 60.9763 7.7308 61.1716 7.53553L64.3536 4.35355ZM0 4.5H64V3.5H0V4.5Z"
-                                    fill="black" />
-                            </svg>
-                        </span>
-                    </a>
+                    <h3 class="tit">멋진 앵무들의 생활</h3>
+                    <p class="desc">
+                        멋진 앵무새들 생활을 보세요. 청금강은 사람들이 알고 있는
+                        대표적인 앵무새입니다. 화려한 그 모습....
+                    </p>
                 </div>
             </article>
 
             <article class="card">
                 <figure class="card__header">
-                    <img src="img/card_bg03.jpg" alt="당신의 추억을 장식하세요">
+                    <img src="img/Card_bg_2_08.jpg" alt="당신의 추억을 장식하세요">
                 </figure>
                 <div class="card__body">
-                    <h3 class="tit">당신의 추억을 장식하세요</h3>
-                    <p class="desc">당신의 감정을 시각적으로 표현하고 싶지 않으신가요? 스티커를 붙이세요. 그림을 그리세요. 당신의 추억을 장식하세요. 적절한 장식은 감정을 실감나게
-                        표현해줍니다.</p>
-                    <a class="btn" href="/">
-                        더 자세히 보기
-                        <span aria-hidden="true">
-                            <svg width="65" height="8" viewBox="0 0 65 8" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M64.3536 4.35355C64.5488 4.15829 64.5488 3.84171 64.3536 3.64645L61.1716 0.464466C60.9763 0.269204 60.6597 0.269204 60.4645 0.464466C60.2692 0.659728 60.2692 0.976311 60.4645 1.17157L63.2929 4L60.4645 6.82843C60.2692 7.02369 60.2692 7.34027 60.4645 7.53553C60.6597 7.7308 60.9763 7.7308 61.1716 7.53553L64.3536 4.35355ZM0 4.5H64V3.5H0V4.5Z"
-                                    fill="black" />
-                            </svg>
-                        </span>
-                    </a>
+                    <h3 class="tit">멋진 앵무들의 생활</h3>
+                    <p class="desc">
+                        멋진 앵무새들 생활을 보세요. 청금강은 사람들이 알고 있는
+                        대표적인 앵무새입니다. 화려한 그 모습....
+                    </p>
                 </div>
             </article>
         </div>
