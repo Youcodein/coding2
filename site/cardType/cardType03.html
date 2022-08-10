@@ -15,7 +15,7 @@
             font-weight: 400;
         }
         body {
-
+            
         }
 
         /* reset */
@@ -69,13 +69,22 @@
             margin-bottom: 70px;
         }
 
+        /* iR 효과(이미지 대체 효과 == alt) */
+        .iR {
+            display: block;
+            overflow: hidden;
+            font-size: 0;
+            line-height: 0;
+            text-indent: -9999px;
+        }
 
         /* card */
-       .card__wrap {
-            width: 100%;
-            height: 757px;
-            background-color: #2254c3;
-       }
+        .card__wrap {
+                width: 100%;
+                height: 757px;
+                background-color: #2254c3;
+                min-width: 1160px;
+        }
 
         .card__inner{
             display: flex;
@@ -118,16 +127,60 @@
             -webkit-line-clamp: 3; 
             -webkit-box-orient: vertical;
         }
+        .profile {
+            margin: 0 49.5px 25px 0 ;
+        }
         .card .user {
+            display: block;
             font-size: 16px;
             line-height: 1.7;
             text-align: right;
             color: #666;
         }
-        .card .user .name {
-            font-size: 18px;
+        .card .name {
+            display: block;
+            font-size: 16px;
+            text-align: right;
             color: #dd2a2a;
         }
+        .card__inner .card .proImg{
+            width: 40px;
+            height: 40px;
+            display: block;
+            position: absolute;
+            right: 26px;
+            top: 451px;
+        }
+
+        .card__inner .card .more1 {
+            width: 40px;
+            height: 40px;
+            background-image: url(img/card_profile03_01.svg);
+            display: block;
+            position: absolute;
+            right: 26px;
+            top: 445px;
+        }
+        .card__inner .card .more2 {
+            width: 40px;
+            height: 40px;
+            background-image: url(img/card_profile03_02.svg);
+            display: block;
+            position: absolute;
+            right: 26px;
+            top: 445px;
+        }
+        .card__inner .card .more3 {
+            width: 40px;
+            height: 40px;
+            background-image: url(img/card_profile03_03.svg);
+            display: block;
+            position: absolute;
+            right: 26px;
+            top: 445px;
+        }
+
+
 
 
 
@@ -147,14 +200,15 @@
                         그림을 그리지 못한다고 해도, 보여줄 이미지가 없다고 해도 겁먹지 말고 
                         다이어리 꾸미기를 시도....
                     </p>
-                    <div>
+                    <div class="profile">
+                        <span class="name">
+                            WriteLove
+                        </span>
                         <span class="user">
-                            Hesperioidea
-                            <span class="name">
-                                건축 박사
-                            </span>
+                            9 Resources
                         </span>
                     </div>
+                    <a href="#" class="more1"><span class="iR">더보기</span></a>
                 </article>
                 <article class="card">
                     <img src="img/card_bg03_02.jpg" alt="다이어리">
@@ -164,6 +218,15 @@
                         그림을 그리지 못한다고 해도, 보여줄 이미지가 없다고 해도 겁먹지 말고 
                         다이어리 꾸미기를 시도....
                     </p>
+                    <div class="profile">
+                        <span class="name">
+                            StickerLove
+                        </span>
+                        <span class="user">
+                            4 Resources
+                        </span>
+                    </div>
+                    <a href="#" class="more2"><span class="iR">더보기</span></a>
 
                 </article>
                 <article class="card">
@@ -174,7 +237,15 @@
                         그림을 그리지 못한다고 해도, 보여줄 이미지가 없다고 해도 겁먹지 말고 
                         다이어리 꾸미기를 시도....
                     </p>
-
+                    <div class="profile">
+                        <span class="name">
+                            StampLove
+                        </span>
+                        <span class="user">
+                            12 Resources
+                        </span>
+                    </div>
+                    <a href="#" class="more3"><span class="iR">더보기</span></a>
                 </article>
             </div>
     </section>
