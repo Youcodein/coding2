@@ -1,22 +1,20 @@
 <!DOCTYPE html>
 <html lang="ko">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>카드 유형02</title>
+    <title>카드유형02</title>
     <style>
         /* fonts */
         @import url('https://webfontworld.github.io/gmarket/GmarketSans.css');
 
-        .nexon {
-            font-family: 'GmarketSans';
-            font-weight: 400;
+        .gmark {
+            font-family: GmarketSans;
+            font-weight: 500;
         }
-
-        /* reset */
-        * {
+         /* reset */
+         * {
             margin: 0;
             padding: 0;
         }
@@ -66,241 +64,131 @@
             margin-bottom: 70px;
         }
 
-        /* cardType */
-        .card__inner {
+        .gray {
+            background-color: #f5f5f5;
+        }
+        /* iR 효과(이미지 대체 효과 == alt) */
+        .iR {
+            display: block;
+            overflow: hidden;
+            font-size: 0;
+            line-height: 0;
+            text-indent: -9999px;
+        }
+
+        /* cardType02 */
+        
+        .card__inner{
             display: flex;
+            flex-wrap: wrap;
             justify-content: space-between;
         }
 
-        .card {
-            width: 32%;
+        .card__inner .card {
+            width: 24%;
+            position: relative;
+
         }
 
-        .card__header {
-            width: 275px;
-            height: 200px;
-            margin: 0 0 20px;
+        .card__inner .card:first-child {
+            margin-bottom: 50px;
+        }
+        .card__inner .card img {
+            margin-bottom: 20px;
             border-radius: 10px;
-            background-color: #d9d9d9;
         }
 
-        .card__body {}
-
-        .card__body .tit {
+        .card__inner .card .tit {
             font-size: 28px;
-            margin: 20px 18px 10px 0;
+            margin-bottom: 10px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            padding-right: 20px;
         }
-
-        .card__body .desc {
+        .card__inner .card .desc {
             font-size: 18px;
-            line-height: 1.4;
-            color: #666;
-            margin: 10px 0 0;
             font-weight: 300;
-            margin: 0 20px 50px 0;
+            color: #666;
+            line-height: 1.4;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 3; 
+            -webkit-box-orient: vertical;
+        }
+        .card__inner .card .more {
+            width: 24px;
+            height: 24px;
+            background-image: url(img/arrow.svg);
+            display: block;
+            position: absolute;
+            right: 0;
+            top: 230px;
+            border-radius: 5px;
         }
 
-        .card__body .btn {
-            text-align: right;
-        }
+
     </style>
 </head>
-
 <body>
-    <section id="cardType" class="card__wrap nexon section">
-        <h2>귀여운 앵무새를 보세요</h2>
+    <section id="cardType02" class="card__wrap gmark section gray">
+        <h2>멋진 앵무새를 보세요🦜</h2>
         <p>
             화려한 앵무새의 광기, 폭력성, 그리고 귀여움을 알리려고 합니다.<br>
-            사람들이 뭐라고 할 때도 있지만 그런 부분까지 정말 귀여운걸요 예쁜 우리 앵무새들의 매력에 빠져보세요.
+            사람들이 뭐라고 할 때도 있지만 그런 부분까지  정말 귀여운걸요 예쁜 우리 앵무새들의 매력에 빠져보세요.
         </p>
         <div class="card__inner container">
             <article class="card">
-                <figure class="card__header">
-                    <img src="img/Card_bg_2_01.jpg" alt="멋진 글을 적어보세요.">
-                </figure>
-                <div class="card__body">
-                    <h3 class="tit">멋진 앵무들의 생활
-                        <a class="btn" href="/">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <rect width="24" height="24" rx="5" fill="#71D1D7" />
-                                <path
-                                    d="M6 11C5.44772 11 5 11.4477 5 12C5 12.5523 5.44772 13 6 13V11ZM18.7071 12.7071C19.0976 12.3166 19.0976 11.6834 18.7071 11.2929L12.3431 4.92893C11.9526 4.53841 11.3195 4.53841 10.9289 4.92893C10.5384 5.31946 10.5384 5.95262 10.9289 6.34315L16.5858 12L10.9289 17.6569C10.5384 18.0474 10.5384 18.6805 10.9289 19.0711C11.3195 19.4616 11.9526 19.4616 12.3431 19.0711L18.7071 12.7071ZM6 13L18 13V11L6 11V13Z"
-                                    fill="white" />
-                            </svg>
-                        </a>
-                    </h3>
-                    <p class="desc">
-                        멋진 앵무새들 생활을 보세요. 청금강은 사람들이 알고 있는
-                        대표적인 앵무새입니다. 화려한 그 모습....
-                    </p>
-                </div>
+                <img src="img/card_bg02_01.jpg" alt="앵무새">
+                <h3 class="tit">청금강청금강청금강청금강청금강</h3>
+                <p class="desc">멋진 앵무새들 생활을 보세요. 청금강은 사람들이 알고 있는 대표적인 앵무새입니다. 화려한 그 모습을 보면 모두 앵무와 사랑에 빠지게 될 것입니다.</p>
+                <a href="#" class="more"><span class="iR">더보기</span></a>
             </article>
-
             <article class="card">
-                <figure class="card__header">
-                    <img src="img/Card_bg_2_02.jpg" alt="당신의 추억을 기록하세요">
-                </figure>
-                <div class="card__body">
-                    <h3 class="tit">멋진 앵무들의 생활
-                        <a class="btn" href="/">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <rect width="24" height="24" rx="5" fill="#71D1D7" />
-                                <path
-                                    d="M6 11C5.44772 11 5 11.4477 5 12C5 12.5523 5.44772 13 6 13V11ZM18.7071 12.7071C19.0976 12.3166 19.0976 11.6834 18.7071 11.2929L12.3431 4.92893C11.9526 4.53841 11.3195 4.53841 10.9289 4.92893C10.5384 5.31946 10.5384 5.95262 10.9289 6.34315L16.5858 12L10.9289 17.6569C10.5384 18.0474 10.5384 18.6805 10.9289 19.0711C11.3195 19.4616 11.9526 19.4616 12.3431 19.0711L18.7071 12.7071ZM6 13L18 13V11L6 11V13Z"
-                                    fill="white" />
-                            </svg>
-                        </a>
-                    </h3>
-                    <p class="desc">
-                        멋진 앵무새들 생활을 보세요. 청금강은 사람들이 알고 있는
-                        대표적인 앵무새입니다. 화려한 그 모습....
-                    </p>
-                </div>
+                <img src="img/card_bg02_02.jpg" alt="앵무새">
+                <h3 class="tit">목도리앵무</h3>
+                <p class="desc">멋진 앵무새들 생활을 보세요. 청금강은 사람들이 알고 있는 대표적인 앵무새입니다. 화려한 그 모습을 보면 모두 앵무와 사랑에 빠지게 될 것입니다.</p>
+                <a href="#" class="more"><span class="iR">더보기</span></a>
             </article>
-
             <article class="card">
-                <figure class="card__header">
-                    <img src="img/Card_bg_2_03.jpg" alt="당신의 추억을 장식하세요">
-                </figure>
-                <div class="card__body">
-                    <h3 class="tit">멋진 앵무들의 생활
-                        <a class="btn" href="/">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <rect width="24" height="24" rx="5" fill="#71D1D7" />
-                                <path
-                                    d="M6 11C5.44772 11 5 11.4477 5 12C5 12.5523 5.44772 13 6 13V11ZM18.7071 12.7071C19.0976 12.3166 19.0976 11.6834 18.7071 11.2929L12.3431 4.92893C11.9526 4.53841 11.3195 4.53841 10.9289 4.92893C10.5384 5.31946 10.5384 5.95262 10.9289 6.34315L16.5858 12L10.9289 17.6569C10.5384 18.0474 10.5384 18.6805 10.9289 19.0711C11.3195 19.4616 11.9526 19.4616 12.3431 19.0711L18.7071 12.7071ZM6 13L18 13V11L6 11V13Z"
-                                    fill="white" />
-                            </svg>
-                        </a>
-                    </h3>
-                    <p class="desc">
-                        멋진 앵무새들 생활을 보세요. 청금강은 사람들이 알고 있는
-                        대표적인 앵무새입니다. 화려한 그 모습....
-                    </p>
-                </div>
+                <img src="img/card_bg02_03.jpg" alt="앵무새">
+                <h3 class="tit">왕관앵무</h3>
+                <p class="desc">멋진 앵무새들 생활을 보세요. 청금강은 사람들이 알고 있는 대표적인 앵무새입니다. 화려한 그 모습을 보면 모두 앵무와 사랑에 빠지게 될 것입니다.</p>
+                <a href="#" class="more"><span class="iR">더보기</span></a>
             </article>
-
             <article class="card">
-                <figure class="card__header">
-                    <img src="img/Card_bg_2_04.jpg" alt="당신의 추억을 장식하세요">
-                </figure>
-                <div class="card__body">
-                    <h3 class="tit">멋진 앵무들의 생활
-                        <a class="btn" href="/">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <rect width="24" height="24" rx="5" fill="#71D1D7" />
-                                <path
-                                    d="M6 11C5.44772 11 5 11.4477 5 12C5 12.5523 5.44772 13 6 13V11ZM18.7071 12.7071C19.0976 12.3166 19.0976 11.6834 18.7071 11.2929L12.3431 4.92893C11.9526 4.53841 11.3195 4.53841 10.9289 4.92893C10.5384 5.31946 10.5384 5.95262 10.9289 6.34315L16.5858 12L10.9289 17.6569C10.5384 18.0474 10.5384 18.6805 10.9289 19.0711C11.3195 19.4616 11.9526 19.4616 12.3431 19.0711L18.7071 12.7071ZM6 13L18 13V11L6 11V13Z"
-                                    fill="white" />
-                            </svg>
-                        </a>
-                    </h3>
-                    <p class="desc">
-                        멋진 앵무새들 생활을 보세요. 청금강은 사람들이 알고 있는
-                        대표적인 앵무새입니다. 화려한 그 모습....
-                    </p>
-                </div>
+                <img src="img/card_bg02_04.jpg" alt="앵무새">
+                <h3 class="tit">모란앵무</h3>
+                <p class="desc">멋진 앵무새들 생활을 보세요. 청금강은 사람들이 알고 있는 대표적인 앵무새입니다. 화려한 그 모습을 보면 모두 앵무와 사랑에 빠지게 될 것입니다.</p>
+                <a href="#" class="more"><span class="iR">더보기</span></a>
             </article>
-        </div>
-
-        <div class="card__inner container">
             <article class="card">
-                <figure class="card__header">
-                    <img src="img/Card_bg_2_05.jpg" alt="멋진 글을 적어보세요.">
-                </figure>
-                <div class="card__body">
-                    <h3 class="tit">멋진 앵무들의 생활
-                        <a class="btn" href="/">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <rect width="24" height="24" rx="5" fill="#71D1D7" />
-                                <path
-                                    d="M6 11C5.44772 11 5 11.4477 5 12C5 12.5523 5.44772 13 6 13V11ZM18.7071 12.7071C19.0976 12.3166 19.0976 11.6834 18.7071 11.2929L12.3431 4.92893C11.9526 4.53841 11.3195 4.53841 10.9289 4.92893C10.5384 5.31946 10.5384 5.95262 10.9289 6.34315L16.5858 12L10.9289 17.6569C10.5384 18.0474 10.5384 18.6805 10.9289 19.0711C11.3195 19.4616 11.9526 19.4616 12.3431 19.0711L18.7071 12.7071ZM6 13L18 13V11L6 11V13Z"
-                                    fill="white" />
-                            </svg>
-                        </a>
-                    </h3>
-                    <p class="desc">
-                        멋진 앵무새들 생활을 보세요. 청금강은 사람들이 알고 있는
-                        대표적인 앵무새입니다. 화려한 그 모습....
-                    </p>
-                </div>
+                <img src="img/card_bg02_05.jpg" alt="앵무새">
+                <h3 class="tit">왕관앵무</h3>
+                <p class="desc">멋진 앵무새들 생활을 보세요. 청금강은 사람들이 알고 있는 대표적인 앵무새입니다. 화려한 그 모습을 보면 모두 앵무와 사랑에 빠지게 될 것입니다.</p>
+                <a href="#" class="more"><span class="iR">더보기</span></a>
             </article>
-
             <article class="card">
-                <figure class="card__header">
-                    <img src="img/Card_bg_2_06.jpg" alt="당신의 추억을 기록하세요">
-                </figure>
-                <div class="card__body">
-                    <h3 class="tit">멋진 앵무들의 생활
-                        <a class="btn" href="/">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <rect width="24" height="24" rx="5" fill="#71D1D7" />
-                                <path
-                                    d="M6 11C5.44772 11 5 11.4477 5 12C5 12.5523 5.44772 13 6 13V11ZM18.7071 12.7071C19.0976 12.3166 19.0976 11.6834 18.7071 11.2929L12.3431 4.92893C11.9526 4.53841 11.3195 4.53841 10.9289 4.92893C10.5384 5.31946 10.5384 5.95262 10.9289 6.34315L16.5858 12L10.9289 17.6569C10.5384 18.0474 10.5384 18.6805 10.9289 19.0711C11.3195 19.4616 11.9526 19.4616 12.3431 19.0711L18.7071 12.7071ZM6 13L18 13V11L6 11V13Z"
-                                    fill="white" />
-                            </svg>
-                        </a>
-                    </h3>
-                    <p class="desc">
-                        멋진 앵무새들 생활을 보세요. 청금강은 사람들이 알고 있는
-                        대표적인 앵무새입니다. 화려한 그 모습....
-                    </p>
-                </div>
+                <img src="img/card_bg02_06.jpg" alt="앵무새">
+                <h3 class="tit">코뉴어</h3>
+                <p class="desc">멋진 앵무새들 생활을 보세요. 청금강은 사람들이 알고 있는 대표적인 앵무새입니다. 화려한 그 모습을 보면 모두 앵무와 사랑에 빠지게 될 것입니다.</p>
+                <a href="#" class="more"><span class="iR">더보기</span></a>
             </article>
-
             <article class="card">
-                <figure class="card__header">
-                    <img src="img/Card_bg_2_07.jpg" alt="당신의 추억을 장식하세요">
-                </figure>
-                <div class="card__body">
-                    <h3 class="tit">멋진 앵무들의 생활
-                        <a class="btn" href="/">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <rect width="24" height="24" rx="5" fill="#71D1D7" />
-                                <path
-                                    d="M6 11C5.44772 11 5 11.4477 5 12C5 12.5523 5.44772 13 6 13V11ZM18.7071 12.7071C19.0976 12.3166 19.0976 11.6834 18.7071 11.2929L12.3431 4.92893C11.9526 4.53841 11.3195 4.53841 10.9289 4.92893C10.5384 5.31946 10.5384 5.95262 10.9289 6.34315L16.5858 12L10.9289 17.6569C10.5384 18.0474 10.5384 18.6805 10.9289 19.0711C11.3195 19.4616 11.9526 19.4616 12.3431 19.0711L18.7071 12.7071ZM6 13L18 13V11L6 11V13Z"
-                                    fill="white" />
-                            </svg>
-                        </a>
-                    </h3>
-                    <p class="desc">
-                        멋진 앵무새들 생활을 보세요. 청금강은 사람들이 알고 있는
-                        대표적인 앵무새입니다. 화려한 그 모습....
-                    </p>
-                </div>
+                <img src="img/card_bg02_07.jpg" alt="앵무새">
+                <h3 class="tit">코카투</h3>
+                <p class="desc">멋진 앵무새들 생활을 보세요. 청금강은 사람들이 알고 있는 대표적인 앵무새입니다. 화려한 그 모습을 보면 모두 앵무와 사랑에 빠지게 될 것입니다.</p>
+                <a href="#" class="more"><span class="iR">더보기</span></a>
             </article>
-
             <article class="card">
-                <figure class="card__header">
-                    <img src="img/Card_bg_2_08.jpg" alt="당신의 추억을 장식하세요">
-                </figure>
-                <div class="card__body">
-                    <h3 class="tit">멋진 앵무들의 생활
-                        <a class="btn" href="/">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <rect width="24" height="24" rx="5" fill="#71D1D7" />
-                                <path
-                                    d="M6 11C5.44772 11 5 11.4477 5 12C5 12.5523 5.44772 13 6 13V11ZM18.7071 12.7071C19.0976 12.3166 19.0976 11.6834 18.7071 11.2929L12.3431 4.92893C11.9526 4.53841 11.3195 4.53841 10.9289 4.92893C10.5384 5.31946 10.5384 5.95262 10.9289 6.34315L16.5858 12L10.9289 17.6569C10.5384 18.0474 10.5384 18.6805 10.9289 19.0711C11.3195 19.4616 11.9526 19.4616 12.3431 19.0711L18.7071 12.7071ZM6 13L18 13V11L6 11V13Z"
-                                    fill="white" />
-                            </svg>
-                        </a>
-                    </h3>
-                    <p class="desc">
-                        멋진 앵무새들 생활을 보세요. 청금강은 사람들이 알고 있는
-                        대표적인 앵무새입니다. 화려한 그 모습....
-                    </p>
-                </div>
+                <img src="img/card_bg02_08.jpg" alt="앵무새">
+                <h3 class="tit">회색앵무</h3>
+                <p class="desc">멋진 앵무새들 생활을 보세요. 청금강은 사람들이 알고 있는 대표적인 앵무새입니다. 화려한 그 모습을 보면 모두 앵무와 사랑에 빠지게 될 것입니다.</p>
+                <a href="#" class="more"><span class="iR">더보기</span></a>
             </article>
         </div>
     </section>
+    
 </body>
-
 </html>
