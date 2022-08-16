@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>구조 요소</title>
+
+    <style>
+        /* fonts */
+        @import url('https://webfontworld.github.io/gmarket/GmarketSans.css');
+
+        /* 리셋 */
+        /* 여백 초기화 */
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'NexonLv1Gothic';
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        /* 링크 초기화 */
+        a {
+            text-decoration: none;
+            color: #222;
+        }
+
+        /* 목록 초기화 */
+        li {
+            list-style: none;
+        }
+
+        /* 제목 초기화 */
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-weight: normal;
+        }
+
+        /* 기울기 초기화 */
+        em,
+        i {
+            font-style: normal;
+        }
+
+        /* 테이블 초기화 */
+        table {
+            width: 100%;
+            border-spacing: 0;
+            border-collapse: collapse;
+        }
+
+        /* container */
+        body {}
+
+        .container {
+            width: 100%;
+            height: 1000px;
+            margin: 0 auto;
+
+        }
+
+        /* header */
+        header {
+            width: 1200px;
+            height: 140px;
+            background-color: #47a5ba;
+            position: relative;
+        }
+
+        .logo1 {
+            width: 100px;
+            height: 100px;
+            text-align: center;
+            background-color: #d9d9d9;
+            position: absolute;
+            margin: 20px;
+
+
+        }
+
+        nav {
+            width: 942px;
+            height: 40px;
+            background-color: #d9d9d9;
+            position: absolute;
+            left: 140px;
+            bottom: 20px;
+
+        }
+
+        nav ul {
+            display: flex;
+        }
+
+        nav ul li {
+            justify-content: space-between;
+        }
+
+        /* contents */
+        .contents {
+            width: 1200px;
+            height: 611px;
+            background-color: #47a5ba;
+            margin: 20px 0 20px 0;
+            display: flex;
+
+        }
+
+        section {
+            width: 373px;
+            height: 560px;
+            background-color: #b3eeea;
+        }
+
+        article {
+            width: 373px;
+            height: 270px;
+            background-color: #b3eeea;
+        }
+
+        aside {
+            width: 373px;
+            height: 270px;
+            background-color: #b3eeea;
+
+        }
+
+        /* footer */
+        footer {
+            width: 1200px;
+            height: 120px;
+            background-color: #47a5ba;
+        }
+
+
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="logo1">
+                <h1><a href="#">반응형웹</a></h1>
+            </div>
+
+            <nav>
+                <ul>
+                    <li><a href="#">MENU01</a></li>
+                    <li><a href="#">MENU02</a></li>
+                    <li><a href="#">MENU03</a></li>
+                    <li><a href="#">MENU04</a></li>
+                    <li><a href="#">MENU05</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div class="contents">
+            <section>
+                <h2>콘텐츠 그룹 01</h2>
+            </section>
+            <section>
+                <h2>콘텐츠 그룹 02</h2>
+            </section>
+            <article>
+                <h2>주요 기사</h2>
+            </article>
+            <aside>광고</aside>
+        </div>
+        <footer>
+            <address>경기도 부천시 오정구 삼정동 032)674-5685 icoxpub@naver.com</address>
+            <p>COPYRIGHT ⓒALL rights reserved.</p>
+        </footer>
+    </div>
+</body>
+
+</html>
