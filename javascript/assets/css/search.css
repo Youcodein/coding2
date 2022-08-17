@@ -112,6 +112,9 @@ li {
 .search__list li.hide {
     display: none;
 }
+.search__list li.show {
+    display: block;
+}
 @media (max-width: 600px){
     .search__wrap {
         padding: 20px;
@@ -127,6 +130,19 @@ li {
         font-size: 16px;
         padding: 12px 30px;
     }
+}
+
+.search__info {
+    text-align-last: right;
+    padding-top: 10px;
+    margin-bottom: 30px;
+    border-bottom: 2px dashed #223547;
+}
+
+.search__info .type {
+    text-align: center;
+    margin-bottom: 10px;
+    
 }
 /* footer */
 #footer {
