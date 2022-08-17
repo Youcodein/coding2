@@ -1,130 +1,79 @@
-<!DOCTYPE html>
-<html lang="ko">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HTML 레퍼런스 북</title>
-
-    <link rel="stylesheet" href="asset/css/style.css">
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/base16/railscasts.min.css">
-
-
-    <!-- 구글 아이콘 -->
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-</head>
-
-<body>
-    <header id="header">
-        <h1><a href="#">라인 중학교 1학년 코딩반</a></h1>
-        <span>이름 : 황유진</span>
-    </header>
-    <!-- header -->
-
-    <main id="main">
-        <div class="main_refer">
-            <div class="document">
-                <h2 class="t_tit">이미지 유형 01</h2>
-                <p class="t_desc">이미지 유형 레이아웃 사이트입니다. html과 css로 작업하였습니다.</p>
-                <div class="t_iframe" style="min-height: 1000px; padding-top: 0;"><iframe
-                        src="https://youcodein.github.io/coding2/site/cardType/cardType03.html"
-                        frameborder="0"></iframe></div>
-                <div class="t_link"><a href="https://youcodein.github.io/coding2/site/cardType/cardType03.html"
-                        target="_blank" rel="noopener">원본 사이트 보기</a></div>
-                <div class="t_link"><a
-                        href="https://github.com/Youcodein/coding2/blob/main/site/cardType/cardType03.html"
-                        target="_blank" rel="noopener">원본 소스 보기</a></div>
-                <h2 data-ke-size="size26">레이아웃 설정</h2>
-                <p class="t_desc2" data-ke-size="size16">figma로 그리드와 사이트의 레이아웃을 잡습니다.</p>
-                <div class="t_iframe"><iframe src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FTNqhMyejddfylXxue7gjHH%2F%25EC%2582%25AC%25EC%259D%25B4%25ED%258A%25B8-%25EB%25A7%258C%25EB%2593%25A4%25EA%25B8%25B0%3Fnode-id%3D30%253A197" allowfullscreen></iframe></div>
-                <h2 data-ke-size="size26">HTML</h2>
-                <p class="t_desc2" data-ke-size="size16">html 소스입니다.</p>
-                <div class="t_code">
-<pre class="language-html"><code>&lt;body&gt;
-&lt;section id="cardType03" class="card__wrap SCoreDream section"&gt;
-        &lt;div class="card__inner container"&gt;
-            &lt;article class="card"&gt;
-                &lt;img src="img/card_bg03_01.jpg" alt="다이어리"&gt;
-                &lt;h3 class="tit"&gt;손글씨를 이용하여 당신의 다이어리를 예쁘게 꾸며보세요! ....&lt;/h3&gt;
-                &lt;p class="desc"&gt;
-                    이미지가 없어도 멋지게 다이어리를 꾸밀 수 있답니다. 
-                    그림을 그리지 못한다고 해도, 보여줄 이미지가 없다고 해도 겁먹지 말고 
-                    다이어리 꾸미기를 시도....
-                &lt;/p&gt;
-                &lt;div class="profile"&gt;
-                    &lt;span class="name"&gt;
-                        WriteLove
-                    &lt;/span&gt;
-                    &lt;span class="user"&gt;
-                        9 Resources
-                    &lt;/span&gt;
-                &lt;/div&gt;
-                &lt;a href="#" class="more1"&gt;&lt;span class="iR"&gt;더보기&lt;/span&gt;&lt;/a&gt;
-            &lt;/article&gt;
-            &lt;article class="card"&gt;
-                &lt;img src="img/card_bg03_02.jpg" alt="다이어리"&gt;
-                &lt;h3 class="tit"&gt;손글씨를 이용하여 당신의 다이어리를 예쁘게 꾸며보세요! ....&lt;/h3&gt;
-                &lt;p class="desc"&gt;
-                    이미지가 없어도 멋지게 다이어리를 꾸밀 수 있답니다. 
-                    그림을 그리지 못한다고 해도, 보여줄 이미지가 없다고 해도 겁먹지 말고 
-                    다이어리 꾸미기를 시도....
-                &lt;/p&gt;
-                &lt;div class="profile"&gt;
-                    &lt;span class="name"&gt;
-                        StickerLove
-                    &lt;/span&gt;
-                    &lt;span class="user"&gt;
-                        4 Resources
-                    &lt;/span&gt;
-                &lt;/div&gt;
-                &lt;a href="#" class="more2"&gt;&lt;span class="iR"&gt;더보기&lt;/span&gt;&lt;/a&gt;
-
-            &lt;/article&gt;
-            &lt;article class="card"&gt;
-                &lt;img src="img/card_bg03_03.jpg" alt="다이어리"&gt;
-                &lt;h3 class="tit"&gt;손글씨를 이용하여 당신의 다이어리를 예쁘게 꾸며보세요! ....&lt;/h3&gt;
-                &lt;p class="desc"&gt;
-                    이미지가 없어도 멋지게 다이어리를 꾸밀 수 있답니다. 
-                    그림을 그리지 못한다고 해도, 보여줄 이미지가 없다고 해도 겁먹지 말고 
-                    다이어리 꾸미기를 시도....
-                &lt;/p&gt;
-                &lt;div class="profile"&gt;
-                    &lt;span class="name"&gt;
-                        StampLove
-                    &lt;/span&gt;
-                    &lt;span class="user"&gt;
-                        12 Resources
-                    &lt;/span&gt;
-                &lt;/div&gt;
-                &lt;a href="#" class="more3"&gt;&lt;span class="iR"&gt;더보기&lt;/span&gt;&lt;/a&gt;
-            &lt;/article&gt;
-        &lt;/div&gt;
+<div class="document">
+<h2 class="t_tit" data-ke-size="size26">이미지 유형 2</h2>
+<p class="t_desc" data-ke-size="size16">이미지 유형 레이아웃 사이트입니다. html과 css로 작업하였습니다.</p>
+<div class="t_iframe" style="min-height: 1000px; padding-top: 0;"><iframe src="https://youcodein.github.io/coding2/site/imageType/imageType02.html" frameborder="0"></iframe></div>
+<div class="t_link"><a href="https://youcodein.github.io/coding2/site/imageType/imageType02.html" target="_blank" rel="noopener">원본 사이트 보기</a></div>
+<div class="t_link"><a href="https://github.com/Youcodein/coding2/blob/main/site/imageType/imageType02.html" target="_blank" rel="noopener">원본 소스 보기</a></div>
+<h2 data-ke-size="size26">레이아웃 설정</h2>
+<p class="t_desc2" data-ke-size="size16">figma로 그리드와 사이트의 레이아웃을 잡습니다.</p>
+<div class="t_iframe"><iframe src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FTNqhMyejddfylXxue7gjHH%2F%25EC%2582%25AC%25EC%259D%25B4%25ED%258A%25B8-%25EB%25A7%258C%25EB%2593%25A4%25EA%25B8%25B0%3Fnode-id%3D375%253A143" allowfullscreen></iframe></div>
+<h2 data-ke-size="size26">HTML</h2>
+<p class="t_desc2" data-ke-size="size16">html 소스입니다.</p>
+<div class="t_code">
+<pre class="language-html xml"><code>&lt;body&gt;
+&lt;section id="imageType01" class="image__wrap gmark section"&gt;
+    &lt;h2&gt;BEST 소품샵&lt;/h2&gt;
+    &lt;p&gt;다양한 소품샵을 가 본 사람이 뽑은 최고의 소품샵 BEST3&lt;/p&gt;
+    &lt;div class="image__inner container"&gt;
+        &lt;article class="image img1"&gt;
+            &lt;figure&gt; class="image__box"&gt;
+                &lt;img src="img/image_bg02_01.jpg" alt=""&gt;
+            &lt;/figure&gt;
+            &lt;div class="image__desc"&gt;
+                &lt;h3&gt;내가만든 기린키링&lt;/h3&gt;
+                &lt;a&gt; href="" class="more" title="자세히보기"&gt;자세히보기&lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/article&gt;
+        &lt;article class="image img2"&gt;
+            &lt;figure&gt; class="image__box"&gt;
+                &lt;img src="img/image_bg02_02.jpg" alt=""&gt;
+            &lt;/figure&gt;
+            &lt;div class="image__desc"&gt;
+                &lt;h3&gt;자그마한 인테리어방&lt;/h3&gt;
+                &lt;a&gt; href="" class="more" title="자세히보기"&gt;자세히보기&lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/article&gt;
+        &lt;article class="image img3"&gt;
+            &lt;figure&gt; class="image__box"&gt;
+                &lt;img src="img/image_bg02_03.jpg" alt=""&gt;
+            &lt;/figure&gt;
+            &lt;div class="image__desc"&gt;
+                &lt;h3&gt;오늘의 감성&lt;/h3&gt;
+                &lt;a&gt; href="" class="more" title="자세히보기"&gt;자세히보기&lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/article&gt;
+    &lt;/div&gt;
 &lt;/section&gt;
 &lt;/body&gt;
 </code></pre>
-                </div>
-                <!-- html -->
-                <h2 data-ke-size="size26">CSS</h2>
-                <p class="t_desc2" data-ke-size="size16">css 소스입니다. figma로 설정해놓은 레이아웃이나 zaplin을 보며 적절하게 css를 설정해줍니다.</p>
-                <div class="t_code">
-<pre class="language-css"><code>/* font */
-@import url('https://webfontworld.github.io/score/SCoreDream.css');
+</div>
+<!-- html -->
+<h2 data-ke-size="size26">CSS</h2>
+<p class="t_desc2" data-ke-size="size16">css 소스입니다. figma로 설정해놓은 레이아웃이나 zaplin을 보며 적절하게 css를 설정해줍니다.</p>
+<div class="t_code">
+<pre class="language-css"><code>/* fonts */
+@import url('https://webfontworld.github.io/gmarket/GmarketSans.css');
 
-.SCoreDream {
-    font-family: SCoreDream;
-    font-weight: 400;
-}
-body {
-    
+.gmark {
+    font-family: 'GmarketSans';
+    font-weight: 500;
 }
 
 /* reset */
 * {
     margin: 0;
     padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+img {
+
+    width: 100%;
 }
 
 h1,
@@ -136,21 +85,12 @@ h6 {
     font-weight: normal;
 }
 
-a {
-    text-decoration: none;
-    color: #000;
-}
-
-img {
-    width: 100%;
-}
-
 /* common */
 .container {
     width: 1160px;
-    height: 517px;
-    background-color: #fff;
-    margin: 120px auto;
+    padding: 0 20px;
+    margin: 0 auto;
+    min-width: 1160px;
 }
 
 .section {
@@ -172,131 +112,94 @@ img {
     margin-bottom: 70px;
 }
 
-/* iR 효과(이미지 대체 효과 == alt) */
-.iR {
-    display: block;
-    overflow: hidden;
-    font-size: 0;
-    line-height: 0;
-    text-indent: -9999px;
-}
-
-/* card */
-.card__wrap {
-        width: 100%;
-        height: 757px;
-        background-color: #2254c3;
-        min-width: 1160px;
-}
-
-.card__inner{
+/* imageType */
+.image__inner {
     display: flex;
-    flex-wrap: nowrap;
-    justify-content: center;
+    justify-content: space-between;
 }
 
-.card__inner .card {
-    width:385px;
-    padding: 26px 26px;
+.image {
+    width: 32%;
+    background-color: #ccc;
     position: relative;
-    border-right: 1px solid #d9d9d9;
+    overflow: hidden;
 }
 
-.card__inner .card img {
-    width: 333.5px;
-    height: 230px;
-    margin: 0 0.5px 19px 0;
-    border-radius: 10px;
-}
-.card__inner .card .tit {
-    font-size: 20px;
-    line-height: 1.4;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 2; 
-    -webkit-box-orient: vertical;
-    
-}
-.card__inner .card .desc {
-    font-size: 16px;
-    font-weight: normal;
-    color: #666;
-    line-height: 1.4;
-    margin: 10px 0.5px 30px 0;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 3; 
-    -webkit-box-orient: vertical;
-}
-.profile {
-    margin: 0 49.5px 25px 0 ;
-}
-.card .user {
-    display: block;
-    font-size: 16px;
-    line-height: 1.7;
-    text-align: right;
-    color: #666;
-}
-.card .name {
-    display: block;
-    font-size: 16px;
-    text-align: right;
-    color: #dd2a2a;
-}
-.card__inner .card .proImg{
-    width: 40px;
-    height: 40px;
-    display: block;
-    position: absolute;
-    right: 26px;
-    top: 451px;
+
+
+
+.image__box {}
+
+.image__box img {
+    vertical-align: top;
+
+    transition: all 0.6s ease-in-out
 }
 
-.card__inner .card .more1 {
-    width: 40px;
-    height: 40px;
-    background-image: url(img/card_profile03_01.svg);
-    display: block;
+.image__desc {
     position: absolute;
-    right: 26px;
-    top: 445px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 23px 20px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    box-sizing: border-box;
+    background-color: rgba(0,0,0,0.1);
+    bottom: -100px;
+    transition: all 0.3s ease-in-out
 }
-.card__inner .card .more2 {
-    width: 40px;
-    height: 40px;
-    background-image: url(img/card_profile03_02.svg);
-    display: block;
-    position: absolute;
-    right: 26px;
-    top: 445px;
+.image:hover .image__desc{
+    bottom: 0;
 }
-.card__inner .card .more3 {
-    width: 40px;
-    height: 40px;
-    background-image: url(img/card_profile03_03.svg);
-    display: block;
-    position: absolute;
-    right: 26px;
-    top: 445px;
+.image:hover .image__box img {
+    transform: scale(1.03);
+}
+
+.img1 .image__desc{
+    background-color: rgba(0,0,0,0.1);
+}
+.img2 .image__desc{
+    background-color: rgba(0,0,0,0.2);
+}
+.img3 .image__desc{
+    background-color: rgba(0,0,0,0.3);
+}
+
+.img1 .image__desc h3 {
+    color: #fff;
+}
+.img1 .image__desc .more {
+    color: #fff;
+}
+
+.img2 .image__desc h3 {
+    color: #fff;
+}
+.img2 .image__desc .more {
+    color: #fff;
+}
+
+.img3 .image__desc h3 {
+    color: #fff;
+}
+.img3 .image__desc .more {
+    color: #fff;
+}
+
+.image__desc h3 {
+    font-size: 24px;
+    margin-bottom: 5px;
+
+}
+
+.image__desc .more {
+    font-size: 16px;
+
+}
+.image__desc .more:hover {
+    text-decoration: underline;
 }
 </code></pre>
-                </div>
-            </div>
-    </main>
-    <!-- header -->
-
-    <footer id="footer">
-        <a href="mailto:foryoucodin@gmail.com">foryoucodin@gmail.com</a>
-    </footer>
-    <!-- footer -->
-
-    <script src="assets/js/highlight.min.js"></script>
-    <script>
-        hljs.highlightAll();
-    </script>
-</body>
-
-</html>
+</div>
+</div>

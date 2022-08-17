@@ -48,12 +48,123 @@
     height: 400px;
     background: #ccc;
   }
+
+  /* image */
+  .image__inner {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .image {
+            width: 32%;
+            position: relative;
+            overflow: hidden;
+        }
+
+
+
+
+        .image__box {}
+
+        .image__box img {
+            vertical-align: top;
+
+            transition: all 0.6s ease-in-out
+        }
+
+        .image__desc {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            padding: 23px 20px;
+            text-align: center;
+            backdrop-filter: blur(10px);
+            box-sizing: border-box;
+            background-color: rgba(0,0,0,0.1);
+            bottom: -100px;
+            transition: all 0.3s ease-in-out
+        }
+        .image:hover .image__desc{
+            bottom: 0;
+        }
+        .image:hover .image__box img {
+            transform: scale(1.03);
+        }
+
+        .img1 .image__desc{
+            background-color: rgba(0,0,0,0.1);
+        }
+        .img2 .image__desc{
+            background-color: rgba(0,0,0,0.2);
+        }
+        .img3 .image__desc{
+            background-color: rgba(0,0,0,0.3);
+        }
+
+        .img1 .image__desc h3 {
+            color: #fff;
+        }
+        .img1 .image__desc .more {
+            color: #fff;
+        }
+
+        .img2 .image__desc h3 {
+            color: #fff;
+        }
+        .img2 .image__desc .more {
+            color: #fff;
+        }
+
+        .img3 .image__desc h3 {
+            color: #fff;
+        }
+        .img3 .image__desc .more {
+            color: #fff;
+        }
+
+        .image__desc h3 {
+            font-size: 24px;
+            margin-bottom: 5px;
+
+        }
+
+        .image__desc .more {
+            font-size: 16px;
+
+        }
+        .image__desc .more:hover {
+            text-decoration: underline;
+        }
 </style>
 <div class="main__add">
-
-  <div class="card">
-
-  </div>
-  <div class="card"></div>
-  <div class="card"></div>
+  <div class="image__inner container">
+    <article class="image img1">
+        <figure class="image__box">
+            <img src="img/image_bg02_01.jpg" alt="">
+        </figure>
+        <div class="image__desc">
+            <h3>내가만든 기린키링</h3>
+            <a href="" class="more" title="자세히보기">자세히보기</a>
+        </div>
+    </article>
+    <article class="image img2">
+        <figure class="image__box">
+            <img src="img/image_bg02_02.jpg" alt="">
+        </figure>
+        <div class="image__desc">
+            <h3>자그마한 인테리어방</h3>
+            <a href="" class="more" title="자세히보기">자세히보기</a>
+        </div>
+    </article>
+    <article class="image img3">
+        <figure class="image__box">
+            <img src="img/image_bg02_03.jpg" alt="">
+        </figure>
+        <div class="image__desc">
+            <h3>오늘의 감성</h3>
+            <a href="" class="more" title="자세히보기">자세히보기</a>
+        </div>
+    </article>
+</div>
 </div>
