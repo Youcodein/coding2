@@ -1,0 +1,59 @@
+<style>
+  /* fonts */
+  @import url('https://webfontworld.github.io/gmarket/GmarketSans.css');
+
+  .gmark {
+    font-family: 'GmarketSans';
+    font-weight: 500;
+  }
+
+  #tt-body-page .main__add {
+    display: none;
+  }
+
+  .main__add {
+    background: #F5F5F5;
+    margin-top: 100px;
+    margin-bottom: 120px;
+    position: relative;
+    justify-content: space-between;
+    padding: 100px 0;
+    display: flex;
+  }
+
+  .main__add::before {
+    content: '';
+    width: 1000px;
+    height: 100%;
+    background-color: #F5F5F5;
+    position: absolute;
+    left: -1000px;
+    top: 0;
+    z-index: 1;
+  }
+
+  .main__add::after {
+    content: '';
+    width: 1000px;
+    height: 100%;
+    background-color: #F5F5F5;
+    position: absolute;
+    right: -1000px;
+    top: 0;
+    z-index: 1;
+  }
+
+  .main__add .card {
+    width: 32%;
+    height: 400px;
+    background: #ccc;
+  }
+</style>
+<div class="main__add">
+
+  <div class="card">
+
+  </div>
+  <div class="card"></div>
+  <div class="card"></div>
+</div>

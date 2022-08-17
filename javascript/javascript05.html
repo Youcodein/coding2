@@ -384,10 +384,9 @@ const currentStr34 = str1.substr(-3, 3);  //nce
                 문자열에서 원하는 값을 추출하는 메서드입니다.
             </p>
             <div class="box">
-                // "문자열".split(구분자);<br>
-                // "문자열".split(정규식 표현);<br>
-                // "문자열".split(구분자, 갯수);
-
+                "문자열".split(구분자);<br>
+                "문자열".split(정규식 표현);<br>
+                "문자열".split(구분자, 갯수);
             </div>
             <div class="script">
 <pre><code class="language-js">const str1 = "javascript reference";
@@ -420,7 +419,7 @@ const currentStr17 = str4.split('').reverse().join('/'); //e/c/n/e/r/e/f/e/r/ /t
         <!-- sample05 -->
 
         <div id="sample06" class="sample">
-            <h3>7. replace() / replaceAll()</h3>
+            <h3>6. replace() / replaceAll()</h3>
             <p>
                 replace()는 문자열을 부분 문자열로 구분하고 배열로 반환해줍니다.
             </p>
@@ -675,6 +674,16 @@ const currentStr26 = str1.lastIndexOf('reference', 12);     //11
             </div>
             <div class="script">
 <pre><code class="language-js">
+    const str1 = "javascript reference";
+            
+    const currentStr1 = str1.includes('javascript');            //true
+    const currentStr2 = str1.includes('j');                     //true
+    const currentStr3 = str1.includes('b');                     //false
+    const currentStr4 = str1.includes('reference');                     //true
+    const currentStr5 = str1.includes('reference', 1);                     //true
+    const currentStr6 = str1.includes('reference', 11);                     //true
+    const currentStr7 = str1.includes('reference', 12);                     //false
+</code></pre>
             </div>
         </div>
         <!-- sample11 -->
@@ -1026,7 +1035,6 @@ const currentStr26 = str1.lastIndexOf('reference', 12);     //11
             const currentStr6 = str1.includes('reference', 11);                     //true
             const currentStr7 = str1.includes('reference', 12);                     //false
 
-            console.log(currentStr7)            
         }
     </script>
 </body>
