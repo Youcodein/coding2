@@ -923,7 +923,7 @@
                     console.log("오답")
                     quizView[number].classList.add("dislike");
                     const div = document.createElement("div");
-                    quizSelectsWrap.appendChild(div).innerHTML = `<p class="result">${question.answerEx}</p>`;
+                    quizSelectsWrap.appendChild(div).innerHTML = `<p class="result">정답은 : ${question.answerResult}번!<br>${question.answerEx}</p>`;
                 }
             });
         }
