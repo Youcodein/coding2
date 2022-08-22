@@ -442,35 +442,37 @@
 
     <script>
         //선택자
-        const searchBox = document.querySelector(".search__box input");            //검색 영역
+        const searchBox = document.querySelector(".search__box input"); //검색 영역
         const searchList = document.querySelectorAll(".search__list ul li"); //목록 리스트
-        const searchInfo = document.querySelector(".search__info .num")     //전체 갯수
+        const searchInfo = document.querySelectorAll(".search__info .num");    //전체 갯수
 
 
-        //속성 갯수 설정하기
-
+        //문제 총 갯수 구하기
         // for(let i=1; i<=searchList.length; i++){
-        //     const searchInfo = document.querySelector(".search__info .num")
-        //     searchInfo.innerHTML = i;
-        // };
+        //     document.querySelector(".num").innerHTML=i
+        // }
 
-        searchInfo.textContent = searchList.length;
-
+        document.querySelector(".num").innerHTML=searchList.length
 
         //
-        searchBox.addEventListener("keyup", () => {
-            const searchWord = searchBox.value;     //사용자가 입력한 키워드
-            searchList.forEach(el => {
-                const cssType = el.dataset.name;                    //CSS유형 모든 값
-                const cssName = el.querySelector("strong").innerText //CSS 속성 모든 값
+        searchBox.addEventListener("keyup", ()=>{
+            const searchWord = searchBox.value          //사용자가 입력한 키워드
 
-                if (cssName.includes(searchWord)) {
-                    el.classList.remove("hide");
+            searchList.forEach(el => {
+                const cssName  = el.dataset.name;       //css 속성(searchList(.search__list ul li)) 모든 값
+                const cssType  = el.dataset.type;       //css 속성(searchList(.search__list ul li)) 모든 값
+                // const cssType  = el.dataset.type;       //css 속성(searchList(.search__list ul li)) 모든 값
+                // console.log(cssName)
+
+                if(cssName.includes(searchWord)||cssType.includes(searchWord)){       //cssName에 searchWord 가 포함되어있으면
+                    el.classList.remove("hide")            //true일시 hide 클래스 제거
                 } else {
-                    el.classList.add("hide");
+                    el.classList.add("hide")         //false일시 hide 클래스 추가
                 }
-            });
-        });
+
+                
+            })
+        })
 
     </script>
 </body>

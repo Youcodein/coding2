@@ -706,7 +706,7 @@ const currentStr22 = str1.padEnd(6);  //   456___
             </div>
             <!-- sample11 -->
             <div id="sample12" class="sample">
-                <h3 class="t_tit2">12. 문자열 메서드 : 검색 : includes() : 문자열 포함 여부 검색</h3>
+                <h3 class="t_tit2">match() : 문자열을 검색(정규식) : 반환(배열)</h3>
                 <p class="t_desc">
                     문자열 포함 여부를 검색하여, 불린(true, false)을 반환합니다.
                 </p>
@@ -728,6 +728,37 @@ const currentStr7 = str1.includes('reference', 12);                     //false
 </code></pre>
                 </div>
             </div>
+            </div>
+            <!-- sample12 -->
+
+            <div id="sample12" class="sample">
+                <h3 class="t_tit2">13. 함수의 유형 : 함수와 매개변수를 이용한 형태</h3>
+                <div class="t_code">
+                    <pre><code class="language-js">function func(num, str1, str2) {
+                        document.write(num + str1 + str2 + "되었습니다.");
+                    }
+                    func("1", "함수", "실행");
+                    func("2", "자바스크립트", "실행");
+                    func("3", "제이쿼리", "실행");
+                    </code></pre>
+                                    </div>
+                                    <div class="result">
+                                        <details>
+                                            <summary>결과 보기</summary>
+                                            <div class="sample13_result">
+                                                <script>
+                                                    {
+                                                        function func(num, str1, str2) {
+                                                        document.write(num + str1 + str2 + "되었습니다.");
+                                                        }
+                                                        func("1", "함수", "실행");
+                                                        func("2", "자바스크립트", "실행");
+                                                        func("3", "제이쿼리", "실행");
+                                                    }
+                                                </script>
+                                            </div>
+                                        </details>
+                                    </div>
             </div>
             <!-- sample12 -->
 
