@@ -635,9 +635,9 @@ const currentStr17 = str4.split('').reverse().join('/'); //e/c/n/e/r/e/f/e/r/ /t
             </div>
             <!-- sample09 -->
             <div id="sample10" class="sample">
-                <h3 class="t_tit2">10. 문자열 메서드 : 변경 : replace() /  replaceAll() : 문자열 변경</h3>
+                <h3 class="t_tit2">search() : 문자열을 검색(정규식) : 반환(숫자)</h3>
                 <p class="t_desc">
-                    replace()는 문자열을 부분 문자열로 구분하고 배열로 반환해줍니다.
+                    search() 메서드는 문자열(정규식)을 검색하고 위치값(숫자)를 반환합니다.
                 </p>
                 <div class="t_tbox">
                     "문자열".replace(찾을 문자열, 변경할 문자열)<br>
@@ -649,26 +649,15 @@ const currentStr17 = str4.split('').reverse().join('/'); //e/c/n/e/r/e/f/e/r/ /t
                 <div class="t_code">
                 <div class="script">
 <pre><code class="language-js">const str1 = "javascript reference";
-const currentStr1 = str1.replace("javascript", "자바스크립트");       //자바스크립트 reference
-const currentStr2 = str1.replace("j", "J");                         //자바스크립트 reference
-const currentStr3 = str1.replace("e", "E");                         //javascript rEference
-const currentStr4 = str1.replaceAll("e", "E");                      //javascript rEfErEncE
-const currentStr5 = str1.replaceAll(/e/g, "E");                      //javascript rEfErEncE
-const currentStr6 = str1.replaceAll(/e/gi, "E");                      //javascript rEfErEncE
-
-
-const str2 = "https://www.naver.com/img01.jpg";
-
-const currentStr7 = str2.replace("img01", "img02");                   //https://www.naver.com/img02.jpg
-
-const str3 = "010-2000-1000";
-
-const currentStr8 = str3.replace("-","");                             //0102000-1000
-const currentStr9 = str3.replaceAll("-","");                          //01020001000
-const currentStr10 = str3.replace(/-/g,"");                           //01020001000
-const currentStr11 = str3.replace(/-/g," ");                          //010 2000 1000
-const currentStr12 = str3.replace(/-/g,"★");                         //010★2000★1000
-const currentStr13 = str3.replaceAll(/[1-9]/g,"★");                  //0★0-★000-★000
+    
+const currentStr1 = str1.search('javascript');            //0
+const currentStr2 = str1.search('reference');          //11
+const currentStr3 = str1.search('j');                  //0
+const currentStr4 = str1.search('a');                  //1
+const currentStr5 = str1.search('v');                  //2
+const currentStr6 = str1.search('jquery');             //-1(데이터가 없을 경우 이렇게 출력됨)
+const currentStr7 = str1.search('b');                  //-1(데이터가 없을 경우 이렇게 출력됨)
+const currentStr8 = str1.search(/[a-z]/g);                  //0
 </code></pre>
                 </div>
             </div>
