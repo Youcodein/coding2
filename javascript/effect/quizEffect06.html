@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,6 +10,7 @@
     <link href="https://webfontworld.github.io/DungGeunMo/DungGeunMo.css" rel="stylesheet">
     <link href="https://webfontworld.github.io/NexonMabinogi/MabinogiClassic.css" rel="stylesheet">
 </head>
+
 <body>
     <!--
         01. 퀴즈 이펙트 - 정답 확인하기
@@ -98,69 +100,69 @@
         //문제정보
         const quizInfo = [
             {
-                answerType : "웹디자인기능사 2011년 04회",
-                answerNum : "1",
-                answerAsk : "디자인의 합목적성에 대한 설명으로 옳은 것은?",
-                answerChoice : [
-                        "정해진 바탕으로 최상의 디자인을 창출하는 것을 말한다.",
-                        "디자인을 할 때 목적에 맞는 수단을 사용하였는지를 말한다.",
-                        "보다 실용적이고 심미적으로 개선, 발전시키는 것을 말한다.",
-                        "개성적인 미의식을 창출해내는 것을 말한다."
-            ],
-                answerResult : "디자인을 할 때 목적에 맞는 수단을 사용하였는지를 말한다.",
-                answerEx : "디자인을 할 때 목적에 맞는 수단을 사용하였는지를 말한다."
-            },
-            {
-                answerType : "웹디자인기능사 2011년 04회",
-                answerNum : "2",
-                answerAsk : "식욕을 자극하는 색상으로 옳은 것은?",
-                answerChoice : [
-                            "빨강",
-                            "청록",
-                            "보라",
-                            "검정" 
-            ],
-                answerResult : "빨강",
-                answerEx : "붉은색계열은 식욕을 자극하는 색입니다."
-            },
-            {
-                answerType : "웹디자인기능사 2011년 04회",
-                answerNum : "3",
-                answerAsk : "동시대비에 해당하지 않는 것은?",
-                answerChoice : [
-                            "명도대비",
-                            "색상대비",
-                            "보색대비",
-                            "유사대비" 
+                answerType: "웹디자인기능사 2011년 04회",
+                answerNum: "1",
+                answerAsk: "디자인의 합목적성에 대한 설명으로 옳은 것은?",
+                answerChoice: [
+                    "정해진 바탕으로 최상의 디자인을 창출하는 것을 말한다.",
+                    "디자인을 할 때 목적에 맞는 수단을 사용하였는지를 말한다.",
+                    "보다 실용적이고 심미적으로 개선, 발전시키는 것을 말한다.",
+                    "개성적인 미의식을 창출해내는 것을 말한다."
                 ],
-                answerResult : "유사대비",
-                answerEx : "동시대비 : 2가지 이상의 색을 동시에 볼때 일어나는 대비현상 / 색상대비, 명도대비, 채도대비, 보색대비가 있음."
+                answerResult: "디자인을 할 때 목적에 맞는 수단을 사용하였는지를 말한다.",
+                answerEx: "디자인을 할 때 목적에 맞는 수단을 사용하였는지를 말한다."
             },
             {
-                answerType : "웹디자인기능사 2011년 04회",
-                answerNum : "4",
-                answerAsk : "다음 중 색의 3속성이 아닌 것은",
-                answerChoice : [
-                            "색상",
-                            "명도",
-                            "채도",
-                            "대비"
+                answerType: "웹디자인기능사 2011년 04회",
+                answerNum: "2",
+                answerAsk: "식욕을 자극하는 색상으로 옳은 것은?",
+                answerChoice: [
+                    "빨강",
+                    "청록",
+                    "보라",
+                    "검정"
                 ],
-                answerResult : "대비",
-                answerEx : "색의 3속성 : 색을 구별하는 데 필요한 색상(H), 명도(V), 채도(C)를 색의 3요소 또는 색의 3속성이라고 합니다. / 색상 :유채색을 분류할 때 각 색에 붙인 명칭 또는 기호를 그 색의 색상이라고 함. / 명도 : 물체의 밝고 어두운 정도를 말함. 검은색 0, 하얀색 10으로 하고 그 중간 11단계의 회색 단계를 그레이스케일이라 하며 명도의 기준척도호 사용 함. / 채도 : 색의 순도, 색의 선명하고 탁한 정도를 말함. 색의 포화도 , 선명도라고도 함."
+                answerResult: "빨강",
+                answerEx: "붉은색계열은 식욕을 자극하는 색입니다."
             },
             {
-                answerType : "웹디자인기능사 2011년 04회",
-                answerNum : "5",
-                answerAsk : "다음 중 주위색의 영향으로 오히려 인접색에 가깝게 느껴지는 현상을 의미하는 것은?",
-                answerChoice : [
-                            "동화 현상",
-                            "명시현상",
-                            "색의 수축성",
-                            "중량현상"
+                answerType: "웹디자인기능사 2011년 04회",
+                answerNum: "3",
+                answerAsk: "동시대비에 해당하지 않는 것은?",
+                answerChoice: [
+                    "명도대비",
+                    "색상대비",
+                    "보색대비",
+                    "유사대비"
                 ],
-                answerResult : "동화 현상",
-                answerEx : "동화현상은 동류의 원리로 가장 가까운 색채끼리의 배색은 친근감과 조화를 느끼게 합니다."
+                answerResult: "유사대비",
+                answerEx: "동시대비 : 2가지 이상의 색을 동시에 볼때 일어나는 대비현상 / 색상대비, 명도대비, 채도대비, 보색대비가 있음."
+            },
+            {
+                answerType: "웹디자인기능사 2011년 04회",
+                answerNum: "4",
+                answerAsk: "다음 중 색의 3속성이 아닌 것은",
+                answerChoice: [
+                    "색상",
+                    "명도",
+                    "채도",
+                    "대비"
+                ],
+                answerResult: "대비",
+                answerEx: "색의 3속성 : 색을 구별하는 데 필요한 색상(H), 명도(V), 채도(C)를 색의 3요소 또는 색의 3속성이라고 합니다. / 색상 :유채색을 분류할 때 각 색에 붙인 명칭 또는 기호를 그 색의 색상이라고 함. / 명도 : 물체의 밝고 어두운 정도를 말함. 검은색 0, 하얀색 10으로 하고 그 중간 11단계의 회색 단계를 그레이스케일이라 하며 명도의 기준척도호 사용 함. / 채도 : 색의 순도, 색의 선명하고 탁한 정도를 말함. 색의 포화도 , 선명도라고도 함."
+            },
+            {
+                answerType: "웹디자인기능사 2011년 04회",
+                answerNum: "5",
+                answerAsk: "다음 중 주위색의 영향으로 오히려 인접색에 가깝게 느껴지는 현상을 의미하는 것은?",
+                answerChoice: [
+                    "동화 현상",
+                    "명시현상",
+                    "색의 수축성",
+                    "중량현상"
+                ],
+                answerResult: "동화 현상",
+                answerEx: "동화현상은 동류의 원리로 가장 가까운 색채끼리의 배색은 친근감과 조화를 느끼게 합니다."
             }
         ];
 
@@ -203,9 +205,9 @@
             quizQuestion.innerHTML = questionTag;   //번호, 질문
             quizSelects.innerHTML = choiceTag;      //객관식
             quizResult.innerHTML = quizInfo[index].answerEx //해설
-            
+
             const quizChoice = quizSelects.querySelectorAll(".choice");
-            for(let i=0; i<quizChoice.length; i++){
+            for (let i = 0; i < quizChoice.length; i++) {
                 quizChoice[i].setAttribute("onclick", "choiceSelected(this)")
             }
 
@@ -219,7 +221,7 @@
             let userAnswer = answer.textContent;    //사용자가 체크한 정답
             let currentAnswer = quizInfo[quizCount].answerResult; //문제의 정답
 
-            if(userAnswer == currentAnswer){
+            if (userAnswer == currentAnswer) {
                 console.log("정답")
                 quizView.classList.add("like");
                 quizScore++;
@@ -235,17 +237,19 @@
 
         //정답 확인 버튼
         const answerQuiz = () => {
+
+            //마지막 문제
+            if (quizInfo.length - 1 == quizCount) {
+                quizConfirm.textContent = `총 ${quizInfo.length} 문제 중에 ${quizScore} 문제를 맞추었습니다.`
+            }
+
             quizCount++;
             updateQuiz(quizCount);
             quizView.classList.remove("like", "dislike")
-
-            //마지막 문제
-            if(quizInfo.length-1 == quizCount) {
-                quizConfirm.textContent = `총 ${quizInfo.length} 문제 중에 ${quizScore} 문제를 맞추었습니다.`
-            }
         }
 
         quizConfirm.addEventListener("click", answerQuiz);
     </script>
 </body>
+
 </html>
