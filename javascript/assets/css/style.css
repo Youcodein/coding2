@@ -1,5 +1,7 @@
 /* 웹폰트 */
 @import url('https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css');
+@import url('https://webfontworld.github.io/NexonMabinogi/MabinogiClassic.css');
+
 /* 리셋 */
 /* 여백 초기화 */
 * {
@@ -8,6 +10,7 @@
     font-family: 'NexonLv1Gothic';
     font-size: 16px;
     line-height: 1.6;
+
 }
 
 /* 링크 초기화 */
@@ -32,6 +35,7 @@ body {
 #header {
     border-bottom: 1px dashed #dcdcdc;
     padding-bottom: 40px;
+    text-align: center;
 }
 #main {
     padding: 20px 0px;
@@ -45,16 +49,24 @@ body {
     text-decoration: underline;
 }
 
+/* container */
+.container {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
 /* 헤더 영역 */
 #header h1 a {
     font-size: 60px;
     font-weight: 700;
+    color: #ff8c8c;
 }
 #header .header_nav ul li {
     display: inline;
 }
 #header .header_nav ul li.active a  {
-    background-color: #000;
+    background-color: rgb(221, 128, 128);
     color: #fff;
 } 
 /* li와 active는 띄어주면 안 됨(부모-자식 관계가 아니라서) */
@@ -63,6 +75,7 @@ body {
     padding: 8px 25px;
     display: inline-block;
     margin-bottom: 7px;
+    font-family: 'MabinogiClassic';
 }
 #header .header_nav ul li a:hover {
     background-color: #000;
@@ -97,6 +110,51 @@ body {
 .main_sample p {
     margin-bottom: 10px;
     color: #666;
+}
+
+/* intro_menu */
+.intro_menu {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    backdrop-filter: blur(10px);
+    background: rgba(255,255,255,0.1);
+    padding: 3vw;
+    border-radius: 1vw;
+    font-size: 1vw;
+    text-align: center;
+
+}
+.intro_menu li {
+    font-family: 'MabinogiClassic';
+    font-size: 20px;
+}
+.intro_menu li a {
+    color: #9e1fe39d;
+    font-family: 'MabinogiClassic';
+    font-size: 20px;
+
+}
+.intro_menu li a:hover {
+    color: #42135c9d;
+    font-family: 'MabinogiClassic';
+    font-size: 20px;
+
+}
+
+@media (max-width: 600px){
+    .intro_menu {
+        width: 90%;
+        padding: 14px;
+    }
+    .intro_menu li a{
+        font-size: 16px;
+    }
+    .intro_menu li a:hover{
+        font-size: 16px;
+    }
+
 }
 
 /* sample */
@@ -148,6 +206,8 @@ body {
         color: #000;
     }
 }
+
+
 
 /* 티스토리용 문서 */
 
@@ -245,7 +305,11 @@ body {
 }
 
 .main_sample .result {
+    margin-top: 10px;
     margin-bottom: 80px;
+    background: rgb(255, 224, 224);
+    padding: 10px;
+    border-radius: 5px;
 }
 
 
