@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 : 전역변수/지역변수</title>
+
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dracura.css">
+</head>
+
+<body>
+    <header id="header">
+        <h1><a href="../index.html">Javascript</a></h1>
+    </header>
+    <!-- //header -->
+
+    <main id="main">
+        <div class="document">
+                <h2 class="t_tit">JQuery 속성선택자</h2>
+                <p class="t_desc2">
+                        JQuery의 속성 선택자입니다.
+                </p>
+
+                <h2 class="t_tit2">속성 선택자</h2>
+                <div class="t_table">
+                    <table>
+                        <colgroup>
+                            <col style="width : 30%">
+                            <col style="width : 30%">
+                            <col style="width : 40%">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>선택자 종류</th>
+                                <th colspan="2">설명</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="ce">요소[속성]</td>
+                                <td class="ce">$("span[class]")</td>
+                                <td>span 요소 중 class 속성을 가지고 있는 요소를 선택합니다.</td>
+                            </tr>
+                            <tr>
+                                <td class="ce">요소[속성='값']</td>
+                                <td class="ce">$("span[class='abc'])</td>
+                                <td>span요소 중 class가 'abc'인 요소를 선택합니다.</td>
+                            </tr>
+                            <tr>
+                                <td class="ce">요소[속성!='값']</td>
+                                <td class="ce">$("span[class!='abc'])</td>
+                                <td>span요소 중 class가 'abc'가 아닌 요소를 선택합니다.</td>
+                            </tr>
+                            <tr>
+                                <td class="ce">요소[속성~='값']</td>
+                                <td class="ce">$("span[class~='abc'])</td>
+                                <td>span요소 중 class가 'abc'가 포함하는 요소를 선택합니다.
+                                    'abc'앞뒤로 연결된 문자가 없어야 합니다. 'bg abc'는 선택되나 'bg_abc'는 선택되지 않습니다.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="ce">요소[속성*='값']</td>
+                                <td class="ce">$("span[class*='abc'])</td>
+                                <td>span요소 중 class가 'abc'를 포함하는 요소를 모두 선택합니다.
+                                    'bg abc', 'bg_abc' 모두 선택합니다.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="ce">요소[속성|='값']</td>
+                                <td class="ce">$("span[class|='abc'])</td>
+                                <td>span요소 중 class가 'abc'나 'abc-'로 시작하는 요소를 선택합니다.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="ce">요소[속성^='값']</td>
+                                <td class="ce">$("span[class^='abc'])</td>
+                                <td>span요소 중 class가 'abc'로 시작하는 요소를 선택합니다.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="ce">요소[속성$='값']</td>
+                                <td class="ce">$("span[class$='abc'])</td>
+                                <td>span요소 중 class가 'abc'로 끝나는 요소를 선택합니다.
+                                </td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+                <div class="t_iframe">
+                    <iframe height="500" style="width: 100%;" scrolling="no" title="제이쿼리속성선택자" src="https://codepen.io/youJin2/embed/qBoePdW?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+                        See the Pen <a href="https://codepen.io/youJin2/pen/qBoePdW">
+                        제이쿼리속성선택자</a> by HwangYoujin (<a href="https://codepen.io/youJin2">@youJin2</a>)
+                        on <a href="https://codepen.io">CodePen</a>.
+                      </iframe>
+                </div>
+        </div>
+
+        <!-- script -->
+    </main>
+
+    <!-- //main -->
+
+    <footer id="footer">
+        <a href="mailto:foryoucodin@gmail.com">foryoucodin@gmail.com</a>
+    </footer>
+    <!-- //footer -->
+
+    <script src="../assets/js/highlight.min.js"></script>
+    <script>
+        hljs.highlightAll();
+    </script>
+</body>
+<!-- 220804 -->
+
+</html>

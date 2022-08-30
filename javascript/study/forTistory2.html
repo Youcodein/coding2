@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 : 전역변수/지역변수</title>
+
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dracura.css">
+</head>
+
+<body>
+    <header id="header">
+        <h1><a href="../index.html">Javascript</a></h1>
+    </header>
+    <!-- //header -->
+
+    <main id="main">
+        <div class="document">
+                <h2 class="t_tit">JQuery 기본선택자</h2>
+                <p class="t_desc2">
+                        JQuery는 html 요소와 관련된 기능구현이 많아 그만큼 CSS와 매우 밀접한 관계가 있습니다.
+                </p>
+
+                <h2 class="t_tit2">기본 선택자</h2>
+                <div class="t_table">
+                    <table>
+                        <colgroup>
+                            <col style="width : 30%">
+                            <col style="width : 30%">
+                            <col style="width : 40%">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>선택자 종류</th>
+                                <th colspan="2">설명</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="ce">태그 선택자</td>
+                                <td class="ce">$("padEnd")</td>
+                                <td>p요소를 설명합니다.</td>
+                            </tr>
+                            <tr>
+                                <td class="ce">id 선택자</td>
+                                <td class="ce">$("#gnb")</td>
+                                <td>#gnb 요소를 선택합니다.</td>
+                            </tr>
+                            <tr>
+                                <td class="ce">class 선택자</td>
+                                <td class="ce">$(".logo")</td>
+                                <td>.logo인 요소를 선택합니다.</td>
+                            </tr>
+                            <tr>
+                                <td class="ce">자식 선택자</td>
+                                <td class="ce">$("#gnb > ul > li")</td>
+                                <td>#gnb의 자식 요소의 자식 요소 li를 선택합니다.</td>
+                            </tr>
+                            <tr>
+                                <td class="ce">하위 선택자</td>
+                                <td class="ce">$("#gnb ul")</td>
+                                <td>#gnb의 하위에 있는 모든 ul 요소를 선택합니다.</td>
+                            </tr>
+                            <tr>
+                                <td class="ce">인접 선택자</td>
+                                <td class="ce">$("#visual + #content")</td>
+                                <td>#visual의 다음에 오는 #content요소를 선택합니다.</td>
+                            </tr>
+                            <tr>
+                                <td class="ce">형제 선택자</td>
+                                <td class="ce">$("#visual ~ #footer")</td>
+                                <td>#visual의 형제 요소 #footer를 선택합니다.</td>
+                            </tr>
+                            <tr>
+                                <td class="ce">종속 선택자</td>
+                                <td class="ce">$("#div.util")</td>
+                                <td>#div 요소 중 class가 util인 요소를 선택합니다.</td>
+                            </tr>
+                            <tr>
+                                <td class="ce">그룹 선택자</td>
+                                <td class="ce">$(".left .right, #banner")</td>
+                                <td>.left .right, #banner 요소들을 선택합니다.</td>
+                            </tr>
+                            <tr>
+                                <td class="ce">전체 선택자</td>
+                                <td class="ce">$("*")</td>
+                                <td>모든 요소를 선택합니다.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+
+        <!-- script -->
+    </main>
+
+    <!-- //main -->
+
+    <footer id="footer">
+        <a href="mailto:foryoucodin@gmail.com">foryoucodin@gmail.com</a>
+    </footer>
+    <!-- //footer -->
+
+    <script src="../assets/js/highlight.min.js"></script>
+    <script>
+        hljs.highlightAll();
+    </script>
+</body>
+<!-- 220804 -->
+
+</html>
