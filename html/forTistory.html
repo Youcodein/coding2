@@ -62,22 +62,18 @@
                 <div class="t_link"><a href="https://github.com/Youcodein/coding2/blob/main/javascript/effect/sliderEffect02_jquery.html" target="_blank" rel="noopener">원본 소스 보기</a></div>
                 <h3 class="t_tit2"> GSAP 소스 </h3>
                 <div class="t_code">
-<pre><code class="language-js">&lt;!-- GSAP --&gt;
-&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"&gt;&lt;/script&gt;
-&lt;script&gt;
-    const slider = document.querySelectorAll(".slider");
-    let currentIndex = 0;
-
-    setInterval(() =&gt; {
-        currentIndex = (currentIndex + 1) % slider.length;
-
-        gsap.to(".slider__inner",{
-            duration : 0.6,
-            x : -800 * currentIndex,
-        });
-
-    }, 2000);
-&lt;/script&gt;
+<pre><code class="language-js">&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"&gt;&lt;/script&gt;
+&lt;script&gt;             
+let currentIndex = 0;
+setInterval(() =&gt; {
+    currentIndex = (currentIndex +1) % $(".slider").length;
+    // sliderInner.style.transition = "all 0.6s"
+    // $(".slider__inner").css(
+    //     "transform", "translateX("+ -800 * currentIndex +"px)"
+    // );
+    $(".slider__inner").css("position", "relative");
+    $(".slider__inner").animate({left : -800 * currentIndex},600)
+}, 2000);
 </code></pre>
                 </div>
 
