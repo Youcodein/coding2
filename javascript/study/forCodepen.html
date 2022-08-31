@@ -5,53 +5,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>기본 필터 선택자</title>
+    <title>visiblisty</title>
 
     <style>
-        * {
-            margin: 5px;
-        }
-
-        #m1 > p:last-child {
-            height: 20px;
-        }
-
-        span {
-            display: inline-block;
-            height: 20px;
+        #vis {
+            display: none;
         }
     </style>
-    <script src="jquery-3.3.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script>
         $(document).ready(function () {
-            $("#m1 > p:contains('html')").css("border", "2px solid red");
-            $("#m1 > p:empty").css("border", "2px solid red");
-            $("#m2 > span:parent").css("border", "2px solid orange");
-            $("#m2 > section:has(article)").css("border", "2px solid orange");
+            console.log($("div:hidden").text());
+            $("div:visible").css("background", "orange");
         });
     </script>
 </head>
 
 <body>
-    <div id="m1">
-        <p>html, css, javascript</p>
-        <p>html 5와 웹표준</p>
-        <p></p>
-    </div>
-    <div id="m2">
-        <span></span>
-        <span>내용1</span>
-    </div>
-    <div id="m3">
-        <section>
-            <article>내용2_1</article>
-        </section>
-        <section>
-            <div>
-                <article>내용2_2</article>
-            </div>
-        </section>
-    </div>
+    <div id="vis">내용1</div>
+    <div>내용2</div>
 </body>
 
 </html>
