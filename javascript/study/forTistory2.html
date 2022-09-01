@@ -21,74 +21,80 @@
         <div class="document">
                 <h2 class="t_tit">요소 크기 메서드 정리</h2>>
 
-                <h2 class="t_tit2">기본 선택자</h2>
+                <h2 class="t_tit2">위치 및 크기를 표현하는 속성 메서드</h2>
                 <div class="t_table">
                     <table>
                         <colgroup>
-                            <col style="width : 30%">
-                            <col style="width : 30%">
-                            <col style="width : 40%">
+                            <col>
+                            <col>
+                            <col>
+                            <col>
                         </colgroup>
                         <thead>
                             <tr>
-                                <th>선택자 종류</th>
-                                <th colspan="2">설명</th>
+                                <th></th>
+                                <th>속성/메서드</th>
+                                <th>설명</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td class="ce">태그 선택자</td>
-                                <td class="ce">$("padEnd")</td>
-                                <td>p요소를 설명합니다.</td>
+                                <td>1</td>
+                                <td>element.clientWidth</td>
+                                <td>요소의 가로값(마진/보더 미포함)</td>
                             </tr>
                             <tr>
-                                <td class="ce">id 선택자</td>
-                                <td class="ce">$("#gnb")</td>
-                                <td>#gnb 요소를 선택합니다.</td>
+                                <td>2</td>
+                                <td>element.clientHeight</td>
+                                <td>요소의 높이값(마진/보더 미포함)</td>
                             </tr>
                             <tr>
-                                <td class="ce">class 선택자</td>
-                                <td class="ce">$(".logo")</td>
-                                <td>.logo인 요소를 선택합니다.</td>
+                                <td>3</td>
+                                <td>element.clientTop</td>
+                                <td>요소의 Y축값(부모기준)</td>
                             </tr>
                             <tr>
-                                <td class="ce">자식 선택자</td>
-                                <td class="ce">$("#gnb > ul > li")</td>
-                                <td>#gnb의 자식 요소의 자식 요소 li를 선택합니다.</td>
+                                <td>4</td>
+                                <td>element.clientLeft</td>
+                                <td>요소의 X축값(부모기준)</td>
                             </tr>
                             <tr>
-                                <td class="ce">하위 선택자</td>
-                                <td class="ce">$("#gnb ul")</td>
-                                <td>#gnb의 하위에 있는 모든 ul 요소를 선택합니다.</td>
+                                <td>5</td>
+                                <td>element.offsetWidth</td>
+                                <td>요소의 가로값(보더/패딩 포함)</td>
                             </tr>
                             <tr>
-                                <td class="ce">인접 선택자</td>
-                                <td class="ce">$("#visual + #content")</td>
-                                <td>#visual의 다음에 오는 #content요소를 선택합니다.</td>
+                                <td>6</td>
+                                <td>element.offsetHeight</td>
+                                <td>요소의 가로값(보더/패딩 포함)</td>
                             </tr>
                             <tr>
-                                <td class="ce">형제 선택자</td>
-                                <td class="ce">$("#visual ~ #footer")</td>
-                                <td>#visual의 형제 요소 #footer를 선택합니다.</td>
+                                <td>7</td>
+                                <td>element.offsetTop</td>
+                                <td>요소의 Y축값(문서 기준)</td>
                             </tr>
                             <tr>
-                                <td class="ce">종속 선택자</td>
-                                <td class="ce">$("#div.util")</td>
-                                <td>#div 요소 중 class가 util인 요소를 선택합니다.</td>
+                                <td>8</td>
+                                <td>element.offsetLeft</td>
+                                <td>요소의 X축값(문서 기준)</td>
                             </tr>
                             <tr>
-                                <td class="ce">그룹 선택자</td>
-                                <td class="ce">$(".left .right, #banner")</td>
-                                <td>.left .right, #banner 요소들을 선택합니다.</td>
-                            </tr>
-                            <tr>
-                                <td class="ce">전체 선택자</td>
-                                <td class="ce">$("*")</td>
-                                <td>모든 요소를 선택합니다.</td>
+                                <td>9</td>
+                                <td>element.getBoundingClientRect()</td>
+                                <td>요소의 크기와 뷰포트에 상대적인 위치 정보를 제공하는 DOMRect 객체</td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
+
+                <div class="t_iframe">
+                    <iframe height="500" style="width: 100%;" scrolling="no" title="제이쿼리요소크기메서드" src="https://codepen.io/youCodein/embed/XWqWbYO?default-tab=result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+                        See the Pen <a href="https://codepen.io/youCodein/pen/XWqWbYO">
+                        제이쿼리요소크기메서드</a> by Youcodein (<a href="https://codepen.io/youCodein">@youCodein</a>)
+                        on <a href="https://codepen.io">CodePen</a>.
+                    </iframe>
+                </div>
+        </div>
 
 
         <!-- script -->
