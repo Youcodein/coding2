@@ -312,23 +312,20 @@ func("함수가 실행되었습니다.7");
                     <p>
                     </p>
                     <div class="script">
-<pre><code class="language-js">function func(str){
-    document.write(str);
-}
-func("함수가 실행되었습니다.7");
-
-// 화살표 함수1
-func = (str) => {
-    document.write(str);
-}
-
-// 화살표 함수2
-func = (str) => document.write(str);
-
-//화살표 함수3
-func = str => document.write(str);
-
-func("함수가 실행되었습니다.7");
+<pre><code class="language-js">{
+    // function func(){
+    // const str = ("함수가 실행되었습니다.8");
+    // return str;
+    // }
+    // document.write(func());
+    
+        func=() => {
+        const str = ("함수가 실행되었습니다.8");
+        return str;
+        }
+        document.write(func());
+        }
+    }
 </code></pre>
                     </div>
                     <div class="result">
