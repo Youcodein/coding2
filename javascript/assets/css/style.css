@@ -60,13 +60,14 @@ body {
 #header h1 a {
     font-size: 60px;
     font-weight: 700;
-    color: #ff8c8c;
+    color: #ff9e9e;
+    -webkit-text-stroke: 1px #1f1f1f; 
 }
 #header .header_nav ul li {
     display: inline;
 }
 #header .header_nav ul li.active a  {
-    background-color: rgb(221, 128, 128);
+    background-color: #1f1f1f;
     color: #fff;
 } 
 /* li와 active는 띄어주면 안 됨(부모-자식 관계가 아니라서) */
@@ -78,7 +79,7 @@ body {
     font-family: 'MabinogiClassic';
 }
 #header .header_nav ul li a:hover {
-    background-color: #000;
+    background-color: #ff9e9e;
     color: #fff;
 }
 .header_nav .study {
