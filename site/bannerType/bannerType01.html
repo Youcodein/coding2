@@ -1,35 +1,50 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>헤더 유형01</title>
+    <title>배너 유형01</title>
     <style>
         /* fonts */
         @import url('https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css');
+
         .nexon {
             font-family: 'NexonLv1Gothic';
             font-weight: 400;
         }
+
         /* reset */
         * {
             margin: 0;
             padding: 0;
         }
+
         a {
             text-decoration: none;
             color: #000;
         }
+
         img {
             width: 100%;
         }
-        h1, h2, h3, h4, h5, h6 {
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
             font-weight: normal;
         }
-        em, i, address {
+
+        em,
+        i,
+        address {
             font-style: normal;
         }
+
         /* common */
         .container {
             width: 1160px;
@@ -37,16 +52,19 @@
             margin: 0 auto;
             min-width: 1160px;
         }
+
         .section {
             padding: 120px 0;
         }
-        .section > h2 {
+
+        .section>h2 {
             font-size: 50px;
             line-height: 1;
             text-align: center;
             margin-bottom: 20px;
         }
-        .section > p {
+
+        .section>p {
             font-size: 22px;
             font-weight: 300;
             color: #666;
@@ -54,27 +72,70 @@
             margin-bottom: 70px;
         }
 
+        /* 블라인드 효과 */
+
+        .blind {
+            position: absolute;
+            clip: rect(0 0 0 0);
+            width: 1px;
+            height: 1px;
+            margin: -1px;
+            overflow: hidden;
+        }
+
+        /* banner */
+        .banner__inner {
+            background-image: url(../bannerType/img/banner_bg01.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            text-align: center;
+            padding: 120px 0;
+            color: #fff;
+        }
+
+        .banner__inner .title {
+            font-size: 50px;
+            line-height: 1;
+            font-weight: 300;
+            margin-bottom: 40px;
+        }
+
+        .banner__inner .desc {
+            font-size: 24px;
+            line-height: 1.5;
+            font-weight: 300;
+            margin-bottom: 70px;
+        }
+
+        .banner__inner .desc a {
+            color: #fff;
+            display: block;
+        }
+
+        .banner__inner .desc a:hover {
+            text-decoration: underline;
+        }
+
+        .banner__inner .small {
+            font-size: 16px;
+            text-decoration: underline;
+        }
     </style>
 </head>
+
 <body>
-    <section id="headerType01" class="header__wrap nexon">
-        <div class="header__inner">
-            <div class="header__logo">
-                <a href="#">Web <em>site</em></a>
-            </div>
-            <div class="header__menu">
-                <ul>
-                    <li><a href="#">헤더 영역</a></li>
-                    <li><a href="#">슬라이드 영역</a></li>
-                    <li><a href="#">배너 영역</a></li>
-                    <li><a href="#">컨텐츠 영역</a></li>
-                    <li><a href="#">푸터 영역</a></li>
-                </ul>
-            </div>
-            <div class="header__member">
-                <a href="#">로그인</a>
-            </div>
+    <section id="bannerType" class="banner__wrap nexon">
+        <h2 class="blind">배너 영역</h2>
+        <div class="banner__inner">
+            <h3 class="title">제목 영역</h3>
+            <p class="desc">
+                내용내용내용이랍니다.내용어케길게써
+                <a href="#" title="새 페이지 열림">그거어케하는건데</a>
+            </p>
+            <span class="small">배너 유형01</span>
         </div>
     </section>
 </body>
+
 </html>
