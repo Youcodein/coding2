@@ -56,10 +56,46 @@
   <![endif]-->
 
   <style>
-    #clock {display: block;}
-    .link1 {background: #fff; left: 50%; transform: translatex(-50%); color: #000; display: inline-block; border-radius: 5px; font-weight: bold; padding: 10px 30px!important; height: auto !important; box-sizing: border-box; width: auto !important; font-size: 20px !important; margin-top: 36px !important;}
-    .link2 {background: #fff; left: 50%; transform: translatex(-50%); color: #000; display: inline-block; border-radius: 5px; font-weight: bold; padding: 10px 30px!important; height: auto !important; box-sizing: border-box; width: auto !important; font-size: 20px !important; margin-top: 86px !important;}
-    .disqus {margin-right: 20px; margin-top: 40px;}
+    #clock {
+      display: block;
+    }
+
+    .link1 {
+      background: #fff;
+      left: 50%;
+      transform: translatex(-50%);
+      color: #000;
+      display: inline-block;
+      border-radius: 5px;
+      font-weight: bold;
+      padding: 10px 30px !important;
+      height: auto !important;
+      box-sizing: border-box;
+      width: auto !important;
+      font-size: 20px !important;
+      margin-top: 36px !important;
+    }
+
+    .link2 {
+      background: #fff;
+      left: 50%;
+      transform: translatex(-50%);
+      color: #000;
+      display: inline-block;
+      border-radius: 5px;
+      font-weight: bold;
+      padding: 10px 30px !important;
+      height: auto !important;
+      box-sizing: border-box;
+      width: auto !important;
+      font-size: 20px !important;
+      margin-top: 86px !important;
+    }
+
+    .disqus {
+      margin-right: 20px;
+      margin-top: 40px;
+    }
   </style>
 </head>
 
@@ -134,6 +170,10 @@
           <ul class="filter option-set" data-filter-group="color">
             <li><a href="#filter-color-any" data-filter-value="" class="selected">ALL</a></li>
             <li class="webstandard"><a href="#filter-color-webstandard" data-filter-value=".class">CLASS</a></li>
+            <li class="webstandard"><a href="#filter-color-webstandard" data-filter-value=".script">SCRIPT</a></li>
+            <li class="webstandard"><a href="#filter-color-webstandard" data-filter-value=".layout">LAYOUT</a></li>
+            <li class="webstandard"><a href="#filter-color-webstandard" data-filter-value=".refer">REFERENCE</a></li>
+            <li class="webstandard"><a href="#filter-color-webstandard" data-filter-value=".site">SITE</a></li>
           </ul>
         </div>
       </div>
@@ -184,7 +224,7 @@
           <!-- //box -->
 
           <!-- box -->
-          <section class="color-shape script">
+          <section class="color-shape refer">
             <a href="html/index.html" target="_blank">
               <div class="image-wrap">
                 <div class="hover-wrap">
@@ -205,7 +245,7 @@
           <!-- //box -->
 
           <!-- box -->
-          <section class="color-shape script">
+          <section class="color-shape refer">
             <a href="css/index.html" target="_blank">
               <div class="image-wrap">
                 <div class="hover-wrap">
@@ -224,8 +264,8 @@
             </a>
           </section>
           <!-- //box -->
-            <!-- box -->
-            <section class="color-shape script">
+          <!-- box -->
+          <section class="color-shape layout">
             <a href="layout/index.html" target="_blank">
               <div class="image-wrap">
                 <div class="hover-wrap">
@@ -243,10 +283,10 @@
               </div>
             </a>
           </section>
-          <!-- //box -->     
+          <!-- //box -->
           <!-- box -->
-          <section class="color-shape script">
-            <a href="site/index.html" target="_blank">
+          <section class="color-shape site">
+            <a href="site/site1/index.html" target="_blank">
               <div class="image-wrap">
                 <div class="hover-wrap">
                   <span class="overlay-img-donut">SITE</span>
@@ -263,7 +303,172 @@
               </div>
             </a>
           </section>
-          <!-- //box -->                                     
+          <!-- //box -->
+
+          <!-- box -->
+          <section class="color-shape script">
+            <a href="javascript/effect/searchEffect.html" target="_blank">
+              <div class="image-wrap">
+                <div class="hover-wrap">
+                  <span class="overlay-img-donut">JAVASCRIPT</span>
+                  <span class="overlay-text-thumb-donut">QUIZ</span>
+                  <span class="overlay-text-thumb1-donut">검색 효과</span>
+                  <span class="overlay-text-thumb2-donut">SCRIPT</span>
+                </div>
+                <img src="assets/img/svg-apple.svg" alt="portfolio">
+                <div class="img-text donutImg">
+                  <h5>SEARCH</h5>
+                  <p>검색 효과</p>
+                  <span>JAVASCRIPT</span>
+                </div>
+              </div>
+            </a>
+          </section>
+          <!-- //box -->
+
+          <!-- box -->
+          <section class="color-shape script">
+            <a href="javascript/effect/quizEffect.html" target="_blank">
+              <div class="image-wrap">
+                <div class="hover-wrap">
+                  <span class="overlay-img-donut">JAVASCRIPT</span>
+                  <span class="overlay-text-thumb-donut">QUIZ</span>
+                  <span class="overlay-text-thumb1-donut">퀴즈 효과</span>
+                  <span class="overlay-text-thumb2-donut">SCRIPT</span>
+                </div>
+                <img src="assets/img/svg-carrot.svg" alt="portfolio">
+                <div class="img-text donutImg">
+                  <h5>QUIZ</h5>
+                  <p>퀴즈 효과</p>
+                  <span>JAVASCRIPT</span>
+                </div>
+              </div>
+            </a>
+          </section>
+          <!-- //box -->
+
+          <!-- box -->
+          <section class="color-shape script">
+            <a href="javascript/effect/sliderEffect.html" target="_blank">
+              <div class="image-wrap">
+                <div class="hover-wrap">
+                  <span class="overlay-img-donut">JAVASCRIPT</span>
+                  <span class="overlay-text-thumb-donut">SLIDER</span>
+                  <span class="overlay-text-thumb1-donut">슬라이드 효과</span>
+                  <span class="overlay-text-thumb2-donut">SCRIPT</span>
+                </div>
+                <img src="assets/img/svg-macaron-cookies.svg" alt="portfolio">
+                <div class="img-text donutImg">
+                  <h5>SLIDER</h5>
+                  <p>슬라이드 효과</p>
+                  <span>JAVASCRIPT</span>
+                </div>
+              </div>
+            </a>
+          </section>
+          <!-- //box -->
+
+          <!-- box -->
+          <section class="color-shape script">
+            <a href="javascript/effect/dataEffect.html" target="_blank">
+              <div class="image-wrap">
+                <div class="hover-wrap">
+                  <span class="overlay-img-donut">JAVASCRIPT</span>
+                  <span class="overlay-text-thumb-donut">DATA</span>
+                  <span class="overlay-text-thumb1-donut">데이터 효과</span>
+                  <span class="overlay-text-thumb2-donut">SCRIPT</span>
+                </div>
+                <img src="assets/img/svg-french-fries.svg" alt="portfolio">
+                <div class="img-text donutImg">
+                  <h5>DATA</h5>
+                  <p>데이터 효과</p>
+                  <span>JAVASCRIPT</span>
+                </div>
+              </div>
+            </a>
+          </section>
+          <!-- //box -->
+          <!-- box -->
+          <section class="color-shape script">
+            <a href="javascript/effect/mouseEffect.html" target="_blank">
+              <div class="image-wrap">
+                <div class="hover-wrap">
+                  <span class="overlay-img-donut">JAVASCRIPT</span>
+                  <span class="overlay-text-thumb-donut">MOUSE</span>
+                  <span class="overlay-text-thumb1-donut">마우스 효과</span>
+                  <span class="overlay-text-thumb2-donut">SCRIPT</span>
+                </div>
+                <img src="assets/img/svg-cherries.svg" alt="portfolio">
+                <div class="img-text donutImg">
+                  <h5>MOUSE</h5>
+                  <p>마우스 효과</p>
+                  <span>JAVASCRIPT</span>
+                </div>
+              </div>
+            </a>
+          </section>
+          <!-- //box -->
+          <!-- box -->
+          <section class="color-shape script">
+            <a href="javascript/effect/searchEffect.html" target="_blank">
+              <div class="image-wrap">
+                <div class="hover-wrap">
+                  <span class="overlay-img-donut">JAVASCRIPT</span>
+                  <span class="overlay-text-thumb-donut">SLIDE</span>
+                  <span class="overlay-text-thumb1-donut">슬라이드 효과</span>
+                  <span class="overlay-text-thumb2-donut">SCRIPT</span>
+                </div>
+                <img src="assets/img/svg-cherries.svg" alt="portfolio">
+                <div class="img-text donutImg">
+                  <h5>SLIDE</h5>
+                  <p>슬라이드 효과</p>
+                  <span>JAVASCRIPT</span>
+                </div>
+              </div>
+            </a>
+          </section>
+          <!-- //box -->
+          <!-- box -->
+          <section class="color-shape script">
+            <a href="javascript/effect/parallaxEffect.html" target="_blank">
+              <div class="image-wrap">
+                <div class="hover-wrap">
+                  <span class="overlay-img-donut">JAVASCRIPT</span>
+                  <span class="overlay-text-thumb-donut">PARALLAX</span>
+                  <span class="overlay-text-thumb1-donut">패럴랙스 효과</span>
+                  <span class="overlay-text-thumb2-donut">SCRIPT</span>
+                </div>
+                <img src="assets/img/svg-cherries.svg" alt="portfolio">
+                <div class="img-text donutImg">
+                  <h5>PARALLAX</h5>
+                  <p>패럴랙스 효과</p>
+                  <span>JAVASCRIPT</span>
+                </div>
+              </div>
+            </a>
+          </section>
+          <!-- //box -->
+          <!-- box -->
+          <section class="color-shape script">
+            <a href="javascript/effect/gameEffect.html" target="_blank">
+              <div class="image-wrap">
+                <div class="hover-wrap">
+                  <span class="overlay-img-donut">JAVASCRIPT</span>
+                  <span class="overlay-text-thumb-donut">GAME</span>
+                  <span class="overlay-text-thumb1-donut">게임 효과</span>
+                  <span class="overlay-text-thumb2-donut">SCRIPT</span>
+                </div>
+                <img src="assets/img/svg-cherries.svg" alt="portfolio">
+                <div class="img-text donutImg">
+                  <h5>GAME</h5>
+                  <p>게임 효과</p>
+                  <span>JAVASCRIPT</span>
+                </div>
+              </div>
+            </a>
+          </section>
+          <!-- //box -->
+
 
         </div>
         <!-- //container-->
