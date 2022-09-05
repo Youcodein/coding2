@@ -1,7 +1,10 @@
 # coding2
 
-### 메인 페이지
+### 메인 페이지1
 https://Youcodein.github.io/coding2/index.html   
+
+### 메인 페이지2
+https://youcodein.netlify.app/  
 
 ### 자기소개 페이지   
 https://Youcodein.github.io/coding2/class/index.html   
