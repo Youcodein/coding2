@@ -19,80 +19,133 @@
 
     <main id="main">
         <div class="document">
-                <h2 class="t_tit">jQuery : 속성 관련 메서드</h2>>
+            <h2 class="t_tit">jQuery : 스타일 관련 메서드</h2>>
 
-                <h2 class="t_tit2">attr( ) 메서드</h2>
-                <p class="t_desc2">
-                    선택한 요소의 attribute(속성)를 선택, 생성, 변경하는 메서드입니다.
-                </p>
-                <div class="t_table">
-                    <table>
-                        <colgroup>
-                            <col>
-                            <col>
-                        </colgroup>
-                        <thead>
-                            <tr>
-                                <th>실행 분류</th>
-                                <th>형식</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>취득</td>
-                                <td>$("a").attr("href");</td>
-                            </tr>
-                            <tr>
-                                <td rowspan="2">생성, 변경</td>
-                                <td>
-                                    $("a").attr("href", "http://icoxpublish.com").attr("target", "_blank");
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    $("a").attr({"href": "http://icoxpublish.com", target:"_blank"});
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>콜백 함수</td>
-                                <td>
-                                    $("a").attr("href", function(index, h){<br>
-                                        //index는 각 a 요소의 index 0, 1, 2<br>
-                                        //h는 각 a 요소 href 속성 <br>
-                                        return attribute(속성) // 각 a 요소의 속성을 생성 및 변경합니다. });<br>
-                                        ...<br>
-                                        &lt;a href="http://www.daum.net" target="_blank" title="새창"&gt;다음&lt;/a&gt;<br>
-                                        &lt;a href="http://www.naver.net" target="_blank" title="새창"&gt;네이버&lt;/a&gt;<br>
-                                        &lt;a href="http://www.nate.net" target="_blank" title="새창"&gt;네이트&lt;/a&gt;
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
+            <h2 class="t_tit2">css() 메서드</h2>
+            <p class="t_desc2">
+                선택한 요소의 css속성값을 가져오거나 추가하는 메서드입니다.
+            </p>
+            <div class="t_table">
+                <table>
+                    <colgroup>
+                        <col>
+                        <col>
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th>실행 분류</th>
+                            <th>형식</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>취득</td>
+                            <td>$("div").css("width");</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2">생성, 변경</td>
+                            <td>
+                                $("div").css("background-color", "red").css("padding", "10px");
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                $("div").css({background-color: "red", padding: "10px"});
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>콜백 함수</td>
+                            <td>
+                                $("div").css("width", function(index, .w) {<br>
+                                // index는 각 div 요소의 index 0,1,2<br>
+                                // w은 각 div 요소 width 속성<br>
+                                return css 속성 // 각 div 요소의 css 속성을 변경합니다.<br>
+                                });<br>
+                                ……<br><br>
+                                <div>내용</div><br>
+                                <div>내용</div><br>
+                                <div>내용</div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
 
-                <div class="t_iframe">
-                    <iframe height="300" style="width: 100%;" scrolling="no" title="1" src="https://codepen.io/youCodein/embed/mdLywGB?default-tab=result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
-                        See the Pen <a href="https://codepen.io/youCodein/pen/mdLywGB">
-                        1</a> by Youcodein (<a href="https://codepen.io/youCodein">@youCodein</a>)
-                        on <a href="https://codepen.io">CodePen</a>.
-                      </iframe>
-                </div>
+            <div class="t_iframe">
+                <iframe height="500" style="width: 100%;" scrolling="no" title="제이쿼리 css메서드"
+                    src="https://codepen.io/youCodein/embed/JjvoVWW?default-tab=result" frameborder="no" loading="lazy"
+                    allowtransparency="true" allowfullscreen="true">
+                    See the Pen <a href="https://codepen.io/youCodein/pen/JjvoVWW">
+                        제이쿼리 css메서드</a> by Youcodein (<a href="https://codepen.io/youCodein">@youCodein</a>)
+                    on <a href="https://codepen.io">CodePen</a>.
+                </iframe>
+            </div>
 
 
-                <h2 class="t_tit2">pop( ) 메서드</h2>
-                <p class="t_desc2">
-                    pop() 메서드는 요소의 속성을 true, false로 제어할 수 있습니다.
-                </p>
+            <h2 class="t_tit2">width, height 관련 메서드</h2>
 
-                <div class="t_iframe">
-                    <iframe height="300" style="width: 100%;" scrolling="no" title="2" src="https://codepen.io/youCodein/embed/QWrwgVJ?default-tab=result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
-                        See the Pen <a href="https://codepen.io/youCodein/pen/QWrwgVJ">
-                        2</a> by Youcodein (<a href="https://codepen.io/youCodein">@youCodein</a>)
-                        on <a href="https://codepen.io">CodePen</a>.
-                      </iframe>
-                </div>
+            <div class="t_table">
+                <table>
+                    <colgroup>
+                        <col>
+                        <col>
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th>메서드 종류</th>
+                            <th>설명</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>width()</td>
+                            <td>요소의 가로 길이를 취득, 변경할 수 있습니다.</td>
+                        </tr>
+                        <tr>
+                            <td>innerWidth()</td>
+                            <td>padding이 적용된 요소의 가로 길이를 취득, 변경할 수 있습니다.</td>
+                        </tr>
+                        <tr>
+                            <td>outerWidth()</td>
+                            <td>
+                                border와 margin이 적용된 요소의 가로 길이를 취득, 변경할 수 있습니다.<br>
+                                outerWidth()는 요소의 width값 + 좌 ∙ 우 border 값<br>
+                                outerWidth(true)는 요소의 width값 + 좌 ∙ 우 border값 + 좌 ∙ 우 margin값<br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>height()</td>
+                            <td>
+                                요소의 높이를 취득, 변경할 수 있습니다.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>innerHeight()</td>
+                            <td>
+                                padding이 적용된 요소의 높이를 취득, 변경할 수 있습니다.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>outerHeight()</td>
+                            <td>
+                                border와 margin이 적용된 요소의 높이를 취득, 변경할 수 있습니다.<br>
+                                outerHeight()는 요소의 height값 + 상 ∙ 하 border 값<br>
+                                outerHeight(true)는 요소의 height값 + 상 ∙ 하 border값 + 상 ∙ 하 margin값<br>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
 
- 
+            <div class="t_iframe">
+                <iframe height="500" style="width: 100%;" scrolling="no" title="제이쿼리 width/height메서드" src="https://codepen.io/youCodein/embed/WNJbWZB?default-tab=result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+                    See the Pen <a href="https://codepen.io/youCodein/pen/WNJbWZB">
+                    제이쿼리 width/height메서드</a> by Youcodein (<a href="https://codepen.io/youCodein">@youCodein</a>)
+                    on <a href="https://codepen.io">CodePen</a>.
+                </iframe>
+            </div>
+
+
         </div>
 
 
