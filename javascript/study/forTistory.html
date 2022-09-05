@@ -19,189 +19,29 @@
 
     <main id="main">
         <div class="document">
-                <h2 class="t_tit">JQuery 탐색 선택자</h2>
+                <h2 class="t_tit">VsCode Prettier 설정 방법</h2>
 
-                <h2 class="t_tit2">1. 기본 탐색 선택자</h2>
-                <div class="t_table">
-                    <table>
-                        <colgroup>
-                            <col style="width : 30%">
-                            <col style="width : 30%">
-                            <col style="width : 40%">
-                        </colgroup>
-                        <thead>
-                            <tr>
-                                <th>선택자 종류</th>
-                                <th colspan="2">설명</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="ce">children()</td>
-                                <td class="ce">$("div").children()</td>
-                                <td>div 요소의 자식 요소를 선택합니다.</td>
-                            </tr>
-                            <tr>
-                                <td class="ce">parent()</td>
-                                <td class="ce">$("p").parent()</td>
-                                <td>p 요소의 부모 요소를 선택합니다.</td>
-                            </tr>
-                            <tr>
-                                <td class="ce">parents()</td>
-                                <td class="ce">$("p").parents("div")</td>
-                                <td>p 요소의 부모가 되는 모든 div 요소를 선택합니다.</td>
-                            </tr>
-                            <tr>
-                                <td class="ce">closest()</td>
-                                <td class="ce">$("p").closest("div")</td>
-                                <td>p 요소의 부모가 되는 첫 번째 div 요소를 선택합니다.</td>
-                            </tr>
-                            <tr>
-                                <td class="ce">next()</td>
-                                <td class="ce">$("div.m").next()</td>
-                                <td>div.m 요소의 다음 요소를 선택합니다.</td>
-                            </tr>
-                            <tr>
-                                <td class="ce">nextAll()</td>
-                                <td class="ce">$("div.m").nextAll()</td>
-                                <td>div.m 요소의 다음 요소들을 모두 선택합니다.</td>
-                            </tr>
-                            <tr>
-                                <td class="ce">nextUntil()</td>
-                                <td class="ce">$("div.m").nextUntil("p")</td>
-                                <td>div.m 요소의 다음 요소부터 p 요소 전까지의 요소를 선택합니다.</td>
-                            </tr>
-                            <tr>
-                                <td class="ce">prev()</td>
-                                <td class="ce">$("div.m").prev()</td>
-                                <td>div.m 요소의 이전 요소를 선택합니다.</td>
-                            </tr>
-                            <tr>
-                                <td class="ce">prevAll()</td>
-                                <td class="ce">$("div.m").prevALL()</td>
-                                <td>div.m 요소의 이전 요소들을 모두 선택합니다.</td>
-                            </tr>
-                            <tr>
-                                <td class="ce">prevUntil()</td>
-                                <td class="ce">$("div.m").prevUntil("p")</td>
-                                <td>div.m 요소의 이전 요소부터 p요소 다음 요소까지 선택합니다.</td>
-                            </tr>
-                            <tr>
-                                <td class="ce">siblings()</td>
-                                <td class="ce">$("div").siblings("p")</td>
-                                <td>div 요소의 형제 요소 중 p 요소를 선택합니다.</td>
-                            </tr>
-                            <tr>
-                                <td class="ce">find()</td>
-                                <td class="ce">$("div").find("span")</td>
-                                <td>div 요소의 하위 요소 중 span 요소를 선택합니다.</td>
-                            </tr>
-                            <tr>
-                                <td class="ce">filter()</td>
-                                <td class="ce">$("div").filter(".m")</td>
-                                <td>div 요소 중 class 가 "m"인 요소를 선택합니다.</td>
-                            </tr>
-                            <tr>
-                                <td class="ce">not()</td>
-                                <td class="ce">$("div").not(".m")</td>
-                                <td>div 요소 중 class 가 "m"이 아닌 요소를 선택합니다.</td>
-                            </tr>
-                            <tr>
-                                <td class="ce">has()</td>
-                                <td class="ce">$("div").has("span")</td>
-                                <td>div 요소 중 span 요소를 포함하고 있는 요소를 선택합니다.</td>
-                            </tr>
-                            <tr>
-                                <td class="ce">eq()</td>
-                                <td class="ce">$("div").eq(0)</td>
-                                <td>div 요소 중 index가 0인 요소들을 선택합니다<br>
-                                    index 0번은 첫 번째 요소입니다.
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="ce">gt()</td>
-                                <td class="ce">$("div").gt(0)</td>
-                                <td>div 요소 중 index가 0보다 큰 요소들을 선택합니다.
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="ce">lt()</td>
-                                <td class="ce">$("div").lt(3)</td>
-                                <td>div 요소 중 index가 3보다 작은 요소들을 선택합니다.
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <div class="t_iframe">
-                    <iframe height="500" style="width: 100%;" scrolling="no" title="제이쿼리  기본 탐색 선택자" src="https://codepen.io/youCodein/embed/PoRMMRq?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
-                        See the Pen <a href="https://codepen.io/youCodein/pen/PoRMMRq">
-                        제이쿼리  기본 탐색 선택자</a> by Youcodein (<a href="https://codepen.io/youCodein">@youCodein</a>)
-                        on <a href="https://codepen.io">CodePen</a>.
-                      </iframe>
-                </div>
+                <p class="t_desc2">
+                    Prettier는 단축키 crtl + s를 누르면 자동으로 정렬이 되는 확장 프로그램입니다.<br>
+                    하지만 간혹 확장 프로그램을 설치했음에도 불구하고 Prettier의 기능이 적용되지 않는 문제가 발생하는데요.<br>
+                    그 문제를 어떻게 해결할 수 있을지 알아보도록 하겠습니다.
+                </p>
 
-                <!-- 기본 탐색 선택자 -->
+                <h3 class="t_tit2">1. 설정(Setting) 들어가기</h2>
 
-                <h2 class="t_tit2">2. 기타 탐색 선택자</h2>
-                <div class="t_table">
-                    <table>
-                        <colgroup>
-                            <col style="width : 30%">
-                            <col style="width : 70%">
-                        </colgroup>
-                        <thead>
-                            <tr>
-                                <th>선택자 종류</th>
-                                <th>설명</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="ce">add()</td>
-                                <td>
-                                    $("div").add("p")<br>
-                                    div 요소와 p 요소를 선택합니다.
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="ce">addBack()</td>
-                                <td>
-                                    $("div").children("p").addBack()<br>
-                                    p 요소와 이전 선택요소 div를 선택합니다.
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="ce">end()</td>
-                                <td>
-                                    $("div").find("span").css(...).end().find("em").css(...)<br>
-                                    $("div").find("span").css(...)의 실행이 끝나면<br>
-                                    처음 선택자 $("div")로 다시 돌아와 $("div").find("em").css(...)가 실행됩니다.<br>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="ce">is()</td>
-                                <td>
-                                    선택한 요소를 판별해 주는 선택자로 보통 if 문의 조건식에 사용됩니다.<br>
-                                    if($("div").children().is("p")){<br>
-                                        console.log("p 요소가 맞습니다.")<br>
-                                    }
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <div class="t_iframe">
-                    <iframe height="500" style="width: 100%;" scrolling="no" title="제이쿼리 기타 탐색 선택자" src="https://codepen.io/youCodein/embed/vYRooVB?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
-                        See the Pen <a href="https://codepen.io/youCodein/pen/vYRooVB">
-                        제이쿼리 기타 탐색 선택자</a> by Youcodein (<a href="https://codepen.io/youCodein">@youCodein</a>)
-                        on <a href="https://codepen.io">CodePen</a>.
-                      </iframe>
-                      <div><img style="width: 800px;" src="https://github.com/Youcodein/coding2/blob/main/assets/tistory/pisalive.JPG?raw=true" alt="p 요소가 존재합니다."></div>
-                </div>
+                <p class="t_desc">
+                    <img src="../../assets/tistory/prettierError.JPG" alt="">
+                    Prettier 설치 후 설정(setting)에 들어간 후 'editor format on save'를 검색, 체크박스에 체크해줍니다.<br>
+                    체크를 했음에도 기능이 적용되지 않을 경우 2번 작업으로 가주세요.
+                </p>
 
-                <!-- 기타 탐색 선택자 -->
+                <h3 class="t_tit2">2. json </h2>
 
+                    <p class="t_desc">
+                        <img src="../../assets/tistory/prettierError.JPG" alt="">
+                        Prettier 설치 후 설정(setting)에 들어간 후 'editor format on save'를 검색, 체크박스에 체크해줍니다.<br>
+                        체크를 했음에도 기능이 적용되지 않을 경우 2번 작업으로 가주세요.
+                    </p>
 
         </div>
 
