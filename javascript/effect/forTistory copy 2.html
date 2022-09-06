@@ -2,9 +2,9 @@
 <h2 class="t_tit" data-ke-size="size26">Javascript mouse Effect</h2>
 <p class="t_desc" data-ke-size="size16">MouseEffect중 마우스 따라다니기 입니다.</p>
 
-<div class="t_iframe" style="min-height: 1000px; padding-top: 0;"><iframe src="https://youcodein.github.io/coding2/javaqscript/effect/mouseEffect01.html" frameborder="0"></iframe></div>
-<div class="t_link"><a href="https://youcodein.github.io/coding2/javaqscript/effect/mouseEffect01.html" target="_blank" rel="noopener">원본 사이트 보기</a></div>
-<div class="t_link"><a href="https://github.com/Youcodein/coding2/blob/main/site/javaqscript/effect/mouseEffect01.html" target="_blank" rel="noopener">원본 소스 보기</a></div>
+<div class="t_iframe" style="min-height: 1000px; padding-top: 0;"><iframe src="https://youcodein.github.io/coding2/javascript/effect/mouseEffect01.html" frameborder="0"></iframe></div>
+<div class="t_link"><a href="https://youcodein.github.io/coding2/javascript/effect/mouseEffect01.html" target="_blank" rel="noopener">원본 사이트 보기</a></div>
+<div class="t_link"><a href="https://github.com/Youcodein/coding2/blob/main/javascript/effect/mouseEffect01.html" target="_blank" rel="noopener">원본 소스 보기</a></div>
  
 <h2 data-ke-size="size26">HTML</h2>
 <p class="t_desc2" data-ke-size="size16">html 소스입니다.</p>
@@ -143,4 +143,112 @@
 }
 </code></pre>
 </div>
+<!-- css -->
+
+<h2 data-ke-size="size26">Javascript</h2>
+<p class="t_desc2" data-ke-size="size16">Javascript 소스입니다.</p>
+<div class="t_code">
+<pre><code class="language-js">window.addEventListener("mousemove", (event) => {
+    document.querySelector(".clientX").innerText = event.clientX;
+    document.querySelector(".clientY").innerText = event.clientY;
+    document.querySelector(".offsetX").innerText = event.offsetX;
+    document.querySelector(".offsetY").innerText = event.offsetY;
+    document.querySelector(".pageX").innerText = event.pageX;
+    document.querySelector(".pageY").innerText = event.pageY;
+    document.querySelector(".screenX").innerText = event.screenX;
+    document.querySelector(".screenY").innerText = event.screenY;
+});
+
+const cursor = document.querySelector(".mouse__cursor");
+window.addEventListener("mousemove", (e) => {
+    cursor.style.left = e.clientX - 25 + "px";
+    cursor.style.top = e.clientY - 25 + "px";
+});
+
+//각각 하나씩
+
+// document.querySelector(".style1").addEventListener("mouseover", () => {
+//     cursor.classList.add("style1")
+// })
+
+// document.querySelector(".style1").addEventListener("mouseout", () => {
+//     cursor.classList.remove("style1")
+// })
+
+// document.querySelector(".style2").addEventListener("mouseover", () => {
+//     cursor.classList.add("style2")
+// })
+
+// document.querySelector(".style2").addEventListener("mouseout", () => {
+//     cursor.classList.remove("style2")
+// })
+
+// document.querySelector(".style3").addEventListener("mouseover", () => {
+//     cursor.classList.add("style3")
+// })
+
+// document.querySelector(".style3").addEventListener("mouseout", () => {
+//     cursor.classList.remove("style3")
+// })
+
+// document.querySelector(".style4").addEventListener("mouseover", () => {
+//     cursor.classList.add("style4")
+// })
+
+// document.querySelector(".style4").addEventListener("mouseout", () => {
+//     cursor.classList.remove("style4")
+// })
+
+// document.querySelector(".style5").addEventListener("mouseover", () => {
+//     cursor.classList.add("style5")
+// })
+
+// document.querySelector(".style5").addEventListener("mouseout", () => {
+//     cursor.classList.remove("style5")
+// })
+
+// document.querySelector(".style6").addEventListener("mouseover", () => {
+//     cursor.classList.add("style6")
+// })
+
+// document.querySelector(".style6").addEventListener("mouseout", () => {
+//     cursor.classList.remove("style6")
+// })
+
+//for
+for(let i=1; i&lt;=6; i++){
+    document.querySelector(".style" + i).addEventListener("mouseover", () => {
+    cursor.classList.add("style" + i)
+    })
+
+    document.querySelector(".style" + i).addEventListener("mouseout", () => {
+    cursor.classList.remove("style" + i)
+    })
+}
+
+//forEach
+// document.querySelector(".mouse_wrap span").forEach((span, num) => {
+
+//     span.addEventListener("mouseover", () => {
+//         cursor.classList.add("style" + (num + 1))
+//     });
+//         span.addEventListener("mouseout", () => {
+//         cursor.classList.remove("style" + (num + 1));
+//         });
+// });
+
+// // getAttribute
+
+document.querySelectorAll(".mouse__wrap span").forEach( span => {
+let attr = span.getAttribute("class");
+span.addEventListener("mouseover", () => {
+    cursor.classList.add(attr)
+})
+span.addEventListener("mouseout", () => {
+    cursor.classList.remove(attr)
+})
+})
+</code></pre>
+</div>
+<!-- html -->
 </div>
