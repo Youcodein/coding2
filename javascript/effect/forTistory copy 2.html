@@ -2,145 +2,25 @@
 <h2 class="t_tit" data-ke-size="size26">Javascript parallax Effect</h2>
 <p class="t_desc" data-ke-size="size16">parallax 이펙트 입니다.</p>
 
-<div class="t_iframe" style="min-height: 1000px; padding-top: 0;"><iframe src="https://youcodein.github.io/coding2/javascript/effect/mouseEffect01.html" frameborder="0"></iframe></div>
-<div class="t_link"><a href="https://youcodein.github.io/coding2/javascript/effect/mouseEffect01.html" target="_blank" rel="noopener">원본 사이트 보기</a></div>
-<div class="t_link"><a href="https://github.com/Youcodein/coding2/blob/main/javascript/effect/mouseEffect01.html" target="_blank" rel="noopener">원본 소스 보기</a></div>
- 
+<div class="t_iframe" style="min-height: 1000px; padding-top: 0;"><iframe src="https://youcodein.github.io/coding2/javascript/effect/parallaxEffect01.html" frameborder="0"></iframe></div>
+<div class="t_link"><a href="https://youcodein.github.io/coding2/javascript/effect/parallaxEffect01.html" target="_blank" rel="noopener">원본 사이트 보기</a></div>
+<div class="t_link"><a href="https://github.com/Youcodein/coding2/blob/main/javascript/effect/parallaxEffect01.html" target="_blank" rel="noopener">원본 소스 보기</a></div>
+<div class="t_iframe">
+    <iframe width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FmS7K1u5BHcIAeMxL0Iqg0F%2FUntitled%3Fnode-id%3D1%253A2" allowfullscreen></iframe>
+</div> 
+
+
 <h2 data-ke-size="size26">HTML</h2>
 <p class="t_desc2" data-ke-size="size16">html 소스입니다.</p>
 <div class="t_code">
-<pre><code class="language-html">&lt;main id="main"&gt;
-    &lt;section id="mouseType"&gt;
-        &lt;div class="mouse__cursor"&gt;&lt;/div&gt;
-        &lt;div class="mouse__wrap"&gt;
-            &lt;p&gt;멋있는 명언&lt;span class="style1"&gt;hoc&lt;/span&gt; &lt;span class="style2"&gt;quoque&lt;/span&gt; &lt;span
-                    class="style3"&gt;transibit&lt;/span&gt;멋있는 명언&lt;/p&gt;
-            &lt;p&gt;멋있는 명언&lt;span class="style4"&gt;이&lt;/span&gt; &lt;span class="style5"&gt;또한&lt;/span&gt; &lt;span
-                    class="style6"&gt;지나가리라.&lt;/span&gt;멋있는 명언&lt;/p&gt;
-        &lt;/div&gt;
-    &lt;/section&gt;
-
-    &lt;div class="mouse__info"&gt;
-        &lt;ul&gt;
-            &lt;li&gt;clientX : &lt;span class="clientX"&gt;0&lt;/span&gt;px&lt;/li&gt;
-            &lt;li&gt;clientY : &lt;span class="clientY"&gt;0&lt;/span&gt;px&lt;/li&gt;
-            &lt;li&gt;offsetX : &lt;span class="offsetX"&gt;0&lt;/span&gt;px&lt;/li&gt;
-            &lt;li&gt;offsetY : &lt;span class="offsetY"&gt;0&lt;/span&gt;px&lt;/li&gt;
-            &lt;li&gt;pageX : &lt;span class="pageX"&gt;0&lt;/span&gt;px&lt;/li&gt;
-            &lt;li&gt;pageY : &lt;span class="pageY"&gt;0&lt;/span&gt;px&lt;/li&gt;
-            &lt;li&gt;screenX : &lt;span class="screenX"&gt;0&lt;/span&gt;px&lt;/li&gt;
-            &lt;li&gt;screenY : &lt;span class="screenY"&gt;0&lt;/span&gt;px&lt;/li&gt;
-        &lt;/ul&gt;
-    &lt;/div&gt;
-&lt;/main&gt;
+<pre><code class="language-html">
 </code></pre>
 </div>
 <!-- html -->
 <h2 data-ke-size="size26">CSS</h2>
 <p class="t_desc2" data-ke-size="size16">css 소스입니다.</p>
 <div class="t_code">
-<pre><code class="language-css">/* MouseType */
-.mouse__wrap {
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    color: #fff;
-    overflow: hidden;
-    cursor: none;
-}
-
-.mouse__wrap p {
-    font-size: 2vw;
-    line-height: 2;
-    font-weight: normal;
-}
-
-.mouse__wrap p:last-child {
-    font-size: 3vw;
-    font-weight: 400;
-}
-
-.mouse__wrap p span {
-    border-bottom: 1px solid #000;
-    color: #000;
-}
-
-@media (max-width: 800px) {
-    .mouse__wrap p {
-        padding: 0 20px;
-        font-size: 20px;
-        line-height: 1.5;
-        text-align: center;
-        margin: 10px;
-    }
-
-    .mouse__wrap p:last-child {
-        font-size: 40px;
-        line-height: 1.5;
-        text-align: center;
-        word-break: keep-all;
-    }
-}
-
-.mouse__cursor {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    border: 3px solid #fff;
-    background-color: rgba(0, 0, 0, 0.3);
-    user-select: none;
-    pointer-events: none;
-    transition: 
-    background-color 0.3s,
-    border-color 0.3s,
-    transform 0.6s,
-    border-radius 0.3s
-    ;
-}
-
-.mouse__cursor.style1 {
-    background-color: rgba(255, 255, 255, 0.459);
-}
-
-.mouse__cursor.style2 {
-    background-color: rgba(111, 222, 255, 0.459);
-    transform: scale(2) rotateY(720deg);
-}
-
-.mouse__cursor.style3 {
-    background-color: rgba(255, 255, 255, 0.459);
-}
-
-.mouse__cursor.style4 {
-    background-color: rgba(255, 255, 255, 0.459);
-    transform: scale(10) rotateY(720deg);
-}
-
-.mouse__cursor.style5 {
-    background-color: rgba(255, 255, 255, 0.459);
-}
-
-.mouse__cursor.style6 {
-    background-color: rgba(255, 255, 255, 0.459);
-    border-radius: 0;
-    transform: scale(5) rotateY(720deg);
-
-}
-
-.mouse__info {
-    position: absolute;
-    left: 20px;
-    bottom: 10px;
-    font-size: 14px;
-    line-height: 1.6;
-    color: #fff;
-}
+<pre><code class="language-css">
 </code></pre>
 </div>
 <!-- css -->
@@ -148,106 +28,7 @@
 <h2 data-ke-size="size26">Javascript</h2>
 <p class="t_desc2" data-ke-size="size16">Javascript 소스입니다.</p>
 <div class="t_code">
-<pre><code class="language-js">window.addEventListener("mousemove", (event) => {
-    document.querySelector(".clientX").innerText = event.clientX;
-    document.querySelector(".clientY").innerText = event.clientY;
-    document.querySelector(".offsetX").innerText = event.offsetX;
-    document.querySelector(".offsetY").innerText = event.offsetY;
-    document.querySelector(".pageX").innerText = event.pageX;
-    document.querySelector(".pageY").innerText = event.pageY;
-    document.querySelector(".screenX").innerText = event.screenX;
-    document.querySelector(".screenY").innerText = event.screenY;
-});
-
-const cursor = document.querySelector(".mouse__cursor");
-window.addEventListener("mousemove", (e) => {
-    cursor.style.left = e.clientX - 25 + "px";
-    cursor.style.top = e.clientY - 25 + "px";
-});
-
-//각각 하나씩
-
-// document.querySelector(".style1").addEventListener("mouseover", () => {
-//     cursor.classList.add("style1")
-// })
-
-// document.querySelector(".style1").addEventListener("mouseout", () => {
-//     cursor.classList.remove("style1")
-// })
-
-// document.querySelector(".style2").addEventListener("mouseover", () => {
-//     cursor.classList.add("style2")
-// })
-
-// document.querySelector(".style2").addEventListener("mouseout", () => {
-//     cursor.classList.remove("style2")
-// })
-
-// document.querySelector(".style3").addEventListener("mouseover", () => {
-//     cursor.classList.add("style3")
-// })
-
-// document.querySelector(".style3").addEventListener("mouseout", () => {
-//     cursor.classList.remove("style3")
-// })
-
-// document.querySelector(".style4").addEventListener("mouseover", () => {
-//     cursor.classList.add("style4")
-// })
-
-// document.querySelector(".style4").addEventListener("mouseout", () => {
-//     cursor.classList.remove("style4")
-// })
-
-// document.querySelector(".style5").addEventListener("mouseover", () => {
-//     cursor.classList.add("style5")
-// })
-
-// document.querySelector(".style5").addEventListener("mouseout", () => {
-//     cursor.classList.remove("style5")
-// })
-
-// document.querySelector(".style6").addEventListener("mouseover", () => {
-//     cursor.classList.add("style6")
-// })
-
-// document.querySelector(".style6").addEventListener("mouseout", () => {
-//     cursor.classList.remove("style6")
-// })
-
-//for
-for(let i=1; i&lt;=6; i++){
-    document.querySelector(".style" + i).addEventListener("mouseover", () => {
-    cursor.classList.add("style" + i)
-    })
-
-    document.querySelector(".style" + i).addEventListener("mouseout", () => {
-    cursor.classList.remove("style" + i)
-    })
-}
-
-//forEach
-// document.querySelector(".mouse_wrap span").forEach((span, num) => {
-
-//     span.addEventListener("mouseover", () => {
-//         cursor.classList.add("style" + (num + 1))
-//     });
-//         span.addEventListener("mouseout", () => {
-//         cursor.classList.remove("style" + (num + 1));
-//         });
-// });
-
-// // getAttribute
-
-document.querySelectorAll(".mouse__wrap span").forEach( span => {
-let attr = span.getAttribute("class");
-span.addEventListener("mouseover", () => {
-    cursor.classList.add(attr)
-})
-span.addEventListener("mouseout", () => {
-    cursor.classList.remove(attr)
-})
-})
+<pre><code class="language-js">
 </code></pre>
 </div>
 <!-- html -->
