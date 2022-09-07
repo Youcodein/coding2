@@ -28,6 +28,14 @@
     <link rel="stylesheet" href="assets/css/footer.css">
     <link rel="stylesheet" href="assets/css/slider.css">
 
+    <style>
+        .header__menu li.active a {
+            background-color: #f1f1f1;
+            border-radius: 10px;
+            box-sizing: content-box;
+        }
+    </style>
+
 </head>
 
 <body>
@@ -101,6 +109,7 @@
         </section>
         <!-- sliderType -->
 
+        
         <section id="imageType" class="image__wrap nexon section ">
             <h2>다이어리 꾸미기</h2>
             <p>당신만의 멋진 기록장, 개성있는 다이어리를 만들어보세요!</p>
@@ -355,7 +364,7 @@
             //forEach
 
             document.querySelectorAll(".content__item").forEach((element, index) => {
-                if (scrollTop >= element.offsetTop - 2) {
+                if (scrollTop >= element.offsetTop -4) {
                     document.querySelectorAll(".header__menu li").forEach(li => {
                         li.classList.remove("active")
                     })
