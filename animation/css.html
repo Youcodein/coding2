@@ -307,17 +307,17 @@
                     <style>
                         .step {
                             height: 700px;
-                            background: #ffe8d9;
+                            background: #333;
                             position: relative;
                         }
                         .step .stepbox {
                             width: 800px; height: 600px;
-                            background: url(img/img.jpg);
+                            background: url(img/cupani.jpg);
                             border-radius: 0;
                             position: absolute;
                             left: 50%; top: 50%;
                             transform: translate(-50%, -50%);
-                            animation: ani 1s steps(16, start) infinite;
+                            animation: ani 1s steps(32, start) infinite;
                         }
                         .step .stepbox.start {
                             animation-play-state: running;
@@ -327,13 +327,13 @@
                         }
                         @keyframes ani {
                             0% {background-position: 0 0;}
-                            100% {background-position: -12800px 0;}
+                            100% {background-position: -25600px 0;}
                         }
                         .stepBtn {
                             position: absolute; left: 15px; top: 20px;
                         }
                         .stepBtn a {
-                            background: #e16162; color: #fff;
+                            background: #000; color: #fff;
                             padding: 10px;
                             margin: 3px;
                             border-radius: 3px;
