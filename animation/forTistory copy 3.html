@@ -58,13 +58,17 @@
 
 <!-- animation -->
 
-<h2 class="t_tit2">animation</h2>
+<h2 class="t_tit2">timing-function</h2>
 <p class="t_desc2">
-    animation : name | duration | timing-function | delay | iteration | direction | fill-mode | play-state
+    timing-function의 종류와 예시를 나타낸 표입니다.
 </p>
 
 <div class="t_table">
     <table>
+        <colgroup>
+            <col style="width: 30%">
+            <col style="width: 70%">
+        </colgroup>
         <thead>
             <tr>
                 <th>종류</th>
@@ -73,838 +77,451 @@
         </thead>
         <tbody>
             <tr>
-                <td>animation-name</td>
-                <td>@keyframe에 지정된 이름을 설정합니다.</td>
+                <td>linear</td>
+                <td>일정한 간격으로 설정합니다.</td>
             </tr>
             <tr>
-                <td>animation-duration</td>
-                <td>애니메이션이 실행되는 시간을 설정합니다.</td>
+                <td>ease</td>
+                <td>처음에는 서서히 가속하고 마지막 부분에서 급격히 감속합니다.</td>
             </tr>
             <tr>
-                <td>animation-timing-function</td>
-                <td>애니메이션 키프레임 움직임을 설정합니다.</td>
+                <td>ease-in</td>
+                <td>처음에는 천천히 시작하고 마지막에 가속합니다.</td>
             </tr>
             <tr>
-                <td>animation-delay</td>
-                <td>애니메이션이 시작되기 전까지 시간을 설정합니다.</td>
+                <td>ease-out</td>
+                <td>처음에는 최대 속도로 시작하고 마지막에 감속합니다.</td>
             </tr>
             <tr>
-                <td>animation-iteration</td>
-                <td>애니메이션 반복 횟수를 설정합니다.</td>
+                <td>ease-in-out</td>
+                <td>처음에는 제로 속도로 시작하고, 중간 지점에서 최고 속도로 움직이고, 마지막 부분에서 서서히 감속합니다.</td>
             </tr>
             <tr>
-                <td>animation-derection</td>
-                <td>애니메이션 방향을 설정합니다.</td>
+                <td>step-start</td>
+                <td>애니메이션을 시작점에서 설정합니다.</td>
             </tr>
             <tr>
-                <td>animation-fill-mode</td>
-                <td>애니메이션 끝나고 난 뒤 어떤 값을 적용할지 설정합니다.</td>
+                <td>step-end</td>
+                <td>애니메이션을 끝점에서 설정합니다.</td>
             </tr>
             <tr>
-                <td>animation-play-state</td>
-                <td>애니메이션 실행 상태를 설정합니다.</td>
+                <td>steps(int, start/end)</td>
+                <td>애니메이션을 단계별을 설정합니다.</td>
+            </tr>
+            <tr>
+                <td>cubic-bezier(n,n,n,n)</td>
+                <td>버지니아 곡선 값을 만들어서 설정합니다.</td>
             </tr>
         </tbody>
     </table>
 </div>
 
 
-<h2 class="t_tit2">사각형(rect)</h2>
-
 <style>
-    .svgBox {padding: 40px;}
-    .svgBox > svg {
-        width: 160px; height: 160px; background: #FFEBEE;
-        margin: 6px;
-    }
-</style>
-
-
-
-<div class="t_box">
-    <div class="svgBox svg1">
-        <svg>
-            <rect width="100" height="100" fill="#f48fb1" x="30" y="30"></rect>
-        </svg>
-        <svg>
-            <rect width="100" height="100" fill="#f48fb1" x="30" y="30" stroke="#880e4f" stroke-width="5"></rect>
-        </svg>
-
-        <svg>
-            <rect fill="#F48FB1" width="100" height="100" x="30" y="30" rx="20" ry="20" />
-        </svg>
-        <svg>
-            <rect fill="#F48FB1" width="100" height="100" x="30" y="30" rx="20" ry="20" stroke="#880E4F" stroke-width="5" />
-        </svg>
-
-        <svg>
-            <rect fill="#F48FB1" width="100" height="100" x="30" y="30" rx="40" ry="40" />
-        </svg>
-        <svg>
-            <rect fill="#F48FB1" width="100" height="100" x="30" y="30" rx="60" ry="60" stroke="#880E4F" stroke-width="5" />
-        </svg>
-    </div>
-</div>
-
-<div class="t_code">
-<pre><code class="language-html">&lt;div class="svgBox svg1"&gt;
-    &lt;svg&gt;
-        &lt;rect fill="#F48FB1" width="100" height="100" x="30" y="30" /&gt;
-    &lt;/svg&gt;
-    &lt;svg&gt;
-        &lt;rect fill="#F48FB1" width="100" height="100" x="30" y="30" stroke="#880E4F" stroke-width="5" /&gt;
-    &lt;/svg&gt;
-    &lt;svg&gt;
-        &lt;rect fill="#F48FB1" width="100" height="100" x="30" y="30" rx="20" ry="20" /&gt;
-    &lt;/svg&gt;
-    &lt;svg&gt;
-        &lt;rect fill="#F48FB1" width="100" height="100" x="30" y="30" rx="20" ry="20" stroke="#880E4F" stroke-width="5" /&gt;
-    &lt;/svg&gt;
-    &lt;svg&gt;
-        &lt;rect fill="#F48FB1" width="100" height="100" x="30" y="30" rx="40" ry="40" /&gt;
-    &lt;/svg&gt;
-    &lt;svg&gt;
-        &lt;rect fill="#F48FB1" width="100" height="100" x="30" y="30" rx="60" ry="60" stroke="#880E4F" stroke-width="5" /&gt;
-    &lt;/svg&gt;
-&lt;/div&gt;
-</code></pre>
-</div>
-<!-- 사각형 -->
-
-<h2 class="t_tit2">원형(circle, ellipse)</h2>
-
-<div class="t_box">
-    <div class="svgBox svg1">
-        <svg>
-            <circle fill="#F48FB1" r="60" cx="80" cy="80" />
-        </svg>
-        <svg>
-            <circle fill="#F48FB1" r="60" cx="80" cy="80" stroke="#880E4F" stroke-width="5" />
-        </svg>
-        <svg>
-            <ellipse fill="#F48FB1" rx="60" ry="40" cx="80" cy="80" />
-        </svg>
-        <svg>
-            <ellipse fill="#F48FB1" rx="60" ry="40" cx="80" cy="80" stroke="#880E4F" stroke-width="5" />
-        </svg>
-        <svg>
-            <ellipse fill="#F48FB1" rx="40" ry="60" cx="80" cy="80" />
-        </svg>
-        <svg>
-            <ellipse fill="#F48FB1" rx="40" ry="60" cx="80" cy="80" stroke="#880E4F" stroke-width="5" />
-        </svg>
-    </div>
-</div>
-
-<div class="t_code">
-<pre><code class="language-html">&lt;div class="svgBox svg1"&gt;
-    &lt;svg&gt;
-        &lt;circle fill="#F48FB1" r="60" cx="80" cy="80" /&gt;
-    &lt;/svg&gt;
-    &lt;svg&gt;
-        &lt;circle fill="#F48FB1" r="60" cx="80" cy="80" stroke="#880E4F" stroke-width="5" /&gt;
-    &lt;/svg&gt;
-    &lt;svg&gt;
-        &lt;ellipse fill="#F48FB1" rx="60" ry="40" cx="80" cy="80" /&gt;
-    &lt;/svg&gt;
-    &lt;svg&gt;
-        &lt;ellipse fill="#F48FB1" rx="60" ry="40" cx="80" cy="80" stroke="#880E4F" stroke-width="5" /&gt;
-    &lt;/svg&gt;
-    &lt;svg&gt;
-        &lt;ellipse fill="#F48FB1" rx="40" ry="60" cx="80" cy="80" /&gt;
-    &lt;/svg&gt;
-    &lt;svg&gt;
-        &lt;ellipse fill="#F48FB1" rx="40" ry="60" cx="80" cy="80" stroke="#880E4F" stroke-width="5" /&gt;
-    &lt;/svg&gt;
-&lt;/div&gt;
-</code></pre>
-</div>
-<!-- 원 -->
-
-<h2 class="t_tit2">다각형(polygon)</h2>
-
-<div class="t_box">
-    <div class="svgBox svg3">
-        <svg>
-            <polygon points="136,141 10,101 108,12" fill="#F48FB1" />
-        </svg>
-        <svg>
-            <polygon points="121,131 56,140 15,89 39,27 104,18 145,70" fill="#F48FB1"/>
-        </svg>
-        <svg>
-            <polygon points="115,134 71,144 30,124 12,82 26,39 64,14 108,20 139,53 142,98" fill="#F48FB1" />
-        </svg>
-        <svg>
-            <polygon points="133,129 87,115 50,144 49,96 9,70 54,54 67,8 96,47 144,45 116,84" fill="#F48FB1" />
-        </svg>
-        <svg>
-            <polygon points="128,130 94,111 88,149 73,114 45,141 53,104 15,110 44,84 10,66 48,62 30,28 64,47 70,9 85,45 113,17 105,55 143,49 114,75 148,92 110,96" fill="#F48FB1" />
-        </svg>
-        <svg>
-            <polygon points="80,8.15 81.84,70.37 106.02,13.02 85.26,71.69 128.53,26.96 87.98,74.17 144.49,48.08 89.62,77.46
-151.73,73.55 89.96,81.12 149.29,99.91 88.95,84.65 137.49,123.61 86.74,87.59 117.93,141.45 83.61,89.52 93.24,151.01 80,90.2
-66.76,151.01 76.39,89.52 42.07,141.45 73.26,87.59 22.51,123.61 71.05,84.65 10.71,99.91 70.04,81.12 8.27,73.55 70.38,77.46
-15.51,48.08 72.02,74.17 31.47,26.96 74.74,71.69 53.98,13.02 78.16,70.37" fill="#F48FB1" />
-        </svg>
-    </div>
-</div>
-
-<div class="t_code">
-<pre><code class="language-html">&lt;div class="svgBox svg3"&gt;
-    &lt;svg&gt;
-    &lt;polygon points="136,141 10,101 108,12" fill="#F48FB1" /&gt;
-    &lt;/svg&gt;
-    &lt;svg&gt;
-    &lt;polygon points="121,131 56,140 15,89 39,27 104,18 145,70" fill="#F48FB1"/&gt;
-    &lt;/svg&gt;
-    &lt;svg&gt;
-    &lt;polygon points="115,134 71,144 30,124 12,82 26,39 64,14 108,20 139,53 142,98" fill="#F48FB1" /&gt;
-    &lt;/svg&gt;
-    &lt;svg&gt;
-    &lt;polygon points="133,129 87,115 50,144 49,96 9,70 54,54 67,8 96,47 144,45 116,84" fill="#F48FB1" /&gt;
-    &lt;/svg&gt;
-    &lt;svg&gt;
-    &lt;polygon points="128,130 94,111 88,149 73,114 45,141 53,104 15,110 44,84 10,66 48,62 30,28 64,47 70,9 85,45 113,17 105,55 143,49 114,75 148,92 110,96" fill="#F48FB1" /&gt;
-    &lt;/svg&gt;
-    &lt;svg&gt;
-    &lt;polygon points="80,8.15 81.84,70.37 106.02,13.02 85.26,71.69 128.53,26.96 87.98,74.17 144.49,48.08 89.62,77.46
-    151.73,73.55 89.96,81.12 149.29,99.91 88.95,84.65 137.49,123.61 86.74,87.59 117.93,141.45 83.61,89.52 93.24,151.01 80,90.2
-    66.76,151.01 76.39,89.52 42.07,141.45 73.26,87.59 22.51,123.61 71.05,84.65 10.71,99.91 70.04,81.12 8.27,73.55 70.38,77.46
-    15.51,48.08 72.02,74.17 31.47,26.96 74.74,71.69 53.98,13.02 78.16,70.37" fill="#F48FB1" /&gt;
-    &lt;/svg&gt;
-&lt;/div&gt;
-</code></pre>
-</div>
-<!-- 다각형 -->
-
-<h2 class="t_tit2">패스(path)</h2>
-
-<div class="t_box">
-    <div class="svgBox svg4">
-        <svg class="svg">
-            <path fill="none" stroke="#880E4F" stroke-width="2" d="M7,154.667c0-82.358,65.152-149,145.667-149"/>
-        </svg>
-        <svg class="svg">
-            <path fill="none" stroke="#880E4F" stroke-width="2" d="M151.534,123.547c-33.711,33.711-88.369,33.711-122.08,0
-            c-26.97-26.969-26.97-70.695,0-97.665c21.575-21.576,56.556-21.576,78.131,0c17.261,17.26,17.261,45.245,0.001,62.504
-            c-13.809,13.809-36.196,13.809-50.005,0c-11.046-11.046-11.046-28.956,0-40.002c8.837-8.837,23.166-8.837,32.003,0
-            c7.069,7.07,7.07,18.532,0,25.602c-5.656,5.657-14.826,5.657-20.482,0c-4.524-4.524-4.524-11.86,0-16.385"/>
-        </svg>
-        <svg class="svg">
-            <path fill="none" stroke="#880E4F" stroke-width="2" d="M82.671,81.243c50.565,48.259,14.182,69.191-2.135,1.229
-            c16.316,67.962-25.611,65.895-2.46-0.122c-23.151,66.017-57.304,41.617-2.004-1.432c-55.3,43.049-70.84,4.057-0.912-2.288
-            c-69.929,6.345-61.919-34.86,0.47-2.417c-62.389-32.442-33.374-62.777,1.703-1.78c-35.076-60.997,5.73-70.826,2.395-0.577
-            c3.335-70.249,42.981-56.458,2.326,0.81c40.655-57.268,66.554-24.232,1.521,1.938c65.033-26.17,68.953,15.62,0.23,2.452
-            C152.526,92.225,133.236,129.502,82.671,81.243z"/>
-        </svg>
-        <svg class="svg">
-            <path fill="none" stroke="#880E4F" stroke-width="2" d="M131.502,129.683c-44.4-42.871-49.621-39.867-34.943,20.102
-            c-14.678-59.969-20.694-60.265-40.261-1.983c19.566-58.281,14.666-61.783-32.799-23.436C70.963,86.018,68.733,80.421,8.573,86.918
-            c60.16-6.497,61.31-12.409,7.692-39.569c53.617,27.16,57.781,22.808,27.864-29.131c29.917,51.938,35.772,50.527,39.189-9.441
-            c-3.417,59.969,2.272,61.948,38.075,13.245c-35.803,48.703-32.086,53.443,24.869,31.726C89.308,75.465,89.87,81.462,150.03,93.884
-            C89.87,81.462,87.102,86.812,131.502,129.683z"/>
-        </svg>
-        <svg class="svg">
-            <path fill="none" stroke="#880E4F" stroke-width="2" d="M58.665,139.312c0-6.873,42-6.873,42-13.747s-42-6.874-42-13.748
-            s42-6.874,42-13.748c0-6.872-42-6.872-42-13.744c0-6.874,42-6.874,42-13.747c0-6.877-42-6.877-42-13.753
-            c0-6.874,42-6.874,42-13.748c0-6.878-42-6.878-42-13.757s42-6.879,42-13.758"/>
-        </svg>
-        <svg class="svg">
-            <path fill="none" stroke="#880E4F" stroke-width="2" d="M93.108,91.478c42.049,30.58-13.048,57.425-13.347,6.503
-            c0.299,50.922-55.041,24.58-13.405-6.381c-41.636,30.961-55.545-28.728-3.37-14.458c-52.176-14.27-14.181-62.359,9.204-11.649
-            c-23.385-50.71,37.901-50.989,14.846-0.067c23.055-50.922,61.484-3.179,9.309,11.565C148.521,62.245,135.157,122.058,93.108,91.478
-            z"/>
-        </svg>
-    </div>
-</div>
-
-<div class="t_code">
-    <pre><code class="language-html">&lt;div class="svgBox svg4"&gt;
-        &lt;svg class="svg"&gt;
-            &lt;path fill="none" stroke="#880E4F" stroke-width="2" d="M7,154.667c0-82.358,65.152-149,145.667-149"/&gt;
-        &lt;/svg&gt;
-        &lt;svg class="svg"&gt;
-            &lt;path fill="none" stroke="#880E4F" stroke-width="2" d="M151.534,123.547c-33.711,33.711-88.369,33.711-122.08,0
-            c-26.97-26.969-26.97-70.695,0-97.665c21.575-21.576,56.556-21.576,78.131,0c17.261,17.26,17.261,45.245,0.001,62.504
-            c-13.809,13.809-36.196,13.809-50.005,0c-11.046-11.046-11.046-28.956,0-40.002c8.837-8.837,23.166-8.837,32.003,0
-            c7.069,7.07,7.07,18.532,0,25.602c-5.656,5.657-14.826,5.657-20.482,0c-4.524-4.524-4.524-11.86,0-16.385"/&gt;
-        &lt;/svg&gt;
-        &lt;svg class="svg"&gt;
-            &lt;path fill="none" stroke="#880E4F" stroke-width="2" d="M82.671,81.243c50.565,48.259,14.182,69.191-2.135,1.229
-            c16.316,67.962-25.611,65.895-2.46-0.122c-23.151,66.017-57.304,41.617-2.004-1.432c-55.3,43.049-70.84,4.057-0.912-2.288
-            c-69.929,6.345-61.919-34.86,0.47-2.417c-62.389-32.442-33.374-62.777,1.703-1.78c-35.076-60.997,5.73-70.826,2.395-0.577
-            c3.335-70.249,42.981-56.458,2.326,0.81c40.655-57.268,66.554-24.232,1.521,1.938c65.033-26.17,68.953,15.62,0.23,2.452
-            C152.526,92.225,133.236,129.502,82.671,81.243z"/&gt;
-        &lt;/svg&gt;
-        &lt;svg class="svg"&gt;
-            &lt;path fill="none" stroke="#880E4F" stroke-width="2" d="M131.502,129.683c-44.4-42.871-49.621-39.867-34.943,20.102
-            c-14.678-59.969-20.694-60.265-40.261-1.983c19.566-58.281,14.666-61.783-32.799-23.436C70.963,86.018,68.733,80.421,8.573,86.918
-            c60.16-6.497,61.31-12.409,7.692-39.569c53.617,27.16,57.781,22.808,27.864-29.131c29.917,51.938,35.772,50.527,39.189-9.441
-            c-3.417,59.969,2.272,61.948,38.075,13.245c-35.803,48.703-32.086,53.443,24.869,31.726C89.308,75.465,89.87,81.462,150.03,93.884
-            C89.87,81.462,87.102,86.812,131.502,129.683z"/&gt;
-        &lt;/svg&gt;
-        &lt;svg class="svg"&gt;
-            &lt;path fill="none" stroke="#880E4F" stroke-width="2" d="M58.665,139.312c0-6.873,42-6.873,42-13.747s-42-6.874-42-13.748
-            s42-6.874,42-13.748c0-6.872-42-6.872-42-13.744c0-6.874,42-6.874,42-13.747c0-6.877-42-6.877-42-13.753
-            c0-6.874,42-6.874,42-13.748c0-6.878-42-6.878-42-13.757s42-6.879,42-13.758"/&gt;
-        &lt;/svg&gt;
-        &lt;svg class="svg"&gt;
-            &lt;path fill="none" stroke="#880E4F" stroke-width="2" d="M93.108,91.478c42.049,30.58-13.048,57.425-13.347,6.503
-            c0.299,50.922-55.041,24.58-13.405-6.381c-41.636,30.961-55.545-28.728-3.37-14.458c-52.176-14.27-14.181-62.359,9.204-11.649
-            c-23.385-50.71,37.901-50.989,14.846-0.067c23.055-50.922,61.484-3.179,9.309,11.565C148.521,62.245,135.157,122.058,93.108,91.478
-            z"/&gt;
-        &lt;/svg&gt;
-    &lt;/div&gt;
-    </code></pre>
-</div>
-<!-- 패스 -->
-
-<h2 class="t_tit2">라인(line, polyline)</h2>
-
-<div class="t_box">
-    <div class="svgBox svg5">
-        <svg style="background: #E3F3FD">
-            <line x1="0" y1="0" x2="200" y2="200" stroke="#0D47A1" stroke-width="2" fill="none" />
-        </svg>
-        <svg style="background: #E3F3FD">
-            <line x1="50" y1="50" x2="200" y2="200" stroke="#0D47A1" stroke-width="2" fill="none" />
-        </svg>
-        <svg style="background: #E3F3FD">
-            <line x1="100" y1="100" x2="200" y2="200" stroke="#0D47A1" stroke-width="2" fill="none" />
-        </svg>
-        <svg style="background: #E3F3FD">
-            <polyline points="21,17.2 21,139.2 117,52.2" stroke="#0D47A1" stroke-width="2" fill="none" />
-        </svg>
-        <svg style="background: #E3F3FD">
-            <polyline points="21,17.2 21,139.2 122,28.2 141,139.2" stroke="#0D47A1" stroke-width="2" fill="none" />
-        </svg>
-        <svg style="background: #E3F3FD">
-            <polyline points="21,17.2 21,139.2 122,28.2 141,139.2 23.5,11.7" stroke="#0D47A1" stroke-width="2" fill="none" />
-        </svg>
-    </div>
-</div>
-
-<div class="t_code">
-    <pre><code class="language-html">&lt;div class="svgBox svg5"&gt;
-        &lt;svg style="background: #E3F3FD"&gt;>
-            &lt;line x1="0" y1="0" x2="200" y2="200" stroke="#0D47A1" stroke-width="2" fill="none" /&gt;
-        &lt;/svg&gt;
-        &lt;svg style="background: #E3F3FD"&gt;
-            &lt;line x1="50" y1="50" x2="200" y2="200" stroke="#0D47A1" stroke-width="2" fill="none" /&gt;
-        &lt;/svg&gt;
-        &lt;svg style="background: #E3F3FD"&gt;
-            &lt;line x1="100" y1="100" x2="200" y2="200" stroke="#0D47A1" stroke-width="2" fill="none" /&gt;
-        &lt;/svg&gt;
-        &lt;svg style="background: #E3F3FD"&gt;
-            &lt;polyline points="21,17.2 21,139.2 117,52.2" stroke="#0D47A1" stroke-width="2" fill="none" /&gt;
-        &lt;/svg&gt;
-        &lt;svg style="background: #E3F3FD"&gt;
-            &lt;polyline points="21,17.2 21,139.2 122,28.2 141,139.2" stroke="#0D47A1" stroke-width="2" fill="none" /&gt;
-        &lt;/svg&gt;
-        &lt;svg style="background: #E3F3FD"&gt;
-            &lt;polyline points="21,17.2 21,139.2 122,28.2 141,139.2 23.5,11.7" stroke="#0D47A1" stroke-width="2" fill="none" /&gt;
-        &lt;/svg&gt;
-    &lt;/div&gt;
-    </code></pre>
-</div>
-<!-- 라인(line, polyline) -->
-
-<h2 class="t_tit2">클리핑 마스크(Clip-path)</h2>
-
-<style>
-    @font-face {
-        font-family: 'SCoreDream';
-        font-weight: 900;
-        font-style: normal;
-        src: url('https://cdn.jsdelivr.net/gh/webfontworld/score/SCoreDreamBlack.eot');
-        src: url('https://cdn.jsdelivr.net/gh/webfontworld/score/SCoreDreamBlack.eot?#iefix') format('embedded-opentype'),
-            url('https://cdn.jsdelivr.net/gh/webfontworld/score/SCoreDreamBlack.woff2') format('woff2'),
-            url('https://cdn.jsdelivr.net/gh/webfontworld/score/SCoreDreamBlack.woff') format('woff'),
-            url('https://cdn.jsdelivr.net/gh/webfontworld/score/SCoreDreamBlack.ttf') format("truetype");
-        font-display: swap;
-    }
-    .svg7 {
-        display: flex;
-    }
-    .text-wrap {
-        background-color: #E3F3FD;
-        width: 160px;
-        height: 160px;
-        margin: 6px;
-        display: inline-block;
+    .timing.bg1 > div {background-image: linear-gradient(to right, #f83600 0%, #f9d423 100%);}
+    .timing.bg7 > div {background-image: linear-gradient(to right, #f83600 0%, #f9d423 100%);}
+    .timing {padding: 20px;}
+    .timing > div {
+        width: 100px; height: 100px;
+        border-radius: 50%;
+        color: #fff;
+        text-align: center;
+        line-height: 100px;
+        margin: 10px;
+        position: relative;
         overflow: hidden;
     }
+    .timing1.show {animation: move 2s 1 linear;}
+    .timing2.show {animation: move 2s 1 ease;}
+    .timing3.show {animation: move 2s 1 ease-in;}
+    .timing4.show {animation: move 2s 1 ease-out;}
+    .timing5.show {animation: move 2s 1 ease-in-out;}
 
-    .text-clip {
-        font-size: 70px;
-        text-align: center;
-        font-family: 'SCoreDream';
-        text-transform: uppercase;
-        line-height: 170px;
-        -webkit-text-fill-color:#0d047a;
-    }
-    .text-clip.c2 {
-        -webkit-text-fill-color: transparent;
-        -webkit-background-clip: text;
-        background-image: url("https://github.com/Youcodein/coding2/blob/main/animation/img/bg.png?raw=true");
-        background-size: 100%;
-
-    }
-    .text-clip.c3 {
-        -webkit-text-fill-color: transparent;
-        -webkit-background-clip: text;
-        background-image: linear-gradient(60deg, #000, #fff)
-    }
-    .text-clip.c4 {
-        -webkit-text-fill-color: transparent;
-        -webkit-background-clip: text;
-        -webkit-text-stroke: 2px #0d47a1;
-    }
-    </style>
-
-<div class="t_box">
-    <div class="svgBox svg6">
-        <svg>
-            <image xlink:href="img/bg.png" width="160" height="160" />
-        </svg>
-        <svg>
-            <image xlink:href="img/bg.png" width="160" height="160" clip-path="circle(60px at center)" />
-        </svg>
-        <svg>
-            <clipPath id="clipPath1">
-                <polygon  points="136,141 10,101 108,12" />
-            </clipPath>
-            <image xlink:href="img/bg.png" width="160" height="160" clip-path="url(#clipPath1)">
-        </svg>
-
-        <svg>
-            <clipPath id="clipPath2">
-                <polygon points="121,131 56,140 15,89 39,27 104,18 145,70" />
-            </clipPath>
-            <image xlink:href="img/bg.png" width="160" height="160" clip-path="url(#clipPath2)">
-        </svg>
-
-        <svg>
-            <clipPath id="clipPath3">
-                <polygon points="115,134 71,144 30,124 12,82 26,39 64,14 108,20 139,53 142,98" />
-            </clipPath>
-            <image xlink:href="img/bg.png" width="160" height="160" clip-path="url(#clipPath3)">
-        </svg>
-
-        <svg>
-            <clipPath id="clipPath4">
-                <polygon points="133,129 87,115 50,144 49,96 9,70 54,54 67,8 96,47 144,45 116,84" />
-            </clipPath>
-            <image xlink:href="img/bg.png" width="160" height="160" clip-path="url(#clipPath4)">
-        </svg>
-    </div>
-</div>
-
-<div class="t_code">
-<pre><code class="language-html">&lt;div class="svgBox svg6"&gt;
-    &lt;svg&gt;
-        &lt;image xlink:href="img/bg.png" width="160" height="160" /&gt;
-    &lt;/svg&gt;
-    &lt;svg&gt;
-        &lt;image xlink:href="img/bg.png" width="160" height="160" clip-path="circle(60px at center)" /&gt;
-    &lt;/svg&gt;
-    &lt;svg&gt;
-        &lt;clipPath id="clipPath1"&gt;
-            &lt;polygon  points="136,141 10,101 108,12" /&gt;
-        &lt;/clipPath&gt;
-        &lt;image xlink:href="img/bg.png" width="160" height="160" clip-path="url(#clipPath1)"&gt;
-    &lt;/svg&gt;
-
-    &lt;svg&gt;
-        &lt;clipPath id="clipPath2"&gt;
-            &lt;polygon points="121,131 56,140 15,89 39,27 104,18 145,70" /&gt;
-        &lt;/clipPath&gt;
-        &lt;image xlink:href="img/bg.png" width="160" height="160" clip-path="url(#clipPath2)"&gt;
-    &lt;/svg&gt;
-
-    &lt;svg&gt;
-        &lt;clipPath id="clipPath3"&gt;
-            &lt;polygon points="115,134 71,144 30,124 12,82 26,39 64,14 108,20 139,53 142,98" /&gt;
-        &lt;/clipPath&gt;
-        &lt;image xlink:href="img/bg.png" width="160" height="160" clip-path="url(#clipPath3)"&gt;
-    &lt;/svg&gt;
-
-    &lt;svg&gt;
-        &lt;clipPath id="clipPath4"&gt;
-            &lt;polygon points="133,129 87,115 50,144 49,96 9,70 54,54 67,8 96,47 144,45 116,84" /&gt;
-        &lt;/clipPath&gt;
-        &lt;image xlink:href="img/bg.png" width="160" height="160" clip-path="url(#clipPath4)"&gt;
-    &lt;/svg&gt;
-&lt;/div&gt;
-</code></pre>
-</div>
-<!-- 클리핑 마스크(Clip-path) -->
-
-
-<h2 class="t_tit2">클리핑 마스크(Clip-path)</h2>
-
-<style>
-    @font-face {
-        font-family: 'SCoreDream';
-        font-weight: 900;
-        font-style: normal;
-        src: url('https://cdn.jsdelivr.net/gh/webfontworld/score/SCoreDreamBlack.eot');
-        src: url('https://cdn.jsdelivr.net/gh/webfontworld/score/SCoreDreamBlack.eot?#iefix') format('embedded-opentype'),
-            url('https://cdn.jsdelivr.net/gh/webfontworld/score/SCoreDreamBlack.woff2') format('woff2'),
-            url('https://cdn.jsdelivr.net/gh/webfontworld/score/SCoreDreamBlack.woff') format('woff'),
-            url('https://cdn.jsdelivr.net/gh/webfontworld/score/SCoreDreamBlack.ttf') format("truetype");
-        font-display: swap;
-    }
-    .svg7 {
-        display: flex;
-    }
-    .text-wrap {
-        background-color: #E3F3FD;
-        width: 160px;
-        height: 160px;
-        margin: 6px;
-        display: inline-block;
-        overflow: hidden;
-    }
-
-    .text-clip {
-        font-size: 70px;
-        text-align: center;
-        font-family: 'SCoreDream';
-        text-transform: uppercase;
-        line-height: 170px;
-        -webkit-text-fill-color:#0d047a;
-    }
-    .text-clip.c2 {
-        -webkit-text-fill-color: transparent;
-        -webkit-background-clip: text;
-        background-image: url("https://github.com/Youcodein/coding2/blob/main/animation/img/bg.png?raw=true");
-        background-size: 100%;
-
-    }
-    .text-clip.c3 {
-        -webkit-text-fill-color: transparent;
-        -webkit-background-clip: text;
-        background-image: linear-gradient(60deg, #000, #fff)
-    }
-    .text-clip.c4 {
-        -webkit-text-fill-color: transparent;
-        -webkit-background-clip: text;
-        -webkit-text-stroke: 2px #0d47a1;
-    }
-    </style>
-
-<div class="t_box">
-    <div class="svgBox svg7">
-        <svg>
-            <text fill="#f48b1" x="7" y="110" font-family="SCoreDream" font-size="70" font-weight="900">SVG</text>
-        </svg>
-
-        <svg>
-            <pattern id="pattern1" patternunites="useSpaceOuUse" width="100%" height="100%">
-                <image xlink:href="https://github.com/Youcodein/coding2/blob/main/animation/img/bg.png?raw=true" width="160" height="160" />
-            </pattern>
-            <text fill="url(#pattern1)" x="7" y="110" font-family="SCoreDream" font-size="70" font-weight="900">SVG</text>
-        </svg>
-
-        <div class="text-wrap">
-            <div class="text-clip">SVG</div>
-        </div>
-        <div class="text-wrap">
-            <div class="text-clip c2">SVG</div>
-        </div>
-        <div class="text-wrap">
-            <div class="text-clip c3">SVG</div>
-        </div>
-        <div class="text-wrap">
-            <div class="text-clip c4">SVG</div>
-        </div>
-    </div>
-</div>
-
-<div class="t_code">
-<pre><code class="language-html">&lt;div class="svgBox svg7"&gt;&lt;svg&gt;
-    &lt;text fill="#f48b1" x="7" y="110" font-family="SCoreDream" font-size="70" font-weight="900"&gt;SVG&lt;/text&gt;
-&lt;/svg&gt;
-
-&lt;svg&gt;
-    &lt;pattern id="pattern1" patternunites="useSpaceOuUse" width="100%" height="100%"&gt;
-        &lt;image xlink:href="img/bg.png" width="160" height="160" /&gt;
-    &lt;/pattern&gt;
-    &lt;text fill="url(#pattern1)" x="7" y="110" font-family="SCoreDream" font-size="70" font-weight="900"&gt;SVG&lt;/text&gt;
-&lt;/svg&gt;
-
-&lt;div class="text-wrap"&gt;
-    &lt;div class="text-clip"&gt;SVG&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="text-wrap"&gt;
-    &lt;div class="text-clip c2"&gt;SVG&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="text-wrap"&gt;
-    &lt;div class="text-clip c3"&gt;SVG&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="text-wrap"&gt;
-    &lt;div class="text-clip c4"&gt;SVG&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-</code></pre>
-<pre><code class="language-css">@font-face {
-    font-family: 'SCoreDream';
-    font-weight: 900;
-    font-style: normal;
-    src: url('https://cdn.jsdelivr.net/gh/webfontworld/score/SCoreDreamBlack.eot');
-    src: url('https://cdn.jsdelivr.net/gh/webfontworld/score/SCoreDreamBlack.eot?#iefix') format('embedded-opentype'),
-        url('https://cdn.jsdelivr.net/gh/webfontworld/score/SCoreDreamBlack.woff2') format('woff2'),
-        url('https://cdn.jsdelivr.net/gh/webfontworld/score/SCoreDreamBlack.woff') format('woff'),
-        url('https://cdn.jsdelivr.net/gh/webfontworld/score/SCoreDreamBlack.ttf') format("truetype");
-    font-display: swap;
-}
-.svg7 {
-    display: flex;
-}
-.text-wrap {
-    background-color: #E3F3FD;
-    width: 160px;
-    height: 160px;
-    margin: 6px;
-    display: inline-block;
-    overflow: hidden;
-}
-
-.text-clip {
-    font-size: 70px;
-    text-align: center;
-    font-family: 'SCoreDream';
-    text-transform: uppercase;
-    line-height: 170px;
-    -webkit-text-fill-color:#0d047a;
-}
-.text-clip.c2 {
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
-    background-image: url(img/bg.png);
-    background-size: 100%;
-
-}
-.text-clip.c3 {
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
-    background-image: linear-gradient(60deg, #000, #fff)
-}
-.text-clip.c4 {
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
-    -webkit-text-stroke: 2px #0d47a1;
-}
-</code></pre>
-</div>
-<!-- 클리핑 마스크(Clip-path) -->
-
-<style>
-    .ani1 {
-        width: 100px; height: 100px;
-        x: 30px; y: 30px;
-        fill: none;
-        stroke: #880E41;
-        stroke-width: 2px;
-        stroke-dasharray: 50;
-        stroke-dashoffset: 50;
-        animation: ani1 1s infinite linear alternate-reverse;
-    }
-    @keyframes ani1 {
-        0%   {stroke-dashoffset: 50;}
-        100% {stroke-dashoffset: 0;}
-    }
-    .ani2 {
-        width: 100px; height: 100px;
-        x: 30px; y: 30px;
-        fill: none;
-        stroke: #880E41;
-        stroke-width: 2px;
-        stroke-dasharray: 400;
-        stroke-dashoffset: 400;
-        animation: ani2 2s infinite linear alternate-reverse;
-    }
-    @keyframes ani2 {
-        0%   {stroke-dashoffset: 400;}
-        100% {stroke-dashoffset: 0;}
-    }
-    .ani3 {
-        animation: ani3 1s infinite linear alternate-reverse;
-        stroke-dasharray: 230px;
-        stroke-dashoffset: 230px;
-    }
-    @keyframes ani3 {
-        0%   {stroke-dashoffset: 230px;}
-        100% {stroke-dashoffset: 0;}
-    }
-    .ani4 {
-        animation: ani4 1s infinite linear alternate-reverse;
-        stroke-dasharray: 605px;
-        stroke-dashoffset: 605px;
-    }
-    @keyframes ani4 {
-        0%   {stroke-dashoffset: 605px;}
-        100% {stroke-dashoffset: 0;}
-    }
-    .ani5 {
-        animation: ani5 1s infinite linear alternate-reverse;
-        stroke-dasharray: 411px;
-        stroke-dashoffset: 411px;
-    }
-    @keyframes ani5 {
-        0%   {stroke-dashoffset: 411px;}
-        100% {stroke-dashoffset: 0;}
-    }
-    .ani6 {
-        animation: ani6 1s infinite linear alternate-reverse;
-        stroke-dasharray: 614px;
-        stroke-dashoffset: 614px;
-    }
-    @keyframes ani6 {
-        0%   {stroke-dashoffset: 614px;}
-        100% {stroke-dashoffset: 0;}
+    @keyframes move {
+        0% {left: 0%;}
+        50% {left: calc(100% - 120px)}
+        100% {left: 0%;}
     }
 </style>
+<!-- Intro1 -->
+<div class="bs-docs-section">
+    <h2 id="intro1" class="page-header">timing-function <button type="button" class="btn btn-warning start1">Start</button></h2>
+    <div class="sample">
+        <h3><span></span><em class="sr-only">border-radius</em></h3>
+        <div class="timing bg1">
+            <div class="timing1"><span>linear</span></div>
+            <div class="timing2"><span>ease</span></div>
+            <div class="timing3"><span>ease-in</span></div>
+            <div class="timing4"><span>ease-out</span></div>
+            <div class="timing5"><span>ease-in-out</span></div>
+        </div>
+    </div>
+<div class="t_code">
+<pre><code class="language-css">.timing1.show {animation: move 2s 1 linear;}
+.timing2.show {animation: move 2s 1 ease;}
+.timing3.show {animation: move 2s 1 ease-in;}
+.timing4.show {animation: move 2s 1 ease-out;}
+.timing5.show {animation: move 2s 1 ease-in-out;}
 
-<h2 class="t_tit2">애니메이션</h2>
+@keyframes move {
+0% {left: 0%;}
+50% {left: 100%;}
+100% {left: 0%;}
+}
+</code></pre>
+</div>
+</div>
+<!-- //Intro1 -->
 
-<div class="t_box">
-    <div class="svgBox svg8">
-        <svg>
-            <rect class="ani1"></rect>
-        </svg>
-        <svg>
-            <rect class="ani2"></rect>
-        </svg>
-        <svg style="background: #E3F3FD">
-            <path class="ani3" fill="none" stroke="#0D47A1" stroke-width="2" d="M7,154.667c0-82.358,65.152-149,145.667-149"/>
-        </svg>
-        <svg style="background: #E3F3FD">
-            <path class="ani4" fill="none" stroke="#0D47A1" stroke-width="2" d="M151.534,123.547c-33.711,33.711-88.369,33.711-122.08,0
-                c-26.97-26.969-26.97-70.695,0-97.665c21.575-21.576,56.556-21.576,78.131,0c17.261,17.26,17.261,45.245,0.001,62.504
-                c-13.809,13.809-36.196,13.809-50.005,0c-11.046-11.046-11.046-28.956,0-40.002c8.837-8.837,23.166-8.837,32.003,0
-                c7.069,7.07,7.07,18.532,0,25.602c-5.656,5.657-14.826,5.657-20.482,0c-4.524-4.524-4.524-11.86,0-16.385"/>
-        </svg>
-        <svg style="background: #E3F3FD">
-            <path class="ani5" fill="none" stroke="#0D47A1" stroke-width="2" d="M58.665,139.312c0-6.873,42-6.873,42-13.747s-42-6.874-42-13.748
-            s42-6.874,42-13.748c0-6.872-42-6.872-42-13.744c0-6.874,42-6.874,42-13.747c0-6.877-42-6.877-42-13.753
-            c0-6.874,42-6.874,42-13.748c0-6.878-42-6.878-42-13.757s42-6.879,42-13.758"/>
-        </svg>
-        <svg style="background: #E3F3FD">
-            <path class="ani6" fill="none" stroke="#0D47A1" stroke-width="2" d="M93.108,91.478c42.049,30.58-13.048,57.425-13.347,6.503
-            c0.299,50.922-55.041,24.58-13.405-6.381c-41.636,30.961-55.545-28.728-3.37-14.458c-52.176-14.27-14.181-62.359,9.204-11.649
-            c-23.385-50.71,37.901-50.989,14.846-0.067c23.055-50.922,61.484-3.179,9.309,11.565C148.521,62.245,135.157,122.058,93.108,91.478
-            z"/>
-        </svg>
+
+<style>
+    .timing.bg2 > div {background-image: linear-gradient(-20deg, #b721ff 0%, #21d4fd 100%);}
+    .timing.bg9 > div {background-image: linear-gradient(-20deg, #b721ff 0%, #21d4fd 100%);}
+    
+    .timing6.show {animation: move 4s 1 step-start;}
+    .timing7.show {animation: move 4s 1 step-end;}
+    .timing8.show {animation: move 4s 1 steps(4, start);}
+    .timing9.show {animation: move 4s 1 steps(4, end);}
+    .timing10.show {animation: move 4s 1 steps(10, start);}
+    .timing11.show {animation: move 4s 1 steps(10, end);}
+</style>
+<!-- Intro2 -->
+<div class="bs-docs-section">
+    <h2 id="intro2" class="page-header">timing-function <button type="button" class="btn btn-warning start2">Start</button></h2>
+    <div class="sample">
+        <h3><span></span><em class="sr-only">border-radius</em></h3>
+        <div class="timing bg2">
+            <div class="timing6"><span>step-start</span></div>
+            <div class="timing7"><span>step-end</span></div>
+            <div class="timing8"><span>steps(4, start)</span></div>
+            <div class="timing9"><span>steps(4, end)</span></div>
+            <div class="timing10"><span>steps(10, start)</span></div>
+            <div class="timing11"><span>steps(10, start)</span></div>
+        </div>
+    </div>
+<div class="t_code">
+<pre><code class="language-css">.timing6.show {animation: move 4s 1 step-start;}
+.timing7.show {animation: move 4s 1 step-end;}
+.timing8.show {animation: move 4s 1 steps(4, start);}
+.timing9.show {animation: move 4s 1 steps(4, end);}
+.timing10.show {animation: move 4s 1 steps(10, start);}
+.timing11.show {animation: move 4s 1 steps(10, end);}
+</code></pre> 
+</div>      
+    <style>
+        .step {
+            height: 700px;
+            background: #333;
+            position: relative;
+        }
+        .step .stepbox {
+            width: 800px; height: 600px;
+            background: url(https://github.com/Youcodein/coding2/blob/main/animation/img/cupani.jpg?raw=true);
+            border-radius: 0;
+            position: absolute;
+            left: 50%; top: 50%;
+            transform: translate(-50%, -50%);
+            animation: ani 1s steps(32, start) infinite;
+        }
+        .step .stepbox.start {
+            animation-play-state: running;
+        }
+        .step .stepbox.stop {
+            animation-play-state: paused;
+        }
+        @keyframes ani {
+            0% {background-position: 0 0;}
+            100% {background-position: -25600px 0;}
+        }
+        .stepBtn {
+            position: absolute; left: 15px; top: 20px;
+        }
+        .stepBtn a {
+            background: #000; color: #fff;
+            padding: 10px;
+            margin: 3px;
+            border-radius: 3px;
+        }
+
+    </style>
+    <div class="sample">
+        <h3><span></span><em class="sr-only">border-radius</em></h3>
+        <div class="timing step">
+            <div class="stepbox"></div>
+            <span class="stepBtn">
+                <a href="#" class="stepBtnStart">Start</a>
+                <a href="#" class="stepBtnStop">Stop</a>
+            </span>
+        </div>
     </div>
 </div>
+<!-- //Intro2 -->
 
+<style>
+    .timing.bg3 > div {background-image: linear-gradient(-60deg, #ff5858 0%, #f09819 100%);}
+    .timing12.show {animation: move 3s 2 cubic-bezier(0,.71,0,1);}
+    .timing13.show {animation: move 3s 2 cubic-bezier(0,.71,1,-0.28);}
+    .timing14.show {animation: move 3s 2 cubic-bezier(1,-0.52,1,-0.28);}
+    .timing15.show {animation: move 3s 2 cubic-bezier(1,.02,0,1.01);}
+    .timing16.show {animation: move 3s 2 cubic-bezier(.33,2.04,1,2.05);}
+</style>
+<!-- Intro3 -->
+<div class="bs-docs-section">
+    <h2 id="intro3" class="page-header">cubic-bezier <button type="button" class="btn btn-warning start3">Start</button></h2>
+    <div class="sample">
+        <h3><span></span><em class="sr-only">border-radius</em></h3>
+        <div class="timing bg3">
+            <div class="timing12"><span>timing12</span></div>
+            <div class="timing13"><span>timing13</span></div>
+            <div class="timing14"><span>timing14</span></div>
+            <div class="timing15"><span>timing15</span></div>
+            <div class="timing16"><span>timing16</span></div>
+        </div>
+    </div>
 <div class="t_code">
-<pre><code class="language-html">&lt;div class="svgBox svg8"&gt;
-    &lt;svg&gt;
-        &lt;rect class="ani1"&gt;&lt;/rect&gt;
-    &lt;/svg&gt;
-    &lt;svg&gt;
-        &lt;rect class="ani2"&gt;&lt;/rect&gt;
-    &lt;/svg&gt;
-    &lt;svg style="background: #E3F3FD"&gt;
-        &lt;path class="ani3" fill="none" stroke="#0D47A1" stroke-width="2" d="M7,154.667c0-82.358,65.152-149,145.667-149"/&gt;
-    &lt;/svg&gt;
-    &lt;svg style="background: #E3F3FD"&gt;
-        &lt;path class="ani4" fill="none" stroke="#0D47A1" stroke-width="2" d="M151.534,123.547c-33.711,33.711-88.369,33.711-122.08,0
-            c-26.97-26.969-26.97-70.695,0-97.665c21.575-21.576,56.556-21.576,78.131,0c17.261,17.26,17.261,45.245,0.001,62.504
-            c-13.809,13.809-36.196,13.809-50.005,0c-11.046-11.046-11.046-28.956,0-40.002c8.837-8.837,23.166-8.837,32.003,0
-            c7.069,7.07,7.07,18.532,0,25.602c-5.656,5.657-14.826,5.657-20.482,0c-4.524-4.524-4.524-11.86,0-16.385"/&gt;
-    &lt;/svg&gt;
-    &lt;svg style="background: #E3F3FD"&gt;
-        &lt;path class="ani5" fill="none" stroke="#0D47A1" stroke-width="2" d="M58.665,139.312c0-6.873,42-6.873,42-13.747s-42-6.874-42-13.748
-        s42-6.874,42-13.748c0-6.872-42-6.872-42-13.744c0-6.874,42-6.874,42-13.747c0-6.877-42-6.877-42-13.753
-        c0-6.874,42-6.874,42-13.748c0-6.878-42-6.878-42-13.757s42-6.879,42-13.758"/&gt;
-    &lt;/svg&gt;
-    &lt;svg style="background: #E3F3FD"&gt;
-        &lt;path class="ani6" fill="none" stroke="#0D47A1" stroke-width="2" d="M93.108,91.478c42.049,30.58-13.048,57.425-13.347,6.503
-        c0.299,50.922-55.041,24.58-13.405-6.381c-41.636,30.961-55.545-28.728-3.37-14.458c-52.176-14.27-14.181-62.359,9.204-11.649
-        c-23.385-50.71,37.901-50.989,14.846-0.067c23.055-50.922,61.484-3.179,9.309,11.565C148.521,62.245,135.157,122.058,93.108,91.478
-        z"/&gt;
-    &lt;/svg&gt;
-&lt;/div&gt;
-</code></pre>
-
-<pre><code class="language-css">.ani1 {
-    width: 100px; height: 100px;
-    x: 30px; y: 30px;
-    fill: none;
-    stroke: #880E41;
-    stroke-width: 2px;
-    stroke-dasharray: 50;
-    stroke-dashoffset: 50;
-    animation: ani1 1s infinite linear alternate-reverse;
-}
-@keyframes ani1 {
-    0%   {stroke-dashoffset: 50;}
-    100% {stroke-dashoffset: 0;}
-}
-.ani2 {
-    width: 100px; height: 100px;
-    x: 30px; y: 30px;
-    fill: none;
-    stroke: #880E41;
-    stroke-width: 2px;
-    stroke-dasharray: 400;
-    stroke-dashoffset: 400;
-    animation: ani2 2s infinite linear alternate-reverse;
-}
-@keyframes ani2 {
-    0%   {stroke-dashoffset: 400;}
-    100% {stroke-dashoffset: 0;}
-}
-.ani3 {
-    animation: ani3 1s infinite linear alternate-reverse;
-    stroke-dasharray: 230px;
-    stroke-dashoffset: 230px;
-}
-@keyframes ani3 {
-    0%   {stroke-dashoffset: 230px;}
-    100% {stroke-dashoffset: 0;}
-}
-.ani4 {
-    animation: ani4 1s infinite linear alternate-reverse;
-    stroke-dasharray: 605px;
-    stroke-dashoffset: 605px;
-}
-@keyframes ani4 {
-    0%   {stroke-dashoffset: 605px;}
-    100% {stroke-dashoffset: 0;}
-}
-.ani5 {
-    animation: ani5 1s infinite linear alternate-reverse;
-    stroke-dasharray: 411px;
-    stroke-dashoffset: 411px;
-}
-@keyframes ani5 {
-    0%   {stroke-dashoffset: 411px;}
-    100% {stroke-dashoffset: 0;}
-}
-.ani6 {
-    animation: ani6 1s infinite linear alternate-reverse;
-    stroke-dasharray: 614px;
-    stroke-dashoffset: 614px;
-}
-@keyframes ani6 {
-    0%   {stroke-dashoffset: 614px;}
-    100% {stroke-dashoffset: 0;}
-}
+<pre><code class="language-css">.timing12.show {animation: move 3s 2 cubic-bezier(0,.71,0,1);}
+.timing13.show {animation: move 3s 2 cubic-bezier(0,.71,1,-0.28);}
+.timing14.show {animation: move 3s 2 cubic-bezier(1,-0.52,1,-0.28);}
+.timing15.show {animation: move 3s 2 cubic-bezier(1,.02,0,1.01);}
+.timing16.show {animation: move 3s 2 cubic-bezier(.33,2.04,1,2.05);}
 </code></pre>
 </div>
-<!-- 애니메이션 -->
+</div>
+<!-- //Intro3 -->
 
-<div class="t_iframe">
-    <iframe height="800" style="width: 100%;" scrolling="no" title="Text Animation" src="https://codepen.io/youCodein/embed/zYjvwxN?default-tab=result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
-        See the Pen <a href="https://codepen.io/youCodein/pen/zYjvwxN">
-        Text Animation</a> by Youcodein (<a href="https://codepen.io/youCodein">@youCodein</a>)
-        on <a href="https://codepen.io">CodePen</a>.
-      </iframe>
+<style>
+    .timing.bg4 > div {background-image: linear-gradient(to top, #4481eb 0%, #04befe 100%);}
+    .timing.bg8 > div {background-image: linear-gradient(to top, #4481eb 0%, #04befe 100%);}
+    .timing17.show {animation: move 3s 0.1s 2 ease;}
+    .timing18.show {animation: move 3s 0.2s 2 ease;}
+    .timing19.show {animation: move 3s 0.3s 2 ease;}
+    .timing20.show {animation: move 3s 0.4s 2 ease;}
+</style>
+<!-- Intro4 -->
+<div class="bs-docs-section">
+    <h2 id="intro4" class="page-header">animation-delay <button type="button" class="btn btn-warning start4">Start</button></h2>
+    <div class="sample">
+        <h3><span></span><em class="sr-only">border-radius</em></h3>
+        <div class="timing bg4">
+            <div class="timing17"><span>timing17</span></div>
+            <div class="timing18"><span>timing18</span></div>
+            <div class="timing19"><span>timing19</span></div>
+            <div class="timing20"><span>timing20</span></div>
+        </div>
+    </div>
+<div class="t_code">
+<pre><code class="language-css">.timing17.show {animation: move 3s 0.1s 2 ease;}
+.timing18.show {animation: move 3s 0.2s 2 ease;}
+.timing19.show {animation: move 3s 0.3s 2 ease;}
+.timing20.show {animation: move 3s 0.4s 2 ease;}
+</code></pre> 
+</div>
+</div>
+<!-- //Intro4 -->
+
+<style>
+    .timing.bg5 > div {background-image: linear-gradient(to top, #0fd850 0%, #f9f047 100%);}
+    .timing21.show {animation: move 1s 1 ease;}
+    .timing22.show {animation: move 1s 2 ease;}
+    .timing23.show {animation: move 1s 3 ease;}
+    .timing24.show {animation: move 1s infinite ease;}
+</style>
+<!-- Intro5 -->
+<div class="bs-docs-section">
+    <h2 id="intro5" class="page-header">animation-iteration-count <button type="button" class="btn btn-warning start5">Start</button></h2>
+    <div class="sample">
+        <h3><span></span><em class="sr-only">animation-iteration-count</em></h3>
+        <div class="timing bg5">
+            <div class="timing21"><span>timing21</span></div>
+            <div class="timing22"><span>timing22</span></div>
+            <div class="timing23"><span>timing23</span></div>
+            <div class="timing24"><span>timing24</span></div>
+        </div>
+    </div>
+<div class="t_code">
+<pre><code class="language-css">.timing21.show {animation: move 1s 1 ease;}
+.timing22.show {animation: move 1s 2 ease;}
+.timing23.show {animation: move 1s 3 ease;}
+.timing24.show {animation: move 1s infinite ease;}
+</code></pre> 
+</div>
+</div>
+<!-- //Intro5 -->
+
+<style>
+    .timing.bg6 {height: 600px;}
+    .timing.bg6 > div {background-image: linear-gradient(-225deg, #FF057C 0%, #8D0B93 50%, #321575 100%);}
+    .timing25.normal {animation: move2 4s 5 ease normal;}
+    .timing25.reverse {animation: move2 4s 5 ease reverse;}
+    .timing25.alternate {animation: move2 4s 5 ease alternate;}
+    .timing25.alternate-reverse {animation: move2 4s 5 ease alternate-reverse;}
+
+    @keyframes move2 {
+        0%   {left: 0; top: 0;}
+        25%  {left: calc(100% - 120px); top: 0;}
+        50%  {left: calc(100% - 120px); top: calc(100% - 120px);}
+        75%  {left: 0; top: calc(100% - 120px);}
+        100% {left: 0; top: 0;}
+    }
+</style>
+<!-- Intro6 -->
+<div class="bs-docs-section">
+    <h2 id="intro6" class="page-header">animation-direction 
+        <button type="button" class="btn btn-warning start6-1">normal</button>
+        <button type="button" class="btn btn-warning start6-2">reverse</button>
+        <button type="button" class="btn btn-warning start6-3">alternate</button>
+        <button type="button" class="btn btn-warning start6-4">alternate-reverse</button>
+    </h2>
+    <div class="sample">
+        <h3><span></span><em class="sr-only">animation-direction</em></h3>
+        <div class="timing bg6">
+            <div class="timing25"><span>timing25</span></div>
+        </div>
+    </div>
+<div class="t_code">
+<pre><code class="language-css">.timing25.normal {animation: move2 4s 5 ease normal;}
+.timing26.reverse {animation: move2 4s 5 ease reverse;}
+.timing27.alternate {animation: move2 4s 5 ease alternate;}
+.timing28.alternate-reverse {animation: move2 4s 5 ease alternate-reverse;}
+</code></pre> 
+</div>
+</div>
+<!-- //Intro6 -->
+
+
+
+<style>
+    .timing26.show {animation: move3 3s 1 ease; animation-fill-mode: none;}
+    .timing27.show {animation: move3 3s 1 ease; animation-fill-mode: forwards;}
+    .timing28.show {animation: move3 3s 1 ease; animation-fill-mode: backwards;}
+    .timing29.show {animation: move3 3s 1 ease; animation-fill-mode: both;}
+    @keyframes move3 {
+        0% {left: 0%;}
+        100% {left: calc(100% - 120px);}
+    }
+</style>
+<!-- Intro7 -->
+<div class="bs-docs-section">
+    <h2 id="intro7" class="page-header">animation-fill-mode 
+        <button type="button" class="btn btn-warning start7">Start</button>
+    </h2>
+    <div class="sample">
+        <h3><span></span><em class="sr-only">animation-direction</em></h3>
+        <div class="timing bg7">
+            <div class="timing26"><span>timing26</span></div>
+            <div class="timing27"><span>timing27</span></div>
+            <div class="timing28"><span>timing28</span></div>
+            <div class="timing29"><span>timing29</span></div>
+        </div>
+    </div>
+<div class="t_code">
+<pre><code class="language-css">.timing26.show {animation: move3 3s 1 ease; animation-fill-mode: none;}
+.timing27.show {animation: move3 3s 1 ease; animation-fill-mode: forwards;}
+.timing28.show {animation: move3 3s 1 ease; animation-fill-mode: backwards;}
+.timing29.show {animation: move3 3s 1 ease; animation-fill-mode: both;}
+@keyframes move3 {
+0% {left: 0%;}
+100% {left: calc(100% - 120px);}
+}
+</code></pre>
+</div> 
+</div>
+<!-- //Intro7 -->
+
+<style>
+    .timing.bg8 {height: 600px;}
+    .timing30.running {animation: move2 4s 100 ease; animation-play-state: running;}
+    .timing30.paused {animation: move2 4s 100 ease; animation-play-state: paused;}
+</style>
+<!-- Intro8 -->
+<div class="bs-docs-section">
+    <h2 id="intro8" class="page-header">animation-play-state
+        <button type="button" class="btn btn-warning start8-1">running</button>
+        <button type="button" class="btn btn-warning start8-2">paused</button>
+    </h2>
+    <div class="sample">
+        <h3><span></span><em class="sr-only">animation-direction</em></h3>
+        <div class="timing bg8">
+            <div class="timing30"><span>timing31</span></div>
+        </div>
+    </div>
+<div class="t_code">
+<pre><code class="language-css">.timing30.running {animation: move2 4s 100 ease; animation-play-state: running;}
+.timing30.paused {animation: move2 4s 100 ease; animation-play-state: paused;}
+</code></pre>
+</div> 
+</div>
+<!-- //Intro8 -->
+
+
+
+<!-- Bootstrap core JavaScript -->
+<script src="../assets/js/jquery-1.9.1.min.js"></script>
+<script src="../assets/js/bootstrap.min.js"></script>
+<script src="../assets/js/docs.min.js"></script>
+<script src="../assets/js/prism.js"></script>
+<script>
+$(".start1").click(function(){
+$(".timing.bg1 > div").addClass("show");
+setTimeout(function(){
+$(".timing.bg1 > div").removeClass("show");
+},2000);
+});
+
+$(".start2").click(function(){
+$(".timing.bg2 > div").addClass("show");
+setTimeout(function(){
+$(".timing.bg2 > div").removeClass("show");
+},4000);
+});
+
+$(".stepBtnStart").click(function(e){
+e.preventDefault();
+$(".stepbox").removeClass("stop").addClass("start");
+});
+$(".stepBtnStop").click(function(e){
+e.preventDefault();
+$(".stepbox").removeClass("start").addClass("stop");
+});
+
+$(".start3").click(function(){
+$(".timing.bg3 > div").addClass("show");
+setTimeout(function(){
+$(".timing.bg3 > div").removeClass("show");
+},3000);
+});
+
+$(".start4").click(function(){
+$(".timing.bg4 > div").addClass("show");
+setTimeout(function(){
+$(".timing.bg4 > div").removeClass("show");
+},3000);
+});
+
+$(".start5").click(function(){
+$(".timing.bg5 > div").addClass("show");
+});
+
+$("#intro6 > button").click(function(){
+let txt = $(this).text();
+$(".timing25").removeClass("normal reverse alternate alternate-reverse").addClass(txt);
+});
+
+$(".start7").click(function(){
+$(".timing.bg7 > div").addClass("show");
+});
+
+$("#intro8 > button").click(function(){
+let txt = $(this).text();
+$(".timing30").removeClass("running paused").addClass(txt);
+});
+
+$("#intro9 > button").click(function(){
+let txt = $(this).text();
+$(".timing.bg9 > div").removeClass("ani1 ani2 ani3 ani4 ani5 ani6 ani7").addClass(txt);
+});
+
+
+</script>
 </div>
 
-</div>
