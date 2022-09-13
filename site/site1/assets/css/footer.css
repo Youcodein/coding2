@@ -25,3 +25,32 @@ display: block;
     color: #666;
     line-height: 1.5;
 }
+
+@media(max-width:1200px){
+    #footerType{
+        width: 96%;
+        margin: 0 auto;
+    }
+    .footer__menu {
+        margin: 0 auto;
+    }
+
+    .footer__inner.container{
+        min-width: auto;
+        width: auto;
+    }
+}
+
+@media(max-width:600px){
+    .footer__menu{
+        justify-content: space-between;
+    }
+
+    .footer__menu>div>h3 {
+        font-size: 14px;
+    }
+
+    .footer__menu li a{
+        font-size: 12px;
+    }
+}

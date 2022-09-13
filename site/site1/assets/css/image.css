@@ -48,3 +48,34 @@
 .image__btn.yellow {
     background-color: #B59140;
 }
+
+@media(max-width:1200px){
+    #imageType{
+        width: 96%;
+        margin: 0 auto;
+    }
+    .image__inner.container{
+        min-width: auto;
+        width: auto;
+    }
+
+    .image__title{
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+
+@media(max-width:600px){
+    .image__inner{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .image{
+        width: 96%;
+        margin-bottom: 15px;
+    }
+    .image.img2{
+        margin-bottom: 0;
+    }
+}

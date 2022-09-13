@@ -73,3 +73,30 @@
             text-underline-position: under;
             color: #666;
         }
+
+        @media(max-width:1200px){
+            #textType{
+                width: 96%;
+                margin: 0 auto;
+            }
+        
+            .text__inner.container{
+                min-width: auto;
+                width: auto;
+            }
+        }
+        
+        @media(max-width:600px){
+            .text__inner{
+                display: block;
+            }
+        
+            .text {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+        
+            .text:last-child{
+                margin-bottom: 0;
+            }
+        }

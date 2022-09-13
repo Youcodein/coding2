@@ -19,14 +19,14 @@
     <link rel="stylesheet" href="assets/css/common.css">
 
     <!-- CSS(섹션별) -->
-    <link rel="stylesheet" href="assets/css/card.css">
-    <link rel="stylesheet" href="assets/css/image.css">
-    <link rel="stylesheet" href="assets/css/text.css">
     <link rel="stylesheet" href="assets/css/header.css">
-    <link rel="stylesheet" href="assets/css/imgText.css">
-    <link rel="stylesheet" href="assets/css/banner.css">
-    <link rel="stylesheet" href="assets/css/footer.css">
     <link rel="stylesheet" href="assets/css/slider.css">
+    <link rel="stylesheet" href="assets/css/image.css">
+    <link rel="stylesheet" href="assets/css/imgText.css">
+    <link rel="stylesheet" href="assets/css/card.css">
+    <link rel="stylesheet" href="assets/css/banner.css">
+    <link rel="stylesheet" href="assets/css/text.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
 
     <style>
         .header__menu li.active a {
@@ -55,36 +55,50 @@
     <header id="headerType" class="header__wrap nexon content__item">
         <div class="header__inner">
             <div class="header__logo">
-                <a href="#">Web <em>site</em></a>
+                <a href="#">Diary <em>deco</em></a>
             </div>
             <div class="header__menu">
                 <ul>
-                    <li class="active"><a href="#headerType">헤더 영역</a></li>
-                    <li><a href="#sliderType">슬라이드 영역</a></li>
-                    <li><a href="#mainType">컨텐츠 영역</a></li>
-                    <li><a href="#bannerType">배너 영역</a></li>
-                    <li><a href="#footerType">푸터 영역</a></li>
+                    <li class="active"><a href="#sliderType">Hot!</a></li>
+                    <li><a href="#imageType">Why?</a></li>
+                    <li><a href="#imgTextType">for NEWBIE</a></li>
+                    <li><a href="#cardType">How?</a></li>
+                    <li><a href="#bannerType">Ask</a></li>
+                    <li><a href="#footerType">My Tip</a></li>
                 </ul>
             </div>
             <div class="header__member">
                 <a href="#">로그인</a>
+                <button class="mbtn"></button>
+            </div>
+
+            <div class="mobile__menu">
+            <button class="cbtn"></button>
+            <div class="sub">
+                <li><a href="#sliderType">Hot!</a></li>
+                <li><a href="#imageType">Why?</a></li>
+                <li><a href="#imgTextType">for NEWBIE</a></li>
+                <li><a href="#cardType">How?</a></li>
+                <li><a href="#bannerType">Ask</a></li>
+                <li><a href="#footerType">My Tip</a></li>
+            </div>
             </div>
         </div>
     </header>
     <!-- headerType -->
 
     <main id="mainType">
-        <section id="sliderType" class="slider__wrap ">
-            <h2>슬라이드 영역</h2>
+        <section id="sliderType" class="slider__wrap nexon scroll">
+            <h2>Hot Issue</h2>
             <div class="slider__inner">
                 <div class="slider">
                     <div class="slider__img">
                         <div class="desc">
-                            <span>DEVELOPER</span>
-                            <h3>NEW PROJECT</h3>
+                            <span>Dairy</span>
+                            <h3>Art of Dairy</h3>
                             <p>
-                                너무 무리하지 말아요! 이미 당신은 잘하고 있고!
-                                앞으로도 잘 할 수 있어요! <br>
+                                다이어리는 이제 기록을 넘어선 문화 예술이 되었습니다.<br>
+                                다이어리 꾸미기의 매력에 빠져보세요
                             </p>
                             <div class="btn">
                                 <a href="#">자세히보기</a>
@@ -110,40 +124,38 @@
         <!-- sliderType -->
 
         
-        <section id="imageType" class="image__wrap nexon section ">
-            <h2>다이어리 꾸미기</h2>
-            <p>당신만의 멋진 기록장, 개성있는 다이어리를 만들어보세요!</p>
+        <section id="imageType" class="image__wrap nexon section scroll">
+            <h2>Why?</h2>
+            <p>왜 사람들은 "다이어리 꾸미기" 에 열광하는가?</p>
             <div class="image__inner container">
                 <article class="image img1">
-                    <h3 class="image__title">당신의 기억들</h3>
-                    <p class="image__desc">기억으로 남기는 것도 좋은 방법이지만 기록으로 남기지 않은 기억은 금방 휘발되는 법이죠. 당신의 기억과 감정을 어딘가에 박제하세요. 훗날
-                        당신의 추억을 읽고 기뻐할 당신의 얼굴을 상상하세요!</p>
+                    <h3 class="image__title">Remember your Memories</h3>
+                    <p class="image__desc">기억으로 남기는 것도 좋은 방법이지만 기록으로 남기지 않은 기억은 금방 휘발되는 법입니다. 멋진 기억들을 기록하고 이후에 펼쳐보면 많은 감정들을 알려주죠.</p>
                     <a class="image__btn" href="/" title="자세히 보기">자세히 보기</a>
                 </article>
                 <article class="image img2">
-                    <h3 class="image__title">당신의 추억을</h3>
+                    <h3 class="image__title">See my Feelings</h3>
                     <p class="image__desc">당신의 감정을 시각적으로 표현하고 싶지 않으신가요? 스티커를 붙이세요. 그림을 그리세요. 당신의 추억을 장식하세요. 적절한 장식은 감정을
-                        실감나게
-                        표현해줍니다. 마음에 드는 스티커나 그림으로 예쁘게 장식해보세요</p>
+                        실감나게 표현해줍니다. 마음에 드는 스티커나 그림으로 예쁘게 장식해보세요</p>
                     <a class="image__btn yellow" href="/" title="자세히 보기">자세히 보기</a>
                 </article>
             </div>
         </section>
         <!-- imageType -->
 
-        <section id="imgTextType" class="imgText__wrap nexon section gray">
+        <section id="imgTextType" class="imgText__wrap nexon section gray scroll">
             <h2 class="blind">유용한 사이트 살펴보기</h2>
             <div class="imgtext__inner container">
                 <div class="imgText__txt">
-                    <span>이미지 텍스트 유형01</span>
+                    <span>초보 다.꾸인을 위해</span>
                     <h3>유용한 사이트 살펴보기</h3>
-                    <p>웹디자이너, 웹 퍼블리셔, 프론트앤드 개발자를 위한 유용한 사이트입니다.</p>
+                    <p>다이어리 꾸미기를 처음 할 때 입문용으로 유용한 사이트입니다.</p>
                     <ul>
                         <li><a href="/">튜토리얼 사이트</a></li>
                         <li><a href="/">레퍼런스 사이트</a></li>
-                        <li><a href="/">웹폰트 사이트</a></li>
-                        <li><a href="/">CSS 사이트</a></li>
-                        <li><a href="/">WebGL 사이트</a></li>
+                        <li><a href="/">디지털 다이어리 스티커</a></li>
+                        <li><a href="/">유용한 블로그 모음</a></li>
+                        <li><a href="/">다꾸 자랑 사진들</a></li>
                         <li><a href="/">Youtube 사이트</a></li>
                     </ul>
                 </div>
@@ -157,9 +169,9 @@
         </section>
         <!-- imgTextType -->
 
-        <section id="cardType" class="card__wrap nexon section">
-            <h2>다이어리 꾸미기</h2>
-            <p>당신만의 멋진 기록장, 개성있는 다이어리를 만들어보세요!</p>
+        <section id="cardType" class="card__wrap nexon section scroll">
+            <h2>How?</h2>
+            <p>어떤 식으로 당신의 다이어리를 꾸밀건가요? 당신만의 멋진 다이어리를 만들어보세요!</p>
             <div class="card__inner container">
                 <article class="card">
                     <figure class="card__header">
@@ -231,51 +243,51 @@
         </section>
         <!-- cardType -->
 
-        <section id="bannerType" class="banner__wrap nexon content__item">
-            <h2 class="blind">배너 영역</h2>
+        <section id="bannerType" class="banner__wrap nexon content__item scroll">
+            <h2 class="blind">Ask</h2>
             <div class="banner__inner">
-                <h3 class="title">제목 영역</h3>
+                <h3 class="title">Ask</h3>
                 <p class="desc">
-                    내용내용내용이랍니다.내용어케길게써
-                    <a href="#" title="새 페이지 열림">그거어케하는건데</a>
+                    궁금한 점이 있으신가요? 아래 이메일로 연락 주세요!
+                    <a href="#" title="새 페이지 열림">D_Deco@abcde.com</a>
                 </p>
-                <span class="small">배너 유형01</span>
+                <span class="small">고객 센터</span>
             </div>
         </section>
         <!-- bannerType -->
 
-        <section id="textType" class="text__wrap nexon section">
-            <span>텍스트 유형01T</span>
-            <h2 class="mb70">🍞빵을 맛있게 먹는 방법🥐</h2>
+        <section id="textType" class="text__wrap nexon section scroll">
+            <span>My Tip</span>
+            <h2 class="mb70">📖나만의 다이어리 꾸미기 팁!🖋</h2>
             <div class="text__inner container">
                 <div class="text t1">
-                    <h3 class="text__title">그냥 먹는다</h3>
-                    <p class="text__desc">인간의 가장 기본적인 행위인 먹는다는 행위를 통해 빵이라는 음식물을 섭취해봅시다. 공복일 시 더욱 맛있습니다.</p>
+                    <h3 class="text__title">Only Text</h3>
+                    <p class="text__desc">문자만의 매력이 있지요. 어떠한 기교도, 장식도 없는 텍스트만의 매력은 미니멀리즘의 아름다움을 연상합니다.</p>
                     <a href="/" class="text__btn">더보기</a>
                 </div>
                 <div class="text t2">
-                    <h3 class="text__title">구워서 먹는다</h3>
-                    <p class="text__desc">불의 발견은 인간에게 아주 혁명적인 일이었습니다. 그리고 그 불로 우리는 빵을 구워먹는 기적을 행할 수 있었습니다.</p>
+                    <h3 class="text__title">Handwriting</h3>
+                    <p class="text__desc">글자만으론 너무 밋밋하신가요? 그렇다면 글씨에 예술적인 감각을 더해보면 어떨까요? 포인트가 될 거예요!</p>
                     <a href="/" class="text__btn">더보기</a>
                 </div>
                 <div class="text t3">
-                    <h3 class="text__title">얹어서 먹는다</h3>
-                    <p class="text__desc">그냥 빵만 먹기 심심하다면? 크림이나 잼을 얹어서 드세요! 달콤하고 고소한 맛을 추가할 수 있어요! 맛있게 드세요~</p>
+                    <h3 class="text__title">Color</h3>
+                    <p class="text__desc">무채색의 다이어리도 멋지지만 당신의 기억에 색을 칠해보는건 어떠세요? 당신의 감정을 색깔로 표현해보세요!</p>
                     <a href="/" class="text__btn">더보기</a>
                 </div>
                 <div class="text t4">
-                    <h3 class="text__title">커피와 함께 먹는다</h3>
-                    <p class="text__desc">커피와 빵은 정말 궁합이 잘 맞죠 빵 한 입과 커피 한 모금에 작은 행복을 경험하세요. 당신의 소확행을 느끼세요</p>
+                    <h3 class="text__title">Hand Drawing</h3>
+                    <p class="text__desc">글만으로는 표현하기 어려울 때, 그림을 더해보세요! 당신도 저도 무엇인지 이해하기 쉬워요! 물론, 이해하기 어려운 그림도 매력적이죠!</p>
                     <a href="/" class="text__btn">더보기</a>
                 </div>
                 <div class="text t5">
-                    <h3 class="text__title">선물로 준다</h3>
-                    <p class="text__desc">가끔은 마음을 배부르게 해보세요. 평소에 감사하던 사람에게 빵으로 감사함을 전해보세요. 정말 기뻐할거예요!</p>
+                    <h3 class="text__title">Sticker</h3>
+                    <p class="text__desc">그림에 자신이 없다면 이미 만들어진 그림을 활용해봐요. 그래요, 바로 스티커를 이용해보세요!</p>
                     <a href="/" class="text__btn">더보기</a>
                 </div>
                 <div class="text t6">
-                    <h3 class="text__title">만들어 먹는다</h3>
-                    <p class="text__desc">예전부터 인간은 원하는 것이 있다면 만들어냈습니다. 자급자족의 인간! 이제 식량을 자급자족하세요! 굿인간 굿브레드</p>
+                    <h3 class="text__title">Just WRITING!</h3>
+                    <p class="text__desc">앞의 팁은 모두 잊어버리세요! 자신다운 다이어리를 원하시나요? 그럼 겁먹지 말고 일단 "쓰세요!"</p>
                     <a href="/" class="text__btn">더보기</a>
                 </div>
             </div>
@@ -285,7 +297,7 @@
     </main>
     <!-- mainType -->
 
-    <footer id="footerType" class="footer__wrap nexon section gray content__item">
+    <footer id="footerType" class="footer__wrap nexon section gray content__item scroll">
         <h2 class="blind">푸터 영역</h2>
         <div class="footer__inner container">
             <div class="footer__menu">
@@ -293,59 +305,54 @@
                     <h3>사이트</h3>
                     <ul>
                         <li><a href="/">웹표준 사이트</a></li>
-                        <li><a href="/">웹표준 사이트</a></li>
-                        <li><a href="/">웹표준 사이트</a></li>
-                        <li><a href="/">웹표준 사이트</a></li>
+                        <li><a href="/">반응형 사이트</a></li>
+                        <li><a href="/">페럴랙스 사이트</a></li>
+                        <li><a href="/">포트폴리오 사이트</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h3>사이트</h3>
+                    <h3>헤더 영역</h3>
                     <ul>
-                        <li><a href="/">웹표준 사이트</a></li>
-                        <li><a href="/">웹표준 사이트</a></li>
-                        <li><a href="/">웹표준 사이트</a></li>
-                        <li><a href="/">웹표준 사이트</a></li>
+                        <li><a href="#">메뉴 유형01</a></li>
+                        <li><a href="#">메뉴 유형02</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h3>사이트</h3>
+                    <h3>슬라이드 영역</h3>
                     <ul>
-                        <li><a href="/">웹표준 사이트</a></li>
-                        <li><a href="/">웹표준 사이트</a></li>
-                        <li><a href="/">웹표준 사이트</a></li>
-                        <li><a href="/">웹표준 사이트</a></li>
+                        <li><a href="#">슬라이드 유형01</a></li>
+                        <li><a href="#">슬라이드 유형02</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h3>사이트</h3>
+                    <h3>이미지 영역</h3>
                     <ul>
-                        <li><a href="/">웹표준 사이트</a></li>
-                        <li><a href="/">웹표준 사이트</a></li>
-                        <li><a href="/">웹표준 사이트</a></li>
-                        <li><a href="/">웹표준 사이트</a></li>
+                        <li><a href="#">이미지 유형 01</a></li>
+                        <li><a href="#">이미지 유형 02</a></li>
+                        <li><a href="#">이미지 / 텍스트 유형 01</a></li>
+                        <li><a href="#">이미지 / 텍스트 유형 02</a></li>
+                        <li><a href="#">텍스트 유형 01</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h3>사이트</h3>
+                    <h3>컨텐츠 영역</h3>
                     <ul>
-                        <li><a href="/">웹표준 사이트</a></li>
-                        <li><a href="/">웹표준 사이트</a></li>
-                        <li><a href="/">웹표준 사이트</a></li>
-                        <li><a href="/">웹표준 사이트</a></li>
+                        <li><a href="#">카드 유형 01</a></li>
+                        <li><a href="#">카드 유형 02</a></li>
+                        <li><a href="#">카드 유형 03</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h3>사이트</h3>
+                    <h3>푸터 영역</h3>
                     <ul>
-                        <li><a href="/">웹표준 사이트</a></li>
-                        <li><a href="/">웹표준 사이트</a></li>
-                        <li><a href="/">웹표준 사이트</a></li>
-                        <li><a href="/">웹표준 사이트</a></li>
+                        <li><a href="#">푸터 메뉴 유형 01</a></li>
+                        <li><a href="#">푸터 컨택트 유형 02</a></li>
+                        <li><a href="#">푸터 이메일 유형 03</a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer__right">
-                2022 Webstoryboy. Portfolio is Power<br>
+                2022 D_Deco. Dairy Decoraion<br>
                 All rights reserved.
             </div>
         </div>
@@ -354,17 +361,12 @@
 
     <script>
         window.addEventListener("scroll", () => {
-            //let scrollTop = window.pageYOffset;
-            //let scrollTop = window.scrollY;
-            //let scrollTop = document.documentElement.scrollTop;
-
             let scrollTop = window.pageYOffset || window.scrollY || document.documentElement.scrollTop;
-
 
             //forEach
 
-            document.querySelectorAll(".content__item").forEach((element, index) => {
-                if (scrollTop >= element.offsetTop -4) {
+            document.querySelectorAll(".scroll").forEach((element, index) => {
+                if (scrollTop >= element.offsetTop - 700) {
                     document.querySelectorAll(".header__menu li").forEach(li => {
                         li.classList.remove("active")
                     })
@@ -375,14 +377,26 @@
         });
 
         //scroll이동
-        document.querySelectorAll(".header__menu li a").forEach(li => {
-            li.addEventListener("click", (e) => {
-                e.preventDefault();
-                document.querySelector(li.getAttribute("href")).scrollIntoView({
-                    behavior: "smooth"
-                })
-            })
-        })
+        document.querySelectorAll("#headerType .header__inner .header__menu li a").forEach(li => {
+        li.addEventListener("click", (e) => {
+            e.preventDefault();
+            document.querySelector(li.getAttribute("href")).scrollIntoView({
+                behavior: "smooth"  // 이동 부드럽게
+            });
+        });
+    });
+
+        const menuBtn = document.querySelector(".header__member .mbtn");  // 메뉴 아이콘
+        const menu = document.querySelector(".sub");   // 메뉴
+
+        menuBtn.addEventListener("mouseover", () => {
+            menu.classList.add("show");   // 메뉴 아이콘에 마우스 커서 올려놓으면 메뉴 보이기
+        });
+        menu.addEventListener("mouseleave", () => {
+            menu.classList.remove("show");    // 메뉴 아이콘에 마우스 커서 벗어나면 메뉴 사라지기
+        });
+
+
     </script>
 </body>
 

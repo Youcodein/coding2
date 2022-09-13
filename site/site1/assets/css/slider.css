@@ -1,15 +1,19 @@
 .slider__inner {
     margin-top: 40px;
 }
+
 .slider {}
+
 .slider__img {
     background: url(../img/slider_bg01.jpg) no-repeat center / cover;
 }
+
 .slider__img .desc {
     width: 1160px;
     margin: 0 auto;
     padding: 100px 20px;
 }
+
 .slider__img .desc span {
     font-size: 16px;
     background-color: #fff;
@@ -19,6 +23,7 @@
     display: inline-block;
     border-radius: 30px;
 }
+
 .slider__img .desc h3 {
     font-size: 110px;
     font-weight: 300;
@@ -28,6 +33,7 @@
     margin-bottom: 16px;
     margin-left: -8px;
 }
+
 .slider__img .desc p {
     font-size: 20px;
     font-weight: 300;
@@ -35,20 +41,25 @@
     line-height: 1.45;
     margin-bottom: 130px;
 }
+
 .slider__img .desc .btn {}
-.slider__img .desc .btn a{
+
+.slider__img .desc .btn a {
     font-size: 16px;
     background-color: #fff;
     padding: 11px 50px;
     display: inline-block;
 }
+
 .slider__img .desc .btn a.black {
     background-color: #000;
     color: #fff;
 }
+
 .slider {
     position: relative;
 }
+
 .slider__arrow {}
 
 .slider__arrow a {
@@ -59,13 +70,16 @@
     background-image: url(../img/slider_icon.svg);
     transform: translateY(-50%);
 }
+
 .slider__arrow a.left {
     left: 20px;
 }
+
 .slider__arrow a.right {
     right: 20px;
     background-position: -50px 0;
 }
+
 .slider__dot {
     position: absolute;
     left: 50%;
@@ -88,6 +102,50 @@
 .slider__dot a.play {
     background-position: -40px -70px;
 }
+
 .slider__dot a.stop {
     background-position: -60px -70px;
+}
+
+@media all and (max-width: 1200px) {
+    .slider__img .desc {
+        width: 80%;
+    }
+
+    .slider__img .desc h3 {
+        font-size: 90px;
+    }
+
+    .slider__img .desc p {
+        font-size: 18px;
+    }
+}
+
+@media all and (max-width: 960px) {
+    .slider__arrow a {
+        width: 20px;
+    }
+
+    .slider__arrow a.right {
+        background-position: -60px 0;
+    }
+}
+
+@media all and (max-width: 600px) {
+    .slider__img .desc {
+        width: 65%;
+    }
+
+    .slider__img .desc h3 {
+        font-size: 85px;
+    }
+
+    .slider__img .desc p {
+        font-size: 18px;
+    }
+
+    .slider__img .desc .btn a {
+        font-size: 14px;
+        padding: 11px 20px;
+    }
 }
