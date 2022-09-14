@@ -23,6 +23,9 @@
 .image__title {
     font-size: 32px;
     margin-bottom: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .image__desc {
@@ -49,7 +52,28 @@
     background-color: #B59140;
 }
 
-@media(max-width:1200px){
+@media (max-width: 960px) {
+
+}
+
+@media (max-width: 600px) {
+    .image__inner {
+        flex-direction: column;
+    }
+    .image {
+        width: 100%;
+        padding: 210px 20px 20px 20px;
+    }
+    .image:first-child {
+        margin-bottom: 20px;
+    }
+    .image__title {
+        font-size: 24px;
+    }
+
+}
+
+/* @media(max-width:1200px){
     #imageType{
         width: 96%;
         margin: 0 auto;
@@ -78,4 +102,4 @@
     .image.img2{
         margin-bottom: 0;
     }
-}
+} */

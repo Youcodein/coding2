@@ -28,7 +28,25 @@
     <link rel="stylesheet" href="assets/css/text.css">
     <link rel="stylesheet" href="assets/css/footer.css">
 
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/swiper.css">
+
+
     <style>
+        /* #headerType {
+            display: none;
+        } */
+
+        /* #sliderType {display: none;} */
+        /* #imageType {display: none;} */
+        /* #imgTextType {display: none;} */
+        /* #cardType {display: none;} */
+        /* #bannerType {display: none;} */
+        /* #textType {display: none;} */
+        /* #footerType {display: none;} */
+
+
+
         .header__menu li.active a {
             background-color: #f1f1f1;
             border-radius: 10px;
@@ -73,15 +91,15 @@
             </div>
 
             <div class="mobile__menu">
-            <button class="cbtn"></button>
-            <div class="sub">
-                <li><a href="#sliderType">Hot!</a></li>
-                <li><a href="#imageType">Why?</a></li>
-                <li><a href="#imgTextType">for NEWBIE</a></li>
-                <li><a href="#cardType">How?</a></li>
-                <li><a href="#bannerType">Ask</a></li>
-                <li><a href="#footerType">My Tip</a></li>
-            </div>
+                <button class="cbtn"></button>
+                <div class="sub">
+                    <li><a href="#sliderType">Hot!</a></li>
+                    <li><a href="#imageType">Why?</a></li>
+                    <li><a href="#imgTextType">for NEWBIE</a></li>
+                    <li><a href="#cardType">How?</a></li>
+                    <li><a href="#bannerType">Ask</a></li>
+                    <li><a href="#footerType">My Tip</a></li>
+                </div>
             </div>
         </div>
     </header>
@@ -89,9 +107,9 @@
 
     <main id="mainType">
         <section id="sliderType" class="slider__wrap nexon scroll">
-            <h2>Hot Issue</h2>
+            <h2 class="ir">Hot Issue</h2>
             <div class="slider__inner">
-                <div class="slider">
+                <!-- <div class="slider">
                     <div class="slider__img">
                         <div class="desc">
                             <span>Dairy</span>
@@ -118,19 +136,70 @@
                         <a href="#" class="stop"><span class="ir">정지</span></a>
 
                     </div>
+                </div> -->
+
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="desc">
+                                <span>Dairy</span>
+                                <h3>Art of Dairy</h3>
+                                <p>
+                                    다이어리는 이제 기록을 넘어선 문화 예술이 되었습니다.<br>
+                                    다이어리 꾸미기의 매력에 빠져보세요
+                                </p>
+                                <div class="btn">
+                                    <a href="#">자세히보기</a>
+                                    <a href="#" class="black">사이트보기</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="desc">
+                                <span>Dairy</span>
+                                <h3>Art of Dairy</h3>
+                                <p>
+                                    다이어리는 이제 기록을 넘어선 문화 예술이 되었습니다.<br>
+                                    다이어리 꾸미기의 매력에 빠져보세요
+                                </p>
+                                <div class="btn">
+                                    <a href="#">자세히보기</a>
+                                    <a href="#" class="black">사이트보기</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="desc">
+                                <span>Dairy</span>
+                                <h3>Art of Dairy</h3>
+                                <p>
+                                    다이어리는 이제 기록을 넘어선 문화 예술이 되었습니다.<br>
+                                    다이어리 꾸미기의 매력에 빠져보세요
+                                </p>
+                                <div class="btn">
+                                    <a href="#">자세히보기</a>
+                                    <a href="#" class="black">사이트보기</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
                 </div>
             </div>
         </section>
         <!-- sliderType -->
 
-        
+
         <section id="imageType" class="image__wrap nexon section scroll">
             <h2>Why?</h2>
             <p>왜 사람들은 "다이어리 꾸미기" 에 열광하는가?</p>
             <div class="image__inner container">
                 <article class="image img1">
                     <h3 class="image__title">Remember your Memories</h3>
-                    <p class="image__desc">기억으로 남기는 것도 좋은 방법이지만 기록으로 남기지 않은 기억은 금방 휘발되는 법입니다. 멋진 기억들을 기록하고 이후에 펼쳐보면 많은 감정들을 알려주죠.</p>
+                    <p class="image__desc">기억으로 남기는 것도 좋은 방법이지만 기록으로 남기지 않은 기억은 금방 휘발되는 법입니다. 멋진 기억들을 기록하고 이후에 펼쳐보면 많은
+                        감정들을 알려주죠.</p>
                     <a class="image__btn" href="/" title="자세히 보기">자세히 보기</a>
                 </article>
                 <article class="image img2">
@@ -359,45 +428,27 @@
     </footer>
     <!-- footerType -->
 
+    <script src="assets/js/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
     <script>
-        window.addEventListener("scroll", () => {
-            let scrollTop = window.pageYOffset || window.scrollY || document.documentElement.scrollTop;
-
-            //forEach
-
-            document.querySelectorAll(".scroll").forEach((element, index) => {
-                if (scrollTop >= element.offsetTop - 700) {
-                    document.querySelectorAll(".header__menu li").forEach(li => {
-                        li.classList.remove("active")
-                    })
-                    document.querySelector(".header__menu li:nth-child(" + (index + 1) + ")").classList.add("active");
-                }
-            })
-
+        var swiper = new Swiper(".mySwiper", {
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            // autoplay: {
+            //     delay: 2000,
+            // },
+            pagination: {
+                el: '.swiper-pagination',
+                type: 'bullets',
+            },
         });
-
-        //scroll이동
-        document.querySelectorAll("#headerType .header__inner .header__menu li a").forEach(li => {
-        li.addEventListener("click", (e) => {
-            e.preventDefault();
-            document.querySelector(li.getAttribute("href")).scrollIntoView({
-                behavior: "smooth"  // 이동 부드럽게
-            });
-        });
-    });
-
-        const menuBtn = document.querySelector(".header__member .cbtn");  // 메뉴 아이콘
-        const menu = document.querySelector(".sub");   // 메뉴
-
-        menuBtn.addEventListener("mouseover", (e) => {
-            menu.classList.add("show");   // 메뉴 아이콘에 마우스 커서 올려놓으면 메뉴 보이기
-        });
-        menu.addEventListener("mouseleave", (e) => {
-            menu.classList.remove("show");    // 메뉴 아이콘에 마우스 커서 벗어나면 메뉴 사라지기
-        });
-
-
     </script>
+
+
+
 </body>
 
 </html>
