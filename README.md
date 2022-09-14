@@ -26,4 +26,4 @@ https://Youcodein.github.io/coding2/html/alphabet.html
 
 ### SITE
 
-https://Youcodein.github.io/coding2/site/site1/index.html  
+https://Youcodein.github.io/coding2/site/site1/index_copy.html  
