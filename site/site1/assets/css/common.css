@@ -102,7 +102,11 @@
 }
 
 /* fixed */
-body.fixed {
+body {
+    overflow: overlay;
+}
+
+.fixed {
     height: 100vh;
     overflow: hidden;
 }
