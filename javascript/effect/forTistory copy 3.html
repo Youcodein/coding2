@@ -1,10 +1,10 @@
 <div class="document">
 <h2 class="t_tit" data-ke-size="size26">Javascript parallax Effect</h2>
-<p class="t_desc" data-ke-size="size16">parallax 이펙트 중 숨김 메뉴/탑버튼 유형입니다.</p>
+<p class="t_desc" data-ke-size="size16">parallax 이펙트 중 내용 나타내기 유형입니다.</p>
 
-<div class="t_iframe" style="min-height: 1000px; padding-top: 0;"><iframe src="https://youcodein.github.io/coding2/javascript/effect/parallaxEffect03.html" frameborder="0"></iframe></div>
-<div class="t_link"><a href="https://youcodein.github.io/coding2/javascript/effect/parallaxEffect03.html" target="_blank" rel="noopener">원본 사이트 보기</a></div>
-<div class="t_link"><a href="https://github.com/Youcodein/coding2/blob/main/javascript/effect/parallaxEffect03.html" target="_blank" rel="noopener">원본 소스 보기</a></div>
+<div class="t_iframe" style="min-height: 1000px; padding-top: 0;"><iframe src="https://youcodein.github.io/coding2/javascript/effect/parallaxEffect04.html" frameborder="0"></iframe></div>
+<div class="t_link"><a href="https://youcodein.github.io/coding2/javascript/effect/parallaxEffect04.html" target="_blank" rel="noopener">원본 사이트 보기</a></div>
+<div class="t_link"><a href="https://github.com/Youcodein/coding2/blob/main/javascript/effect/parallaxEffect04.html" target="_blank" rel="noopener">원본 소스 보기</a></div>
 
 
 
@@ -119,7 +119,7 @@
 #parallax__nav {
     position: fixed;
     right: 20px;
-    top: -200px;
+    top: 20px;
     z-index: 2000;
     background-color: rgba(0, 0, 0, 0.4);
     padding: 20px 30px;
@@ -127,9 +127,6 @@
     transition: top .4s ease;
 }
 
-#parallax__nav.show {
-    top: 20px;
-}
 
 #parallax__nav li {
     display: inline;
@@ -269,25 +266,7 @@
     border-radius: 5px;
 }
 
-#parallax__info {
-    position: fixed;
-    left: 20px;
-    bottom: 20px;
-    z-index: 2000;
-    background-color: rgba(0, 0, 0, 0.6);
-    color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-}
 
-#parallax__info li,
-.scrollTop {
-    line-height: 1.4;
-}
-
-#parallax__info li.active a {
-    border-radius: 5px;
-}
 
 @media (max-width: 800px) {
     #parallax__cont {
@@ -316,39 +295,72 @@
         height: auto;
         line-height: 1;
     }
-
-    #parallax__info {
-        left: 10;
-        bottom: 10px;
-    }
-
 }
 
-#parallax__top {
-    font-size: 14px;
-    position: fixed;
-    left: 50%;
-    bottom: -220px;
-    z-index: 10000;
-    transform: translateX(-50%);
-    width: 40px;
-    height: 40px;
-    background: rgba(0, 0, 0, 0.4);
-    text-align: center;
-    line-height: 40px;
-    color: #fff;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: all 0.3s;
+/* 한번에 나타나기
+#contents > section {
+    opacity: 0;
+    transition: all 1s;
+}
+#contents > section.show {
+    opacity: 1;
+} */
+
+/* 개별적으로 나타나기 */
+
+#contents > section .content__item__num {
+    opacity: 0;
+    transform: translateY(200px);
+    transition: all 1s 0.1s cubic-bezier(0.12, 0.72, 0.48, 1.08);
+}
+#contents > section .content__item__title {
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: all 1s 0.3s cubic-bezier(0.12, 0.72, 0.48, 1.08);
+
+}
+#contents > section .content__item__imgWrap {
+    opacity: 0;
+    transform: translateY(200px) rotate(30deg) skew(20deg);
+    transition: all 1s 0.6s cubic-bezier(0.12, 0.72, 0.48, 1.08);
+}
+#contents > section .content__item__desc {
+    opacity: 0;
+    transform: translateX(-200px);
+    transition: all 1s 0.9s cubic-bezier(0.12, 0.72, 0.48, 1.08);
 }
 
-#parallax__top.show {
-    bottom: 20px;
+#contents > section.show .content__item__num {
+    opacity: 0.07;
+    transform: translateY(0);
+}
+#contents > section.show .content__item__title {
+    opacity: 1;
+    transform: translateX(0);
+}
+#contents > section.show .content__item__imgWrap {
+    opacity: 1;
+    transform: translateY(0) rotate(0) skew(0);
+}
+#contents > section.show .content__item__desc {
+    opacity: 1;
+    transform: translateX(0);
 }
 
-#parallax__top:hover {
-    background: #fff;
-    color: #000;
+#contents > section:nth-child(even) .content__item__title {
+    transform: translateX(100px);
+}
+
+#contents > section:nth-child(even).show .content__item__title {
+    transform: translateX(0);
+}
+
+#contents > section:nth-child(even) .content__item__desc {
+    transform: translateX(200px);
+}
+
+#contents > section:nth-child(even).show .content__item__desc {
+    transform: translateX(0);
 }
 </code></pre>
 </div>
@@ -357,64 +369,21 @@
 <h2 data-ke-size="size26">Javascript</h2>
 <p class="t_desc2" data-ke-size="size16">Javascript 소스입니다.</p>
 <div class="t_code">
-<pre><code class="language-js">window.addEventListener("scroll", ()=>{
-    let scrollTop = window.pageYOffset || window.scrollY || document.documentElement.scrollTop;
+<pre><code class="language-js">//재귀함수
 
-    //01
-    // if(scrollTop > 0){
-    //     document.querySelector("#parallax__nav").classList.add("show");
-    // } else {
-    //     document.querySelector("#parallax__nav").classList.remove("show");
-    // }                                스크롤바 0보다 커지면 메뉴가 나온다.
+function scroll(){
+    let scrollTop = window.pageXOffset || document.documentElement.scrollTop || window.screenY
 
-    
-
-    02
-    if(scrollTop > (document.body.scrollHeight - window.outerHeight) ){
-        document.querySelector("#parallax__top").classList.add("show");
-    } else {
-        document.querySelector("#parallax__top").classList.remove("show");
-    }
-    console.log();
-
-    document.querySelector("#parallax__info span").innerText = Math.floor(scrollTop);
-    
-    
-    // document.querySelector("#parallax__info span").innerText = Math.ceil(scrollTop);
-})
-
-// top 버튼
-document.querySelector("#parallax__top").addEventListener("click", ()=>{
-    window.scrollTo({left: 0, top: 0, behavior: "smooth"});
-});
-
-//03
-let nowScroll = true;
-let lastScroll = 0;
-
-function scrollProgress(){
-    nowScroll = true;
-
-    setInterval(() => {
-        if(nowScroll){
-            nowScroll = false;
-            hasScroll();
+    document.querySelectorAll(".content__item").forEach(item => {
+        if(scrollTop > item.offsetTop - window.innerHeight/2){
+            item.classList.add("show");
         }
-    }, 300);
+    });
+    
+    requestAnimationFrame(scroll);
 }
 
-function hasScroll(){
-    let scrollTop = window.pageYOffset || window.scrollY || document.documentElement.scrollTop;
-
-    if(scrollTop &lt; lastScroll){
-        document.querySelector("#parallax__nav").classList.add("show");
-    } else {
-        document.querySelector("#parallax__nav").classList.remove("show");
-    }
-    lastScroll = scrollTop;
-}
-
-window.addEventListener("scroll", scrollProgress);
+scroll();
 </code></pre>
 </div>
 <!-- html -->
