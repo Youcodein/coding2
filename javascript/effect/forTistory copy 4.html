@@ -1,10 +1,10 @@
 <div class="document">
-<h2 class="t_tit" data-ke-size="size26">Javascript Mouse Effect</h2>
-<p class="t_desc" data-ke-size="size16">Mouse 이펙트 중 GSAP을 이용한 마우스 따라다니기 효과입니다.</p>
+<h2 class="t_tit" data-ke-size="size26">Javascript Slider Effect</h2>
+<p class="t_desc" data-ke-size="size16">Slider 이펙트 중 버튼을 눌러 이미지를 옆으로 넘기는 효과입니다.</p>
 
-<div class="t_iframe" style="min-height: 1000px; padding-top: 0;"><iframe src="https://youcodein.github.io/coding2/javascript/effect/mouseEffect02.html" frameborder="0"></iframe></div>
-<div class="t_link"><a href="https://youcodein.github.io/coding2/javascript/effect/mouseEffect02.html" target="_blank" rel="noopener">원본 사이트 보기</a></div>
-<div class="t_link"><a href="https://github.com/Youcodein/coding2/blob/main/javascript/effect/mouseEffect02.html" target="_blank" rel="noopener">원본 소스 보기</a></div>
+<div class="t_iframe" style="min-height: 1000px; padding-top: 0;"><iframe src="https://youcodein.github.io/coding2/javascript/effect/sliderEffect04.html" frameborder="0"></iframe></div>
+<div class="t_link"><a href="https://youcodein.github.io/coding2/javascript/effect/sliderEffect04.html" target="_blank" rel="noopener">원본 사이트 보기</a></div>
+<div class="t_link"><a href="https://github.com/Youcodein/coding2/blob/main/javascript/effect/sliderEffect04.html" target="_blank" rel="noopener">원본 소스 보기</a></div>
 
 
 
@@ -12,18 +12,23 @@
 <p class="t_desc2" data-ke-size="size16">html 소스입니다.</p>
 <div class="t_code">
 <pre><code class="language-html">&lt;main id="main"&gt;
-    &lt;section id="mouseType"&gt;
-        &lt;div class="mouse__cursor"&gt;&lt;/div&gt;
-        &lt;div class="mouse__cursor2"&gt;&lt;/div&gt;
-        
-        &lt;div class="mouse__wrap"&gt;
-            &lt;p&gt;멋있는 명언&lt;span class="style1"&gt;hoc&lt;/span&gt; &lt;span class="style2"&gt;quoque&lt;/span&gt; &lt;span
-                    class="style3"&gt;transibit&lt;/span&gt;멋있는 명언&lt;/p&gt;
-            &lt;p&gt;멋있는 명언&lt;span class="style4"&gt;이&lt;/span&gt; &lt;span class="style5"&gt;또한&lt;/span&gt; &lt;span
-                    class="style6"&gt;지나가리라.&lt;/span&gt;멋있는 명언&lt;/p&gt;
+    &lt;section id="sliderType02"&gt;
+        &lt;div class="slider__wrap"&gt;
+            &lt;div class="slider__img"&gt;
+                &lt;div class="slider__inner"&gt;
+                    &lt;div class="slider" role="group" aria-label="1/5"&gt;&lt;img src="../effect/img/effect_sub01-min.jpg" alt="슬라이드 이미지1"&gt;&lt;/div&gt;
+                    &lt;div class="slider" role="group" aria-label="2/5"&gt;&lt;img src="../effect/img/effect_sub02-min.jpg" alt="슬라이드 이미지2"&gt;&lt;/div&gt;
+                    &lt;div class="slider" role="group" aria-label="3/5"&gt;&lt;img src="../effect/img/effect_sub03-min.jpg" alt="슬라이드 이미지3"&gt;&lt;/div&gt;
+                    &lt;div class="slider" role="group" aria-label="4/5"&gt;&lt;img src="../effect/img/effect_sub04-min.jpg" alt="슬라이드 이미지4"&gt;&lt;/div&gt;
+                    &lt;div class="slider" role="group" aria-label="5/5"&gt;&lt;img src="../effect/img/effect_sub05-min.jpg" alt="슬라이드 이미지5"&gt;&lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="slider__btn"&gt;
+            &lt;a href="#" class="prev" role="button" aria-label="왼쪽 이미지"&gt;prev&lt;/a&gt;
+            &lt;a href="#" class="next" role="button" aria-label="오른쪽 이미지"&gt;next&lt;/a&gt;
         &lt;/div&gt;
     &lt;/section&gt;
-
 &lt;/main&gt;
 </code></pre>
 </div>
@@ -31,103 +36,118 @@
 <h2 data-ke-size="size26">CSS</h2>
 <p class="t_desc2" data-ke-size="size16">css 소스입니다.</p>
 <div class="t_code">
-<pre><code class="language-css">/* MouseType */
-.mouse__wrap {
+<pre><code class="language-css">/* slider */
+.slider__wrap {
     width: 100%;
     height: 100vh;
     display: flex;
+
     align-items: center;
     justify-content: center;
-    flex-direction: column;
-    color: #fff;
+
+}
+
+/* 이미지 보이는 영역 */
+.slider__img {
+    position: relative;
+    width: 800px;
+    height: 450px;
     overflow: hidden;
-    cursor: none;
+
 }
 
-.mouse__wrap p {
-    font-size: 2vw;
-    line-height: 2;
-    font-weight: normal;
+
+.slider::before {
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: #fff;
+    padding: 5px 10px;
 }
 
-.mouse__wrap p:last-child {
-    font-size: 3vw;
-    font-weight: 400;
+
+.slider img {
+    width: 100%;
+
 }
 
-.mouse__wrap p span {
-    border-bottom: 1px solid #ff9aa1;
-    color: #ff9aa1;
+
+.slider__inner {
+    /* 이미지를 감싸고 있는 부모 : 움직이는 부분 */
+    display: flex;
+    flex-wrap: wrap;
+    width: 4800px;
+    /*총 이미지 6개 */
+    height: 450px;
 }
+
+
+
+.slider {
+    /* 개별적인 이미지 */
+    position: relative;
+    width: 800px;
+    height: 450px;
+}
+
+.slider:nth-child(1)::before {
+    content: '이미지1';
+}
+
+.slider:nth-child(2)::before {
+    content: '이미지2';
+}
+
+.slider:nth-child(3)::before {
+    content: '이미지3';
+}
+
+.slider:nth-child(4)::before {
+    content: '이미지4';
+}
+
+.slider:nth-child(5)::before {
+    content: '이미지5';
+}
+
+.slider:nth-child(6)::before {
+    content: '이미지1';
+}
+
 
 @media (max-width: 800px) {
-    .mouse__wrap p {
-        padding: 0 20px;
-        font-size: 20px;
-        line-height: 1.5;
-        text-align: center;
-        margin: 10px;
-    }
-
-    .mouse__wrap p:last-child {
-        font-size: 40px;
-        line-height: 1.5;
-        text-align: center;
-        word-break: keep-all;
+    .slider__img {
+        width: 400px;
+        height: 225px;
     }
 }
 
-.mouse__cursor {
+/* slide btn */
+
+.slider__btn a{
     position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    background: rgba(0,0,0,0.3);
+    text-align: center;
+    line-height: 45px;
+    transition: all 0.2s;
+    display: block;
+    color: #fff;
+}
+
+.slider__btn a:hover {
+    background: rgb(255, 71, 71);
+    border-radius: 40%;
+}
+.slider__btn a.prev {
     left: 0;
-    top: 0;
-    width: 10px;
-    height: 10px;
-    z-index: 10002;
-    border-radius: 50%;
-    background: rgba(255,255,255,0.1);
-    user-select: none;
-    pointer-events: none;
-    transition: transform 0.3s, opacity 0.2s;
 }
-
-.mouse__cursor2 {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 30px;
-    height: 30px;
-    z-index: 10001;
-    border-radius: 50%;
-    background: rgba(255,255,255,0.3);
-    user-select: none;
-    pointer-events: none;
-    transition: transform 0.3s, opacity 0.2s;
-
-}
-
-.mouse__cursor.active {
-    transform: scale(0);
-}
-.mouse__cursor2.active {
-    transform: scale(5);
-    background: rgba(255,166,0,0.6);
-}
-
-.mouse__cursor.active2 {
-    transform: scale(0);
-}
-.mouse__cursor2.active2 {
-    transform: scale(3);
-    background: rgba(255, 161, 161, 0.541);
-}
-
-.mouse__cursor.active3 {
-    transform: scale(0);
-}
-.mouse__cursor2.active3 {
-    transform: scale(3);
-    background: rgba(142, 223, 255, 0.6);
+.slider__btn a.next {
+    right: 0;
 }
 </code></pre>
 </div>
@@ -136,59 +156,38 @@
 <h2 data-ke-size="size26">Javascript</h2>
 <p class="t_desc2" data-ke-size="size16">Javascript 소스입니다.</p>
 <div class="t_code">
-<pre><code class="language-js">const cursor = document.querySelector(".mouse__cursor");
-const cursor2 = document.querySelector(".mouse__cursor2");
-const span = document.querySelectorAll(".mouse__wrap span");
-const span2 = document.querySelectorAll("#header ul li");
-const span3 = document.querySelectorAll(".modal__wrap .modal__btn");
+<pre><code class="language-js">const sliderWrap = document.querySelector(".slider__wrap");
+const sliderImg = document.querySelector(".slider__img");           //보여지는 영역
+const sliderInner = document.querySelector(".slider__inner");       //움직이는 영역
+const slider = document.querySelectorAll(".slider");                //각각의 이미지
 
-window.addEventListener("mousemove" , e => {
-    // 커서 좌표값 할당
-    // cursor.style.left = e.pageX -5 + "px";
-    // cursor.style.top = e.pageY -5 + "px";
-    // cursor2.style.left = e.pageX -15 + "px";
-    // cursor2.style.top = e.pageY -15 + "px";
+const sliderBtn = document.querySelector(".slider__btn");        //버튼
+const sliderBtnPrev = document.querySelector(".prev");           //왼쪽버튼
+const sliderBtnNext = document.querySelector(".next");           //오른쪽버튼
 
-    // GSAP
-    gsap.to(cursor, {duration: 0.3, left: e.pageX -5, top: e.pageY -5})
-    gsap.to(cursor2, {duration: 0.8, left: e.pageX -15, top: e.pageY -15})
+let currentIndex = 0;                   //현재 이미지
+let sliderCount = slider.length;        //이미지 갯수
+let sliderWidth = sliderImg.offsetWidth //이미지 가로값
 
+//이미지 움직이는 영역
+function gotoSlider (num) {
+    sliderInner.style.transition = "all 400ms"
+    sliderInner.style.transform = "translateX(" + -sliderWidth * num + "px)";
+    currentIndex = num;
+};
 
-    // 오버 효과  
-    // mouseenter / mouseover / 이벤트 버블링
-    // (화살표함수를 쓰면 this 를 사용할수 없다!!)
-    span.forEach(span => {
-        span.addEventListener("mouseenter", ()=>{
-            cursor.classList.add("active");
-            cursor2.classList.add("active");
-        });
-        span.addEventListener("mouseleave", ()=>{
-            cursor.classList.remove("active");
-            cursor2.classList.remove("active");
-        });
-    });
+//왼쪽 버튼 클릭(주말숙제)
+sliderBtnPrev.addEventListener("click", ()=>{
+    let prevIndex = (currentIndex + (sliderCount-1)) % sliderCount
+    //4 3 2 1 0
+    gotoSlider(prevIndex);
+});
 
-    span2.forEach(span2 => {
-        span2.addEventListener("mouseenter", ()=>{
-            cursor.classList.add("active2");
-            cursor2.classList.add("active2");
-        });
-        span2.addEventListener("mouseleave", ()=>{
-            cursor.classList.remove("active2");
-            cursor2.classList.remove("active2");
-        });
-    });
-
-    span3.forEach(span3 => {
-        span3.addEventListener("mouseenter", ()=>{
-            cursor.classList.add("active3");
-            cursor2.classList.add("active3");
-        });
-        span3.addEventListener("mouseleave", ()=>{
-            cursor.classList.remove("active3");
-            cursor2.classList.remove("active3");
-        });
-    });
+//오른쪽 버튼 클릭
+sliderBtnNext.addEventListener("click", ()=>{
+    let nextIndex = (currentIndex + 1) % sliderCount
+    gotoSlider(nextIndex);
+    // 0 1 2 3 4
 });
 </code></pre>
 </div>
