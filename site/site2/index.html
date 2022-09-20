@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>사이트 만들기1</title>
+
+    <!-- SEO -->
+    <meta name="author" content="Youcodein">
+    <meta name="description" content="사이트 만들기 튜토리얼입니다.">
+    <meta name="keyword" content="사이트, 만들기, 튜토리얼, Youcodein">
+    <meta name="robots" content="all">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/font.css">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/common.css">
+
+    <!-- CSS(섹션별) -->
+    <link rel="stylesheet" href="assets/css/header.css">
+    <link rel="stylesheet" href="assets/css/slider.css">
+    <link rel="stylesheet" href="assets/css/image.css">
+    <link rel="stylesheet" href="assets/css/imgText.css">
+    <link rel="stylesheet" href="assets/css/card.css">
+    <link rel="stylesheet" href="assets/css/banner.css">
+    <link rel="stylesheet" href="assets/css/text.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
+
+    <style>
+        .header__menu li.active a {
+            background-color: #f1f1f1;
+            border-radius: 10px;
+            box-sizing: content-box;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="skip">
+        <a href="#headerType">헤더 영역 바로가기</a>
+        <a href="#sliderType">슬라이드 영역 바로가기</a>
+        <a href="#imageType">이미지 영역 바로가기</a>
+        <a href="#imgTextType">이미지/텍스트 영역 바로가기</a>
+        <a href="#cardType">카드 영역 바로가기</a>
+        <a href="#bannerType">배너 영역 바로가기</a>
+        <a href="#textType">텍스트 영역 바로가기</a>
+        <a href="#footerType">푸터 영역 바로가기</a>
+    </div>
+
+    <!-- skip -->
+
+    <header id="headerType" class="header__wrap nexon content__item">
+        <div class="header__inner">
+            <div class="header__logo">
+                <a href="#">Diary <em>deco</em></a>
+            </div>
+            <div class="header__menu">
+                <ul>
+                    <li class="active"><a href="#sliderType">Hot!</a></li>
+                    <li><a href="#imageType">Why?</a></li>
+                    <li><a href="#imgTextType">for NEWBIE</a></li>
+                    <li><a href="#cardType">How?</a></li>
+                    <li><a href="#bannerType">Ask</a></li>
+                    <li><a href="#footerType">My Tip</a></li>
+                </ul>
+            </div>
+            <div class="header__member">
+                <a href="#">로그인</a>
+                <button class="mbtn"></button>
+            </div>
+        </div>
+    </header>
+    <!-- headerType -->
+
+    <main id="mainType">
+        <section id="sliderType" class="slider__wrap nexon scroll">
+            <h2>Hot Issue</h2>
+            <div class="slider__inner">
+                <div class="slider">
+                    <div class="slider__img">
+                        <div class="desc">
+                            <span>Dairy</span>
+                            <h3>Art of Dairy</h3>
+                            <p>
+                                다이어리는 이제 기록을 넘어선 문화 예술이 되었습니다.<br>
+                                다이어리 꾸미기의 매력에 빠져보세요
+                            </p>
+                            <div class="btn">
+                                <a href="#">자세히보기</a>
+                                <a href="#" class="black">사이트보기</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider__arrow">
+                        <a href="#" class="left"><span class="ir">이전 이미지</span></a>
+                        <a href="#" class="right"><span class="ir">다음 이미지</span></a>
+                    </div>
+                    <div class="slider__dot">
+                        <a href="#" class="dot active"><span class="ir">1</span></a>
+                        <a href="#" class="dot"><span class="ir">2</span></a>
+                        <a href="#" class="dot"><span class="ir">3</span></a>
+                        <a href="#" class="play"><span class="ir">플레이</span></a>
+                        <a href="#" class="stop"><span class="ir">정지</span></a>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- sliderType -->
+
+    </main>
+    <!-- mainType -->
+
+    <footer id="footerType" class="footer__wrap nexon section gray content__item scroll">
+    </footer>
+    <!-- footerType -->
+
+</body>
+<script>
+    window.addEventListener("scroll", () => {
+        let scrollTop = window.pageYOffset || window.scrollY || document.documentElement.scrollTop;
+
+        //forEach
+
+        document.querySelectorAll(".scroll").forEach((element, index) => {
+            if (scrollTop >= element.offsetTop - 700) {
+                document.querySelectorAll(".header__menu li").forEach(li => {
+                    li.classList.remove("active")
+                })
+                document.querySelector(".header__menu li:nth-child(" + (index + 1) + ")").classList.add("active");
+            }
+        })
+
+    });
+
+    //scroll이동
+    document.querySelectorAll("#headerType .header__inner .header__menu li a").forEach(li => {
+    li.addEventListener("click", (e) => {
+        e.preventDefault();
+        document.querySelector(li.getAttribute("href")).scrollIntoView({
+            behavior: "smooth"  // 이동 부드럽게
+        });
+    });
+});
+
+    const menuBtn = document.querySelector(".header__member .cbtn");  // 메뉴 아이콘
+    const menu = document.querySelector(".sub");   // 메뉴
+
+    menuBtn.addEventListener("mouseover", (e) => {
+        menu.classList.add("show");   // 메뉴 아이콘에 마우스 커서 올려놓으면 메뉴 보이기
+    });
+    menu.addEventListener("mouseleave", (e) => {
+        menu.classList.remove("show");    // 메뉴 아이콘에 마우스 커서 벗어나면 메뉴 사라지기
+    });
+
+
+</script>
+</html>

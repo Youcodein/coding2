@@ -683,6 +683,212 @@
                         </div>
                     </div>
                     <!-- //sample18 -->
+
+                    <div id="sample19" class="sample">
+                        <h3>19. 객체 : 데이터 불러오기 : 펼침연산자 - 복사</h3>
+                        <p>
+                        </p>
+                        <div class="script">
+<pre><code class="language-js">const obj = {
+    a: 100,
+    b: 200,
+    c: "javascript"
+}
+
+const spread = { ...obj }
+
+document.write(spread.a);
+document.write(spread.b);
+document.write(spread.c);
+</code></pre>
+                        </div>
+                        <div class="result">
+                            <details>
+                                <summary>결과 보기</summary>
+                                    <script>
+{                                        const obj = {
+                                        a: 100,
+                                        b: 200,
+                                        c: "javascript"
+                                        }
+
+                                        const spread = { ...obj }
+
+                                        document.write(spread.a);
+                                        document.write(spread.b);
+                                        document.write(spread.c);}
+                                    </script>
+                                <div class="sample18_result">
+                                </div>
+                            </details>
+                        </div>
+                    </div>
+                    <!-- //sample19 -->
+
+                    <div id="sample20" class="sample">
+                        <h3>20. 객체 : 데이터 불러오기 : 펼침연산자 - 추가</h3>
+                        <p>
+                        </p>
+                        <div class="script">
+<pre><code class="language-js">const obj = {
+    a: 100,
+    b: 200,
+    c: "javascript"
+}
+const spread = { ...obj, d: "jquery" }
+
+document.write(spread.a);
+document.write(spread.b);
+document.write(spread.c);
+document.write(spread.d);
+</code></pre>
+                        </div>
+                        <div class="result">
+                            <details>
+                                <summary>결과 보기</summary>
+                                    <script>
+                                        {
+                                            const obj = {
+                                                a: 100,
+                                                b: 200,
+                                                c: "javascript"
+                                            }
+                                            const spread = { ...obj, d: "jquery" }
+
+                                            document.write(spread.a);
+                                            document.write(spread.b);
+                                            document.write(spread.c);
+                                            document.write(spread.d);
+                                        }
+                                    </script>
+                                <div class="sample18_result">
+                                </div>
+                            </details>
+                        </div>
+                    </div>
+                    <!-- //sample20 -->
+
+                    <div id="sample21" class="sample">
+                        <h3>21. 객체 : 데이터 불러오기 : 펼침연산자 - 결합</h3>
+                        <p>
+                        </p>
+                        <div class="script">
+<pre><code class="language-js">const objA ={
+    a:100,
+    b: 200
+}
+const objB ={
+    c:"javascript",
+    d: "jquery"
+}
+const spread = { ...objA, ...objB }
+
+document.write(spread.a);
+document.write(spread.b);
+document.write(spread.c);
+document.write(spread.d);
+</code></pre>
+                        </div>
+                        <div class="result">
+                            <details>
+                                <summary>결과 보기</summary>
+                                    <script>
+                                        {
+                                            const objA ={
+                                                a:100,
+                                                b: 200
+                                            }
+                                            const objB ={
+                                                c:"javascript",
+                                                d: "jquery"
+                                            }
+                                            const spread = { ...objA, ...objB }
+
+                                            document.write(spread.a);
+                                            document.write(spread.b);
+                                            document.write(spread.c);
+                                            document.write(spread.d);
+
+                                        }
+                                    </script>
+                                <div class="sample18_result">
+                                </div>
+                            </details>
+                        </div>
+                    </div>
+                    <!-- //sample21 -->
+
+                    <div id="sample22" class="sample">
+                        <h3>22. 객체 : 데이터 불러오기 : 비구조화 할당</h3>
+                        <p>
+                        </p>
+                        <div class="script">
+<pre><code class="language-js">const obj = {
+    a : 100,
+    b : 200,
+    c : "javascript"
+}
+const {a, b, c} = obj;
+
+document.write(a);
+document.write(b);
+document.write(c);
+</code></pre>
+                        </div>
+                        <div class="result">
+                            <details>
+                                <summary>결과 보기</summary>
+                                    <script>
+                                    {
+                                        const obj = {
+                                            a : 100,
+                                            b : 200,
+                                            c : "javascript"
+                                        }
+                                        const {a, b, c} = obj;
+
+                                        document.write(a);
+                                        document.write(b);
+                                        document.write(c);
+                                    }
+                                    </script>
+                                <div class="sample18_result">
+                                </div>
+                            </details>
+                        </div>
+                    </div>
+                    <!-- //sample22 -->
+
+                    <div id="sample23" class="sample">
+                        <h3>23. 객체 : 데이터 불러오기 : 객체구조분해할당</h3>
+                        <p>
+                        </p>
+                        <div class="script">
+<pre><code class="language-js">const obj = {a : name1, b : name2, c : name3} = obj;
+
+document.write(name1);
+document.write(name2);
+document.write(name3);
+</code></pre>
+                        </div>
+                        <div class="result">
+                            <details>
+                                <summary>결과 보기</summary>
+                                    <script>
+                                        {
+                                            const obj = {a : name1, b : name2, c : name3} = obj;
+
+                                            document.write(name1);
+                                            document.write(name2);
+                                            document.write(name3);
+                                        }
+                                    </script>
+                                <div class="sample18_result">
+                                </div>
+                            </details>
+                        </div>
+                    </div>
+                    <!-- //sample23 -->
                 <div class="main_desc"></div>
             </div>
         </div>
@@ -856,6 +1062,85 @@
         //     document.write("b" in obj); //약식으로 이렇게 씀
         //     document.write("c" in obj); //약식으로 이렇게 씀
         //     document.write("d" in obj); //약식으로 이렇게 씀
+        // }
+
+
+
+        // //19 복사
+
+        // {
+        //     const obj = {
+        //         a: 100,
+        //         b: 200,
+        //         c: "javascript"
+        //     }
+
+        //     const spread = { ...obj }
+
+        //     document.write(spread.a);
+        //     document.write(spread.b);
+        //     document.write(spread.c);
+
+        //     document.write("<br><br>");
+
+        // }
+
+        // //20 추가
+        // {
+        //     const obj = {
+        //         a: 100,
+        //         b: 200,
+        //         c: "javascript"
+        //     }
+        //     const spread = { ...obj, d: "jquery" }
+
+        //     document.write(spread.a);
+        //     document.write(spread.b);
+        //     document.write(spread.c);
+        //     document.write(spread.d);
+        // }
+        // document.write("<br><br>");
+        // //21 결합
+        // {
+        //     const objA ={
+        //         a:100,
+        //         b: 200
+        //     }
+        //     const objB ={
+        //         c:"javascript",
+        //         d: "jquery"
+        //     }
+        //     const spread = { ...objA, ...objB }
+
+        //     document.write(spread.a);
+        //     document.write(spread.b);
+        //     document.write(spread.c);
+        //     document.write(spread.d);
+
+        // }
+        // document.write("<br><br>");
+        // //22 비구조화할당
+
+        // {
+        //     const obj = {
+        //         a : 100,
+        //         b : 200,
+        //         c : "javascript"
+        //     }
+        //     const {a, b, c} = obj;
+
+        //     document.write(a);
+        //     document.write(b);
+        //     document.write(c);
+        // }
+
+        // //23
+        // {
+        //     const obj = {a : name1, b : name2, c : name3} = obj;
+
+        //     document.write(name1);
+        //     document.write(name2);
+        //     document.write(name3);
         // }
     </script>
 </body>
