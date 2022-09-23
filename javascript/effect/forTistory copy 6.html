@@ -1,6 +1,6 @@
 <div class="document">
 <h2 class="t_tit" data-ke-size="size26">Javascript Mouse Effect</h2>
-<p class="t_desc" data-ke-size="size16">Mouse 이펙트 중 마우스 커서를 움직이면 중앙의 사진이 움직이는 </p>
+<p class="t_desc" data-ke-size="size16">Mouse 이펙트 중 마우스 커서를 움직이면 중앙의 사진이 움직이는 효과입니다.</p>
 
 <div class="t_iframe" style="min-height: 1000px; padding-top: 0;"><iframe src="https://youcodein.github.io/coding2/javascript/effect/mouseEffect04.html" frameborder="0"></iframe></div>
 <div class="t_link"><a href="https://youcodein.github.io/coding2/javascript/effect/mouseEffect04.html" target="_blank" rel="noopener">원본 사이트 보기</a></div>
@@ -19,16 +19,28 @@
 <p class="t_desc2" data-ke-size="size16">html 소스입니다.</p>
 <div class="t_code">
 <pre><code class="language-html">&lt;main id="main"&gt;
-    &lt;section id="mouseType"&gt;
+    &lt;section id="mouseType" &gt;
         &lt;div class="mouse__cursor"&gt;&lt;/div&gt;
-        &lt;div class="mouse__cursor2"&gt;&lt;/div&gt;
-
         &lt;div class="mouse__wrap"&gt;
-            &lt;p&gt;Seize the day!&lt;/p&gt;
-            &lt;p&gt;오늘을 즐기세요!&lt;/p&gt;
+            &lt;figure&gt;
+                &lt;img src="img/effect_bg06-min.jpg" alt="이미지"&gt;
+                &lt;figcaption&gt;
+                    &lt;p&gt;The way to get started is to quit talking and begin doing.&lt;/p&gt;
+                    &lt;p&gt;무언가를 시작하려면 말은 멈추고 행동해야 한다.&lt;/p&gt;
+                &lt;/figcaption&gt;
+            &lt;/figure&gt;
         &lt;/div&gt;
     &lt;/section&gt;
 
+    &lt;div class="mouse__info"&gt;
+        &lt;ul&gt;
+            &lt;li&gt;mousePageX : &lt;span class="mousePageX"&gt;0&lt;/span&gt;px&lt;/li&gt;
+            &lt;li&gt;mousePageY : &lt;span class="mousePageY"&gt;0&lt;/span&gt;px&lt;/li&gt;
+            &lt;li&gt;centerPageX : &lt;span class="centerPageX"&gt;0&lt;/span&gt;px&lt;/li&gt;
+            &lt;li&gt;centerPageY : &lt;span class="centerPageY"&gt;0&lt;/span&gt;px&lt;/li&gt;
+
+        &lt;/ul&gt;
+    &lt;/div&gt;
 &lt;/main&gt;
 </code></pre>
 </div>
@@ -48,53 +60,57 @@
     overflow: hidden;
     /* cursor: none; */
 }
-
-.mouse__wrap p {
-    font-size: 2vw;
-    line-height: 2;
-    font-weight: normal;
+.mouse__wrap figure{
+    width: 50vw;
+    height: 50vh;
+    position: relative;
+    overflow: hidden;
+    transition: transform 500ms ease;
+    cursor: none;
+}
+.mouse__wrap figure:hover {
+    transform: scale(1.025);
 }
 
-.mouse__wrap p:last-child {
-    font-size: 3vw;
-    font-weight: 400;
+.mouse__wrap figure img {
+    position: absolute;
+    left: -5%;
+    top: -5%;
+    width: 110%;
+    height: 110%;
+    object-fit: cover;
 }
-
-.mouse__wrap p span {
-    border-bottom: 1px solid #ff9aa1;
-    color: #ff9aa1;
+figcaption {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 16px;
+    white-space: nowrap;
+    line-height: 1.4;
+    font-weight: 300;
 }
-
-@media (max-width: 800px) {
-    .mouse__wrap p {
-        padding: 0 20px;
-        font-size: 20px;
-        line-height: 1.5;
-        text-align: center;
-        margin: 10px;
-    }
-
-    .mouse__wrap p:last-child {
-        font-size: 40px;
-        line-height: 1.5;
-        text-align: center;
-        word-break: keep-all;
-    }
-}
-
 .mouse__cursor {
     position: absolute;
     left: 0;
     top: 0;
-    width: 200px;
-    height: 200px;
-    z-index: -1;
+    width: 20px;
+    height: 20px;
+    background: #fff;
     border-radius: 50%;
-    background-image: url(img/effect_bg02-min.jpg);
-    background-size: cover;
-    background-position: center center;
-    background-attachment: fixed;
-    border: 5px solid #fff;
+    z-index: 1000;
+    user-select: none;
+    pointer-events: none;
+}
+
+.mouse__info {
+    position: absolute;
+    left: 20px;
+    bottom: 10px;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #fff;
 }
 </code></pre>
 </div>
@@ -104,15 +120,48 @@
 <p class="t_desc2" data-ke-size="size16">Javascript 소스입니다.</p>
 <div class="t_code">
 <pre><code class="language-js">const cursor = document.querySelector(".mouse__cursor");
+const cursorRect = cursor.getBoundingClientRect();
 
-const circle = cursor.getBoundingClientRect();
-console.log(circle);
+document.querySelector(".mouse__wrap figure").addEventListener("mousemove",(e) => {
+    //커서
+    gsap.to(cursor, {
+        duration: .2,
+        left: e.pageX -cursorRect.width/2,
+        top: e.pageY -cursorRect.height/2,
+    });
 
-window.addEventListener("mousemove", (e) => {
-    gsap.to(cursor,{duration: 0.3,
-            left: e.pageX - circle.width/2, 
-            top: e.pageY- circle.height/2,
-        });
+    //마우스 좌표값
+    let mousePageX = e.pageX;
+    let mousePageY = e.pageY;
+
+    //전체 가로값
+    // window.innerWidth //1920     : 브라우저 크기
+    // window.outerWidth //1920     : 브라우저 크기(스크롤바 포함)
+    // window.screen.Width //1920   : 화면 크기
+
+    //마우스 좌표 값 가운데로 초기화
+
+    //전체 길이/2 - 마우스 좌표값 == 0
+    let centerPageX = window.innerWidth/2 - mousePageX;
+    let centerPageY = window.innerHeight/2 - mousePageY;
+
+    //이미지 움직이기
+    const imgMove = document.querySelector(".mouse__wrap figure img");
+    // imgMove.style.transform = "translate(" + centerPageX + "px, " + + "px)";
+
+    gsap.to(imgMove,{
+        duration: 0.3,
+        x: centerPageX/20,
+        y: centerPageY/20,
+    })
+
+    //출력
+
+    document.querySelector(".mousePageX").textContent = mousePageX;
+    document.querySelector(".mousePageY").textContent = mousePageY;
+    document.querySelector(".centerPageX").textContent = centerPageX;
+    document.querySelector(".centerPageY").textContent = centerPageY;
+
 });
 </code></pre>
 </div>
