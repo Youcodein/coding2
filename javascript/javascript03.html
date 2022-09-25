@@ -60,23 +60,23 @@
                     <li><a href="#sample10">10. 화살표 함수 : 익명 함수 + 매개변수 + 리턴값 + 괄호 생략</a></li>
                     <li><a href="#sample11">11. 화살표 함수 : 익명 함수 + 매개변수 + 리턴값 + 괄호 생략 + 리턴 생략</a></li>
                     <li><a href="#sample12">12. 화살표 함수 : 선언적 함수 + 매개변수 + 리턴값 + 괄호 생략 + 리턴 생략</a></li>
-                    <li><a href="#sample13">13. 내부 함수</a></li>
-                    <li><a href="#sample14">14. 즉시 실행 함수</a></li>
-                    <li><a href="#sample15">15. 파라미터 함수</a></li>
-                    <li><a href="#sample16">16. 아규먼트 함수</a></li>
-                    <li><a href="#sample17">17. 재귀함수</a></li>
-                    <li><a href="#sample18">18. 콜백함수</a></li>
-                    <li><a href="#sample19">19. 콜백함수 : 반복문</a></li>
-                    <li><a href="#sample20">20. 콜백함수 : 동기/비동기</a></li>
-                    <li><a href="#sample21">21. 함수 유형 : 함수와 매개변수를 이용한 형태</a></li>
-                    <li><a href="#sample22">22. 함수 유형 : 함수와 변수를 이용한 형태</a></li>
-                    <li><a href="#sample23">23. 함수 유형 : 함수와 배열, 객체를 이용한 형태</a></li>
-                    <li><a href="#sample24">24. 함수 유형 : 객체 안에 변수와 함수를 이용한 형태</a></li>
-                    <li><a href="#sample25">25. 함수 유형 : 객체 생성자 함수</a></li>
-                    <li><a href="#sample26">26. 함수 유형 : 프로토타입 함수</a></li>
-                    <li><a href="#sample27">27. 함수 유형 : 객체 리터럴 함수</a></li>
-                    <li><a href="#sample28">28. 클래스</a></li>
-                    <li><a href="#sample29">29. 클래스 상속</a></li>
+                    <li><a href="#sample13">13. 함수 유형 : 함수와 매개변수를 이용한 형태</a></li>
+                    <li><a href="#sample14">14. 함수 유형 : 함수와 변수를 이용한 형태</a></li>
+                    <li><a href="#sample15">15. 함수 유형 : 함수와 배열, 객체를 이용한 형태</a></li>
+                    <li><a href="#sample16">16. 함수 유형 : 함수와 배열, 객체를 이용한 형태</a></li>
+                    <li><a href="#sample17">17. 함수 유형 : 객체 생성자 함수</a></li>
+                    <li><a href="#sample18">18. 함수 유형 : 객체 생성자 함수</a></li>
+                    <li><a href="#sample19">19. 함수 유형 : 객체 리터럴 함수</a></li>
+                    <li><a href="#sample20">20. 즉시 실행 함수</a></li>
+                    <li><a href="#sample21">21. 파라미터 함수</a></li>
+                    <li><a href="#sample22">22. 아규먼트 함수</a></li>
+                    <li><a href="#sample23">23. 재귀 함수</a></li>
+                    <li><a href="#sample24">24. 콜백 함수 : 다른 함수에 인자로 넘겨지는 함수</a></li>
+                    <li><a href="#sample25">25. 콜백 함수 : 반복문</a></li>
+                    <li><a href="#sample26">26. 콜백 함수 : 동기/비동기</a></li>
+                    <li><a href="#sample27">27. promise 함수</a></li>
+                    <li><a href="#sample28">28. 내부 함수 : 스코프, 클로져</a></li>
+                    <li><a href="#sample29">29. 클래스</a></li>
                 </ul>
             </div>
             <div class="main_sample">
@@ -896,7 +896,7 @@ info3.result3();
 <pre><code class="language-js">
         
         function func (str) {
-             document.write("함수실행21");
+            document.write("함수실행21");
         }
         func();
 
@@ -931,7 +931,7 @@ info3.result3();
                 <!-- //sample21 -->
 
                 <div id="sample22" class="sample">
-                    <h3>21. 파라미터 함수</h3>
+                    <h3>22. 아규먼트 함수</h3>
                     <p>
                     </p>
                     <div class="script">
@@ -1101,16 +1101,86 @@ callback(func);
                     <p>
                     </p>
                     <div class="script">
-<pre><code class="language-js">
+<pre><code class="language-js">function funcA() {
+    document.write("funcA가 실행되었습니다.<br>");
+}
+function funcB() {
+    document.write("funcB가 실행되었습니다.<br>");
+}
+funcA();
+funcB();
+a
+b
+
+//02
+function funcA() {
+    setTimeout(()=>{
+        console.log("funcA가 실행되었습니다.<br>");
+    },1000);
+}
+function funcB() {
+    console.log("funcB가 실행되었습니다.<br>");
+}
+funcA();
+funcB();
+b
+a
+
+//03
+function funcA(callback){
+    setTimeout(()=>{
+        console.log("함수가 실행되었습니다.<br>")
+        callback();
+    }, 1000);
+}
+function funcB() {
+    console.log("funcB가 실행되었습니다.<br>");
+}
+funcA(function(){
+    funcB();
+});
+
+//04 콜백지옥
+function funcA(callback){
+    setTimeout(()=>{
+        console.log("funcA 함수가 실행되었습니다.<br>")
+        callback();
+    }, 1000);
+}
+function funcB(callback){
+    setTimeout(()=>{
+        console.log("funcB 함수가 실행되었습니다.<br>")
+        callback();
+    }, 1000);
+}
+function funcC(callback){
+    setTimeout(()=>{
+        console.log("funcC 함수가 실행되었습니다.<br>")
+        callback();
+    }, 1000);
+}
+function funcD(){
+    setTimeout(()=>{
+        console.log("funcD 함수가 실행되었습니다.<br>")
+    }, 1000);
+}
+funcA(function(){
+    funcB(function(){
+        funcC(function(){
+            funcD();
+        });
+    });
+});
 </code></pre>
                     </div>
                     <div class="result">
                         <details>
                             <summary>결과 보기</summary>
                             <div class="sample26_result">
-                                <script>
-
-                                </script>
+                                funcA 함수가 실행되었습니다.<br>
+                                funcB 함수가 실행되었습니다.<br>
+                                funcC 함수가 실행되었습니다.<br>
+                                funcD 함수가 실행되었습니다.
                             </div>
                         </details>
                     </div>
@@ -1118,7 +1188,7 @@ callback(func);
                 <!-- //sample26 -->
 
                 <div id="sample27" class="sample">
-                    <h3>27</h3>
+                    <h3>27. promise 함수</h3>
                     <p>
                     </p>
                     <div class="script">
@@ -1139,11 +1209,25 @@ callback(func);
                 <!-- //sample27 -->
 
                 <div id="sample28" class="sample">
-                    <h3>28</h3>
+                    <h3>28. 내부 함수 : 스코프, 클로져</h3>
                     <p>
                     </p>
                     <div class="script">
-<pre><code class="language-js">
+<pre><code class="language-js">//내부함수는 변수를 불어오는 게 복잡해지고 문제가 되기 때문에 클로져 개념이 등장하였습니다.
+//함수의 규모가 커지면 변수를 불러오는 데에 여러가지 오류가 생깁니다.
+//스코프와 클로져는 같은 개념이라고 보면 됩니다.
+function func(){
+    function funcA(){
+        document.write("함수가 실행되었습니다.");
+    };
+    funcA();
+
+    function funcB(){
+        document.write("함수가 실행되었습니다.");
+    }
+    funcB();
+}
+func();
 </code></pre>
                     </div>
                     <div class="result">
@@ -1151,7 +1235,20 @@ callback(func);
                             <summary>결과 보기</summary>
                             <div class="sample28_result">
                                 <script>
+                                {                                    
+                                    function func(){
+                                        function funcA(){
+                                            document.write("함수가 실행되었습니다.");
+                                        };
+                                        funcA();
 
+                                        function funcB(){
+                                            document.write("함수가 실행되었습니다.");
+                                        }
+                                        funcB();
+                                    }
+                                    func();
+                                }
                                 </script>
                             </div>
                         </details>
@@ -1163,7 +1260,35 @@ callback(func);
                     <p>
                     </p>
                     <div class="script">
-<pre><code class="language-js">
+<pre><code class="language-js">class study {
+    constructor(num, name, job){
+        this.num = num;
+        this.name = name;
+        this.job = job;
+    }
+
+    result(){
+        document.write(this.num + "내 이름은 " + this.name + "이며, 직업은 " + this.job + "입니다.");
+    }
+}
+
+
+class study2 extends study {
+    constructor(num, name, job, age){
+        super(num, name, job);
+        this.age = age;
+    }
+
+    result2(){
+        document.write(this.num + "내 이름은 " + this.name + "이며, 직업은 " + this.job + "이며, 나이는" + this.age + "입니다");
+    }
+}
+
+const info1 = new study ("1", "웹쓰", "웹퍼블리셔");
+const info2 = new study2 ("2", "지니닝", "프론트엔드 개발자", "100");
+
+info1.result();
+info2.result2();
 </code></pre>
                     </div>
                     <div class="result">
@@ -1171,7 +1296,37 @@ callback(func);
                             <summary>결과 보기</summary>
                             <div class="sample28_result">
                                 <script>
+                                    {
+                                        class study {
+                                            constructor(num, name, job){
+                                                this.num = num;
+                                                this.name = name;
+                                                this.job = job;
+                                            }
 
+                                            result(){
+                                                document.write(this.num + "내 이름은 " + this.name + "이며, 직업은 " + this.job + "입니다.");
+                                            }
+                                        }
+                                        
+
+                                        class study2 extends study {
+                                            constructor(num, name, job, age){
+                                                super(num, name, job);
+                                                this.age = age;
+                                            }
+
+                                            result2(){
+                                                document.write(this.num + "내 이름은 " + this.name + "이며, 직업은 " + this.job + "이며, 나이는" + this.age + "입니다");
+                                            }
+                                        }
+                                        
+                                        const info1 = new study ("1", "웹쓰", "웹퍼블리셔");
+                                        const info2 = new study2 ("2", "지니닝", "프론트엔드 개발자", "100");
+                                        
+                                        info1.result();
+                                        info2.result2();
+                                    }
                                 </script>
                             </div>
                         </details>
@@ -1196,6 +1351,9 @@ callback(func);
         hljs.highlightAll();
     </script>
     <script>
+
+        //01
+
     
         //     //선언적 함수
 
@@ -1682,9 +1840,9 @@ callback(func);
         //     callback(func);
         // }
 
-        //콜백 함수 : 동기/비동기
+        //26. 콜백 함수 : 동기/비동기
 
-
+        //01
         // function funcA () {
         //     document.write("funcA 실행<br>");
         // }
@@ -1698,6 +1856,7 @@ callback(func);
         //a
         //b
 
+        //02
         // {
         //     function funcA () {
         //         setTimeout(()=>{
@@ -1713,6 +1872,23 @@ callback(func);
         // }
         //b
         //a
+
+        //03
+        // function funcA(callback){
+        //     setTimeout(()=>{
+        //         console.log("함수가 실행되었습니다.<br>")
+        //         callback();
+        //     }, 1000);
+        // }
+        // function funcB() {
+        //     console.log("funcB가 실행되었습니다.<br>");
+        // }
+        // funcA(function(){
+        //     funcB();
+        // });
+
+
+        //콜백지옥
 // {
 //     function funcA(callback){
 //                 setTimeout(()=>{
