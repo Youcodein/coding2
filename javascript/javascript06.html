@@ -1862,7 +1862,7 @@ console.log(result3);
             document.querySelector(".sample14_Q1").innerHTML = "javascript";
             document.querySelector(".sample14_M1").innerHTML = "Array.from(text)";
             document.querySelector(".sample14_P1").innerHTML = result;
-            console.log(result);
+            // console.log(result);
 
             const text2 = "javascript";
             const result2 = Array.from(text2, el => el + "10");
@@ -1871,7 +1871,7 @@ console.log(result3);
             document.querySelector(".sample14_Q2").innerHTML = "javascript";
             document.querySelector(".sample14_M2").innerHTML = "Array.from(text2, el => el + '10')";
             document.querySelector(".sample14_P2").innerHTML = result2;
-            console.log(result2);
+            // console.log(result2);
 
             const text3 = "javascript";
             const result3 = [...text3].map(el => el);
@@ -1880,7 +1880,7 @@ console.log(result3);
             document.querySelector(".sample14_Q3").innerHTML = "javascript";
             document.querySelector(".sample14_M3").innerHTML = "[...text3].map(el => el)";
             document.querySelector(".sample14_P3").innerHTML = result3;
-            console.log(result3);
+            // console.log(result3);
         }
 
         {
@@ -1925,9 +1925,37 @@ console.log(result3);
 
             // console.log(result9);
 
-            const num = [a,b,c,d,e,f,g,h,i,k];
+            // const num = [a,b,c,d,e,f,g,h,i,k];
 
             //b d f h k 4가지
+            const num1 = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "k"];
+            const result1= num1.slice(1,2) + num1.slice(3,4) + num1.slice(5,6) + num1.slice(7,8) + num1.slice(9);
+            console.log(result1);
+
+            //2
+            const num2 = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "k"];
+            num2.splice(0,1);
+            num2.splice(1,1);
+            num2.splice(2,1);
+            num2.splice(3,1);
+            num2.splice(4,1);
+
+            console.log(num2)
+
+            //3
+            const num3 = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "k"];
+            const result12 = num3.filter(function(e,i){
+                return i % 2 == 1 ? true : false;
+            });
+            console.log(result12)
+
+            //4
+            const num4 = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "k"];
+            [...num4].map((el, i)=> {
+                if( i % 2 == 1){
+                    console.log(num4[i]);
+                }
+            });
 
 
 

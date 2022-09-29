@@ -745,8 +745,15 @@ li {
         }
         searchDesc.textContent = targetData.desc;
     };
-    
-    //
+            //클릭효과
+        //클릭했을 때 속성값을 돋보기 옆에 보여주기 위한 변수 선언
+        const searchProperty = document.querySelectorAll(".search__list span");
+        searchProperty.forEach((e, i) => {
+            e.addEventListener("click", () => {
+                searchDesc.textContent = cssProperty[i].desc;
+            });
+        });
+
 
 
 
