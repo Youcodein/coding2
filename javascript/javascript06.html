@@ -1962,9 +1962,16 @@ console.log(result3);
 
 
 
-            const num = [a,b,c,d,e,f,g,h,i,k];
-
+            
             //e, f만 나오게!(3가지,slice와 splice 쓰지 않고)
+            const num1 = ["a","b","c","d","e","f","g","h","i","k"];
+            const result1 = num1.filter(function(e,i){
+                return i => i>3 && i<6
+            });
+
+            console.log(result1);
+            
+
 
         }
 

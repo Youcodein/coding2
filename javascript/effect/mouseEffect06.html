@@ -80,6 +80,19 @@
             background: rgba(255, 255, 255, 0.9);
             user-select: none;
             pointer-events: none;
+            transition: transform 0.6s;
+            mix-blend-mode: difference;
+        }
+
+        .mouse__cursor.style1,
+        .mouse__cursor.style2,
+        .mouse__cursor.style3,
+        .mouse__cursor.style4,
+        .mouse__cursor.style5,
+        .mouse__cursor.style6,
+        .mouse__cursor.style7,
+        .mouse__cursor.style8{
+            transform: scale(5)
         }
     </style>
 </head>
@@ -112,48 +125,48 @@
                     <div class="line">
                         <div class="left">
                             <div class="spanWrap">
-                                <span class="spanSlow">Pain Past</span>
+                                <span class="spanSlow style1">마우스를 움직여보세요</span>
                             </div>
                         </div>
                         <div class="right">
                             <div class="spanWrap">
-                                <span class="spanSlow">Pain Past</span>
+                                <span class="spanSlow style2">마우스를 움직여보세요</span>
                             </div>
                         </div>
                     </div>
                     <div class="line">
                         <div class="left">
                             <div class="spanWrap">
-                                <span class="spanFast">is pleasure</span>
+                                <span class="spanFast style3">글씨가 움직입니다</span>
                             </div>
                         </div>
                         <div class="right">
                             <div class="spanWrap">
-                                <span class="spanFast">is pleasure</span>
+                                <span class="spanFast style4">글씨가 움직입니다</span>
                             </div>
                         </div>
                     </div>
                     <div class="line">
                         <div class="left">
                             <div class="spanWrap">
-                                <span class="spanSlow">지나간 고통은</span>
+                                <span class="spanSlow style5">0ㅇ0</span>
                             </div>
                         </div>
                         <div class="right">
                             <div class="spanWrap">
-                                <span class="spanSlow">지나간 고통은</span>
+                                <span class="spanSlow style6">0ㅇ0</span>
                             </div>
                         </div>
                     </div>
                     <div class="line">
                         <div class="left">
                             <div class="spanWrap">
-                                <span class="spanFast">쾌락이다.</span>
+                                <span class="spanFast style7">멋있죠?</span>
                             </div>
                         </div>
                         <div class="right">
                             <div class="spanWrap">
-                                <span class="spanFast">쾌락이다.</span>
+                                <span class="spanFast style8">멋있죠?</span>
                             </div>
                         </div>
                     </div>
@@ -255,15 +268,180 @@
                     </div>
                     <div class="cont">
                         <div class="active">
-                            <pre><code class="language-js">
+<pre><code class="language-js">const mouseMove = (e) => {
+    let positionSlow = (e.pageX - (window.innerWidth / 2)) * 0.1;
+    let positionFast = (e.pageX - (window.innerWidth / 2)) * 0.2;
+
+    gsap.to(".spanSlow", {duration: 0.4, x: positionSlow});
+    gsap.to(".spanFast", {duration: 0.4, x: -positionFast});
+    gsap.to(".mouse__cursor", {duration: 0.3, left: e.pageX -5, top: e.pageY -5});
+}
+
+window.addEventListener("mousemove", mouseMove);
+
+//마우스 커서가 글씨 위에 올라가면 원의 크기는 5배정도 크게 작업... 글씨 반전효과 추가
+
+    const cursor = document.querySelector(".mouse__cursor");
+
+for(let i=1; i&lt;=8; i++){
+    document.querySelector(".style" + i).addEventListener("mouseover", () => {
+    cursor.classList.add("style" + i)
+    })
+
+    document.querySelector(".style" + i).addEventListener("mouseout", () => {
+    cursor.classList.remove("style" + i)
+    })
+}
 </code></pre>
                         </div>
                         <div>
-                            <pre><code class="language-html">
+<pre><code class="language-html">&lt;section id="mouseType"&gt;
+    &lt;div class="mouse__cursor"&gt;&lt;/div&gt;
+    &lt;div class="mouse__wrap"&gt;
+        &lt;div class="mouse__img"&gt;
+            &lt;figure&gt;
+                &lt;img src="img/effect_sub09-min.jpg" alt=""&gt;
+            &lt;/figure&gt;
+        &lt;/div&gt;
+        &lt;div class="mouse__text"&gt;
+            &lt;div class="line"&gt;
+                &lt;div class="left"&gt;
+                    &lt;div class="spanWrap"&gt;
+                        &lt;span class="spanSlow style1"&gt;Pain Past&lt;/span&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class="right"&gt;
+                    &lt;div class="spanWrap"&gt;
+                        &lt;span class="spanSlow style2"&gt;Pain Past&lt;/span&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="line"&gt;
+                &lt;div class="left"&gt;
+                    &lt;div class="spanWrap"&gt;
+                        &lt;span class="spanFast style3"&gt;is pleasure&lt;/span&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class="right"&gt;
+                    &lt;div class="spanWrap"&gt;
+                        &lt;span class="spanFast style4"&gt;is pleasure&lt;/span&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="line"&gt;
+                &lt;div class="left"&gt;
+                    &lt;div class="spanWrap"&gt;
+                        &lt;span class="spanSlow style5"&gt;지나간 고통은&lt;/span&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class="right"&gt;
+                    &lt;div class="spanWrap"&gt;
+                        &lt;span class="spanSlow style6"&gt;지나간 고통은&lt;/span&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="line"&gt;
+                &lt;div class="left"&gt;
+                    &lt;div class="spanWrap"&gt;
+                        &lt;span class="spanFast style7"&gt;쾌락이다.&lt;/span&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class="right"&gt;
+                    &lt;div class="spanWrap"&gt;
+                        &lt;span class="spanFast style8"&gt;쾌락이다.&lt;/span&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/section&gt;
 </code></pre>
                         </div>
                         <div>
-                            <pre><code class="language-css">
+<pre><code class="language-css">.mouse__wrap {
+    color: #fff;
+    width: 100%;
+    height: 100vh;
+    cursor: none;
+}
+
+.mouse__img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+.mouse__text {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -20%);
+    font-size: 3vw;
+    line-height: 1.5;
+    font-weight: 500;
+}
+
+.mouse__text .line {
+    width: 100%;
+    display: flex;
+}
+
+.mouse__text .line .left {
+    width: 50vw;
+    color: orange;
+    overflow: hidden;
+    transform: skew(0deg, -15deg);
+}
+
+.mouse__text .line .left .spanWrap {
+    width: 100vw;
+    text-align: center;
+}
+
+.mouse__text .line .right {
+    width: 50vw;
+    color: white;
+    overflow: hidden;
+    transform: skew(0deg, 15deg);
+}
+
+.mouse__text .line .right .spanWrap {
+    width: 100vw;
+    text-align: center;
+    transform: translateX(-50vw);
+}
+
+.mouse__text span {
+    display: inline-block;
+}
+
+.mouse__cursor {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    z-index: 9999;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.9);
+    user-select: none;
+    pointer-events: none;
+    transition: transform 0.6s;
+    mix-blend-mode: difference;
+}
+
+.mouse__cursor.style1,
+.mouse__cursor.style2,
+.mouse__cursor.style3,
+.mouse__cursor.style4,
+.mouse__cursor.style5,
+.mouse__cursor.style6,
+.mouse__cursor.style7,
+.mouse__cursor.style8{
+    transform: scale(5)
+}
 </code></pre>
                         </div>
                     </div>
@@ -281,7 +459,7 @@
     </footer>
     <!-- //footer -->
     <script src="../assets/js/highlight.min.js"></script>
-    <script src="../assets/js/common.js"></script>
+    <script src="../assets/js/common.min.js"></script>
     <script src="../assets/js/gsap.min.js"></script>
     <script>
         const mouseMove = (e) => {
@@ -296,6 +474,19 @@
         window.addEventListener("mousemove", mouseMove);
 
         //마우스 커서가 글씨 위에 올라가면 원의 크기는 5배정도 크게 작업... 글씨 반전효과 추가
+
+            const cursor = document.querySelector(".mouse__cursor");
+
+        for(let i=1; i<=8; i++){
+            document.querySelector(".style" + i).addEventListener("mouseover", () => {
+            cursor.classList.add("style" + i)
+            })
+
+            document.querySelector(".style" + i).addEventListener("mouseout", () => {
+            cursor.classList.remove("style" + i)
+            })
+        }
+
     </script>
 </body>
 

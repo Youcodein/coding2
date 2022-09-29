@@ -145,7 +145,7 @@
             top: 0;
             width: 60px;
             height: 60px;
-            background: url(assets/img/text_icon.svg);
+            background: url(../img/text_icon.svg);
         }
 
         .text__desc>div:nth-child(1) h4::before {
