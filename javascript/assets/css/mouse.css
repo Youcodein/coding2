@@ -65,6 +65,10 @@ body.image10 {
   background: #000 url(../../effect/img/effect_bg10-min.jpg) no-repeat center /
     cover;
 }
+img {
+  width: 100%;
+  vertical-align: top;
+}
 
 body::after {
   content: "";
