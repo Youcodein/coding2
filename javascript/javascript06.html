@@ -1965,12 +1965,19 @@ console.log(result3);
             
             //e, f만 나오게!(3가지,slice와 splice 쓰지 않고)
             const num1 = ["a","b","c","d","e","f","g","h","i","k"];
-            const result1 = num1.filter(function(e,i){
-                return i => i>3 && i<6
-            });
-
+            const result1 = num1.filter(el => el === "e" || el === "f");
             console.log(result1);
-            
+
+            const num2 = ["a","b","c","d","e","f","g","h","i","k"];
+            console.log(num2[4]);
+            console.log(num2[5]);
+
+            const num3 = ["a","b","c","d","e","f","g","h","i","k"];
+            arr = [];
+            for(i = 4; i <=5; i++){
+                
+                console.log(num3[i]);
+            }
 
 
         }
