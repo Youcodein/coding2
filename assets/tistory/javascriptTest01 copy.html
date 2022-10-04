@@ -222,25 +222,16 @@ code[class*=language-],pre[class*=language-]{color:#000;background:0 0;text-shad
         <h2>01. 결괏값을 작성하시오.<span class="dot"></span></h2>
         <div class="code">
 <pre class="line-numbers"><code class="language-js">
-{
     function func(){
-        for( i=1; i&lt;=7; i++){
+        for( i=1; i&lt;=10; i++){
             for( j=1; j&lt;=i; j++){
                 document.write(j);
             }
-            document.write("&lt;br&gt;");
         }
     }
     func();
-}
 </code></pre>
         </div>
-        <p class="t_desc2">
-            중첩 for문에 대한 문제입니다.
-
-            i가 1씩 증가함으로 j를 출력할 때 한자리씩 늘어납니다.
-            그렇기 때문에 답은 아래에 나오는대로 나옵니다.
-        </p>
     </div>
     <div class="result">
         <details>
@@ -249,7 +240,7 @@ code[class*=language-],pre[class*=language-]{color:#000;background:0 0;text-shad
                 <script>
                     {
                         function func(){
-                            for( i=1; i<=7; i++){
+                            for( i=1; i<=10; i++){
                                 for( j=1; j<=i; j++){
                                     document.write(j);
                                 }
@@ -270,10 +261,10 @@ code[class*=language-],pre[class*=language-]{color:#000;background:0 0;text-shad
         <div class="code">
 <pre class="line-numbers"><code class="language-js">{
     function func() {
-        let i = 10, hap = 0;
+        let i = 15, hap = 0;
         while (i > 1) {
-            if (i % 3 == 1) {
-                hap += i;1
+            if (i % 4 == 1) {
+                hap += i;
             }
         }
         document.write(hap);
@@ -283,11 +274,6 @@ code[class*=language-],pre[class*=language-]{color:#000;background:0 0;text-shad
 </code></pre>
         </div>
     </div>
-    <p class="t_desc2">
-        i는 10에서 1씩 감소합니다.
-        while문의 조건에서 i는 1보다 클 때 if문의 조건, i를 3으로 나누었을 때 나머지가 1이 나오면 hap의 값에 이전 i의 값을 더합니다. 
-        i를 3으로 나눈 나머지값이 1이 나오는 것은 7,4,1가 되고 합은 12입니다.
-    </p>
     <div class="result">
         <details>
             <summary>결과 보기</summary>
@@ -295,15 +281,10 @@ code[class*=language-],pre[class*=language-]{color:#000;background:0 0;text-shad
                 <script>
 {
     function func() {
-        let i = 10, hap = 0;
+        let i = 15, hap = 0;
         while (i > 1) {
-            i--;
-            //i가 1씩 작아짐
-            if (i % 3 == 1) {
+            if (i % 4 == 1) {
                 hap += i;
-                //나머지가 1일 때 hap에 더함
-                //7, 4, 1
-                //1은 3으로 나눠지지 않아서 나머지가 1
             }
         }
         document.write(hap);
@@ -322,41 +303,33 @@ code[class*=language-],pre[class*=language-]{color:#000;background:0 0;text-shad
         <div class="code">
 <pre class="line-numbers"><code class="language-js">{
     function func(){
-        for( i=1; i&lt;=10; i++){
-            for( j=1; j&lt;=i; j++){
-                document.write(j);
-            }
-            document.write("<br>");
+        let i, j = 0;
+        for( i=0; i&lt;7; i++){        
+            j += i;                    
         }
+        document.write(i*j);  
     }
     func();
+}
 }
 </code></pre>
         </div>
     </div>
-    <p class="t_desc2">
-        for문에 배열에 대한 문제입니다.
-        i&lt;9 일 때 a[i]를 2로 나누었을때 나머지가 0이면 cnt에 1씩 더합니다.
-        조건에 맞는 a[i]=2,4,6,8이므로 1를 네 번 더합니다.
-    </p>
     <div class="result">
         <details>
             <summary>결과 보기</summary>
             <div class="sample01_result">
                 <script>
-                    {
-                        function func(){
-                            let a = [1,2,3,4,5,6,7,8,9], cnt = 0;
-
-                            for( i=0; i<a.length; i++){
-                                if(a[i] % 2 == 0){
-                                    cnt = cnt + 1;
-                                }
-                            }
-                            document.write(cnt);
-                        }
-                        func();
-                    }
+{
+    function func(){
+        let i, j = 0;
+        for( i=0; i<7; i++){        
+            j += i;                    
+        }
+        document.write(i*j);  
+    }
+    func();
+}
                 </script>
             </div>
         </details>
@@ -367,38 +340,26 @@ code[class*=language-],pre[class*=language-]{color:#000;background:0 0;text-shad
     <div id="sample4" class="sample">
         <h2>04. 결괏값을 작성하시오.<span class="dot"></span></h2>
         <div class="code">
-<pre class="line-numbers"><code class="language-js">{                    
-    function func(data, exp){
-        let result = 1;
-        for(i=1; i &lt; exp; i++){
-            result = result * i;
-        }
-        document.write(result + data);
+<pre class="line-numbers"><code class="language-js">{{
+    function solution(text) {
+        return text.split("").join("/").replace("n", "nforme");
     }
-    func(1, 5);
+    document.write(solution("youcodein"));
 }
 </code></pre>
         </div>
     </div>
-    <p class="t_desc2">
-        data, exp변수에 1, 5 값을 대입하면 for문이 1~4까지로 지정되어 순서대로 1, 2, 6, 24가 나오므로 최종값인 24가 result값이 됩니다.
-        최종값 24에 data = 1을 더해주면 정답은 25가 출력됩니다.
-    </p>
     <div class="result">
         <details>
             <summary>결과 보기</summary>
             <div class="sample01_result">
                 <script>
-                {                    
-                    function func(data, exp){
-                        let result = 1;
-                        for(i=1; i < exp; i++){
-                            result = result * i;
-                        }
-                        document.write(result + data);
-                    }
-                    func(1, 5);
-                }
+{
+    function solution(text) {
+        return text.split("").join("/").replace("n", "nforme");
+    }
+    document.write(solution("youcodein"));
+}
                 </script>
             </div>
         </details>
@@ -410,43 +371,37 @@ code[class*=language-],pre[class*=language-]{color:#000;background:0 0;text-shad
         <h2>05. 결괏값을 작성하시오.<span class="dot"></span></h2>
         <div class="code">
 <pre class="line-numbers"><code class="language-js">{
-    function func(){
-        let a = [2, 3, 2, 4, 5, 6, 7, 2, 3, 3, 2];
-        let value = 0;
-        for(i = 0; i &lt; a.length; i++){
-            if(a[i] != 2){
-                value++
-            }
-        }
-        document.write(value);
+    function func13(){
+        let a, b, c, result;
+        a = 10;
+        b = 300;
+        c = 40;
+        result = a &lt; b ? b/a : c;
+
+        document.write(result);         
     }
-    func();
+    func13();
 }
 </code></pre>
         </div>
     </div>
-    <p class="t_desc2">
-        if(배열 a의 인덱스값 i에 위치한 수가 2가 아니라면) value값에 1씩 더해줍니다.
-    [3, 4, 5, 6, 7, 3, 3] 총 7개 이므로, value값은 1을 7번 더한 7이 출력됩니다.
-    </p>
     <div class="result">
         <details>
             <summary>결과 보기</summary>
             <div class="sample01_result">
                 <script>
-                {
-                    function func(){
-                        let a = [2, 3, 2, 4, 5, 6, 7, 2, 3, 3, 2];
-                        let value = 0;
-                        for(i = 0; i < a.length; i++){
-                            if(a[i] != 2){
-                                value++
-                            }
+                    {
+                        function func13(){
+                            let a, b, c, result;
+                            a = 10;
+                            b = 300;
+                            c = 40;
+                            result = a < b ? b/a : c;
+
+                            document.write(result);         
                         }
-                        document.write(value);
+                        func13();
                     }
-                    func();
-                }
                 </script>
             </div>
         </details>
@@ -458,40 +413,39 @@ code[class*=language-],pre[class*=language-]{color:#000;background:0 0;text-shad
         <h2>06. 결괏값을 작성하시오.<span class="dot"></span></h2>
         <div class="code">
 <pre class="line-numbers"><code class="language-js">{
-    function func(){
-        let i, j = 0;
-        for( i=0; i&lt;5; i++){        
-            j += i;                    
+    function func(s){
+        let answer = "";
+        for(let x of s){        
+            if( x != 'y') answer += '#'; 
+            else answer += x;     
         }
-        document.write(i);  
-        document.write(j);    
+        return answer;   
     }
-    func();
+    
+    let str = "youcodein";
+    document.write(func(str));
 }
 </code></pre>
         </div>
     </div>
-    <p class="t_desc2">
-        i가 5가 될 때까지 계속 늘어나는 i값을 더해 j에 저장시켜야 합니다.
-
-    </p>
     <div class="result">
         <details>
             <summary>결과 보기</summary>
             <div class="sample01_result">
                 <script>
-                {
-                    function func(){
-                        let i, j = 0;
-                        for( i=0; i<5; i++){        
-                            j += i;                    
+                    {
+                        function func(s){
+                            let answer = "";
+                            for(let x of s){        
+                                if( x != 'y') answer += '#'; 
+                                else answer += x;     
+                            }
+                            return answer;   
                         }
-                        document.write(i);
-                        document.write("<br>");    
-                        document.write(j);    
+                        
+                        let str = "youcodein";
+                        document.write(func(str));
                     }
-                    func();
-                }
                 </script>
             </div>
         </details>
@@ -502,34 +456,37 @@ code[class*=language-],pre[class*=language-]{color:#000;background:0 0;text-shad
     <div id="sample7" class="sample">
         <h2>07. 결괏값을 작성하시오.<span class="dot"></span></h2>
         <div class="code">
-<pre class="line-numbers"><code class="language-js">function func(){
-    let a = 12, b = 8, c = 2, d = 3;
-    a /= b - c * d;
-    document.write(a);
-    document.write(a*b);
+<pre class="line-numbers"><code class="language-js">{
+    function func(s, d){
+        let answer = 0;
+        for(let x of s){
+            if(x !== d) answer++;
+        }
+        return answer; 
+    }
+    
+    let str = "youcodein";
+    document.write(func(str, 'd'));
 }
-func();
 </code></pre>
         </div>
     </div>
-    <p class="t_desc2">
-        a, b, c, d 변수에 각 값을 저장, 8 - 2 * 3 = 2 값으로 a값을 나누면 6이 됩니다.
-        그리고 a에 b를 곱하면 48이 나옵니다.
-    </p>
     <div class="result">
         <details>
             <summary>결과 보기</summary>
             <div class="sample01_result">
                 <script>
                     {
-                        function func(){
-                            let a = 12, b = 8, c = 2, d = 3;
-                            a /= b - c * d;
-                            document.write(a);
-                        document.write("<br>");    
-                            document.write(a*b);
+                        function func(s, d){
+                            let answer = 0;
+                            for(let x of s){
+                                if(x !== d) answer++;
+                            }
+                            return answer; 
                         }
-                        func();
+                        
+                        let str = "youcodein";
+                        document.write(func(str, 'd'));
                     }
                 </script>
             </div>
@@ -541,16 +498,18 @@ func();
     <div id="sample8" class="sample">
         <h2>08. 결괏값을 작성하시오.<span class="dot"></span></h2>
         <div class="code">
-<pre class="line-numbers"><code class="language-js">function func(){
-    let a = 0, sum = 0;
-    while( a &lt; 10 ){  
-        a++;       
-        if(a % 2 == 1) continue;        
-        sum += a;                      
+<pre class="line-numbers"><code class="language-js">
+{
+    function func(){
+        let i, j = 0;
+
+        for( i=0; i&lt;=10; i++){  
+            j += i;                
+        }
+        document.write(j*i)        
     }
-    document.write(sum);
+    func();
 }
-func();
 </code></pre>
         </div>
     </div>

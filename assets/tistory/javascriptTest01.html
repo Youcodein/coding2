@@ -1414,6 +1414,48 @@ func(1, 5);
     </details>
 </div>
 
+<div id="sample9" class="sample">
+    <h2>24. 결괏값을 작성하시오.<span class="dot"></span></h2>
+    <div class="code">
+<pre class="line-numbers"><code class="language-js">{
+    function cookingMama(){
+        let cook = ['당근','소세지','삼겹살','계란후라이']
+        for(sel=0; sel&lt;cook.length; sel++){
+            if(cook[sel]!=='당근'){
+                let i = '오늘 저녁은'+cook[sel];
+                console.log(i);
+            }
+        }
+    }
+}
+</code></pre>
+    </div>
+</div>
+<p class="t_desc2">
+    함정 주의!!<br>
+    실행문이 없기 때문에 결과가 출력되지 않습니다.
+</p>
+<div class="result">
+<details>
+    <summary>결과 보기</summary>
+    <div class="sample01_result">
+        <script>
+            {
+                function cookingMama(){
+                    let cook = ['당근','소세지','삼겹살','계란후라이']
+                    for(sel=0; sel<cook.length; sel++){
+                        if(cook[sel]!=='당근'){
+                            let i = '오늘 저녁은'+cook[sel];
+                            console.log(i);
+                        }
+                    }
+                }
+            }
+        </script>
+    </div>
+</details>
+</div>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.0/prism.min.js"></script>
     <script>
