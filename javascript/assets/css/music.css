@@ -74,7 +74,7 @@
     border-radius: 5px;
 }
 .music__control .progress .bar {
-    width: 10%;
+    width: 0%;
     height: inherit;
     background: #5ddf3d;
     border-radius: 5px;
@@ -93,6 +93,12 @@
     padding: 0 80px;
 }
 
+.music__control .control i:hover {
+    background-color: #ccc !important;
+    padding: 10px;
+    display: inline-block;
+}
+
 .music__control .control svg {
     width: 50%;
 }
@@ -101,7 +107,7 @@
     width: 48px;
     height: 48px;
     background: url(../img/musicBar.png) no-repeat;
-    background-position: -200px 0;
+    background-position: -192px 0;
     scale: 0.7;
 }
 .music__control .control .repeat_one {
@@ -109,7 +115,7 @@
     width: 48px;
     height: 48px;
     background: url(../img/musicBar.png) no-repeat;
-    background-position: -250px 0;
+    background-position: -240px 0;
     scale: 0.7;
 }
 .music__control .control .shuffle {
@@ -117,7 +123,7 @@
     width: 48px;
     height: 48px;
     background: url(../img/musicBar.png) no-repeat;
-    background-position: -300px 0;
+    background-position: -288px 0;
     scale: 0.7;
 }
 .music__control .control .prev {
@@ -136,7 +142,14 @@
     background-position: 0 0;
     scale: 0.7;
 }
-.music__control .control .stop {}
+.music__control .control .stop {
+    display: block;
+    width: 48px;
+    height: 48px;
+    background: url(../img/musicBar.png) no-repeat;
+    background-position: -50px 0;
+    scale: 0.7;
+}
 .music__control .control .next {
     display: block;
     width: 48px;
@@ -156,4 +169,49 @@
 
 
 .music__view {}
-.music__footer {}
+.music__footer {
+    background: #c4c4c4;
+}
+.music__list {
+    padding: 20px;
+}
+.music__list h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+.music__list h3 .list{
+    display: inline-block;
+    vertical-align: -15px;
+    width: 48px;
+    height: 48px;
+    background: url(../img/musicBar.png) no-repeat;
+    background-position: -350px 0;
+    scale: 0.7;
+    margin-right: 5px;
+
+}
+.music__list ul {
+    max-height: 200px;
+    overflow-y: scroll;
+}
+.music__list li {
+    border-bottom: 1px solid #000;
+    list-style: none;
+    position: relative;
+    padding: 5px 0;
+}
+
+.music__list strong {
+    display: block;
+    font-size: 20px;
+}
+
+.music__list li span {
+    position: absolute;
+    right: 0;
+    top: 10px;
+}
+
+.music__list li em {
+    font-style: normal;
+}

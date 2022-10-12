@@ -80,13 +80,13 @@
                         </div>
                     </div>
                     <div class="control">
-                        <i title="전체 반복" class="repeat"></i>
+                        <i title="전체 반복" class="repeat" id="control-repeat"></i>
                         <i title="이전곡 재생" class="prev" id="control-prev"></i>
                         <div></div>
                         <i title="재생" class="play" id="control-play"></i>
                         <div></div>
                         <i title="다음곡 재생" class="next" id="control-next"></i>
-                        <i title="재생 목록" class="list"></i>
+                        <i title="재생 목록" class="list" id="control-list"></i>
 
                         <!-- <i title="한곡 반복" class="repeat_one"></i> -->
                         <!-- <i title="랜덤 반복" class="shuffle"></i> -->
@@ -94,7 +94,44 @@
                     </div>
                 </div>
             </div>
-            <div class="music__footer"></div>
+            <div class="music__footer">
+                <div class="music__list">
+                    <h3><span class="list"></span>뮤직 리스트</h3>
+                    <ul>
+                        <!-- <li>
+                            <strong>제목</strong>
+                            <em>아티스트</em>
+                            <span>재생시간</span>
+                        </li>
+                        <li>
+                            <strong>제목</strong>
+                            <em>아티스트</em>
+                            <span>재생시간</span>
+                        </li>
+                        <li>
+                            <strong>제목</strong>
+                            <em>아티스트</em>
+                            <span>재생시간</span>
+                        </li>
+                        <li>
+                            <strong>제목</strong>
+                            <em>아티스트</em>
+                            <span>재생시간</span>
+                        </li>
+                        <li>
+                            <strong>제목</strong>
+                            <em>아티스트</em>
+                            <span>재생시간</span>
+                        </li>
+                        <li>
+                            <strong>제목</strong>
+                            <em>아티스트</em>
+                            <span>재생시간</span>
+                        </li> -->
+
+                    </ul>
+                </div>
+            </div>
         </div>
     </div>
     <!-- 뮤직 플레이어 -->
@@ -106,14 +143,35 @@
         
         $(".icon1").draggable({
             drag: function() {
-                $(".cursor img").attr("src", "../img/cursor_red.svg")
+                $(".cursor img").attr("src", "../img/cursor_red.png")
             }
         });
-        $(".icon2").draggable();
-        $(".icon3").draggable();
-        $(".icon4").draggable();
-        $(".icon5").draggable();
-        $(".icon6").draggable();
+        $(".icon2").draggable({
+            drag: function() {
+                $(".cursor img").attr("src", "../img/cursor_blue.png")
+            }
+        });
+        $(".icon3").draggable({
+            drag: function() {
+                $(".cursor img").attr("src", "../img/cursor_green.png")
+            }
+        });
+        $(".icon4").draggable({
+            drag: function() {
+                $(".cursor img").attr("src", "../img/cursor_pink.png")
+            }
+        });
+        $(".icon5").draggable({
+            drag: function() {
+                $(".cursor img").attr("src", "../img/cursor_yellow.png")
+            }
+        });
+        $(".icon6").draggable({
+            drag: function() {
+                $(".cursor img").attr("src", "../img/cursor_white.png")
+            }
+        });
+        $(".music__wrap").draggable();
 
         const cursor = document.querySelector(".mouse__cursor");
         window.addEventListener("mousemove", (e) => {
