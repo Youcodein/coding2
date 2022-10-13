@@ -21,7 +21,7 @@ body {
     top: 0;
     width: 24px;
     height: 52px;
-    background-image: url(../img/cursor_red.svg);
+    background-image: url(../img/cursor_red.png);
     user-select: none;
     pointer-events: none;
     background-size: cover;
