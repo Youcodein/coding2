@@ -173,10 +173,12 @@
         });
         $(".music__wrap").draggable();
 
+
+        //마우스
         const cursor = document.querySelector(".mouse__cursor");
         window.addEventListener("mousemove", (e) => {
-            cursor.style.left = e.clientX - 25 + "px";
-            cursor.style.top = e.clientY - 25 + "px";
+            cursor.style.left = e.clientX - 0 + "px";
+            cursor.style.top = e.clientY - 0 + "px";
         });
 
         //시계
