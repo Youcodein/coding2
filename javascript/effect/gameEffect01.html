@@ -96,7 +96,7 @@
             </div>
             <div class="music__footer">
                 <div class="music__list">
-                    <h3><span class="list"></span>뮤직 리스트</h3>
+                    <h3><span class="list"></span>뮤직 리스트 <a href="#" class="close"></a></h3>
                     <ul>
                         <!-- <li>
                             <strong>제목</strong>
@@ -143,32 +143,32 @@
         
         $(".icon1").draggable({
             drag: function() {
-                $(".cursor img").attr("src", "../img/cursor_red.png")
+                $(".mouse__cursor img").attr("src", "../img/cursor_red.png")
             }
         });
         $(".icon2").draggable({
             drag: function() {
-                $(".cursor img").attr("src", "../img/cursor_blue.png")
+                $(".mouse__cursor img").attr("src", "../img/cursor_blue.png")
             }
         });
         $(".icon3").draggable({
             drag: function() {
-                $(".cursor img").attr("src", "../img/cursor_green.png")
+                $(".mouse__cursor img").attr("src", "../img/cursor_green.png")
             }
         });
         $(".icon4").draggable({
             drag: function() {
-                $(".cursor img").attr("src", "../img/cursor_pink.png")
+                $(".mouse__cursor img").attr("src", "../img/cursor_pink.png")
             }
         });
         $(".icon5").draggable({
             drag: function() {
-                $(".cursor img").attr("src", "../img/cursor_yellow.png")
+                $(".mouse__cursor img").attr("src", "../img/cursor_yellow.png")
             }
         });
         $(".icon6").draggable({
             drag: function() {
-                $(".cursor img").attr("src", "../img/cursor_white.png")
+                $(".mouse__cursor img").attr("src", "../img/cursor_white.png")
             }
         });
         $(".music__wrap").draggable();
@@ -179,15 +179,37 @@
             cursor.style.top = e.clientY - 25 + "px";
         });
 
+        //시계
         function printTime(){
+            //지금 시간 넣기
             const clock = document.querySelector(".time");
             const now = new Date();
-            clock.textContent = now;
-            const nowTime = now.getFullYear() + ". " + (now.getMonth() + 1) + ". " + now.getDate() + "  |  " + now.getHours() + " : " + now.getMinutes() + " : " + now.getSeconds();
 
+            //한자리 숫자 앞에다 0을 넣어주기 위한 변수
+            let nowHours = now.getHours();
+            let nowMins = now.getMinutes();
+            let nowSecs = now.getSeconds();
+            if(nowHours > 12) {
+                nowHours = `${nowHours - 12}`
+            } else if(nowHours >= 0 &&  nowHours<=9){
+                nowHours = `0${nowHours}`
+            };
+            if(nowMins < 10) nowMins = `0${nowMins}`;
+            if(nowSecs < 10) nowSecs = `0${nowSecs}`;
+
+
+            let nowMonth = now.getMonth() + 1;
+            let nowDate = now.getDate();
+            if(nowMonth  < 10 ) nowMonth = `0${nowMonth}`
+            if(nowDate < 10 ) nowDate = `0${nowDate}`
+
+            //데이터에서 연도만 가져오기
+            const nowTime = now.getFullYear() + ". " +  nowMonth + ". " + nowDate + " | " + nowHours + " : " + nowMins + " : " + nowSecs;
             
             clock.innerText = nowTime;
             setTimeout("printTime()", 1000);
+
+    
         }
 
         function printAgent(){
