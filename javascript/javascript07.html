@@ -7,6 +7,7 @@
     <title>자바스크립트 : 수학 객체</title>
 
 <link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/dracura.css">
 </head>
 <body>
     <header id="header">
@@ -54,20 +55,62 @@
                     <li><a href="#sample01">01. 수학 메서드 : Math.abs() : 절대값 반환 : 반환(숫자)</a></li>
                     <li><a href="#sample01">01. 수학 메서드 : Math.trulc() : 값의 정수 부분만 반환 : 반환(숫자)</a></li>
                     <li><a href="#sample01">01. 수학 메서드 : Math.random() : 랜덤값(0-1사이 난수 값을 반환) 반환 : 반환(숫자)</a></li>
-                    <li><a href="#sample02">02. if문 생략</a></li>
-                    <li><a href="#sample03">03. 다중 if문</a></li>
-                    <li><a href="#sample04">04. 중첩 if문</a></li>
-                    <li><a href="#sample05">05. 상황 연산자</a></li>
-                    <li><a href="#sample06">06. switch문</a></li>
-                    <li><a href="#sample07">07. while문</a></li>
-                    <li><a href="#sample08">08. do while문</a></li>
-                    <li><a href="#sample09">09. for문</a></li>
-                    <li><a href="#sample10">10. 중첩 for문</a></li>
-                    <li><a href="#sample11">11. break문</a></li>
-                    <li><a href="#sample12">12. continue문</a></li>
                 </ul>
             </div>
             <div class ="main_sample">
+                <div id="sample01" class="sample">
+                    <h3>01. 수학 메서드 : Math.random() : 0-1사이의 난수값을 반환 : 반환(숫자) </h3>
+                    <p>
+                        0-1사이의 난수값을 
+                    </p>
+                    <div class="table">
+                        <table>
+                            <colgroup>
+                            <col style="width : 5%">
+                            <col style="width : 22%">
+                            <col style="width : 32%">
+                            <col style="width : 37%">
+                            <col style="width : 5%">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>번호</th>
+                                    <th>기본값</th>
+                                    <th>메서드</th>
+                                    <th>리턴값</th>
+                                    <th>클릭</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="sample01_N1"></td>
+                                    <td class="sample01_Q1"></td>
+                                    <td class="sample01_M1"></td>
+                                    <td class="sample01_P1"></td>
+                                    <td class="sample01_B1"><button>클릭</button></td>
+                                </tr>
+                                <tr>
+                                    <td class="sample01_N2"></td>
+                                    <td class="sample01_Q2"></td>
+                                    <td class="sample01_M2"></td>
+                                    <td class="sample01_P2"></td>
+                                    <td class="sample01_B2"><button>클릭</button></td>
+                                </tr>
+                                <tr>
+                                    <td class="sample01_N3"></td>
+                                    <td class="sample01_Q3"></td>
+                                    <td class="sample01_M3"></td>
+                                    <td class="sample01_P3"></td>
+                                    <td class="sample01_B3"><button>클릭</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="script">
+<pre><code class="language-js">
+</code></pre>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -80,5 +123,37 @@
         <a href="mailto:foryoucodin@gmail.com">foryoucodin@gmail.com</a>
     </footer>
       <!-- //footer --> 
+
+      <script src="assets/js/highlight.min.js"></script>
+      <script>
+          hljs.highlightAll();
+      </script> 
+
+      <script>
+        document.querySelector(".sample01_N1").innerHTML = 1;
+        document.querySelector(".sample01_Q1").innerHTML = "0 ~ 1";
+        document.querySelector(".sample01_M1").innerHTML = "Math.random";
+        document.querySelector(".sample01_P1").style.color = "black"
+        document.querySelector(".sample01_B1").addEventListener("click", () => {
+            document.querySelector(".sample01_P1").innerHTML = Math.random();
+        })
+
+
+        document.querySelector(".sample01_N2").innerHTML = 2;
+        document.querySelector(".sample01_Q2").innerHTML = "0 ~ 9";
+        document.querySelector(".sample01_M2").innerHTML = "Math.random";
+        document.querySelector(".sample01_P2").style.color = "black"
+        document.querySelector(".sample01_B2").addEventListener("click", () => {
+            document.querySelector(".sample01_P2").innerHTML =Math.floor( Math.random() * 10);
+        })
+
+        document.querySelector(".sample01_N3").innerHTML = 3;
+        document.querySelector(".sample01_Q3").innerHTML = "10 ~ 19";
+        document.querySelector(".sample01_M3").innerHTML = "Math.random";
+        document.querySelector(".sample01_P3").style.color = "black"
+        document.querySelector(".sample01_B3").addEventListener("click", () => {
+            document.querySelector(".sample01_P3").innerHTML = 10 + Math.floor( Math.random() * 10);
+        })
+      </script>
 </body>
 </html>

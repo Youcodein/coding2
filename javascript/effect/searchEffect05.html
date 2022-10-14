@@ -613,6 +613,28 @@
             tabCont[i].style.display = "block";
         });
     });
+
+//클릭하기
+searchClick.forEach(star => {
+            star.addEventListener("click", () => {
+                //star2 = star.innerText.search("☆");
+                //console.log(star2);
+                let target = 0;
+                let filterList = '';
+                //target = star.dataset.star;
+                target = star.innerText.search("☆");
+                if(target == -1){
+                    target=5;
+                }
+                filterList = cssProperty.filter(data => data.star == target || data.star >= star.innerText.charAt());
+                updateList(filterList);
+                
+                const searchListNum = document.querySelectorAll(".search__list ul li").length;
+                searchInfo.textContent = searchListNum;
+            });
+
+        });
+
 </script>
 </body>
 
