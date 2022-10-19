@@ -315,13 +315,10 @@ musicCloseBtn.addEventListener("click",()=>{
     musicList.classList.remove("show");
 })
 
-// 볼륨 버튼 클릭
-const volumeBtn = document.querySelector(".music_control .control #control-volume");
-const volumeBar= document.querySelector(".music_control .control .volumeBar");
-const volumeBarSize= document.querySelector(".music_control .control .volumeBar .volumeSize");
-volumeBtn.addEventListener("click", ()=>{
-    volumeBar.classList.toggle("show");
-});
+//볼륨바 클릭
+const volumeBar = document.querySelector(".volume_line");
+const volumeBarSize = document.querySelector(".volumeBar");
+
 // 볼륨 조절 (클릭한 만큼의 볼륨)
 musicAudio.volume = 0.5;
 volumeBar.addEventListener("click", (e)=>{
@@ -330,15 +327,8 @@ volumeBar.addEventListener("click", (e)=>{
     let volume = musicAudio.volume;
 
     musicAudio.volume = (clickedOffsetX / volumeBarWidth); //클릭 부분이 전체에서 차지하는 비율을 백분율로 표시
-    // alert(volume);
-    if(musicAudio.volume == 0){
-        volumeBtn.classList.add("mute");
-        volumeBtn.setAttribute("title", "음소거 됨");
-    } else {
-        volumeBtn.classList.remove("mute");
-        volumeBtn.setAttribute("title", "음량 조절");
-    }
 });
+
 // 볼륨이 바뀌면 볼륨바의 너비를 바꾸기
 musicAudio.addEventListener("volumechange", e =>{
     const currentVolume = e.target.volume;
@@ -346,6 +336,7 @@ musicAudio.addEventListener("volumechange", e =>{
 
     volumeBarSize.style.width = `${volumeBarWidth}%`;
 });
+
 
 //로드 버튼
 window.addEventListener("load",()=> {

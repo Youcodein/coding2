@@ -47,12 +47,32 @@
 }
 
 .music__view .title {
-    width: 70%;
+    width: 60%;
     text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+}
+.volume {
+    width: 10%;
+
+}
+
+.volume .volume_line {
+    rotate: 270deg;
+    height: 10px;
+    width: 120px;
+    background: #000;
+    border-radius: 5px;
+    margin: 60px -40px;
+}
+
+.volume .volume_line .volumeBar {
+    height: inherit;
+    width: 50%;
+    background: #5ddf3d;
+    border-radius: 5px;
 }
 
 .music__view .title h3 {
@@ -72,6 +92,7 @@
     padding: 20px;
     padding-top: 0;
 }
+
 
 .music__control .progress {
     width: 100%;
@@ -182,25 +203,6 @@
     background: url(../img/musicBar.png) no-repeat;
     background-position: -336px 0;
     scale: 0.7;
-}
-
-
-/* volume */
-.music_control .control .volumeBar {
-    width: 0;
-    height: 5px;
-    background: #000;
-    border-radius: 5px;
-    transition: all 0.5s;
-}
-.music_control .control .volumeBar.show {
-    width: 70px;
-}
-.music_control .control .volumeBar .volumeSize {
-    width: 50%;
-    height: inherit;
-    background: #37c3ff;
-    border-radius: 5px;
 }
 
 
