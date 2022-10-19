@@ -22,7 +22,9 @@
 
 
     <main id="main">
-        <div class="mouse__cursor"></div>
+        <div class="mouse__cursor">
+            <img src="../assets/img/cursor_red.png" alt="">
+        </div>
         <div class="icon_box">
             <div class="icon1">
                 <img src="../assets/img/folder_red.png" alt="뮤직">
@@ -149,37 +151,41 @@
     <script src="../assets/js/music.js"></script>
     <script>
         
-        $(".icon1").draggable({
-            drag: function() {
-                $(".mouse__cursor img").attr("src", "../assets/img/cursor_red.png")
-            }
+        $( ".icon1" ).draggable({
+            drag: function(){
+                $(".mouse__cursor img").attr("src","../assets/img/cursor_red.png")
+            },
         });
-        $(".icon2").draggable({
-            drag: function() {
-                $(".mouse__cursor img").attr("src", "../assets/img/cursor_blue.png")
-            }
+        $( ".icon2" ).draggable({
+            drag: function(){
+                $(".mouse__cursor img").attr("src","../assets/img/cursor_blue.png")
+            },
         });
-        $(".icon3").draggable({
-            drag: function() {
-                $(".mouse__cursor img").attr("src", "../assets/img/cursor_green.png")
-            }
+        $( ".icon3" ).draggable({
+            drag: function(){
+                $(".mouse__cursor img").attr("src","../assets/img/cursor_green.png")
+            },
         });
-        $(".icon4").draggable({
-            drag: function() {
-                $(".mouse__cursor img").attr("src", "../assets/img/cursor_pink.png")
-            }
+        $( ".icon4" ).draggable({
+            drag: function(){
+                $(".mouse__cursor img").attr("src","../assets/img/cursor_pink.png")
+            },
         });
-        $(".icon5").draggable({
-            drag: function() {
-                $(".mouse__cursor img").attr("src", "../assets/img/cursor_yellow.png")
-            }
+        $( ".icon5" ).draggable({
+            drag: function(){
+                $(".mouse__cursor img").attr("src","../assets/img/cursor_yellow.png")
+            },
         });
-        $(".icon6").draggable({
-            drag: function() {
-                $(".mouse__cursor img").attr("src", "../assets/img/cursor_white.png")
-            }
+        $( ".icon6" ).draggable({
+            drag: function(){
+                $(".mouse__cursor img").attr("src","../assets/img/cursor_white.png")
+            },
         });
-        $(".music__wrap").draggable();
+        $( ".music__wrap" ).draggable({
+            drag: function(){
+                $(".mouse__cursor img").attr("src","../assets/img/cursor_red.png")
+            },
+        });
 
 
         //마우스
