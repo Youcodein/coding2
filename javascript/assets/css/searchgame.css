@@ -4,12 +4,12 @@
 .search__wrap {
     display: none;
     background: #333;
-    width: 700px;
-    height: 500px;
+    width: 1000px;
+    height: 700px;
     padding: 0 10px 10px;
     border-radius: 3px;
     position: absolute;
-    top: 250px;
+    top: 10%;
     left: 50%;
     transform: translateX(-50%);
 }
