@@ -71,6 +71,7 @@ body {
     background-color: var(--bgSub);
     padding: 80px;
     text-align: center;
+    display: none;
 }
 .main__title h1 {
     font-family: var(--fontTitle);
